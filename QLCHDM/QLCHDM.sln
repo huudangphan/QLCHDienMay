@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLCHDM", "QLCHDM\QLCHDM.csproj", "{B9FD60F2-7249-4034-B0C4-7487E2D6485B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9FD60F2-7249-4034-B0C4-7487E2D6485B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9FD60F2-7249-4034-B0C4-7487E2D6485B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9FD60F2-7249-4034-B0C4-7487E2D6485B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9FD60F2-7249-4034-B0C4-7487E2D6485B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DDBA2CC7-913A-4D84-A084-5442BA121457}
+	EndGlobalSection
+EndGlobal
