@@ -17,6 +17,13 @@ INSERT INTO NhaCungCap(TenNCC,MaSoThue,DiaChi)
 VALUES(N'Sony VietNam','0000000006',N'93 Nguyễn Du')
 GO
 SELECT * FROM NhaCungCap
+
+------ThanhPho------
+INSERT INTO ThanhPho(TenThanhPho)
+VALUES(N'Tp. Hồ Chí Minh')
+INSERT INTO ThanhPho(TenThanhPho)
+VALUES(N'Hà Nội')
+SELECT * FROM ThanhPho
 ------ThuongHieu------
 /*
 INSERT INTO ThuongHieu(MaNCC,TenThuongHieu,XuatXu)
@@ -472,10 +479,10 @@ VALUES(N'Quản lý kho')
 GO
 SELECT * FROM ChucVu
 ------CuaHang------
-INSERT INTO CuaHang(DiaChi,CuaHangTruong,NgayThanhLap)
-VALUES(N'123 Trường Chinh',null,'2021-10-6')
-INSERT INTO CuaHang(DiaChi,CuaHangTruong,NgayThanhLap)
-VALUES(N'500 CMT8',null,'2021-9-15')
+INSERT INTO CuaHang(DiaChi,ThanhPho,CuaHangTruong,NgayThanhLap)
+VALUES(N'123 Trường Chinh','TP001',null,'2021-10-6')
+INSERT INTO CuaHang(DiaChi,ThanhPho,CuaHangTruong,NgayThanhLap)
+VALUES(N'500 CMT8','TP002',null,'2021-9-15')
 SELECT * FROM CuaHang
 
 ------NhanVien------
@@ -553,8 +560,8 @@ SELECT * FROM ChiTietPhieuNhap
 SELECT * FROM PhieuNhap
 SELECT * FROM ChiTietKho Where MaKho = 'K0001'
 ------KhachHang------
-INSERT INTO KhachHang(TenKhachHang,SDT,DiaChi,Email,TaiKhoan,MatKhau,TrangThai)
-VALUES(N'Phan Hữu Đăng','0909119459',N'5000M2 bđs Nha Trang','phanhuudang@gmail.com','phanhuudang','123456',0)
+INSERT INTO KhachHang(TenKhachHang,SDT,DiaChi,ThanhPho,Email,TaiKhoan,MatKhau,TrangThai)
+VALUES(N'Phan Hữu Đăng','0909119459',N'50 Thành Thái','TP001','phanhuudang@gmail.com','phanhuudang','123456',0)
 
 SELECT * FROM KhachHang
 
@@ -578,24 +585,16 @@ SELECT * FROM Voucher
 ------DonHang------
 declare @ID CHAR(10)
 exec Tao_Don_Hang_Online @ma_khach_hang = 'KH00000001', @ma_voucher = 'HAPPY2021', @ma_don = @ID OUTPUT;
-print(@ID)
 
 INSERT INTO ChiTietDonHang(MaDonHang,MaSanPham,SoLuong,DonGia,ThanhTien)
 VALUES(@ID,'SP00000001',2,12990000.00,25980000)
-
 
 SELECT * FROM DonHang
 SELECT * FROM ChiTietDonHang
 select * from KhachHang
 
-delete from ChiTietDonHang
-delete from DonHang
-SELECT * FROM NhanVien
 USE QLDienMay
-UPDATE DonHang SET MaCuaHang = 'CH001', NhanVienPhuTrach = 'NV00000001'  WHERE MaDonHang = 'DH00000001' 
+UPDATE DonHang SET NhanVienPhuTrach = 'NV00000001', TinhTrangXacNhan = 0  WHERE MaDonHang = 'DH00000001' 
 ---TheTichDiem-----
 EXEC Tao_The_Cho_Khach_Hang @ma_khach_hang = 'KH00000001';
 SELECT * FROM TheTichDiem
-DELETE FROM TheTichDiem
-
-

@@ -16,6 +16,14 @@ CREATE TABLE NhaCungCap
 	CONSTRAINT PK_NCC PRIMARY KEY (MaNCC)
 )
 GO
+
+CREATE TABLE ThanhPho
+(
+	MaThanhPho CHAR(5),
+	TenThanhPho NVARCHAR(20) NOT NULL,
+	CONSTRAINT PK_TP PRIMARY KEY(MaThanhPho),
+)
+GO
 CREATE TABLE KhuyenMai
 (
 	MaKhuyenMai CHAR(10),
@@ -131,11 +139,13 @@ GO
 CREATE TABLE CuaHang
 (
 	MaCuaHang CHAR(5),
-	DiaChi NVARCHAR(100),
+	DiaChi NVARCHAR(100) NOT NULL,
+	ThanhPho CHAR(5) NOT NULL,
 	CuaHangTruong CHAR(10),
-	NgayThanhLap DATETIME,
+	NgayThanhLap DATETIME NOT NULL,
 	CONSTRAINT PK_CuaHang PRIMARY KEY(MaCuaHang),
-	CONSTRAINT FK_NhanVien_CuaHang FOREIGN KEY(CuaHangTruong) REFERENCES NhanVien(MaNhanVien) 
+	CONSTRAINT FK_NhanVien_CuaHang FOREIGN KEY(CuaHangTruong) REFERENCES NhanVien(MaNhanVien),
+	CONSTRAINT FK_TP_CuaHang FOREIGN KEY(ThanhPho) REFERENCES ThanhPho(MaThanhPho)
 )
 GO
 ALTER TABLE NhanVien
@@ -145,8 +155,8 @@ GO
 CREATE TABLE Kho
 (
 	MaKho CHAR(5),
-	MaCuaHang CHAR(5),
-	DiaChi NVARCHAR(100),
+	MaCuaHang CHAR(5) NOT NULL,
+	DiaChi NVARCHAR(100) NOT NULL,
 	CONSTRAINT PK_Kho PRIMARY KEY(MaKho),
 	CONSTRAINT FK_CuaHang_Kho FOREIGN KEY(MaCuaHang) REFERENCES CuaHang(MaCuaHang)
 )
@@ -156,7 +166,7 @@ CREATE TABLE ChiTietKho
 (
 	MaKho CHAR(5),
 	MaSanPham CHAR(10),
-	SoLuong INT CHECK(SoLuong >= 0),
+	SoLuong INT CHECK(SoLuong >= 0) NOT NULL,
 	CONSTRAINT PK_ChiTietKho PRIMARY KEY(MaKho,MaSanPham),
 	CONSTRAINT FK_SanPham_ChiTietKho FOREIGN KEY(MaSanPham) REFERENCES SanPham(MaSanPham),
 	CONSTRAINT FK_Kho_ChiTietKho FOREIGN KEY(MaKho) REFERENCES Kho(MaKho)
@@ -165,11 +175,11 @@ GO
 CREATE TABLE PhieuNhap
 (
 	MaPhieuNhap CHAR(10),
-	NhaCungCap CHAR(5),
-	NhanVienTrucKho CHAR(10),
-	MaKho CHAR(5),
-	ThoiGianTao DATETIME,
-	TongGiaTri DECIMAL(18,2) DEFAULT 0,
+	NhaCungCap CHAR(5) NOT NULL,
+	NhanVienTrucKho CHAR(10) NOT NULL,
+	MaKho CHAR(5) NOT NULL,
+	ThoiGianTao DATETIME NOT NULL,
+	TongGiaTri DECIMAL(18,2) DEFAULT 0 NOT NULL,
 	CONSTRAINT PK_PhieuNhap PRIMARY KEY(MaPhieuNhap),	
 	CONSTRAINT FK_NCC_PhieuNhap FOREIGN KEY(NhaCungCap) REFERENCES NhaCungCap(MaNCC),
 	CONSTRAINT FK_NhanVien_NVPhuTrach FOREIGN KEY(NhanVienTrucKho) REFERENCES NhanVien(MaNhanVien),
@@ -180,8 +190,8 @@ CREATE TABLE ChiTietPhieuNhap
 (
 	MaPhieuNhap CHAR(10),
 	MaSanPham CHAR(10),
-	SoLuong INT CHECK(SoLuong >= 0),
-	DonGiaNhap DECIMAL(18,2),
+	SoLuong INT CHECK(SoLuong >= 0) NOT NULL,
+	DonGiaNhap DECIMAL(18,2) NOT NULL,
 	CONSTRAINT PK_ChiTietPhieuNhap PRIMARY KEY(MaPhieuNhap, MaSanPham),
 	CONSTRAINT FK_PhieuNhap_ChiTietPhieuNhap FOREIGN KEY(MaPhieuNhap) REFERENCES PhieuNhap(MaPhieuNhap),
 	CONSTRAINT FK_SanPham_ChiTietPhieuNhap FOREIGN KEY(MaSanPham) REFERENCES SanPham(MaSanPham)
@@ -194,11 +204,13 @@ CREATE TABLE KhachHang
 	TenKhachHang NVARCHAR(50) NOT NULL,
 	SDT CHAR(10) UNIQUE NOT NULL,
 	DiaChi NVARCHAR(100) NOT NULL,
+	ThanhPho CHAR(5) NOT NULL,
 	Email CHAR(50) UNIQUE NOT NULL,
 	TaiKhoan CHAR(50) UNIQUE,
 	MatKhau CHAR(50),
-	TrangThai BIT,
-	CONSTRAINT PK_KhachHang PRIMARY KEY(MaKhachHang)
+	TrangThai BIT NOT NULL,
+	CONSTRAINT PK_KhachHang PRIMARY KEY(MaKhachHang),
+	CONSTRAINT FK_TP_KhacHang FOREIGN KEY(ThanhPho) REFERENCES ThanhPho(MaThanhPho)
 )
 GO
 
@@ -220,7 +232,7 @@ CREATE TABLE DonHang
 	MaDonHang CHAR(10),
 	NhanVienPhuTrach CHAR(10),
 	MaKhachHang CHAR(10),
-	MaCuaHang CHAR(5),
+	MaCuaHang CHAR(5) NOT NULL,
 	ThoiGianTao DATETIME,
 	MaVoucher CHAR(10),
 	Loai BIT,
@@ -238,9 +250,9 @@ CREATE TABLE ChiTietDonHang
 (
 	MaDonHang CHAR(10),
 	MaSanPham CHAR(10),
-	SoLuong INT CHECK(SoLuong >= 0),
-	DonGia DECIMAL(18,2) CHECK(DonGia >= 0),	
-	ThanhTien DECIMAL(18,2) CHECK(ThanhTien >= 0),
+	SoLuong INT CHECK(SoLuong >= 0) NOT NULL,
+	DonGia DECIMAL(18,2) CHECK(DonGia >= 0) NOT NULL,	
+	ThanhTien DECIMAL(18,2) CHECK(ThanhTien >= 0) NOT NULL,
 	CONSTRAINT PK_ChiTietDonHang PRIMARY KEY(MaDonHang, MaSanPham),
 	CONSTRAINT FK_DonHang_ChiTietDonHang FOREIGN KEY(MaDonHang) REFERENCES DonHang(MaDonHang),
 	CONSTRAINT FK_SanPham_ChiTietDonHang FOREIGN KEY(MaSanPham) REFERENCES SanPham(MaSanPham)
@@ -250,7 +262,7 @@ GO
 CREATE TABLE HangTichDiem
 (
 	MaHang CHAR(5),
-	TenHang NVARCHAR(20),
+	TenHang NVARCHAR(20) NOT NULL,
 	CONSTRAINT PK_HangTichDiem PRIMARY KEY(MaHang)
 )
 GO
@@ -259,10 +271,10 @@ CREATE TABLE TheTichDiem
 (
 	MaThe CHAR(10),
 	MaKhachHang CHAR(10),
-	Hang CHAR(5),
-	NgayTao DATETIME,
-	Diem INT CHECK(Diem >= 0),
-	TrangThai BIT,
+	Hang CHAR(5) NOT NULL,
+	NgayTao DATETIME NOT NULL,
+	Diem INT CHECK(Diem >= 0) NOT NULL,
+	TrangThai BIT NOT NULL,
 	CONSTRAINT PK_TheTichDiem PRIMARY KEY(MaThe),
 	CONSTRAINT FK_KH_TheTichDiem FOREIGN KEY(MaKhachHang) REFERENCES KhachHang(MaKhachHang),
 	CONSTRAINT FK_HangThe_TheTichDiem FOREIGN KEY(Hang) REFERENCES HangTichDiem(MaHang)
@@ -272,12 +284,12 @@ GO
 CREATE TABLE PhieuXuat
 (
 	MaPhieuXuat CHAR(10),
-	NhanVienTaoPhieu CHAR(10),
-	NhanVienTruongKho CHAR(10),
-	MaKho CHAR(5),
-	MaDonHang CHAR(10),
-	ThoiGianTao DATETIME,
-	TongGiaTri DECIMAL(18,2),
+	NhanVienTaoPhieu CHAR(10) NOT NULL,
+	NhanVienTruongKho CHAR(10) NOT NULL,
+	MaKho CHAR(5) NOT NULL,
+	MaDonHang CHAR(10) NOT NULL,
+	ThoiGianTao DATETIME NOT NULL,
+	TongGiaTri DECIMAL(18,2) NOT NULL,
 	CONSTRAINT PK_PhieuXuat PRIMARY KEY(MaPhieuXuat),
 	CONSTRAINT FK_NVTaoPhieu_PhieuXuat FOREIGN KEY(NhanVienTaoPhieu) REFERENCES NhanVien(MaNhanVien),
 	CONSTRAINT FK_NVTruongKho_PhieuXuat FOREIGN KEY(NhanVienTruongKho) REFERENCES NhanVien(MaNhanVien),
@@ -290,7 +302,7 @@ CREATE TABLE ChiTietPhieuXuat
 (
 	MaPhieuXuat CHAR(10),
 	MaSanPham CHAR(10),
-	SoLuong INT,
+	SoLuong INT NOT NULL,
 	CONSTRAINT PK_ChiTietPhieuXuat PRIMARY KEY(MaPhieuXuat, MaSanPham),
 	CONSTRAINT FK_PhieuXuat_CTPhieuXuat FOREIGN KEY(MaPhieuXuat) REFERENCES PhieuXuat(MaPhieuXuat),
 	CONSTRAINT FK_SanPham_CTPhieuXuat FOREIGN KEY(MaSanPham) REFERENCES SanPham(MaSanPham),
@@ -300,11 +312,11 @@ GO
 CREATE TABLE PhieuBaoHanh
 (
 	MaPhieuBH CHAR(10),
-	MaSanPham CHAR(10),
-	MaKhachHang CHAR(10),
-	MaDonHang CHAR(10),
-	NgayTao DATETIME,
-	NgayHetHan DATETIME,
+	MaSanPham CHAR(10) NOT NULL,
+	MaKhachHang CHAR(10) NOT NULL,
+	MaDonHang CHAR(10) NOT NULL,
+	NgayTao DATETIME NOT NULL,
+	NgayHetHan DATETIME NOT NULL,
 	CONSTRAINT PK_PhieuBaoHanh PRIMARY KEY(MaPhieuBH),
 	CONSTRAINT FK_SP_BaoHanh FOREIGN KEY(MaSanPham) REFERENCES SanPham(MaSanPham),
 	CONSTRAINT FK_KH_BaoHanh FOREIGN KEY(MaKhachHang) REFERENCES KhachHang(MaKhachHang),
@@ -314,8 +326,8 @@ CREATE TABLE PhieuBaoHanh
 CREATE TABLE PhanHoi
 (
 	MaPhanHoi CHAR(10),
-	MaKhachHang CHAR(10),
-	NoiDung NVARCHAR(300),
+	MaKhachHang CHAR(10) NOT NULL,
+	NoiDung NVARCHAR(300) NOT NULL,
 	TrangThai BIT,
 	CONSTRAINT PK_PhanHoi PRIMARY KEY(MaPhanHoi),
 	CONSTRAINT FK_KH_PhanHoi FOREIGN KEY(MaKhachHang) REFERENCES KhachHang(MaKhachHang)
