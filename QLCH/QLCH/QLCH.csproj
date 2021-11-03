@@ -133,274 +133,349 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ChiTietDonHang.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ChiTietKho.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ChiTietLoai.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ChiTietPhieuNhap.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ChiTietPhieuXuat.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ChucVu.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CuaHang.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DacDiemNoiBat.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DanhMuc.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DonHang.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\HangTichDiem.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\KhachHang.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Kho.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\KhuyenMai.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Loai.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSdynamicsnapshotjob.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSdynamicsnapshotview.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_agent_parameters.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_altsyncpartners.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_articlehistory.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflicts_info.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_ChiTietDonHang.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_ChiTietKho.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_ChiTietLoai.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuNhap.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuXuat.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_ChucVu.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_CuaHang.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_DacDiemNoiBat.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_DanhMuc.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_DonHang.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_HangTichDiem.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_KhachHang.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_Kho.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_KhuyenMai.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_Loai.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_NhaCungCap.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_NhanVien.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_PhanHoi.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_PhieuBaoHanh.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_PhieuNhap.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_PhieuXuat.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_SanPham.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_TheTichDiem.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_ThongSoKiThuat.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_TinhNang.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_Voucher.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_ChiTietDonHang.cs">
+      <DependentUpon>QLCHModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_ChiTietKho.cs">
+      <DependentUpon>QLCHModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_ChiTietLoai.cs">
+      <DependentUpon>QLCHModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_ChiTietPhieuNhap.cs">
+      <DependentUpon>QLCHModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_ChiTietPhieuXuat.cs">
+      <DependentUpon>QLCHModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_ChucVu.cs">
+      <DependentUpon>QLCHModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_CuaHang.cs">
+      <DependentUpon>QLCHModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_DacDiemNoiBat.cs">
+      <DependentUpon>QLCHModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_DanhMuc.cs">
+      <DependentUpon>QLCHModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_DonHang.cs">
+      <DependentUpon>QLCHModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_HangTichDiem.cs">
+      <DependentUpon>QLCHModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_KhachHang.cs">
+      <DependentUpon>QLCHModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_Kho.cs">
+      <DependentUpon>QLCHModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_KhuyenMai.cs">
+      <DependentUpon>QLCHModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_Loai.cs">
+      <DependentUpon>QLCHModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_NhaCungCap.cs">
+      <DependentUpon>QLCHModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_NhanVien.cs">
+      <DependentUpon>QLCHModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_PhanHoi.cs">
+      <DependentUpon>QLCHModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_PhieuBaoHanh.cs">
+      <DependentUpon>QLCHModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_PhieuNhap.cs">
+      <DependentUpon>QLCHModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_PhieuXuat.cs">
+      <DependentUpon>QLCHModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_SanPham.cs">
+      <DependentUpon>QLCHModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_TheTichDiem.cs">
+      <DependentUpon>QLCHModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_ThongSoKiThuat.cs">
+      <DependentUpon>QLCHModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_TinhNang.cs">
+      <DependentUpon>QLCHModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_Voucher.cs">
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_contents.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_current_partition_mappings.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_dynamic_snapshots.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_errorlineage.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_generation_partition_mappings.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_genhistory.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_history.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_identity_range.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_log_files.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_metadataaction_request.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_partition_groups.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_past_partition_mappings.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_replinfo.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_sessions.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_settingshistory.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_supportability_settings.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_tombstone.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSrepl_errors.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\MSsnapshotdeliveryprogress.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\NhaCungCap.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\NhanVien.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PhanHoi.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PhieuBaoHanh.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PhieuNhap.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PhieuXuat.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QLCHModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLCHModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QLCHModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QLCHModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLCHModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\SanPham.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysmergearticle.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysmergepartitioninfo.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysmergepublication.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysmergeschemaarticle.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysmergeschemachange.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysmergesubscription.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysmergesubsetfilter.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\test_Result.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="Models\sysreplserver.cs">
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TheTichDiem.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ThongSoKiThuat.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TinhNang.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Voucher.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLCHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -413,24 +488,24 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\Model1.Context.tt">
+    <Content Include="Models\QLCHModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>QLCHModel.edmx</DependentUpon>
+      <LastGenOutput>QLCHModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Model1.tt">
+    <Content Include="Models\QLCHModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
+      <DependentUpon>QLCHModel.edmx</DependentUpon>
+      <LastGenOutput>QLCHModel.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\Model1.edmx">
+    <EntityDeploy Include="Models\QLCHModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>QLCHModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <Content Include="Models\QLCHModel.edmx.diagram">
+      <DependentUpon>QLCHModel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
