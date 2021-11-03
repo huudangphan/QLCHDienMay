@@ -1,0 +1,2148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLDienMayModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ChiTietDonHang">
+    <Key>
+      <PropertyRef Name="MaDonHang" />
+      <PropertyRef Name="MaSanPham" />
+    </Key>
+    <Property Name="MaDonHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="DonGia" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ThanhTien" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="DonHang" Relationship="Self.FK_DonHang_ChiTietDonHang" FromRole="ChiTietDonHang" ToRole="DonHang" />
+    <NavigationProperty Name="SanPham" Relationship="Self.FK_SanPham_ChiTietDonHang" FromRole="ChiTietDonHang" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="ChiTietKho">
+    <Key>
+      <PropertyRef Name="MaKho" />
+      <PropertyRef Name="MaSanPham" />
+    </Key>
+    <Property Name="MaKho" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="Kho" Relationship="Self.FK_Kho_ChiTietKho" FromRole="ChiTietKho" ToRole="Kho" />
+    <NavigationProperty Name="SanPham" Relationship="Self.FK_SanPham_ChiTietKho" FromRole="ChiTietKho" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="ChiTietLoai">
+    <Key>
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="MaLoai" />
+    </Key>
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaLoai" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="Loai" Relationship="Self.FK_Loai_ChiTietLoai" FromRole="ChiTietLoai" ToRole="Loai" />
+    <NavigationProperty Name="SanPham" Relationship="Self.FK_SP_ChiTietLoai" FromRole="ChiTietLoai" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="ChiTietPhieuNhap">
+    <Key>
+      <PropertyRef Name="MaPhieuNhap" />
+      <PropertyRef Name="MaSanPham" />
+    </Key>
+    <Property Name="MaPhieuNhap" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="DonGiaNhap" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="PhieuNhap" Relationship="Self.FK_PhieuNhap_ChiTietPhieuNhap" FromRole="ChiTietPhieuNhap" ToRole="PhieuNhap" />
+    <NavigationProperty Name="SanPham" Relationship="Self.FK_SanPham_ChiTietPhieuNhap" FromRole="ChiTietPhieuNhap" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="ChiTietPhieuXuat">
+    <Key>
+      <PropertyRef Name="MaPhieuXuat" />
+      <PropertyRef Name="MaSanPham" />
+    </Key>
+    <Property Name="MaPhieuXuat" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="PhieuXuat" Relationship="Self.FK_PhieuXuat_CTPhieuXuat" FromRole="ChiTietPhieuXuat" ToRole="PhieuXuat" />
+    <NavigationProperty Name="SanPham" Relationship="Self.FK_SanPham_CTPhieuXuat" FromRole="ChiTietPhieuXuat" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="ChucVu">
+    <Key>
+      <PropertyRef Name="MaChucVu" />
+    </Key>
+    <Property Name="MaChucVu" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenChucVu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="NhanViens" Relationship="Self.FK_ChucVu_NhanVien" FromRole="ChucVu" ToRole="NhanVien" />
+  </EntityType>
+  <EntityType Name="CuaHang">
+    <Key>
+      <PropertyRef Name="MaCuaHang" />
+    </Key>
+    <Property Name="MaCuaHang" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CuaHangTruong" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="NgayThanhLap" Type="DateTime" Precision="3" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="NhanViens" Relationship="Self.FK__NhanVien__CuaHan__48CFD27E" FromRole="CuaHang" ToRole="NhanVien" />
+    <NavigationProperty Name="DonHangs" Relationship="Self.FK_CuaHang_DonHang" FromRole="CuaHang" ToRole="DonHang" />
+    <NavigationProperty Name="Khoes" Relationship="Self.FK_CuaHang_Kho" FromRole="CuaHang" ToRole="Kho" />
+    <NavigationProperty Name="NhanVien" Relationship="Self.FK_NhanVien_CuaHang" FromRole="CuaHang" ToRole="NhanVien" />
+  </EntityType>
+  <EntityType Name="DacDiemNoiBat">
+    <Key>
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="TenDacDiem" />
+    </Key>
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenDacDiem" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="SanPham" Relationship="Self.FK_SP_DacDiemNoiBat" FromRole="DacDiemNoiBat" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="DanhMuc">
+    <Key>
+      <PropertyRef Name="MaDanhMuc" />
+    </Key>
+    <Property Name="MaDanhMuc" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenDanhMuc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="Loais" Relationship="Self.FK_DM_LOAI" FromRole="DanhMuc" ToRole="Loai" />
+  </EntityType>
+  <EntityType Name="DonHang">
+    <Key>
+      <PropertyRef Name="MaDonHang" />
+    </Key>
+    <Property Name="MaDonHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="NhanVienPhuTrach" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MaKhachHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MaCuaHang" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="ThoiGianTao" Type="DateTime" Precision="3" />
+    <Property Name="MaVoucher" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Loai" Type="Boolean" />
+    <Property Name="TinhTrangXacNhan" Type="Boolean" />
+    <Property Name="TinhTrangThanhToan" Type="Boolean" />
+    <Property Name="TinhTrangGiaoHang" Type="Boolean" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="TongGiaTri" Type="Decimal" Precision="18" Scale="2" />
+    <NavigationProperty Name="ChiTietDonHangs" Relationship="Self.FK_DonHang_ChiTietDonHang" FromRole="DonHang" ToRole="ChiTietDonHang" />
+    <NavigationProperty Name="CuaHang" Relationship="Self.FK_CuaHang_DonHang" FromRole="DonHang" ToRole="CuaHang" />
+    <NavigationProperty Name="PhieuBaoHanhs" Relationship="Self.FK_DH_BaoHanh" FromRole="DonHang" ToRole="PhieuBaoHanh" />
+    <NavigationProperty Name="PhieuXuats" Relationship="Self.FK_DonHang_PhieuXuat" FromRole="DonHang" ToRole="PhieuXuat" />
+    <NavigationProperty Name="KhachHang" Relationship="Self.FK_KH_DonHang" FromRole="DonHang" ToRole="KhachHang" />
+    <NavigationProperty Name="NhanVien" Relationship="Self.FK_NV_DonHang" FromRole="DonHang" ToRole="NhanVien" />
+    <NavigationProperty Name="Voucher" Relationship="Self.FK_Voucher_DonHang" FromRole="DonHang" ToRole="Voucher" />
+  </EntityType>
+  <EntityType Name="HangTichDiem">
+    <Key>
+      <PropertyRef Name="MaHang" />
+    </Key>
+    <Property Name="MaHang" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenHang" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="TheTichDiems" Relationship="Self.FK_HangThe_TheTichDiem" FromRole="HangTichDiem" ToRole="TheTichDiem" />
+  </EntityType>
+  <EntityType Name="KhachHang">
+    <Key>
+      <PropertyRef Name="MaKhachHang" />
+    </Key>
+    <Property Name="MaKhachHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenKhachHang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SDT" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TaiKhoan" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="TrangThai" Type="Boolean" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="DonHangs" Relationship="Self.FK_KH_DonHang" FromRole="KhachHang" ToRole="DonHang" />
+    <NavigationProperty Name="PhieuBaoHanhs" Relationship="Self.FK_KH_BaoHanh" FromRole="KhachHang" ToRole="PhieuBaoHanh" />
+    <NavigationProperty Name="PhanHois" Relationship="Self.FK_KH_PhanHoi" FromRole="KhachHang" ToRole="PhanHoi" />
+    <NavigationProperty Name="TheTichDiems" Relationship="Self.FK_KH_TheTichDiem" FromRole="KhachHang" ToRole="TheTichDiem" />
+  </EntityType>
+  <EntityType Name="Kho">
+    <Key>
+      <PropertyRef Name="MaKho" />
+    </Key>
+    <Property Name="MaKho" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaCuaHang" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="ChiTietKhoes" Relationship="Self.FK_Kho_ChiTietKho" FromRole="Kho" ToRole="ChiTietKho" />
+    <NavigationProperty Name="CuaHang" Relationship="Self.FK_CuaHang_Kho" FromRole="Kho" ToRole="CuaHang" />
+    <NavigationProperty Name="PhieuNhaps" Relationship="Self.FK_Kho_PhieuNhap" FromRole="Kho" ToRole="PhieuNhap" />
+    <NavigationProperty Name="PhieuXuats" Relationship="Self.FK_Kho_PhieuXuat" FromRole="Kho" ToRole="PhieuXuat" />
+  </EntityType>
+  <EntityType Name="KhuyenMai">
+    <Key>
+      <PropertyRef Name="MaKhuyenMai" />
+    </Key>
+    <Property Name="MaKhuyenMai" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenKM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PhanTramKhuyenMai" Type="Double" Nullable="false" />
+    <Property Name="NgayBatDau" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NgayKetThuc" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="MoTa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="SanPhams" Relationship="Self.FK_KM_SP" FromRole="KhuyenMai" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="Loai">
+    <Key>
+      <PropertyRef Name="MaLoai" />
+    </Key>
+    <Property Name="MaLoai" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenLoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaDanhMuc" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="ChiTietLoais" Relationship="Self.FK_Loai_ChiTietLoai" FromRole="Loai" ToRole="ChiTietLoai" />
+    <NavigationProperty Name="DanhMuc" Relationship="Self.FK_DM_LOAI" FromRole="Loai" ToRole="DanhMuc" />
+  </EntityType>
+  <EntityType Name="MSdynamicsnapshotview">
+    <Key>
+      <PropertyRef Name="dynamic_snapshot_view_name" />
+    </Key>
+    <Property Name="dynamic_snapshot_view_name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MSmerge_dynamic_snapshots">
+    <Key>
+      <PropertyRef Name="partition_id" />
+    </Key>
+    <Property Name="partition_id" Type="Int32" Nullable="false" />
+    <Property Name="dynamic_snapshot_location" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="last_updated" Type="DateTime" Precision="3" />
+    <Property Name="last_started" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="MSmerge_partition_groups" Relationship="Self.FK__MSmerge_d__parti__2739D489" FromRole="MSmerge_dynamic_snapshots" ToRole="MSmerge_partition_groups" />
+  </EntityType>
+  <EntityType Name="MSmerge_partition_groups">
+    <Key>
+      <PropertyRef Name="partition_id" />
+    </Key>
+    <Property Name="partition_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="publication_number" Type="Int16" Nullable="false" />
+    <Property Name="maxgen_whenadded" Type="Int64" />
+    <Property Name="using_partition_groups" Type="Boolean" />
+    <Property Name="is_partition_active" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="MSmerge_dynamic_snapshots" Relationship="Self.FK__MSmerge_d__parti__2739D489" FromRole="MSmerge_partition_groups" ToRole="MSmerge_dynamic_snapshots" />
+  </EntityType>
+  <EntityType Name="NhaCungCap">
+    <Key>
+      <PropertyRef Name="MaNCC" />
+    </Key>
+    <Property Name="MaNCC" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenNCC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaSoThue" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="PhieuNhaps" Relationship="Self.FK_NCC_PhieuNhap" FromRole="NhaCungCap" ToRole="PhieuNhap" />
+  </EntityType>
+  <EntityType Name="NhanVien">
+    <Key>
+      <PropertyRef Name="MaNhanVien" />
+    </Key>
+    <Property Name="MaNhanVien" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenNhanVien" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SDT" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GioiTinh" Type="Boolean" Nullable="false" />
+    <Property Name="ChucVu" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CuaHang" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="HinhThuc" Type="Boolean" Nullable="false" />
+    <Property Name="TaiKhoan" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TrangThai" Type="Boolean" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="ChucVu1" Relationship="Self.FK_ChucVu_NhanVien" FromRole="NhanVien" ToRole="ChucVu" />
+    <NavigationProperty Name="CuaHang1" Relationship="Self.FK__NhanVien__CuaHan__48CFD27E" FromRole="NhanVien" ToRole="CuaHang" />
+    <NavigationProperty Name="CuaHangs" Relationship="Self.FK_NhanVien_CuaHang" FromRole="NhanVien" ToRole="CuaHang" />
+    <NavigationProperty Name="DonHangs" Relationship="Self.FK_NV_DonHang" FromRole="NhanVien" ToRole="DonHang" />
+    <NavigationProperty Name="PhieuNhaps" Relationship="Self.FK_NhanVien_NVPhuTrach" FromRole="NhanVien" ToRole="PhieuNhap" />
+    <NavigationProperty Name="PhieuXuats" Relationship="Self.FK_NVTaoPhieu_PhieuXuat" FromRole="NhanVien" ToRole="PhieuXuat" />
+    <NavigationProperty Name="PhieuXuats1" Relationship="Self.FK_NVTruongKho_PhieuXuat" FromRole="NhanVien" ToRole="PhieuXuat" />
+  </EntityType>
+  <EntityType Name="PhanHoi">
+    <Key>
+      <PropertyRef Name="MaPhanHoi" />
+    </Key>
+    <Property Name="MaPhanHoi" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaKhachHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="NoiDung" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="TrangThai" Type="Boolean" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="KhachHang" Relationship="Self.FK_KH_PhanHoi" FromRole="PhanHoi" ToRole="KhachHang" />
+  </EntityType>
+  <EntityType Name="PhieuBaoHanh">
+    <Key>
+      <PropertyRef Name="MaPhieuBH" />
+    </Key>
+    <Property Name="MaPhieuBH" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MaKhachHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MaDonHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="NgayTao" Type="DateTime" Precision="3" />
+    <Property Name="NgayHetHan" Type="DateTime" Precision="3" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="TrangThai" Type="Boolean" />
+    <NavigationProperty Name="DonHang" Relationship="Self.FK_DH_BaoHanh" FromRole="PhieuBaoHanh" ToRole="DonHang" />
+    <NavigationProperty Name="KhachHang" Relationship="Self.FK_KH_BaoHanh" FromRole="PhieuBaoHanh" ToRole="KhachHang" />
+    <NavigationProperty Name="SanPham" Relationship="Self.FK_SP_BaoHanh" FromRole="PhieuBaoHanh" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="PhieuNhap">
+    <Key>
+      <PropertyRef Name="MaPhieuNhap" />
+    </Key>
+    <Property Name="MaPhieuNhap" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="NhaCungCap" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="NhanVienTrucKho" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MaKho" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="ThoiGianTao" Type="DateTime" Precision="3" />
+    <Property Name="TongGiaTri" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="TrangThai" Type="Boolean" />
+    <NavigationProperty Name="ChiTietPhieuNhaps" Relationship="Self.FK_PhieuNhap_ChiTietPhieuNhap" FromRole="PhieuNhap" ToRole="ChiTietPhieuNhap" />
+    <NavigationProperty Name="Kho" Relationship="Self.FK_Kho_PhieuNhap" FromRole="PhieuNhap" ToRole="Kho" />
+    <NavigationProperty Name="NhaCungCap1" Relationship="Self.FK_NCC_PhieuNhap" FromRole="PhieuNhap" ToRole="NhaCungCap" />
+    <NavigationProperty Name="NhanVien" Relationship="Self.FK_NhanVien_NVPhuTrach" FromRole="PhieuNhap" ToRole="NhanVien" />
+  </EntityType>
+  <EntityType Name="PhieuXuat">
+    <Key>
+      <PropertyRef Name="MaPhieuXuat" />
+    </Key>
+    <Property Name="MaPhieuXuat" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="NhanVienTaoPhieu" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="NhanVienTruongKho" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MaKho" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaDonHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ThoiGianTao" Type="DateTime" Precision="3" />
+    <Property Name="TongGiaTri" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="TrangThai" Type="Boolean" />
+    <NavigationProperty Name="ChiTietPhieuXuats" Relationship="Self.FK_PhieuXuat_CTPhieuXuat" FromRole="PhieuXuat" ToRole="ChiTietPhieuXuat" />
+    <NavigationProperty Name="DonHang" Relationship="Self.FK_DonHang_PhieuXuat" FromRole="PhieuXuat" ToRole="DonHang" />
+    <NavigationProperty Name="Kho" Relationship="Self.FK_Kho_PhieuXuat" FromRole="PhieuXuat" ToRole="Kho" />
+    <NavigationProperty Name="NhanVien" Relationship="Self.FK_NVTaoPhieu_PhieuXuat" FromRole="PhieuXuat" ToRole="NhanVien" />
+    <NavigationProperty Name="NhanVien1" Relationship="Self.FK_NVTruongKho_PhieuXuat" FromRole="PhieuXuat" ToRole="NhanVien" />
+  </EntityType>
+  <EntityType Name="SanPham">
+    <Key>
+      <PropertyRef Name="MaSanPham" />
+    </Key>
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenSanPham" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaThuongHieu" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="AnhMinhHoa" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DonGia" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MaKhuyenMai" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="ChiTietDonHangs" Relationship="Self.FK_SanPham_ChiTietDonHang" FromRole="SanPham" ToRole="ChiTietDonHang" />
+    <NavigationProperty Name="ChiTietKhoes" Relationship="Self.FK_SanPham_ChiTietKho" FromRole="SanPham" ToRole="ChiTietKho" />
+    <NavigationProperty Name="ChiTietLoais" Relationship="Self.FK_SP_ChiTietLoai" FromRole="SanPham" ToRole="ChiTietLoai" />
+    <NavigationProperty Name="ChiTietPhieuNhaps" Relationship="Self.FK_SanPham_ChiTietPhieuNhap" FromRole="SanPham" ToRole="ChiTietPhieuNhap" />
+    <NavigationProperty Name="ChiTietPhieuXuats" Relationship="Self.FK_SanPham_CTPhieuXuat" FromRole="SanPham" ToRole="ChiTietPhieuXuat" />
+    <NavigationProperty Name="DacDiemNoiBats" Relationship="Self.FK_SP_DacDiemNoiBat" FromRole="SanPham" ToRole="DacDiemNoiBat" />
+    <NavigationProperty Name="KhuyenMai" Relationship="Self.FK_KM_SP" FromRole="SanPham" ToRole="KhuyenMai" />
+    <NavigationProperty Name="PhieuBaoHanhs" Relationship="Self.FK_SP_BaoHanh" FromRole="SanPham" ToRole="PhieuBaoHanh" />
+    <NavigationProperty Name="ThongSoKiThuats" Relationship="Self.FK_SP_ThongSoKiThuat" FromRole="SanPham" ToRole="ThongSoKiThuat" />
+    <NavigationProperty Name="TinhNangs" Relationship="Self.FK_SP_TinhNang" FromRole="SanPham" ToRole="TinhNang" />
+  </EntityType>
+  <EntityType Name="TheTichDiem">
+    <Key>
+      <PropertyRef Name="MaThe" />
+    </Key>
+    <Property Name="MaThe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaKhachHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Hang" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="NgayTao" Type="DateTime" Precision="3" />
+    <Property Name="Diem" Type="Int32" />
+    <Property Name="TrangThai" Type="Boolean" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="HangTichDiem" Relationship="Self.FK_HangThe_TheTichDiem" FromRole="TheTichDiem" ToRole="HangTichDiem" />
+    <NavigationProperty Name="KhachHang" Relationship="Self.FK_KH_TheTichDiem" FromRole="TheTichDiem" ToRole="KhachHang" />
+  </EntityType>
+  <EntityType Name="ThongSoKiThuat">
+    <Key>
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="TenThongSo" />
+    </Key>
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenThongSo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MoTa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="SanPham" Relationship="Self.FK_SP_ThongSoKiThuat" FromRole="ThongSoKiThuat" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="TinhNang">
+    <Key>
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="TenTinhNang" />
+    </Key>
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenTinhNang" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MoTa" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="HinhAnh" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="SanPham" Relationship="Self.FK_SP_TinhNang" FromRole="TinhNang" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="Voucher">
+    <Key>
+      <PropertyRef Name="MaVoucher" />
+    </Key>
+    <Property Name="MaVoucher" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenVoucher" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PhanTramKhuyenMai" Type="Double" Nullable="false" />
+    <Property Name="NgayBatDau" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NgayKetThuc" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="MoTa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="DonHangs" Relationship="Self.FK_Voucher_DonHang" FromRole="Voucher" ToRole="DonHang" />
+  </EntityType>
+  <EntityType Name="MSdynamicsnapshotjob">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="pubid" />
+      <PropertyRef Name="job_id" />
+      <PropertyRef Name="agent_id" />
+      <PropertyRef Name="dynamic_snapshot_location" />
+      <PropertyRef Name="partition_id" />
+      <PropertyRef Name="computed_dynsnap_location" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="pubid" Type="Guid" Nullable="false" />
+    <Property Name="job_id" Type="Guid" Nullable="false" />
+    <Property Name="agent_id" Type="Int32" Nullable="false" />
+    <Property Name="dynamic_filter_login" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="dynamic_filter_hostname" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="dynamic_snapshot_location" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="partition_id" Type="Int32" Nullable="false" />
+    <Property Name="computed_dynsnap_location" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MSmerge_agent_parameters">
+    <Key>
+      <PropertyRef Name="profile_name" />
+      <PropertyRef Name="parameter_name" />
+      <PropertyRef Name="value" />
+    </Key>
+    <Property Name="profile_name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="parameter_name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="value" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MSmerge_altsyncpartners">
+    <Key>
+      <PropertyRef Name="subid" />
+      <PropertyRef Name="alternate_subid" />
+    </Key>
+    <Property Name="subid" Type="Guid" Nullable="false" />
+    <Property Name="alternate_subid" Type="Guid" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MSmerge_articlehistory">
+    <Key>
+      <PropertyRef Name="session_id" />
+      <PropertyRef Name="start_time" />
+      <PropertyRef Name="inserts" />
+      <PropertyRef Name="updates" />
+      <PropertyRef Name="deletes" />
+      <PropertyRef Name="conflicts" />
+      <PropertyRef Name="rows_retried" />
+      <PropertyRef Name="percent_complete" />
+      <PropertyRef Name="relative_cost" />
+    </Key>
+    <Property Name="session_id" Type="Int32" Nullable="false" />
+    <Property Name="phase_id" Type="Int32" />
+    <Property Name="article_name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="start_time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="duration" Type="Int32" />
+    <Property Name="inserts" Type="Int32" Nullable="false" />
+    <Property Name="updates" Type="Int32" Nullable="false" />
+    <Property Name="deletes" Type="Int32" Nullable="false" />
+    <Property Name="conflicts" Type="Int32" Nullable="false" />
+    <Property Name="rows_retried" Type="Int32" Nullable="false" />
+    <Property Name="percent_complete" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="estimated_changes" Type="Int32" />
+    <Property Name="relative_cost" Type="Decimal" Precision="12" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_ChiTietDonHang">
+    <Key>
+      <PropertyRef Name="MaDonHang" />
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaDonHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="DonGia" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ThanhTien" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_ChiTietKho">
+    <Key>
+      <PropertyRef Name="MaKho" />
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaKho" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_ChiTietLoai">
+    <Key>
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="MaLoai" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaLoai" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuNhap">
+    <Key>
+      <PropertyRef Name="MaPhieuNhap" />
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaPhieuNhap" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="DonGiaNhap" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuXuat">
+    <Key>
+      <PropertyRef Name="MaPhieuXuat" />
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaPhieuXuat" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_ChucVu">
+    <Key>
+      <PropertyRef Name="MaChucVu" />
+      <PropertyRef Name="TenChucVu" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaChucVu" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenChucVu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_CuaHang">
+    <Key>
+      <PropertyRef Name="MaCuaHang" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaCuaHang" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CuaHangTruong" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="NgayThanhLap" Type="DateTime" Precision="3" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_DacDiemNoiBat">
+    <Key>
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="TenDacDiem" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenDacDiem" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_DanhMuc">
+    <Key>
+      <PropertyRef Name="MaDanhMuc" />
+      <PropertyRef Name="TenDanhMuc" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaDanhMuc" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenDanhMuc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_DonHang">
+    <Key>
+      <PropertyRef Name="MaDonHang" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaDonHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="NhanVienPhuTrach" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MaKhachHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MaCuaHang" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="ThoiGianTao" Type="DateTime" Precision="3" />
+    <Property Name="MaVoucher" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Loai" Type="Boolean" />
+    <Property Name="TinhTrangXacNhan" Type="Boolean" />
+    <Property Name="TinhTrangThanhToan" Type="Boolean" />
+    <Property Name="TinhTrangGiaoHang" Type="Boolean" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="TongGiaTri" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_HangTichDiem">
+    <Key>
+      <PropertyRef Name="MaHang" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaHang" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenHang" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_KhachHang">
+    <Key>
+      <PropertyRef Name="MaKhachHang" />
+      <PropertyRef Name="TenKhachHang" />
+      <PropertyRef Name="SDT" />
+      <PropertyRef Name="DiaChi" />
+      <PropertyRef Name="Email" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaKhachHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenKhachHang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SDT" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TaiKhoan" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="TrangThai" Type="Boolean" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_Kho">
+    <Key>
+      <PropertyRef Name="MaKho" />
+      <PropertyRef Name="MaCuaHang" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaKho" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaCuaHang" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_KhuyenMai">
+    <Key>
+      <PropertyRef Name="MaKhuyenMai" />
+      <PropertyRef Name="TenKM" />
+      <PropertyRef Name="PhanTramKhuyenMai" />
+      <PropertyRef Name="NgayBatDau" />
+      <PropertyRef Name="NgayKetThuc" />
+      <PropertyRef Name="MoTa" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaKhuyenMai" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenKM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PhanTramKhuyenMai" Type="Double" Nullable="false" />
+    <Property Name="NgayBatDau" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NgayKetThuc" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="MoTa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_Loai">
+    <Key>
+      <PropertyRef Name="MaLoai" />
+      <PropertyRef Name="TenLoai" />
+      <PropertyRef Name="MaDanhMuc" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaLoai" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenLoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaDanhMuc" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_NhaCungCap">
+    <Key>
+      <PropertyRef Name="MaNCC" />
+      <PropertyRef Name="TenNCC" />
+      <PropertyRef Name="MaSoThue" />
+      <PropertyRef Name="DiaChi" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaNCC" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenNCC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaSoThue" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_NhanVien">
+    <Key>
+      <PropertyRef Name="MaNhanVien" />
+      <PropertyRef Name="TenNhanVien" />
+      <PropertyRef Name="NgaySinh" />
+      <PropertyRef Name="SDT" />
+      <PropertyRef Name="Email" />
+      <PropertyRef Name="DiaChi" />
+      <PropertyRef Name="GioiTinh" />
+      <PropertyRef Name="ChucVu" />
+      <PropertyRef Name="CuaHang" />
+      <PropertyRef Name="HinhThuc" />
+      <PropertyRef Name="TaiKhoan" />
+      <PropertyRef Name="MatKhau" />
+      <PropertyRef Name="TrangThai" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaNhanVien" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenNhanVien" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SDT" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GioiTinh" Type="Boolean" Nullable="false" />
+    <Property Name="ChucVu" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CuaHang" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="HinhThuc" Type="Boolean" Nullable="false" />
+    <Property Name="TaiKhoan" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TrangThai" Type="Boolean" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_PhanHoi">
+    <Key>
+      <PropertyRef Name="MaPhanHoi" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaPhanHoi" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaKhachHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="NoiDung" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="TrangThai" Type="Boolean" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_PhieuBaoHanh">
+    <Key>
+      <PropertyRef Name="MaPhieuBH" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaPhieuBH" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MaKhachHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MaDonHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="NgayTao" Type="DateTime" Precision="3" />
+    <Property Name="NgayHetHan" Type="DateTime" Precision="3" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="TrangThai" Type="Boolean" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_PhieuNhap">
+    <Key>
+      <PropertyRef Name="MaPhieuNhap" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaPhieuNhap" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="NhaCungCap" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="NhanVienTrucKho" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MaKho" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="ThoiGianTao" Type="DateTime" Precision="3" />
+    <Property Name="TongGiaTri" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="TrangThai" Type="Boolean" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_PhieuXuat">
+    <Key>
+      <PropertyRef Name="MaPhieuXuat" />
+      <PropertyRef Name="MaKho" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaPhieuXuat" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="NhanVienTaoPhieu" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="NhanVienTruongKho" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MaKho" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaDonHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ThoiGianTao" Type="DateTime" Precision="3" />
+    <Property Name="TongGiaTri" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="TrangThai" Type="Boolean" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_SanPham">
+    <Key>
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="TenSanPham" />
+      <PropertyRef Name="MaThuongHieu" />
+      <PropertyRef Name="DonGia" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenSanPham" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaThuongHieu" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="AnhMinhHoa" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DonGia" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MaKhuyenMai" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_TheTichDiem">
+    <Key>
+      <PropertyRef Name="MaThe" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaThe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaKhachHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Hang" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="NgayTao" Type="DateTime" Precision="3" />
+    <Property Name="Diem" Type="Int32" />
+    <Property Name="TrangThai" Type="Boolean" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_ThongSoKiThuat">
+    <Key>
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="TenThongSo" />
+      <PropertyRef Name="MoTa" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenThongSo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MoTa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_TinhNang">
+    <Key>
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="TenTinhNang" />
+      <PropertyRef Name="MoTa" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenTinhNang" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MoTa" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="HinhAnh" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_Voucher">
+    <Key>
+      <PropertyRef Name="MaVoucher" />
+      <PropertyRef Name="TenVoucher" />
+      <PropertyRef Name="PhanTramKhuyenMai" />
+      <PropertyRef Name="NgayBatDau" />
+      <PropertyRef Name="NgayKetThuc" />
+      <PropertyRef Name="MoTa" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaVoucher" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenVoucher" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PhanTramKhuyenMai" Type="Double" Nullable="false" />
+    <Property Name="NgayBatDau" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NgayKetThuc" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="MoTa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflicts_info">
+    <Key>
+      <PropertyRef Name="tablenick" />
+      <PropertyRef Name="rowguid" />
+      <PropertyRef Name="MSrepl_create_time" />
+    </Key>
+    <Property Name="tablenick" Type="Int32" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="conflict_type" Type="Int32" />
+    <Property Name="reason_code" Type="Int32" />
+    <Property Name="reason_text" Type="String" MaxLength="720" FixedLength="false" Unicode="true" />
+    <Property Name="pubid" Type="Guid" />
+    <Property Name="MSrepl_create_time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_contents">
+    <Key>
+      <PropertyRef Name="tablenick" />
+      <PropertyRef Name="rowguid" />
+      <PropertyRef Name="generation" />
+      <PropertyRef Name="lineage" />
+    </Key>
+    <Property Name="tablenick" Type="Int32" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="generation" Type="Int64" Nullable="false" />
+    <Property Name="partchangegen" Type="Int64" />
+    <Property Name="lineage" Type="Binary" MaxLength="311" FixedLength="false" Nullable="false" />
+    <Property Name="colv1" Type="Binary" MaxLength="2953" FixedLength="false" />
+    <Property Name="marker" Type="Guid" />
+    <Property Name="logical_record_parent_rowguid" Type="Guid" />
+    <Property Name="logical_record_lineage" Type="Binary" MaxLength="311" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="MSmerge_current_partition_mappings">
+    <Key>
+      <PropertyRef Name="publication_number" />
+      <PropertyRef Name="tablenick" />
+      <PropertyRef Name="rowguid" />
+      <PropertyRef Name="partition_id" />
+    </Key>
+    <Property Name="publication_number" Type="Int16" Nullable="false" />
+    <Property Name="tablenick" Type="Int32" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="partition_id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MSmerge_errorlineage">
+    <Key>
+      <PropertyRef Name="tablenick" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="tablenick" Type="Int32" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="lineage" Type="Binary" MaxLength="311" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="MSmerge_generation_partition_mappings">
+    <Key>
+      <PropertyRef Name="publication_number" />
+      <PropertyRef Name="generation" />
+      <PropertyRef Name="partition_id" />
+      <PropertyRef Name="changecount" />
+    </Key>
+    <Property Name="publication_number" Type="Int16" Nullable="false" />
+    <Property Name="generation" Type="Int64" Nullable="false" />
+    <Property Name="partition_id" Type="Int32" Nullable="false" />
+    <Property Name="changecount" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MSmerge_genhistory">
+    <Key>
+      <PropertyRef Name="guidsrc" />
+      <PropertyRef Name="generation" />
+      <PropertyRef Name="nicknames" />
+      <PropertyRef Name="coldate" />
+      <PropertyRef Name="genstatus" />
+      <PropertyRef Name="changecount" />
+      <PropertyRef Name="subscriber_number" />
+    </Key>
+    <Property Name="guidsrc" Type="Guid" Nullable="false" />
+    <Property Name="pubid" Type="Guid" />
+    <Property Name="generation" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="art_nick" Type="Int32" />
+    <Property Name="nicknames" Type="Binary" MaxLength="1001" FixedLength="false" Nullable="false" />
+    <Property Name="coldate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="genstatus" Type="Byte" Nullable="false" />
+    <Property Name="changecount" Type="Int32" Nullable="false" />
+    <Property Name="subscriber_number" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MSmerge_history">
+    <Key>
+      <PropertyRef Name="agent_id" />
+      <PropertyRef Name="comments" />
+      <PropertyRef Name="error_id" />
+      <PropertyRef Name="timestamp" />
+      <PropertyRef Name="updateable_row" />
+      <PropertyRef Name="time" />
+    </Key>
+    <Property Name="session_id" Type="Int32" />
+    <Property Name="agent_id" Type="Int32" Nullable="false" />
+    <Property Name="comments" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="error_id" Type="Int32" Nullable="false" />
+    <Property Name="timestamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="updateable_row" Type="Boolean" Nullable="false" />
+    <Property Name="time" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="MSmerge_identity_range">
+    <Key>
+      <PropertyRef Name="subid" />
+      <PropertyRef Name="artid" />
+      <PropertyRef Name="is_pub_range" />
+    </Key>
+    <Property Name="subid" Type="Guid" Nullable="false" />
+    <Property Name="artid" Type="Guid" Nullable="false" />
+    <Property Name="range_begin" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="range_end" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="next_range_begin" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="next_range_end" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="is_pub_range" Type="Boolean" Nullable="false" />
+    <Property Name="max_used" Type="Decimal" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="MSmerge_log_files">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="file_name" />
+      <PropertyRef Name="upload_time" />
+      <PropertyRef Name="log_file_type" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pubid" Type="Guid" />
+    <Property Name="subid" Type="Guid" />
+    <Property Name="web_server" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="file_name" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="upload_time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="log_file_type" Type="Int32" Nullable="false" />
+    <Property Name="log_file" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="MSmerge_metadataaction_request">
+    <Key>
+      <PropertyRef Name="tablenick" />
+      <PropertyRef Name="rowguid" />
+      <PropertyRef Name="action" />
+    </Key>
+    <Property Name="tablenick" Type="Int32" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="action" Type="Byte" Nullable="false" />
+    <Property Name="generation" Type="Int64" />
+    <Property Name="changed" Type="Int32" />
+  </EntityType>
+  <EntityType Name="MSmerge_past_partition_mappings">
+    <Key>
+      <PropertyRef Name="publication_number" />
+      <PropertyRef Name="tablenick" />
+      <PropertyRef Name="rowguid" />
+      <PropertyRef Name="partition_id" />
+      <PropertyRef Name="reason" />
+    </Key>
+    <Property Name="publication_number" Type="Int16" Nullable="false" />
+    <Property Name="tablenick" Type="Int32" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="partition_id" Type="Int32" Nullable="false" />
+    <Property Name="generation" Type="Int64" />
+    <Property Name="reason" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MSmerge_replinfo">
+    <Key>
+      <PropertyRef Name="repid" />
+      <PropertyRef Name="use_interactive_resolver" />
+      <PropertyRef Name="validation_level" />
+      <PropertyRef Name="resync_gen" />
+      <PropertyRef Name="login_name" />
+      <PropertyRef Name="sync_info" />
+    </Key>
+    <Property Name="repid" Type="Guid" Nullable="false" />
+    <Property Name="use_interactive_resolver" Type="Boolean" Nullable="false" />
+    <Property Name="validation_level" Type="Int32" Nullable="false" />
+    <Property Name="resync_gen" Type="Int64" Nullable="false" />
+    <Property Name="login_name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="hostname" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="merge_jobid" Type="Binary" MaxLength="16" FixedLength="true" />
+    <Property Name="sync_info" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="MSmerge_sessions">
+    <Key>
+      <PropertyRef Name="session_id" />
+      <PropertyRef Name="agent_id" />
+      <PropertyRef Name="delivery_time" />
+      <PropertyRef Name="upload_time" />
+      <PropertyRef Name="download_time" />
+      <PropertyRef Name="schema_change_time" />
+      <PropertyRef Name="prepare_snapshot_time" />
+      <PropertyRef Name="delivery_rate" />
+      <PropertyRef Name="time_remaining" />
+      <PropertyRef Name="percent_complete" />
+      <PropertyRef Name="runstatus" />
+      <PropertyRef Name="timestamp" />
+    </Key>
+    <Property Name="subid" Type="Guid" />
+    <Property Name="session_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="agent_id" Type="Int32" Nullable="false" />
+    <Property Name="start_time" Type="DateTime" Precision="3" />
+    <Property Name="end_time" Type="DateTime" Precision="3" />
+    <Property Name="duration" Type="Int32" />
+    <Property Name="delivery_time" Type="Int32" Nullable="false" />
+    <Property Name="upload_time" Type="Int32" Nullable="false" />
+    <Property Name="download_time" Type="Int32" Nullable="false" />
+    <Property Name="schema_change_time" Type="Int32" Nullable="false" />
+    <Property Name="prepare_snapshot_time" Type="Int32" Nullable="false" />
+    <Property Name="delivery_rate" Type="Decimal" Precision="12" Scale="2" Nullable="false" />
+    <Property Name="time_remaining" Type="Int32" Nullable="false" />
+    <Property Name="percent_complete" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="upload_inserts" Type="Int32" />
+    <Property Name="upload_updates" Type="Int32" />
+    <Property Name="upload_deletes" Type="Int32" />
+    <Property Name="upload_conflicts" Type="Int32" />
+    <Property Name="upload_rows_retried" Type="Int32" />
+    <Property Name="download_inserts" Type="Int32" />
+    <Property Name="download_updates" Type="Int32" />
+    <Property Name="download_deletes" Type="Int32" />
+    <Property Name="download_conflicts" Type="Int32" />
+    <Property Name="download_rows_retried" Type="Int32" />
+    <Property Name="schema_changes" Type="Int32" />
+    <Property Name="bulk_inserts" Type="Int32" />
+    <Property Name="metadata_rows_cleanedup" Type="Int32" />
+    <Property Name="runstatus" Type="Int32" Nullable="false" />
+    <Property Name="estimated_upload_changes" Type="Int32" />
+    <Property Name="estimated_download_changes" Type="Int32" />
+    <Property Name="connection_type" Type="Int32" />
+    <Property Name="timestamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="current_phase_id" Type="Int32" />
+    <Property Name="spid" Type="Int16" />
+    <Property Name="spid_login_time" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="MSmerge_settingshistory">
+    <Key>
+      <PropertyRef Name="pubid" />
+      <PropertyRef Name="eventtype" />
+    </Key>
+    <Property Name="eventtime" Type="DateTime" Precision="3" />
+    <Property Name="pubid" Type="Guid" Nullable="false" />
+    <Property Name="artid" Type="Guid" />
+    <Property Name="eventtype" Type="Byte" Nullable="false" />
+    <Property Name="propertyname" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="previousvalue" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="newvalue" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="eventtext" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MSmerge_supportability_settings">
+    <Key>
+      <PropertyRef Name="support_options" />
+      <PropertyRef Name="log_severity" />
+      <PropertyRef Name="log_modules" />
+      <PropertyRef Name="log_file_size" />
+      <PropertyRef Name="no_of_log_files" />
+      <PropertyRef Name="upload_interval" />
+      <PropertyRef Name="delete_after_upload" />
+    </Key>
+    <Property Name="pubid" Type="Guid" />
+    <Property Name="subid" Type="Guid" />
+    <Property Name="web_server" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="support_options" Type="Int32" Nullable="false" />
+    <Property Name="log_severity" Type="Int32" Nullable="false" />
+    <Property Name="log_modules" Type="Int32" Nullable="false" />
+    <Property Name="log_file_path" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="log_file_name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="log_file_size" Type="Int32" Nullable="false" />
+    <Property Name="no_of_log_files" Type="Int32" Nullable="false" />
+    <Property Name="upload_interval" Type="Int32" Nullable="false" />
+    <Property Name="delete_after_upload" Type="Int32" Nullable="false" />
+    <Property Name="custom_script" Type="String" MaxLength="2048" FixedLength="false" Unicode="true" />
+    <Property Name="message_pattern" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="last_log_upload_time" Type="DateTime" Precision="3" />
+    <Property Name="agent_xe" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="agent_xe_ring_buffer" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="sql_xe" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="MSmerge_tombstone">
+    <Key>
+      <PropertyRef Name="rowguid" />
+      <PropertyRef Name="tablenick" />
+      <PropertyRef Name="type" />
+      <PropertyRef Name="lineage" />
+      <PropertyRef Name="generation" />
+    </Key>
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="tablenick" Type="Int32" Nullable="false" />
+    <Property Name="type" Type="Byte" Nullable="false" />
+    <Property Name="lineage" Type="Binary" MaxLength="311" FixedLength="false" Nullable="false" />
+    <Property Name="generation" Type="Int64" Nullable="false" />
+    <Property Name="logical_record_parent_rowguid" Type="Guid" />
+    <Property Name="logical_record_lineage" Type="Binary" MaxLength="311" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="MSrepl_errors">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="time" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="error_type_id" Type="Int32" />
+    <Property Name="source_type_id" Type="Int32" />
+    <Property Name="source_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="error_code" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="error_text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="xact_seqno" Type="Binary" MaxLength="16" FixedLength="false" />
+    <Property Name="command_id" Type="Int32" />
+    <Property Name="session_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="MSsnapshotdeliveryprogress">
+    <Key>
+      <PropertyRef Name="session_token" />
+      <PropertyRef Name="progress_token_hash" />
+      <PropertyRef Name="progress_token" />
+    </Key>
+    <Property Name="session_token" Type="String" MaxLength="260" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="progress_token_hash" Type="Int32" Nullable="false" />
+    <Property Name="progress_token" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="progress_timestamp" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="sysmergearticle">
+    <Key>
+      <PropertyRef Name="name" />
+      <PropertyRef Name="objid" />
+      <PropertyRef Name="sync_objid" />
+      <PropertyRef Name="artid" />
+      <PropertyRef Name="pubid" />
+      <PropertyRef Name="nickname" />
+      <PropertyRef Name="column_tracking" />
+      <PropertyRef Name="destination_object" />
+      <PropertyRef Name="excluded_col_count" />
+      <PropertyRef Name="vertical_partition" />
+      <PropertyRef Name="identity_support" />
+      <PropertyRef Name="allow_interactive_resolver" />
+      <PropertyRef Name="fast_multicol_updateproc" />
+      <PropertyRef Name="check_permissions" />
+      <PropertyRef Name="maxversion_at_cleanup" />
+      <PropertyRef Name="processing_order" />
+      <PropertyRef Name="upload_options" />
+      <PropertyRef Name="published_in_tran_pub" />
+      <PropertyRef Name="lightweight" />
+      <PropertyRef Name="compensate_for_errors" />
+      <PropertyRef Name="stream_blob_columns" />
+      <PropertyRef Name="preserve_rowguidcol" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="type" Type="Byte" />
+    <Property Name="objid" Type="Int32" Nullable="false" />
+    <Property Name="sync_objid" Type="Int32" Nullable="false" />
+    <Property Name="view_type" Type="Byte" />
+    <Property Name="artid" Type="Guid" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="pre_creation_command" Type="Byte" />
+    <Property Name="pubid" Type="Guid" Nullable="false" />
+    <Property Name="nickname" Type="Int32" Nullable="false" />
+    <Property Name="column_tracking" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="Byte" />
+    <Property Name="conflict_table" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="creation_script" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="conflict_script" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="article_resolver" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ins_conflict_proc" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="insert_proc" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="update_proc" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="select_proc" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="metadata_select_proc" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="delete_proc" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="schema_option" Type="Binary" MaxLength="8" FixedLength="true" />
+    <Property Name="destination_object" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="destination_owner" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="resolver_clsid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="subset_filterclause" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="missing_col_count" Type="Int32" />
+    <Property Name="missing_cols" Type="Binary" MaxLength="128" FixedLength="false" />
+    <Property Name="excluded_cols" Type="Binary" MaxLength="128" FixedLength="false" />
+    <Property Name="excluded_col_count" Type="Int32" Nullable="false" />
+    <Property Name="columns" Type="Binary" MaxLength="128" FixedLength="false" />
+    <Property Name="deleted_cols" Type="Binary" MaxLength="128" FixedLength="false" />
+    <Property Name="resolver_info" Type="String" MaxLength="517" FixedLength="false" Unicode="true" />
+    <Property Name="view_sel_proc" Type="String" MaxLength="290" FixedLength="false" Unicode="true" />
+    <Property Name="gen_cur" Type="Int64" />
+    <Property Name="vertical_partition" Type="Int32" Nullable="false" />
+    <Property Name="identity_support" Type="Int32" Nullable="false" />
+    <Property Name="before_image_objid" Type="Int32" />
+    <Property Name="before_view_objid" Type="Int32" />
+    <Property Name="verify_resolver_signature" Type="Int32" />
+    <Property Name="allow_interactive_resolver" Type="Boolean" Nullable="false" />
+    <Property Name="fast_multicol_updateproc" Type="Boolean" Nullable="false" />
+    <Property Name="check_permissions" Type="Int32" Nullable="false" />
+    <Property Name="maxversion_at_cleanup" Type="Int32" Nullable="false" />
+    <Property Name="processing_order" Type="Int32" Nullable="false" />
+    <Property Name="upload_options" Type="Byte" Nullable="false" />
+    <Property Name="published_in_tran_pub" Type="Boolean" Nullable="false" />
+    <Property Name="lightweight" Type="Boolean" Nullable="false" />
+    <Property Name="procname_postfix" Type="String" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="well_partitioned_lightweight" Type="Boolean" />
+    <Property Name="before_upd_view_objid" Type="Int32" />
+    <Property Name="delete_tracking" Type="Boolean" />
+    <Property Name="compensate_for_errors" Type="Boolean" Nullable="false" />
+    <Property Name="pub_range" Type="Int64" />
+    <Property Name="range" Type="Int64" />
+    <Property Name="threshold" Type="Int32" />
+    <Property Name="stream_blob_columns" Type="Boolean" Nullable="false" />
+    <Property Name="preserve_rowguidcol" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysmergepartitioninfo">
+    <Key>
+      <PropertyRef Name="artid" />
+      <PropertyRef Name="pubid" />
+    </Key>
+    <Property Name="artid" Type="Guid" Nullable="false" />
+    <Property Name="pubid" Type="Guid" Nullable="false" />
+    <Property Name="partition_view_id" Type="Int32" />
+    <Property Name="repl_view_id" Type="Int32" />
+    <Property Name="partition_deleted_view_rule" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="partition_inserted_view_rule" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="membership_eval_proc_name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="column_list" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="column_list_blob" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="expand_proc" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="logical_record_parent_nickname" Type="Int32" />
+    <Property Name="logical_record_view" Type="Int32" />
+    <Property Name="logical_record_deleted_view_rule" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="logical_record_level_conflict_detection" Type="Boolean" />
+    <Property Name="logical_record_level_conflict_resolution" Type="Boolean" />
+    <Property Name="partition_options" Type="Byte" />
+  </EntityType>
+  <EntityType Name="sysmergepublication">
+    <Key>
+      <PropertyRef Name="publisher" />
+      <PropertyRef Name="publisher_db" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="pubid" />
+      <PropertyRef Name="enabled_for_internet" />
+      <PropertyRef Name="dynamic_filters" />
+      <PropertyRef Name="snapshot_in_defaultfolder" />
+      <PropertyRef Name="compress_snapshot" />
+      <PropertyRef Name="ftp_port" />
+      <PropertyRef Name="backward_comp_level" />
+      <PropertyRef Name="max_concurrent_merge" />
+      <PropertyRef Name="max_concurrent_dynamic_snapshots" />
+      <PropertyRef Name="publication_number" />
+      <PropertyRef Name="replicate_ddl" />
+      <PropertyRef Name="allow_subscriber_initiated_snapshot" />
+      <PropertyRef Name="retention_period_unit" />
+      <PropertyRef Name="automatic_reinitialization_policy" />
+    </Key>
+    <Property Name="publisher" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="publisher_db" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="retention" Type="Int32" />
+    <Property Name="publication_type" Type="Byte" />
+    <Property Name="pubid" Type="Guid" Nullable="false" />
+    <Property Name="designmasterid" Type="Guid" />
+    <Property Name="parentid" Type="Guid" />
+    <Property Name="sync_mode" Type="Byte" />
+    <Property Name="allow_push" Type="Int32" />
+    <Property Name="allow_pull" Type="Int32" />
+    <Property Name="allow_anonymous" Type="Int32" />
+    <Property Name="centralized_conflicts" Type="Int32" />
+    <Property Name="status" Type="Byte" />
+    <Property Name="snapshot_ready" Type="Byte" />
+    <Property Name="enabled_for_internet" Type="Boolean" Nullable="false" />
+    <Property Name="dynamic_filters" Type="Boolean" Nullable="false" />
+    <Property Name="snapshot_in_defaultfolder" Type="Boolean" Nullable="false" />
+    <Property Name="alt_snapshot_folder" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="pre_snapshot_script" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="post_snapshot_script" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="compress_snapshot" Type="Boolean" Nullable="false" />
+    <Property Name="ftp_address" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ftp_port" Type="Int32" Nullable="false" />
+    <Property Name="ftp_subdirectory" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ftp_login" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ftp_password" Type="String" MaxLength="524" FixedLength="false" Unicode="true" />
+    <Property Name="conflict_retention" Type="Int32" />
+    <Property Name="keep_before_values" Type="Int32" />
+    <Property Name="allow_subscription_copy" Type="Boolean" />
+    <Property Name="allow_synctoalternate" Type="Boolean" />
+    <Property Name="validate_subscriber_info" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ad_guidname" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="backward_comp_level" Type="Int32" Nullable="false" />
+    <Property Name="max_concurrent_merge" Type="Int32" Nullable="false" />
+    <Property Name="max_concurrent_dynamic_snapshots" Type="Int32" Nullable="false" />
+    <Property Name="use_partition_groups" Type="Int16" />
+    <Property Name="dynamic_filters_function_list" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="partition_id_eval_proc" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="publication_number" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="replicate_ddl" Type="Int32" Nullable="false" />
+    <Property Name="allow_subscriber_initiated_snapshot" Type="Boolean" Nullable="false" />
+    <Property Name="distributor" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="snapshot_jobid" Type="Binary" MaxLength="16" FixedLength="true" />
+    <Property Name="allow_web_synchronization" Type="Boolean" />
+    <Property Name="web_synchronization_url" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="allow_partition_realignment" Type="Boolean" />
+    <Property Name="retention_period_unit" Type="Byte" Nullable="false" />
+    <Property Name="decentralized_conflicts" Type="Int32" />
+    <Property Name="generation_leveling_threshold" Type="Int32" />
+    <Property Name="automatic_reinitialization_policy" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysmergeschemaarticle">
+    <Key>
+      <PropertyRef Name="name" />
+      <PropertyRef Name="objid" />
+      <PropertyRef Name="artid" />
+      <PropertyRef Name="pubid" />
+      <PropertyRef Name="destination_object" />
+      <PropertyRef Name="processing_order" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="type" Type="Byte" />
+    <Property Name="objid" Type="Int32" Nullable="false" />
+    <Property Name="artid" Type="Guid" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="pre_creation_command" Type="Byte" />
+    <Property Name="pubid" Type="Guid" Nullable="false" />
+    <Property Name="status" Type="Byte" />
+    <Property Name="creation_script" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="schema_option" Type="Binary" MaxLength="8" FixedLength="true" />
+    <Property Name="destination_object" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="destination_owner" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="processing_order" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysmergeschemachange">
+    <Key>
+      <PropertyRef Name="pubid" />
+      <PropertyRef Name="schemaversion" />
+      <PropertyRef Name="schemaguid" />
+      <PropertyRef Name="schematype" />
+      <PropertyRef Name="schematext" />
+      <PropertyRef Name="schemastatus" />
+      <PropertyRef Name="schemasubtype" />
+    </Key>
+    <Property Name="pubid" Type="Guid" Nullable="false" />
+    <Property Name="artid" Type="Guid" />
+    <Property Name="schemaversion" Type="Int32" Nullable="false" />
+    <Property Name="schemaguid" Type="Guid" Nullable="false" />
+    <Property Name="schematype" Type="Int32" Nullable="false" />
+    <Property Name="schematext" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="schemastatus" Type="Byte" Nullable="false" />
+    <Property Name="schemasubtype" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysmergesubscription">
+    <Key>
+      <PropertyRef Name="db_name" />
+      <PropertyRef Name="datasource_type" />
+      <PropertyRef Name="subid" />
+      <PropertyRef Name="replnickname" />
+      <PropertyRef Name="replicastate" />
+      <PropertyRef Name="status" />
+      <PropertyRef Name="subscriber_type" />
+      <PropertyRef Name="subscription_type" />
+      <PropertyRef Name="sync_type" />
+      <PropertyRef Name="metadatacleanuptime" />
+      <PropertyRef Name="cleanedup_unsent_changes" />
+      <PropertyRef Name="replica_version" />
+      <PropertyRef Name="supportability_mode" />
+      <PropertyRef Name="subscriber_number" />
+    </Key>
+    <Property Name="subscriber_server" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="db_name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="pubid" Type="Guid" />
+    <Property Name="datasource_type" Type="Int32" Nullable="false" />
+    <Property Name="subid" Type="Guid" Nullable="false" />
+    <Property Name="replnickname" Type="Binary" MaxLength="6" FixedLength="true" Nullable="false" />
+    <Property Name="replicastate" Type="Guid" Nullable="false" />
+    <Property Name="status" Type="Byte" Nullable="false" />
+    <Property Name="subscriber_type" Type="Int32" Nullable="false" />
+    <Property Name="subscription_type" Type="Int32" Nullable="false" />
+    <Property Name="sync_type" Type="Byte" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="priority" Type="Single" />
+    <Property Name="recgen" Type="Int64" />
+    <Property Name="recguid" Type="Guid" />
+    <Property Name="sentgen" Type="Int64" />
+    <Property Name="sentguid" Type="Guid" />
+    <Property Name="schemaversion" Type="Int32" />
+    <Property Name="schemaguid" Type="Guid" />
+    <Property Name="last_validated" Type="DateTime" Precision="3" />
+    <Property Name="attempted_validate" Type="DateTime" Precision="3" />
+    <Property Name="last_sync_date" Type="DateTime" Precision="3" />
+    <Property Name="last_sync_status" Type="Int32" />
+    <Property Name="last_sync_summary" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="metadatacleanuptime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="partition_id" Type="Int32" />
+    <Property Name="cleanedup_unsent_changes" Type="Boolean" Nullable="false" />
+    <Property Name="replica_version" Type="Int32" Nullable="false" />
+    <Property Name="supportability_mode" Type="Int32" Nullable="false" />
+    <Property Name="application_name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="subscriber_number" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="last_makegeneration_datetime" Type="DateTime" Precision="3" />
+    <Property Name="last_local_sentgen" Type="Int64" />
+    <Property Name="last_local_recguid" Type="Guid" />
+    <Property Name="last_local_recgen" Type="Int64" />
+  </EntityType>
+  <EntityType Name="sysmergesubsetfilter">
+    <Key>
+      <PropertyRef Name="filtername" />
+      <PropertyRef Name="join_filterid" />
+      <PropertyRef Name="pubid" />
+      <PropertyRef Name="artid" />
+      <PropertyRef Name="art_nickname" />
+      <PropertyRef Name="join_articlename" />
+      <PropertyRef Name="join_nickname" />
+      <PropertyRef Name="join_unique_key" />
+      <PropertyRef Name="filter_type" />
+    </Key>
+    <Property Name="filtername" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="join_filterid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pubid" Type="Guid" Nullable="false" />
+    <Property Name="artid" Type="Guid" Nullable="false" />
+    <Property Name="art_nickname" Type="Int32" Nullable="false" />
+    <Property Name="join_articlename" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="join_nickname" Type="Int32" Nullable="false" />
+    <Property Name="join_unique_key" Type="Int32" Nullable="false" />
+    <Property Name="expand_proc" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="join_filterclause" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="filter_type" Type="Byte" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_DonHang_ChiTietDonHang">
+    <End Role="DonHang" Type="Self.DonHang" Multiplicity="1" />
+    <End Role="ChiTietDonHang" Type="Self.ChiTietDonHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DonHang">
+        <PropertyRef Name="MaDonHang" />
+      </Principal>
+      <Dependent Role="ChiTietDonHang">
+        <PropertyRef Name="MaDonHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SanPham_ChiTietDonHang">
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
+    <End Role="ChiTietDonHang" Type="Self.ChiTietDonHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="MaSanPham" />
+      </Principal>
+      <Dependent Role="ChiTietDonHang">
+        <PropertyRef Name="MaSanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kho_ChiTietKho">
+    <End Role="Kho" Type="Self.Kho" Multiplicity="1" />
+    <End Role="ChiTietKho" Type="Self.ChiTietKho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kho">
+        <PropertyRef Name="MaKho" />
+      </Principal>
+      <Dependent Role="ChiTietKho">
+        <PropertyRef Name="MaKho" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SanPham_ChiTietKho">
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
+    <End Role="ChiTietKho" Type="Self.ChiTietKho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="MaSanPham" />
+      </Principal>
+      <Dependent Role="ChiTietKho">
+        <PropertyRef Name="MaSanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Loai_ChiTietLoai">
+    <End Role="Loai" Type="Self.Loai" Multiplicity="1" />
+    <End Role="ChiTietLoai" Type="Self.ChiTietLoai" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Loai">
+        <PropertyRef Name="MaLoai" />
+      </Principal>
+      <Dependent Role="ChiTietLoai">
+        <PropertyRef Name="MaLoai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SP_ChiTietLoai">
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
+    <End Role="ChiTietLoai" Type="Self.ChiTietLoai" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="MaSanPham" />
+      </Principal>
+      <Dependent Role="ChiTietLoai">
+        <PropertyRef Name="MaSanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PhieuNhap_ChiTietPhieuNhap">
+    <End Role="PhieuNhap" Type="Self.PhieuNhap" Multiplicity="1" />
+    <End Role="ChiTietPhieuNhap" Type="Self.ChiTietPhieuNhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhieuNhap">
+        <PropertyRef Name="MaPhieuNhap" />
+      </Principal>
+      <Dependent Role="ChiTietPhieuNhap">
+        <PropertyRef Name="MaPhieuNhap" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SanPham_ChiTietPhieuNhap">
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
+    <End Role="ChiTietPhieuNhap" Type="Self.ChiTietPhieuNhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="MaSanPham" />
+      </Principal>
+      <Dependent Role="ChiTietPhieuNhap">
+        <PropertyRef Name="MaSanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PhieuXuat_CTPhieuXuat">
+    <End Role="PhieuXuat" Type="Self.PhieuXuat" Multiplicity="1" />
+    <End Role="ChiTietPhieuXuat" Type="Self.ChiTietPhieuXuat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhieuXuat">
+        <PropertyRef Name="MaPhieuXuat" />
+      </Principal>
+      <Dependent Role="ChiTietPhieuXuat">
+        <PropertyRef Name="MaPhieuXuat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SanPham_CTPhieuXuat">
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
+    <End Role="ChiTietPhieuXuat" Type="Self.ChiTietPhieuXuat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="MaSanPham" />
+      </Principal>
+      <Dependent Role="ChiTietPhieuXuat">
+        <PropertyRef Name="MaSanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChucVu_NhanVien">
+    <End Role="ChucVu" Type="Self.ChucVu" Multiplicity="1" />
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChucVu">
+        <PropertyRef Name="MaChucVu" />
+      </Principal>
+      <Dependent Role="NhanVien">
+        <PropertyRef Name="ChucVu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NhanVien__CuaHan__48CFD27E">
+    <End Role="CuaHang" Type="Self.CuaHang" Multiplicity="1" />
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CuaHang">
+        <PropertyRef Name="MaCuaHang" />
+      </Principal>
+      <Dependent Role="NhanVien">
+        <PropertyRef Name="CuaHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CuaHang_DonHang">
+    <End Role="CuaHang" Type="Self.CuaHang" Multiplicity="0..1" />
+    <End Role="DonHang" Type="Self.DonHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CuaHang">
+        <PropertyRef Name="MaCuaHang" />
+      </Principal>
+      <Dependent Role="DonHang">
+        <PropertyRef Name="MaCuaHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CuaHang_Kho">
+    <End Role="CuaHang" Type="Self.CuaHang" Multiplicity="1" />
+    <End Role="Kho" Type="Self.Kho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CuaHang">
+        <PropertyRef Name="MaCuaHang" />
+      </Principal>
+      <Dependent Role="Kho">
+        <PropertyRef Name="MaCuaHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NhanVien_CuaHang">
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+    <End Role="CuaHang" Type="Self.CuaHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="MaNhanVien" />
+      </Principal>
+      <Dependent Role="CuaHang">
+        <PropertyRef Name="CuaHangTruong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SP_DacDiemNoiBat">
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
+    <End Role="DacDiemNoiBat" Type="Self.DacDiemNoiBat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="MaSanPham" />
+      </Principal>
+      <Dependent Role="DacDiemNoiBat">
+        <PropertyRef Name="MaSanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DM_LOAI">
+    <End Role="DanhMuc" Type="Self.DanhMuc" Multiplicity="1" />
+    <End Role="Loai" Type="Self.Loai" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DanhMuc">
+        <PropertyRef Name="MaDanhMuc" />
+      </Principal>
+      <Dependent Role="Loai">
+        <PropertyRef Name="MaDanhMuc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DH_BaoHanh">
+    <End Role="DonHang" Type="Self.DonHang" Multiplicity="0..1" />
+    <End Role="PhieuBaoHanh" Type="Self.PhieuBaoHanh" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DonHang">
+        <PropertyRef Name="MaDonHang" />
+      </Principal>
+      <Dependent Role="PhieuBaoHanh">
+        <PropertyRef Name="MaDonHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DonHang_PhieuXuat">
+    <End Role="DonHang" Type="Self.DonHang" Multiplicity="0..1" />
+    <End Role="PhieuXuat" Type="Self.PhieuXuat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DonHang">
+        <PropertyRef Name="MaDonHang" />
+      </Principal>
+      <Dependent Role="PhieuXuat">
+        <PropertyRef Name="MaDonHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KH_DonHang">
+    <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="0..1" />
+    <End Role="DonHang" Type="Self.DonHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="MaKhachHang" />
+      </Principal>
+      <Dependent Role="DonHang">
+        <PropertyRef Name="MaKhachHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NV_DonHang">
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+    <End Role="DonHang" Type="Self.DonHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="MaNhanVien" />
+      </Principal>
+      <Dependent Role="DonHang">
+        <PropertyRef Name="NhanVienPhuTrach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Voucher_DonHang">
+    <End Role="Voucher" Type="Self.Voucher" Multiplicity="0..1" />
+    <End Role="DonHang" Type="Self.DonHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Voucher">
+        <PropertyRef Name="MaVoucher" />
+      </Principal>
+      <Dependent Role="DonHang">
+        <PropertyRef Name="MaVoucher" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HangThe_TheTichDiem">
+    <End Role="HangTichDiem" Type="Self.HangTichDiem" Multiplicity="0..1" />
+    <End Role="TheTichDiem" Type="Self.TheTichDiem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HangTichDiem">
+        <PropertyRef Name="MaHang" />
+      </Principal>
+      <Dependent Role="TheTichDiem">
+        <PropertyRef Name="Hang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KH_BaoHanh">
+    <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="0..1" />
+    <End Role="PhieuBaoHanh" Type="Self.PhieuBaoHanh" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="MaKhachHang" />
+      </Principal>
+      <Dependent Role="PhieuBaoHanh">
+        <PropertyRef Name="MaKhachHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KH_PhanHoi">
+    <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="0..1" />
+    <End Role="PhanHoi" Type="Self.PhanHoi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="MaKhachHang" />
+      </Principal>
+      <Dependent Role="PhanHoi">
+        <PropertyRef Name="MaKhachHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KH_TheTichDiem">
+    <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="0..1" />
+    <End Role="TheTichDiem" Type="Self.TheTichDiem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="MaKhachHang" />
+      </Principal>
+      <Dependent Role="TheTichDiem">
+        <PropertyRef Name="MaKhachHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kho_PhieuNhap">
+    <End Role="Kho" Type="Self.Kho" Multiplicity="0..1" />
+    <End Role="PhieuNhap" Type="Self.PhieuNhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kho">
+        <PropertyRef Name="MaKho" />
+      </Principal>
+      <Dependent Role="PhieuNhap">
+        <PropertyRef Name="MaKho" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kho_PhieuXuat">
+    <End Role="Kho" Type="Self.Kho" Multiplicity="1" />
+    <End Role="PhieuXuat" Type="Self.PhieuXuat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kho">
+        <PropertyRef Name="MaKho" />
+      </Principal>
+      <Dependent Role="PhieuXuat">
+        <PropertyRef Name="MaKho" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KM_SP">
+    <End Role="KhuyenMai" Type="Self.KhuyenMai" Multiplicity="0..1" />
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhuyenMai">
+        <PropertyRef Name="MaKhuyenMai" />
+      </Principal>
+      <Dependent Role="SanPham">
+        <PropertyRef Name="MaKhuyenMai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MSmerge_d__parti__2739D489">
+    <End Role="MSmerge_partition_groups" Type="Self.MSmerge_partition_groups" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="MSmerge_dynamic_snapshots" Type="Self.MSmerge_dynamic_snapshots" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="MSmerge_partition_groups">
+        <PropertyRef Name="partition_id" />
+      </Principal>
+      <Dependent Role="MSmerge_dynamic_snapshots">
+        <PropertyRef Name="partition_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NCC_PhieuNhap">
+    <End Role="NhaCungCap" Type="Self.NhaCungCap" Multiplicity="0..1" />
+    <End Role="PhieuNhap" Type="Self.PhieuNhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhaCungCap">
+        <PropertyRef Name="MaNCC" />
+      </Principal>
+      <Dependent Role="PhieuNhap">
+        <PropertyRef Name="NhaCungCap" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NhanVien_NVPhuTrach">
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+    <End Role="PhieuNhap" Type="Self.PhieuNhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="MaNhanVien" />
+      </Principal>
+      <Dependent Role="PhieuNhap">
+        <PropertyRef Name="NhanVienTrucKho" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NVTaoPhieu_PhieuXuat">
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+    <End Role="PhieuXuat" Type="Self.PhieuXuat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="MaNhanVien" />
+      </Principal>
+      <Dependent Role="PhieuXuat">
+        <PropertyRef Name="NhanVienTaoPhieu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NVTruongKho_PhieuXuat">
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+    <End Role="PhieuXuat" Type="Self.PhieuXuat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="MaNhanVien" />
+      </Principal>
+      <Dependent Role="PhieuXuat">
+        <PropertyRef Name="NhanVienTruongKho" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SP_BaoHanh">
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="0..1" />
+    <End Role="PhieuBaoHanh" Type="Self.PhieuBaoHanh" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="MaSanPham" />
+      </Principal>
+      <Dependent Role="PhieuBaoHanh">
+        <PropertyRef Name="MaSanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SP_ThongSoKiThuat">
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
+    <End Role="ThongSoKiThuat" Type="Self.ThongSoKiThuat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="MaSanPham" />
+      </Principal>
+      <Dependent Role="ThongSoKiThuat">
+        <PropertyRef Name="MaSanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SP_TinhNang">
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
+    <End Role="TinhNang" Type="Self.TinhNang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="MaSanPham" />
+      </Principal>
+      <Dependent Role="TinhNang">
+        <PropertyRef Name="MaSanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QLDienMayEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ChiTietDonHangs" EntityType="Self.ChiTietDonHang" />
+    <EntitySet Name="ChiTietKhoes" EntityType="Self.ChiTietKho" />
+    <EntitySet Name="ChiTietLoais" EntityType="Self.ChiTietLoai" />
+    <EntitySet Name="ChiTietPhieuNhaps" EntityType="Self.ChiTietPhieuNhap" />
+    <EntitySet Name="ChiTietPhieuXuats" EntityType="Self.ChiTietPhieuXuat" />
+    <EntitySet Name="ChucVus" EntityType="Self.ChucVu" />
+    <EntitySet Name="CuaHangs" EntityType="Self.CuaHang" />
+    <EntitySet Name="DacDiemNoiBats" EntityType="Self.DacDiemNoiBat" />
+    <EntitySet Name="DanhMucs" EntityType="Self.DanhMuc" />
+    <EntitySet Name="DonHangs" EntityType="Self.DonHang" />
+    <EntitySet Name="HangTichDiems" EntityType="Self.HangTichDiem" />
+    <EntitySet Name="KhachHangs" EntityType="Self.KhachHang" />
+    <EntitySet Name="Khoes" EntityType="Self.Kho" />
+    <EntitySet Name="KhuyenMais" EntityType="Self.KhuyenMai" />
+    <EntitySet Name="Loais" EntityType="Self.Loai" />
+    <EntitySet Name="MSdynamicsnapshotviews" EntityType="Self.MSdynamicsnapshotview" />
+    <EntitySet Name="MSmerge_dynamic_snapshots" EntityType="Self.MSmerge_dynamic_snapshots" />
+    <EntitySet Name="MSmerge_partition_groups" EntityType="Self.MSmerge_partition_groups" />
+    <EntitySet Name="NhaCungCaps" EntityType="Self.NhaCungCap" />
+    <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
+    <EntitySet Name="PhanHois" EntityType="Self.PhanHoi" />
+    <EntitySet Name="PhieuBaoHanhs" EntityType="Self.PhieuBaoHanh" />
+    <EntitySet Name="PhieuNhaps" EntityType="Self.PhieuNhap" />
+    <EntitySet Name="PhieuXuats" EntityType="Self.PhieuXuat" />
+    <EntitySet Name="SanPhams" EntityType="Self.SanPham" />
+    <EntitySet Name="TheTichDiems" EntityType="Self.TheTichDiem" />
+    <EntitySet Name="ThongSoKiThuats" EntityType="Self.ThongSoKiThuat" />
+    <EntitySet Name="TinhNangs" EntityType="Self.TinhNang" />
+    <EntitySet Name="Vouchers" EntityType="Self.Voucher" />
+    <EntitySet Name="MSdynamicsnapshotjobs" EntityType="Self.MSdynamicsnapshotjob" />
+    <EntitySet Name="MSmerge_agent_parameters" EntityType="Self.MSmerge_agent_parameters" />
+    <EntitySet Name="MSmerge_altsyncpartners" EntityType="Self.MSmerge_altsyncpartners" />
+    <EntitySet Name="MSmerge_articlehistory" EntityType="Self.MSmerge_articlehistory" />
+    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_ChiTietDonHang" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_ChiTietDonHang" />
+    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_ChiTietKho" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_ChiTietKho" />
+    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_ChiTietLoai" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_ChiTietLoai" />
+    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuNhap" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuNhap" />
+    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuXuat" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuXuat" />
+    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_ChucVu" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_ChucVu" />
+    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_CuaHang" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_CuaHang" />
+    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_DacDiemNoiBat" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_DacDiemNoiBat" />
+    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_DanhMuc" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_DanhMuc" />
+    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_DonHang" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_DonHang" />
+    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_HangTichDiem" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_HangTichDiem" />
+    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_KhachHang" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_KhachHang" />
+    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_Kho" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_Kho" />
+    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_KhuyenMai" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_KhuyenMai" />
+    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_Loai" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_Loai" />
+    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_NhaCungCap" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_NhaCungCap" />
+    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_NhanVien" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_NhanVien" />
+    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_PhanHoi" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_PhanHoi" />
+    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_PhieuBaoHanh" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_PhieuBaoHanh" />
+    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_PhieuNhap" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_PhieuNhap" />
+    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_PhieuXuat" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_PhieuXuat" />
+    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_SanPham" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_SanPham" />
+    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_TheTichDiem" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_TheTichDiem" />
+    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_ThongSoKiThuat" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_ThongSoKiThuat" />
+    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_TinhNang" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_TinhNang" />
+    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_Voucher" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_Voucher" />
+    <EntitySet Name="MSmerge_conflicts_info" EntityType="Self.MSmerge_conflicts_info" />
+    <EntitySet Name="MSmerge_contents" EntityType="Self.MSmerge_contents" />
+    <EntitySet Name="MSmerge_current_partition_mappings" EntityType="Self.MSmerge_current_partition_mappings" />
+    <EntitySet Name="MSmerge_errorlineage" EntityType="Self.MSmerge_errorlineage" />
+    <EntitySet Name="MSmerge_generation_partition_mappings" EntityType="Self.MSmerge_generation_partition_mappings" />
+    <EntitySet Name="MSmerge_genhistory" EntityType="Self.MSmerge_genhistory" />
+    <EntitySet Name="MSmerge_history" EntityType="Self.MSmerge_history" />
+    <EntitySet Name="MSmerge_identity_range" EntityType="Self.MSmerge_identity_range" />
+    <EntitySet Name="MSmerge_log_files" EntityType="Self.MSmerge_log_files" />
+    <EntitySet Name="MSmerge_metadataaction_request" EntityType="Self.MSmerge_metadataaction_request" />
+    <EntitySet Name="MSmerge_past_partition_mappings" EntityType="Self.MSmerge_past_partition_mappings" />
+    <EntitySet Name="MSmerge_replinfo" EntityType="Self.MSmerge_replinfo" />
+    <EntitySet Name="MSmerge_sessions" EntityType="Self.MSmerge_sessions" />
+    <EntitySet Name="MSmerge_settingshistory" EntityType="Self.MSmerge_settingshistory" />
+    <EntitySet Name="MSmerge_supportability_settings" EntityType="Self.MSmerge_supportability_settings" />
+    <EntitySet Name="MSmerge_tombstone" EntityType="Self.MSmerge_tombstone" />
+    <EntitySet Name="MSrepl_errors" EntityType="Self.MSrepl_errors" />
+    <EntitySet Name="MSsnapshotdeliveryprogresses" EntityType="Self.MSsnapshotdeliveryprogress" />
+    <EntitySet Name="sysmergearticles" EntityType="Self.sysmergearticle" />
+    <EntitySet Name="sysmergepartitioninfoes" EntityType="Self.sysmergepartitioninfo" />
+    <EntitySet Name="sysmergepublications" EntityType="Self.sysmergepublication" />
+    <EntitySet Name="sysmergeschemaarticles" EntityType="Self.sysmergeschemaarticle" />
+    <EntitySet Name="sysmergeschemachanges" EntityType="Self.sysmergeschemachange" />
+    <EntitySet Name="sysmergesubscriptions" EntityType="Self.sysmergesubscription" />
+    <EntitySet Name="sysmergesubsetfilters" EntityType="Self.sysmergesubsetfilter" />
+    <AssociationSet Name="FK_DonHang_ChiTietDonHang" Association="Self.FK_DonHang_ChiTietDonHang">
+      <End Role="DonHang" EntitySet="DonHangs" />
+      <End Role="ChiTietDonHang" EntitySet="ChiTietDonHangs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SanPham_ChiTietDonHang" Association="Self.FK_SanPham_ChiTietDonHang">
+      <End Role="SanPham" EntitySet="SanPhams" />
+      <End Role="ChiTietDonHang" EntitySet="ChiTietDonHangs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kho_ChiTietKho" Association="Self.FK_Kho_ChiTietKho">
+      <End Role="Kho" EntitySet="Khoes" />
+      <End Role="ChiTietKho" EntitySet="ChiTietKhoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SanPham_ChiTietKho" Association="Self.FK_SanPham_ChiTietKho">
+      <End Role="SanPham" EntitySet="SanPhams" />
+      <End Role="ChiTietKho" EntitySet="ChiTietKhoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Loai_ChiTietLoai" Association="Self.FK_Loai_ChiTietLoai">
+      <End Role="Loai" EntitySet="Loais" />
+      <End Role="ChiTietLoai" EntitySet="ChiTietLoais" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SP_ChiTietLoai" Association="Self.FK_SP_ChiTietLoai">
+      <End Role="SanPham" EntitySet="SanPhams" />
+      <End Role="ChiTietLoai" EntitySet="ChiTietLoais" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PhieuNhap_ChiTietPhieuNhap" Association="Self.FK_PhieuNhap_ChiTietPhieuNhap">
+      <End Role="PhieuNhap" EntitySet="PhieuNhaps" />
+      <End Role="ChiTietPhieuNhap" EntitySet="ChiTietPhieuNhaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SanPham_ChiTietPhieuNhap" Association="Self.FK_SanPham_ChiTietPhieuNhap">
+      <End Role="SanPham" EntitySet="SanPhams" />
+      <End Role="ChiTietPhieuNhap" EntitySet="ChiTietPhieuNhaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PhieuXuat_CTPhieuXuat" Association="Self.FK_PhieuXuat_CTPhieuXuat">
+      <End Role="PhieuXuat" EntitySet="PhieuXuats" />
+      <End Role="ChiTietPhieuXuat" EntitySet="ChiTietPhieuXuats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SanPham_CTPhieuXuat" Association="Self.FK_SanPham_CTPhieuXuat">
+      <End Role="SanPham" EntitySet="SanPhams" />
+      <End Role="ChiTietPhieuXuat" EntitySet="ChiTietPhieuXuats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChucVu_NhanVien" Association="Self.FK_ChucVu_NhanVien">
+      <End Role="ChucVu" EntitySet="ChucVus" />
+      <End Role="NhanVien" EntitySet="NhanViens" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NhanVien__CuaHan__48CFD27E" Association="Self.FK__NhanVien__CuaHan__48CFD27E">
+      <End Role="CuaHang" EntitySet="CuaHangs" />
+      <End Role="NhanVien" EntitySet="NhanViens" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CuaHang_DonHang" Association="Self.FK_CuaHang_DonHang">
+      <End Role="CuaHang" EntitySet="CuaHangs" />
+      <End Role="DonHang" EntitySet="DonHangs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CuaHang_Kho" Association="Self.FK_CuaHang_Kho">
+      <End Role="CuaHang" EntitySet="CuaHangs" />
+      <End Role="Kho" EntitySet="Khoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NhanVien_CuaHang" Association="Self.FK_NhanVien_CuaHang">
+      <End Role="NhanVien" EntitySet="NhanViens" />
+      <End Role="CuaHang" EntitySet="CuaHangs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SP_DacDiemNoiBat" Association="Self.FK_SP_DacDiemNoiBat">
+      <End Role="SanPham" EntitySet="SanPhams" />
+      <End Role="DacDiemNoiBat" EntitySet="DacDiemNoiBats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DM_LOAI" Association="Self.FK_DM_LOAI">
+      <End Role="DanhMuc" EntitySet="DanhMucs" />
+      <End Role="Loai" EntitySet="Loais" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DH_BaoHanh" Association="Self.FK_DH_BaoHanh">
+      <End Role="DonHang" EntitySet="DonHangs" />
+      <End Role="PhieuBaoHanh" EntitySet="PhieuBaoHanhs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DonHang_PhieuXuat" Association="Self.FK_DonHang_PhieuXuat">
+      <End Role="DonHang" EntitySet="DonHangs" />
+      <End Role="PhieuXuat" EntitySet="PhieuXuats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KH_DonHang" Association="Self.FK_KH_DonHang">
+      <End Role="KhachHang" EntitySet="KhachHangs" />
+      <End Role="DonHang" EntitySet="DonHangs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NV_DonHang" Association="Self.FK_NV_DonHang">
+      <End Role="NhanVien" EntitySet="NhanViens" />
+      <End Role="DonHang" EntitySet="DonHangs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Voucher_DonHang" Association="Self.FK_Voucher_DonHang">
+      <End Role="Voucher" EntitySet="Vouchers" />
+      <End Role="DonHang" EntitySet="DonHangs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HangThe_TheTichDiem" Association="Self.FK_HangThe_TheTichDiem">
+      <End Role="HangTichDiem" EntitySet="HangTichDiems" />
+      <End Role="TheTichDiem" EntitySet="TheTichDiems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KH_BaoHanh" Association="Self.FK_KH_BaoHanh">
+      <End Role="KhachHang" EntitySet="KhachHangs" />
+      <End Role="PhieuBaoHanh" EntitySet="PhieuBaoHanhs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KH_PhanHoi" Association="Self.FK_KH_PhanHoi">
+      <End Role="KhachHang" EntitySet="KhachHangs" />
+      <End Role="PhanHoi" EntitySet="PhanHois" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KH_TheTichDiem" Association="Self.FK_KH_TheTichDiem">
+      <End Role="KhachHang" EntitySet="KhachHangs" />
+      <End Role="TheTichDiem" EntitySet="TheTichDiems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kho_PhieuNhap" Association="Self.FK_Kho_PhieuNhap">
+      <End Role="Kho" EntitySet="Khoes" />
+      <End Role="PhieuNhap" EntitySet="PhieuNhaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kho_PhieuXuat" Association="Self.FK_Kho_PhieuXuat">
+      <End Role="Kho" EntitySet="Khoes" />
+      <End Role="PhieuXuat" EntitySet="PhieuXuats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KM_SP" Association="Self.FK_KM_SP">
+      <End Role="KhuyenMai" EntitySet="KhuyenMais" />
+      <End Role="SanPham" EntitySet="SanPhams" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MSmerge_d__parti__2739D489" Association="Self.FK__MSmerge_d__parti__2739D489">
+      <End Role="MSmerge_partition_groups" EntitySet="MSmerge_partition_groups" />
+      <End Role="MSmerge_dynamic_snapshots" EntitySet="MSmerge_dynamic_snapshots" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NCC_PhieuNhap" Association="Self.FK_NCC_PhieuNhap">
+      <End Role="NhaCungCap" EntitySet="NhaCungCaps" />
+      <End Role="PhieuNhap" EntitySet="PhieuNhaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NhanVien_NVPhuTrach" Association="Self.FK_NhanVien_NVPhuTrach">
+      <End Role="NhanVien" EntitySet="NhanViens" />
+      <End Role="PhieuNhap" EntitySet="PhieuNhaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NVTaoPhieu_PhieuXuat" Association="Self.FK_NVTaoPhieu_PhieuXuat">
+      <End Role="NhanVien" EntitySet="NhanViens" />
+      <End Role="PhieuXuat" EntitySet="PhieuXuats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NVTruongKho_PhieuXuat" Association="Self.FK_NVTruongKho_PhieuXuat">
+      <End Role="NhanVien" EntitySet="NhanViens" />
+      <End Role="PhieuXuat" EntitySet="PhieuXuats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SP_BaoHanh" Association="Self.FK_SP_BaoHanh">
+      <End Role="SanPham" EntitySet="SanPhams" />
+      <End Role="PhieuBaoHanh" EntitySet="PhieuBaoHanhs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SP_ThongSoKiThuat" Association="Self.FK_SP_ThongSoKiThuat">
+      <End Role="SanPham" EntitySet="SanPhams" />
+      <End Role="ThongSoKiThuat" EntitySet="ThongSoKiThuats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SP_TinhNang" Association="Self.FK_SP_TinhNang">
+      <End Role="SanPham" EntitySet="SanPhams" />
+      <End Role="TinhNang" EntitySet="TinhNangs" />
+    </AssociationSet>
+    <FunctionImport Name="test" ReturnType="Collection(QLDienMayModel.test_Result)" />
+  </EntityContainer>
+  <ComplexType Name="test_Result">
+    <Property Type="String" Name="MaCuaHang" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="DiaChi" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CuaHangTruong" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="NgayThanhLap" Nullable="true" Precision="23" />
+    <Property Type="Guid" Name="rowguid" Nullable="false" />
+  </ComplexType>
+</Schema>
