@@ -498,51 +498,57 @@ CREATE TRIGGER TAO_ID_CHO_KHO ON Kho INSTEAD OF INSERT
 AS
 BEGIN
 	DECLARE @CUAHANG CHAR(5) = (SELECT MaCuaHang FROM inserted)
+	DECLARE @TRUONGKHO CHAR(10) = (SELECT TruongKho FROM inserted)
 	DECLARE @DIACHI NVARCHAR(100) = (SELECT DiaChi FROM inserted)
-
-	DECLARE @DEMKHO INT = (SELECT COUNT(MaKho) FROM Kho)
-	DECLARE @I INT = 0
-	SET @DEMKHO += 1
-	DECLARE @ID CHAR(5)
-
-	DECLARE @CHUOISOKHONG VARCHAR(4) = '0'
-	DECLARE @LENGTHID INT = 5 - (LEN('K') + LEN(@DEMKHO))
-
-	WHILE(@I < @LENGTHID - 1)
+	IF EXISTS(SELECT MaCuaHang FROM Kho, NhanVien WHERE MaNhanVien = @TRUONGKHO AND NhanVien.CuaHang = @CUAHANG)
 	BEGIN
-		SET @CHUOISOKHONG += '0'
-		SET @I += 1
-	END
-
-	SET @ID  = CONCAT('K',@CHUOISOKHONG,@DEMKHO)
-	DECLARE @DEMID INT = (SELECT COUNT(MaKho) FROM Kho WHERE MaKho = @ID)
-
-	WHILE(@DEMID <> 0)
-	BEGIN
+		DECLARE @CH CHAR(10) = (SELECT MaCuaHang FROM Kho, NhanVien WHERE MaNhanVien = @TRUONGKHO AND Kho.MaCuaHang = NhanVien.CuaHang)
+		DECLARE @DEMKHO INT = (SELECT COUNT(MaKho) FROM Kho)
+		DECLARE @I INT = 0
 		SET @DEMKHO += 1
-		SET @CHUOISOKHONG = '0'
-		SET @ID = 0
-		SET @LENGTHID = 5 - (LEN('K') + LEN(@DEMKHO))
+		DECLARE @ID CHAR(5)
+
+		DECLARE @CHUOISOKHONG VARCHAR(4) = '0'
+		DECLARE @LENGTHID INT = 5 - (LEN('K') + LEN(@DEMKHO))
 
 		WHILE(@I < @LENGTHID - 1)
 		BEGIN
 			SET @CHUOISOKHONG += '0'
 			SET @I += 1
 		END
+
 		SET @ID  = CONCAT('K',@CHUOISOKHONG,@DEMKHO)
-		SET @DEMID = (SELECT COUNT(MaKho) FROM Kho WHERE MaKho = @DEMKHO)
+		DECLARE @DEMID INT = (SELECT COUNT(MaKho) FROM Kho WHERE MaKho = @ID)
+
+		WHILE(@DEMID <> 0)
+		BEGIN
+			SET @DEMKHO += 1
+			SET @CHUOISOKHONG = '0'
+			SET @ID = 0
+			SET @LENGTHID = 5 - (LEN('K') + LEN(@DEMKHO))
+
+			WHILE(@I < @LENGTHID - 1)
+			BEGIN
+				SET @CHUOISOKHONG += '0'
+				SET @I += 1
+			END
+			SET @ID  = CONCAT('K',@CHUOISOKHONG,@DEMKHO)
+			SET @DEMID = (SELECT COUNT(MaKho) FROM Kho WHERE MaKho = @DEMKHO)
+		END
+		BEGIN TRAN
+		BEGIN TRY
+			INSERT INTO Kho(MaKho,MaCuaHang,TruongKho,DiaChi)
+			VALUES(@ID,@CUAHANG,@TRUONGKHO,@DIACHI)
+			COMMIT
+		END TRY
+		BEGIN CATCH
+			ROLLBACK
+			DECLARE @ERRORMESS VARCHAR(2000) = 'Lỗi: ' + ERROR_MESSAGE()
+			RAISERROR(@ERRORMESS,16,1)
+		END CATCH
 	END
-	BEGIN TRAN
-	BEGIN TRY
-		INSERT INTO Kho(MaKho,MaCuaHang,DiaChi)
-		VALUES(@ID,@CUAHANG,@DIACHI)
-		COMMIT
-	END TRY
-	BEGIN CATCH
-		ROLLBACK
-		DECLARE @ERRORMESS VARCHAR(2000) = 'Lỗi: ' + ERROR_MESSAGE()
-		RAISERROR(@ERRORMESS,16,1)
-	END CATCH
+	ELSE
+		RAISERROR('Mã nhân viên trưởng kho không trực thuộc cửa hàng! Đổi nhân viên khác',16,1)
 END
 GO
 
@@ -554,7 +560,7 @@ BEGIN
 	DECLARE @NVTRUCKHO CHAR(10) = (SELECT NhanVienTrucKho  FROM inserted)
 	DECLARE @MAKHO CHAR(5) = (SELECT MaKho  FROM inserted)
 	DECLARE @THOIGIANTAO DATETIME = (SELECT ThoiGianTao FROM inserted)
-
+	DECLARE @TrangThai BIT = (SELECT TrangThai FROM PhieuNhap)
 	IF((SELECT MaCuaHang FROM Kho WHERE MaKho = @MAKHO) <> (SELECT CuaHang FROM NhanVien WHERE MaNhanVien = @NVTRUCKHO))
 	BEGIN
 		ROLLBACK
@@ -922,5 +928,123 @@ BEGIN
 			RAISERROR(@ERRORMESS,16,1)
 		END CATCH
 	END	
+END
+GO
+
+
+---Tao ID cho PhieuXuat---
+
+CREATE TRIGGER TAO_ID_PHIEU_XUAT ON PhieuXuat INSTEAD OF INSERT 
+AS
+BEGIN
+	DECLARE @nhan_vien_tao_phieu CHAR(10) = (SELECT NhanVienTaoPhieu FROM inserted)
+	DECLARE @nhan_vien_truong_kho CHAR(10) = (SELECT NhanVienTruongKho FROM inserted)
+	DECLARE @ma_kho CHAR(5) = (SELECT MaKho FROM inserted)
+	DECLARE @ma_don_hang CHAR(10) = (SELECT MaDonHang FROM inserted)
+	DECLARE @thoi_gian_tao DATETIME = (SELECT ThoiGianTao FROM inserted)
+	DECLARE @tong_gia_tri DECIMAL(18,2) = (SELECT TongGiaTri FROM inserted)
+	DECLARE @trang_thai BIT = (SELECT TrangThai FROM inserted) 
+
+	DECLARE @DEMPX INT = (SELECT COUNT(MaPhieuXuat) FROM PhieuXuat)
+	DECLARE @I INT = 0
+	SET @DEMPX += 1
+	DECLARE @ID CHAR(10)
+
+	DECLARE @chuoiSoKhong VARCHAR(8) = '0'
+	DECLARE @LENGTHID INT = 10 - (LEN('PX') + LEN(@DEMPX))
+
+	WHILE(@I < @LENGTHID - 1)
+	BEGIN
+		SET @CHUOISOKHONG += '0'
+		SET @I += 1
+	END
+
+	SET @ID  = CONCAT('PX',@chuoiSoKhong,@DEMPX)
+	DECLARE @DEMID INT = (SELECT COUNT(MaPhieuXuat) FROM PhieuXuat WHERE MaPhieuXuat = @ID)
+
+	WHILE(@DEMID <> 0)
+	BEGIN
+		SET @DEMPX += 1
+		SET @CHUOISOKHONG = '0'
+		SET @ID = 0
+		SET @LENGTHID = 10 - (LEN('PX') + LEN(@DEMPX))
+
+		WHILE(@I < @LENGTHID - 1)
+		BEGIN
+			SET @CHUOISOKHONG += '0'
+			SET @I += 1
+		END
+		SET @ID  = CONCAT('PX',@chuoiSoKhong,@DEMPX)
+		SET @DEMID = (SELECT COUNT(MaPhieuXuat) FROM PhieuXuat WHERE MaPhieuXuat = @ID)
+	END
+	BEGIN TRAN
+	BEGIN TRY
+		INSERT INTO PhieuXuat(MaPhieuXuat,NhanVienTaoPhieu,NhanVienTruongKho,MaKho,MaDonHang,ThoiGianTao,TongGiaTri,TrangThai)
+		VALUES(@ID,@nhan_vien_tao_phieu,@nhan_vien_truong_kho,@ma_kho,@ma_don_hang,@thoi_gian_tao,@tong_gia_tri, @trang_thai)
+		COMMIT
+	END TRY
+	BEGIN CATCH
+		ROLLBACK
+		DECLARE @ERRORMESS VARCHAR(2000) = 'Lỗi: ' + ERROR_MESSAGE()
+		RAISERROR(@ERRORMESS,16,1)
+	END CATCH
+END
+GO
+
+---Tao ID cho PhieuBaoHanh---
+
+CREATE TRIGGER TAO_ID_PHIEU_BAO_HANH ON PhieuBaoHanh INSTEAD OF INSERT 
+AS
+BEGIN
+	DECLARE @ma_san_pham CHAR(10) = (SELECT MaSanPham FROM inserted)
+	DECLARE @ma_khach_hang CHAR(10) = (SELECT MaKhachHang FROM inserted)
+	DECLARE @ma_don_hang CHAR(10) = (SELECT MaDonHang FROM inserted)
+	DECLARE @ngay_tao DATETIME = (SELECT NgayTao FROM inserted)
+	DECLARE @ngay_het_han DATETIME = (SELECT NgayHetHan FROM inserted)
+	DECLARE @trang_thai BIT = (SELECT TrangThai FROM inserted) 
+
+	DECLARE @DEMPBH INT = (SELECT COUNT(MaPhieuBH) FROM PhieuBaoHanh)
+	DECLARE @I INT = 0
+	SET @DEMPBH += 1
+	DECLARE @ID CHAR(10)
+
+	DECLARE @chuoiSoKhong VARCHAR(8) = '0'
+	DECLARE @LENGTHID INT = 10 - (LEN('BH') + LEN(@DEMPBH))
+
+	WHILE(@I < @LENGTHID - 1)
+	BEGIN
+		SET @CHUOISOKHONG += '0'
+		SET @I += 1
+	END
+
+	SET @ID  = CONCAT('BH',@chuoiSoKhong,@DEMPBH)
+	DECLARE @DEMID INT = (SELECT COUNT(MaPhieuBH) FROM PhieuBaoHanh WHERE MaPhieuBH = @ID)
+
+	WHILE(@DEMID <> 0)
+	BEGIN
+		SET @DEMPBH += 1
+		SET @CHUOISOKHONG = '0'
+		SET @ID = 0
+		SET @LENGTHID = 10 - (LEN('BH') + LEN(@DEMPBH))
+
+		WHILE(@I < @LENGTHID - 1)
+		BEGIN
+			SET @CHUOISOKHONG += '0'
+			SET @I += 1
+		END
+		SET @ID  = CONCAT('BH',@chuoiSoKhong,@DEMPBH)
+		SET @DEMID = (SELECT COUNT(MaPhieuBH) FROM PhieuBaoHanh WHERE MaPhieuBH = @ID)
+	END
+	BEGIN TRAN
+	BEGIN TRY
+		INSERT INTO PhieuBaoHanh(MaPhieuBH,MaSanPham,MaKhachHang,MaDonHang,NgayTao,NgayHetHan,TrangThai)
+		VALUES(@ID,@ma_san_pham,@ma_khach_hang,@ma_don_hang,@ngay_tao,@ngay_het_han, @trang_thai)
+		COMMIT
+	END TRY
+	BEGIN CATCH
+		ROLLBACK
+		DECLARE @ERRORMESS VARCHAR(2000) = 'Lỗi: ' + ERROR_MESSAGE()
+		RAISERROR(@ERRORMESS,16,1)
+	END CATCH
 END
 GO
