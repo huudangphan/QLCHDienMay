@@ -475,7 +475,7 @@ VALUES(N'Thu ngân')
 INSERT INTO ChucVu(TenChucVu)
 VALUES(N'Nhân viên')
 INSERT INTO ChucVu(TenChucVu)
-VALUES(N'Quản lý kho')
+VALUES(N'Trưởng kho')
 GO
 SELECT * FROM ChucVu
 ------CuaHang------
@@ -507,12 +507,15 @@ SELECT MaCuaHang, CuaHangTruong FROM CuaHang, NhanVien WHERE CuaHang.CuaHangTruo
 GO
 
 ------Kho------
-INSERT INTO Kho(MaCuaHang,DiaChi)
-VALUES('CH001',N'123 Trường Chinh')
-INSERT INTO Kho(MaCuaHang,DiaChi)
-VALUES('CH002',N'500 CMT8')
+INSERT INTO Kho(MaCuaHang,TruongKho,DiaChi)
+VALUES('CH001','NV00000003',N'123 Trường Chinh')
+INSERT INTO Kho(MaCuaHang,TruongKho,DiaChi)
+VALUES('CH002','NV00000006',N'500 CMT8')
+INSERT INTO Kho(MaCuaHang,TruongKho,DiaChi)
+VALUES('CH001','NV00000003',N'600 ĐBP')
 GO
 SELECT * FROM Kho
+delete from Kho where MaKho = 'K0002'
 
 ------ChiTietKho------
 INSERT INTO ChiTietKho(MaKho,MaSanPham,SoLuong)
@@ -537,6 +540,11 @@ VALUES('K0002','SP00000004',20)
 INSERT INTO ChiTietKho(MaKho,MaSanPham,SoLuong)
 VALUES('K0002','SP00000005',20)
 
+
+INSERT INTO ChiTietKho(MaKho,MaSanPham,SoLuong)
+VALUES('K0003','SP00000001',2)
+INSERT INTO ChiTietKho(MaKho,MaSanPham,SoLuong)
+VALUES('K0003','SP00000004',1)
 SELECT * FROM ChiTietKho
 
 ------PhieuNhap------
@@ -582,19 +590,23 @@ VALUES('HAPPY2021',N'Voucher 2021',0.1,'2021/1/1','2021/12/30',N'Voucher 10% áp
 
 SELECT * FROM Voucher
 
+---TheTichDiem-----
+EXEC Tao_The_Cho_Khach_Hang @ma_khach_hang = 'KH00000001';
+SELECT * FROM TheTichDiem
 ------DonHang------
 declare @ID CHAR(10)
-exec Tao_Don_Hang_Online @ma_khach_hang = 'KH00000001', @ma_voucher = 'HAPPY2021', @ma_don = @ID OUTPUT;
+exec Tao_Don_Hang_Online @ma_khach_hang = 'KH00000001', @ma_voucher = 'HAPPY2021', @tong_gia_tri_don = 38052000, @ma_don = @ID OUTPUT;
 
 INSERT INTO ChiTietDonHang(MaDonHang,MaSanPham,SoLuong,DonGia,ThanhTien)
 VALUES(@ID,'SP00000001',2,12990000.00,25980000)
+INSERT INTO ChiTietDonHang(MaDonHang,MaSanPham,SoLuong,DonGia,ThanhTien)
+VALUES('DH00000001','SP00000004',1,16300000,16300000)
 
 SELECT * FROM DonHang
 SELECT * FROM ChiTietDonHang
 select * from KhachHang
 
-USE QLDienMay
-UPDATE DonHang SET NhanVienPhuTrach = 'NV00000001', TinhTrangXacNhan = 0  WHERE MaDonHang = 'DH00000001' 
----TheTichDiem-----
-EXEC Tao_The_Cho_Khach_Hang @ma_khach_hang = 'KH00000001';
-SELECT * FROM TheTichDiem
+exec Xac_Nhan_Don_Hang @ma_don_hang = 'DH00000001', @ma_nhan_vien = 'NV00000001', @tinh_trang_xac_nhan = 0
+exec Thanh_Toan_Don_Hang @ma_don_hang = 'DH00000001', @ma_nhan_vien = 'NV00000001', @tinh_trang_thanh_toan = 0
+exec Xuat_Phieu_Xuat_Kho @nhan_vien_tao_phieu = 'NV00000001', @ma_don_hang = 'DH00000001'
+exec Cap_Nhat_Tinh_Trang_Giao_Hang @ma_don_hang = 'DH00000001', @ma_nhan_vien = 'NV00000001', @tinh_trang_giao_hang = 0
