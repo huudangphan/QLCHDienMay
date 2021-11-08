@@ -24,7 +24,7 @@ GO
 ---That bai: neu sai khoa ngoai(ma khach hang, thoi gian cua voucher)---
 CREATE PROC Tao_Don_Hang_Online @ma_khach_hang CHAR(10), @ma_voucher CHAR(10),@tong_gia_tri_don DECIMAL(18,2), @ma_don CHAR(10) OUTPUT AS
 BEGIN
-	IF(@ma_khach_hang IS NOT NULL AND @tong_gia_tri_don IS NOT NULL AND @ma_don IS NOT NULL)
+	IF(@ma_khach_hang IS NOT NULL AND @tong_gia_tri_don IS NOT NULL)
 	BEGIN
 		IF NOT EXISTS(SELECT(MaKhachHang) FROM KhachHang WHERE MaKhachHang = @ma_khach_hang)
 		BEGIN
@@ -356,7 +356,10 @@ GO
 CREATE PROC Cap_Nhat_Tinh_Trang_Giao_Hang @ma_don_hang CHAR(10), @ma_nhan_vien CHAR(10), @tinh_trang_giao_hang BIT AS
 BEGIN
 	DECLARE @tinh_trang_hien_tai BIT = (SELECT TinhTrangGiaoHang FROM DonHang WHERE MaDonHang = @ma_don_hang)
-	IF(@tinh_trang_hien_tai IS NULL AND @ma_don_hang IS NOT NULL AND @ma_nhan_vien IS NOT NULL AND @tinh_trang_giao_hang IS NOT NULL)
+	DECLARE @kiem_tra_phieu_xuat BIT = NULL
+	IF EXISTS(SELECT MaPhieuXuat FROM PhieuXuat WHERE MaDonHang = @ma_don_hang)
+		SET @kiem_tra_phieu_xuat = 0
+	IF(@tinh_trang_hien_tai IS NULL AND @kiem_tra_phieu_xuat IS NOT NULL AND @ma_don_hang IS NOT NULL AND @ma_nhan_vien IS NOT NULL AND @tinh_trang_giao_hang IS NOT NULL)
 	BEGIN
 		DECLARE @ERRORMESS VARCHAR(2000)
 		IF(@tinh_trang_giao_hang = 0)
@@ -441,6 +444,6 @@ BEGIN
 		END
 	END
 	ELSE
-		RAISERROR(N'Lỗi: Tình trạng giao hàng đã được cập nhật từ trước hoặc input null !',16,1)
+		RAISERROR(N'Lỗi: Tình trạng giao hàng đã được cập nhật từ trước hoặc đơn hàng chưa xuất kho !',16,1)
 END
 GO

@@ -515,7 +515,7 @@ INSERT INTO Kho(MaCuaHang,TruongKho,DiaChi)
 VALUES('CH001','NV00000003',N'600 ĐBP')
 GO
 SELECT * FROM Kho
-delete from Kho where MaKho = 'K0002'
+
 
 ------ChiTietKho------
 INSERT INTO ChiTietKho(MaKho,MaSanPham,SoLuong)
@@ -542,9 +542,9 @@ VALUES('K0002','SP00000005',20)
 
 
 INSERT INTO ChiTietKho(MaKho,MaSanPham,SoLuong)
-VALUES('K0003','SP00000001',2)
+VALUES('K0003','SP00000001',10)
 INSERT INTO ChiTietKho(MaKho,MaSanPham,SoLuong)
-VALUES('K0003','SP00000004',1)
+VALUES('K0003','SP00000004',10)
 SELECT * FROM ChiTietKho
 
 ------PhieuNhap------
@@ -602,11 +602,25 @@ VALUES(@ID,'SP00000001',2,12990000.00,25980000)
 INSERT INTO ChiTietDonHang(MaDonHang,MaSanPham,SoLuong,DonGia,ThanhTien)
 VALUES('DH00000001','SP00000004',1,16300000,16300000)
 
-SELECT * FROM DonHang
-SELECT * FROM ChiTietDonHang
-select * from KhachHang
+declare @ID2 CHAR(10)
+exec Tao_Don_Hang_Online @ma_khach_hang = 'KH00000001', @ma_voucher = NULL, @tong_gia_tri_don = 12990000, @ma_don = @ID2 OUTPUT;
+
+INSERT INTO ChiTietDonHang(MaDonHang,MaSanPham,SoLuong,DonGia,ThanhTien)
+VALUES(@ID2,'SP00000001',1,12990000,12990000)
+
 
 exec Xac_Nhan_Don_Hang @ma_don_hang = 'DH00000001', @ma_nhan_vien = 'NV00000001', @tinh_trang_xac_nhan = 0
 exec Thanh_Toan_Don_Hang @ma_don_hang = 'DH00000001', @ma_nhan_vien = 'NV00000001', @tinh_trang_thanh_toan = 0
 exec Xuat_Phieu_Xuat_Kho @nhan_vien_tao_phieu = 'NV00000001', @ma_don_hang = 'DH00000001'
 exec Cap_Nhat_Tinh_Trang_Giao_Hang @ma_don_hang = 'DH00000001', @ma_nhan_vien = 'NV00000001', @tinh_trang_giao_hang = 0
+
+exec Xac_Nhan_Don_Hang @ma_don_hang = 'DH00000002', @ma_nhan_vien = 'NV00000001', @tinh_trang_xac_nhan = 0
+exec Thanh_Toan_Don_Hang @ma_don_hang = 'DH00000002', @ma_nhan_vien = 'NV00000001', @tinh_trang_thanh_toan = 0
+exec Xuat_Phieu_Xuat_Kho @nhan_vien_tao_phieu = 'NV00000001', @ma_don_hang = 'DH00000002'
+exec Cap_Nhat_Tinh_Trang_Giao_Hang @ma_don_hang = 'DH00000002', @ma_nhan_vien = 'NV00000001', @tinh_trang_giao_hang = 1
+
+------PhanHoi------
+INSERT INTO PhanHoi(MaKhachHang,NoiDung,TrangThai)
+VALUES('KH00000001',N'Sản phâm tốt vl',null)
+SELECT * FROM PhanHoi
+

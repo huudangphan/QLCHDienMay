@@ -1,5 +1,3 @@
-USE master
-GO
 CREATE DATABASE QLDienMay
 GO
 USE QLDienMay
