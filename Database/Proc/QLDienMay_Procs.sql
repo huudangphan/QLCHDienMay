@@ -363,12 +363,11 @@ BEGIN
 		BEGIN
 			BEGIN TRAN
 			BEGIN TRY
-				IF EXISTS((SELECT MaThe FROM TheTichDiem WHERE MaKhachHang = (SELECT MaKhachHang FROM DonHang WHERE MaDonHang = @ma_don_hang)))
-					UPDATE TheTichDiem SET Diem = Diem + ((SELECT TongGiaTri FROM DonHang WHERE MaDonHang = @ma_don_hang) / 1000)
+				DECLARE @MAKH CHAR(10) = (SELECT MaKhachHang FROM DonHang WHERE MaDonHang = @ma_don_hang)
+				IF EXISTS((SELECT MaThe FROM TheTichDiem WHERE MaKhachHang = @MAKH))
+					UPDATE TheTichDiem SET Diem = Diem + ((SELECT TongGiaTri FROM DonHang WHERE MaDonHang = @ma_don_hang) / 1000) WHERE MaKhachHang = @MAKH
 				UPDATE DonHang SET TinhTrangGiaoHang = @tinh_trang_giao_hang, NhanVienPhuTrach = @ma_nhan_vien WHERE MaDonHang = @ma_don_hang
 				
-				DECLARE @MAKH CHAR(10) = (SELECT MaKhachHang FROM DonHang WHERE MaDonHang = @ma_don_hang)
-
 				DECLARE @CTDH_TEMP TABLE(STT INT,MaSanPham CHAR(10), SoLuong INT)
 				INSERT INTO @CTDH_TEMP(STT,MaSanPham,SoLuong)
 				(SELECT ROW_NUMBER() OVER (ORDER BY MaSanPham) AS dong
