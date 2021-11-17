@@ -447,3 +447,17 @@ BEGIN
 		RAISERROR(N'Lỗi: Tình trạng giao hàng đã được cập nhật từ trước hoặc đơn hàng chưa xuất kho !',16,1)
 END
 GO
+---------------- 
+--Proc login
+ALTER proc [dbo].[sp_Lay_thong_tin_tu_login]
+	@TenLogin nvarchar(100)
+as	
+	declare @uid int
+	declare @Manv char(10)
+	select @uid=uid,@Manv=name
+	from  sys.sysusers
+	where sid=SUSER_SID(@TenLogin)
+
+	select MaNV=@Manv,HOTEN=(select TenNhanVien from NhanVien where MaNhanVien=@Manv),TENNHOM=name
+	from sys.sysusers
+	where uid=(select groupuid from sys.sysmembers where memberuid=@uid)
