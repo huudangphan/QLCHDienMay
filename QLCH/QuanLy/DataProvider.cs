@@ -125,9 +125,9 @@ namespace QuanLy
 
                 return data;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                string error = ex.Message.ToString();
                 return data;
             }
            
@@ -168,13 +168,14 @@ namespace QuanLy
         {
             SqlDataReader myReader;
             SqlCommand sqlcmd = new SqlCommand(cmd, conn);
-            sqlcmd.CommandType = System.Data.CommandType.Text;
-            if (conn.State == System.Data.ConnectionState.Closed)
-            {
-                conn.Open();
-            }
+            
             try
             {
+                sqlcmd.CommandType = System.Data.CommandType.Text;
+                if (conn.State == System.Data.ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
                 myReader = sqlcmd.ExecuteReader();
                 return myReader;
             }
