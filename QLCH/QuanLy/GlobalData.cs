@@ -9,5 +9,6 @@ namespace QuanLy
     public class GlobalData
     {
         public static string makh { get; set; }
+        
     }
 }

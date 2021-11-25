@@ -59,26 +59,27 @@ namespace QuanLy
         private void simpleButton1_Click(object sender, EventArgs e)
         {
            
-            DataProvider.mLogin = txtUserName.Text.Trim();
-            DataProvider.password = txtPassword.Text.Trim();
-            if (DataProvider.KetNoi() == 0)
-                MessageBox.Show("Error");
-            DataProvider.maCN = cbChiNhanh.SelectedIndex;
-            DataProvider.mLoginDN = DataProvider.mLogin;
-            DataProvider.passWordDN = DataProvider.password;
-            string query = "exec sp_Lay_thong_tin_tu_login '" + DataProvider.mLogin + "'";
-            DataProvider.myReader = DataProvider.ExecDataReader(query);
-            if (DataProvider.myReader == null)
-                MessageBox.Show("Tài khoản không hợp lệ!");
-            DataProvider.myReader.Read();
-            DataProvider.userName = DataProvider.myReader.GetString(0);
-            if(Convert.IsDBNull(DataProvider.userName))
-            {
-                MessageBox.Show("Tài khoản không hợp lệ");
-                
-            }
+            
             try
             {
+                DataProvider.mLogin = txtUserName.Text.Trim();
+                DataProvider.password = txtPassword.Text.Trim();
+                if (DataProvider.KetNoi() == 0)
+                    MessageBox.Show("Error");
+                DataProvider.maCN = cbChiNhanh.SelectedIndex;
+                DataProvider.mLoginDN = DataProvider.mLogin;
+                DataProvider.passWordDN = DataProvider.password;
+                string query = "exec sp_Lay_thong_tin_tu_login '" + DataProvider.mLogin + "'";
+                DataProvider.myReader = DataProvider.ExecDataReader(query);
+                if (DataProvider.myReader == null)
+                    MessageBox.Show("Tài khoản không hợp lệ!");
+                DataProvider.myReader.Read();
+                DataProvider.userName = DataProvider.myReader.GetString(0);
+                if (Convert.IsDBNull(DataProvider.userName))
+                {
+                    MessageBox.Show("Tài khoản không hợp lệ");
+
+                }
                 DataProvider.mHoTen = DataProvider.myReader.GetString(1);
                 DataProvider.mGroup = DataProvider.myReader.GetString(2);
                 MessageBox.Show(DataProvider.userName);

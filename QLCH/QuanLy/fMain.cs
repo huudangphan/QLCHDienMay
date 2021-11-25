@@ -1,6 +1,7 @@
 ﻿using DevExpress.XtraBars;
 using QuanLy.DonHangXuat;
 using QuanLy.KhachHang;
+using QuanLy.NhanVien;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -185,6 +186,20 @@ namespace QuanLy
             {
                 ff.Controls.Clear();
                 fDanhSachKhach f = new fDanhSachKhach();
+                f.Dock = DockStyle.Fill;
+                ff.Controls.Add(f);
+            }
+            else
+                MessageBox.Show("Người dùng không có quyền truy cập!");
+        }
+
+        private void accordionControlElement22_Click(object sender, EventArgs e)
+        {
+            type = CheckType();
+            if ( type == 3)
+            {
+                ff.Controls.Clear();
+                fDanhSachNhanVien f = new fDanhSachNhanVien();
                 f.Dock = DockStyle.Fill;
                 ff.Controls.Add(f);
             }
