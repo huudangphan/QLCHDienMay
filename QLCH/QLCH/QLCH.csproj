@@ -128,358 +128,1800 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DonHangController.cs" />
+    <Compile Include="Controllers\GioHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KhachHangController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ChiTietDonHang.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ChiTietKho.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ChiTietLoai.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ChiTietPhieuNhap.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ChiTietPhieuXuat.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ChucVu.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CuaHang.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DacDiemNoiBat.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DanhMuc.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DonHang.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\GioHang.cs" />
     <Compile Include="Models\HangTichDiem.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\KhachHang.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Kho.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\KhuyenMai.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Loai.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelKhachHang.cs" />
     <Compile Include="Models\MSdynamicsnapshotjob.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSdynamicsnapshotview.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_agent_parameters.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_altsyncpartners.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_articlehistory.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflicts_info.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_ChiTietDonHang.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_ChiTietKho.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_ChiTietLoai.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuNhap.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuXuat.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_ChucVu.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_CuaHang.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_DacDiemNoiBat.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_DanhMuc.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_DonHang.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_HangTichDiem.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_KhachHang.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_Kho.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_KhuyenMai.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_Loai.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_NhaCungCap.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_NhanVien.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_PhanHoi.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_PhieuBaoHanh.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_PhieuNhap.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_PhieuXuat.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_SanPham.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_ThanhPho.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_TheTichDiem.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_ThongSoKiThuat.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_TinhNang.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN1_Voucher.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_ChiTietDonHang.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_ChiTietKho.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_ChiTietLoai.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_ChiTietPhieuNhap.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_ChiTietPhieuXuat.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_ChucVu.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_CuaHang.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_DacDiemNoiBat.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_DanhMuc.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_DonHang.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_HangTichDiem.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_KhachHang.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_Kho.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_KhuyenMai.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_Loai.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_NhaCungCap.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_NhanVien.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_PhanHoi.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_PhieuBaoHanh.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_PhieuNhap.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_PhieuXuat.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_SanPham.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_ThanhPho.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_TheTichDiem.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_ThongSoKiThuat.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_TinhNang.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_conflict_QLDienMay_CN2_Voucher.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_contents.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_cpmv_3B119D6CCA384A37AAD74B2C42C4FA58.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_cpmv_4C57D6BFADB6403C9BD048B69EE9A711.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_cpmv_648A29E871774465A8F217CFD7D3CC4A.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_cpmv_897154BD00094B28AF9013C540B937CB.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_cpmv_908276E0587D4863B9837BE92F24AFD5.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_cpmv_93DE4593559C4750BC2B1B49700507B8.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_cpmv_95F0C05A250749C193F5A538AD67F037.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_cpmv_9D2B1E57F6EA4640855AC2F0DDC38569.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_cpmv_9D35F9266C704F9AB231EFECD432DA84.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_cpmv_9D9D6ED7CCCA49559191C7777C7C8AFB.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_cpmv_9E6D847CD4B84C1494FB744C73333224.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_cpmv_A1765C48C7D343B6AA97B011B00069F7.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_cpmv_A66B25AFE51348DFB9AF6378E073C436.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_cpmv_A954A882661F4156A723A72C0A59E1A5.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_cpmv_ABD8B1EDB0E84A73816055D7FAE25E8B.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_cpmv_B234B6FE02564F9EB38BAD96BCB2134A.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_cpmv_BBD387789E9643D984216659C009D4D3.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_cpmv_BC049454C2094EEE8EE01869FBDFC02D.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_cpmv_C0541825B4094DAE9C4111318E45616B.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_cpmv_C2F34DE67FB1426985C16D21CD5128AE.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_cpmv_D9E091456FAE4AB185849640C91F03BB.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_cpmv_DBC1EDC0DA6B448CA785DA16456E4965.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_cpmv_E853DEECCB4C4671BF91158C75724958.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_cpmv_F1F5B41C259641E488930519F3FBED8D.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_cpmv_F2597FEE354C4E1A830E168382EDB99F.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_cpmv_F39BD2298472454F9C0FE02D795211B0.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_cpmv_F5B58F75BB214A39BDE451EFE6A5FC76.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ctsv_3B119D6CCA384A37AAD74B2C42C4FA58.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ctsv_4C57D6BFADB6403C9BD048B69EE9A711.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ctsv_648A29E871774465A8F217CFD7D3CC4A.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ctsv_897154BD00094B28AF9013C540B937CB.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ctsv_908276E0587D4863B9837BE92F24AFD5.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ctsv_93DE4593559C4750BC2B1B49700507B8.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ctsv_95F0C05A250749C193F5A538AD67F037.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ctsv_9D2B1E57F6EA4640855AC2F0DDC38569.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ctsv_9D35F9266C704F9AB231EFECD432DA84.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ctsv_9D9D6ED7CCCA49559191C7777C7C8AFB.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ctsv_9E6D847CD4B84C1494FB744C73333224.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ctsv_A1765C48C7D343B6AA97B011B00069F7.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ctsv_A66B25AFE51348DFB9AF6378E073C436.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ctsv_A954A882661F4156A723A72C0A59E1A5.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ctsv_ABD8B1EDB0E84A73816055D7FAE25E8B.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ctsv_B234B6FE02564F9EB38BAD96BCB2134A.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ctsv_BBD387789E9643D984216659C009D4D3.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ctsv_BC049454C2094EEE8EE01869FBDFC02D.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ctsv_C0541825B4094DAE9C4111318E45616B.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ctsv_C2F34DE67FB1426985C16D21CD5128AE.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ctsv_D9E091456FAE4AB185849640C91F03BB.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ctsv_DBC1EDC0DA6B448CA785DA16456E4965.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ctsv_E853DEECCB4C4671BF91158C75724958.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ctsv_F1F5B41C259641E488930519F3FBED8D.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ctsv_F2597FEE354C4E1A830E168382EDB99F.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ctsv_F39BD2298472454F9C0FE02D795211B0.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ctsv_F5B58F75BB214A39BDE451EFE6A5FC76.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_current_partition_mappings.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_dynamic_snapshots.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_errorlineage.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_generation_partition_mappings.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_genhistory.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_genvw_3B119D6CCA384A37AAD74B2C42C4FA58.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_genvw_4C57D6BFADB6403C9BD048B69EE9A711.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_genvw_648A29E871774465A8F217CFD7D3CC4A.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_genvw_897154BD00094B28AF9013C540B937CB.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_genvw_908276E0587D4863B9837BE92F24AFD5.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_genvw_93DE4593559C4750BC2B1B49700507B8.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_genvw_95F0C05A250749C193F5A538AD67F037.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_genvw_9D2B1E57F6EA4640855AC2F0DDC38569.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_genvw_9D35F9266C704F9AB231EFECD432DA84.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_genvw_9D9D6ED7CCCA49559191C7777C7C8AFB.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_genvw_9E6D847CD4B84C1494FB744C73333224.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_genvw_A1765C48C7D343B6AA97B011B00069F7.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_genvw_A66B25AFE51348DFB9AF6378E073C436.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_genvw_A954A882661F4156A723A72C0A59E1A5.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_genvw_ABD8B1EDB0E84A73816055D7FAE25E8B.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_genvw_B234B6FE02564F9EB38BAD96BCB2134A.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_genvw_BBD387789E9643D984216659C009D4D3.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_genvw_BC049454C2094EEE8EE01869FBDFC02D.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_genvw_C0541825B4094DAE9C4111318E45616B.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_genvw_C2F34DE67FB1426985C16D21CD5128AE.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_genvw_D9E091456FAE4AB185849640C91F03BB.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_genvw_DBC1EDC0DA6B448CA785DA16456E4965.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_genvw_E853DEECCB4C4671BF91158C75724958.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_genvw_F1F5B41C259641E488930519F3FBED8D.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_genvw_F2597FEE354C4E1A830E168382EDB99F.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_genvw_F39BD2298472454F9C0FE02D795211B0.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_genvw_F5B58F75BB214A39BDE451EFE6A5FC76.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_history.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_identity_range.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_log_files.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_metadataaction_request.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_partition_groups.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_past_partition_mappings.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ppmv_3B119D6CCA384A37AAD74B2C42C4FA58.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ppmv_4C57D6BFADB6403C9BD048B69EE9A711.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ppmv_648A29E871774465A8F217CFD7D3CC4A.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ppmv_897154BD00094B28AF9013C540B937CB.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ppmv_908276E0587D4863B9837BE92F24AFD5.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ppmv_93DE4593559C4750BC2B1B49700507B8.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ppmv_95F0C05A250749C193F5A538AD67F037.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ppmv_9D2B1E57F6EA4640855AC2F0DDC38569.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ppmv_9D35F9266C704F9AB231EFECD432DA84.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ppmv_9D9D6ED7CCCA49559191C7777C7C8AFB.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ppmv_9E6D847CD4B84C1494FB744C73333224.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ppmv_A1765C48C7D343B6AA97B011B00069F7.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ppmv_A66B25AFE51348DFB9AF6378E073C436.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ppmv_A954A882661F4156A723A72C0A59E1A5.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ppmv_ABD8B1EDB0E84A73816055D7FAE25E8B.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ppmv_B234B6FE02564F9EB38BAD96BCB2134A.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ppmv_BBD387789E9643D984216659C009D4D3.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ppmv_BC049454C2094EEE8EE01869FBDFC02D.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ppmv_C0541825B4094DAE9C4111318E45616B.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ppmv_C2F34DE67FB1426985C16D21CD5128AE.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ppmv_D9E091456FAE4AB185849640C91F03BB.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ppmv_DBC1EDC0DA6B448CA785DA16456E4965.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ppmv_E853DEECCB4C4671BF91158C75724958.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ppmv_F1F5B41C259641E488930519F3FBED8D.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ppmv_F2597FEE354C4E1A830E168382EDB99F.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ppmv_F39BD2298472454F9C0FE02D795211B0.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_ppmv_F5B58F75BB214A39BDE451EFE6A5FC76.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_ChiTietDonHang_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_ChiTietDonHang_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_ChiTietKho_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_ChiTietKho_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_ChiTietLoai_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_ChiTietLoai_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_ChiTietPhieuNhap_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_ChiTietPhieuNhap_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_ChiTietPhieuXuat_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_ChiTietPhieuXuat_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_ChucVu_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_ChucVu_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_CuaHang_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_CuaHang_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_DacDiemNoiBat_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_DacDiemNoiBat_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_DanhMuc_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_DanhMuc_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_DonHang_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_DonHang_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_HangTichDiem_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_HangTichDiem_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_KhachHang_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_KhachHang_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_Kho_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_Kho_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_KhuyenMai_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_KhuyenMai_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_Loai_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_Loai_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_NhaCungCap_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_NhaCungCap_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_NhanVien_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_NhanVien_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_PhanHoi_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_PhanHoi_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_PhieuBaoHanh_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_PhieuBaoHanh_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_PhieuNhap_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_PhieuNhap_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_PhieuXuat_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_PhieuXuat_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_SanPham_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_SanPham_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_ThanhPho_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_ThanhPho_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_TheTichDiem_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_TheTichDiem_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_ThongSoKiThuat_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_ThongSoKiThuat_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_TinhNang_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_TinhNang_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_Voucher_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN1_Voucher_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_ChiTietDonHang_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_ChiTietDonHang_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_ChiTietKho_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_ChiTietKho_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_ChiTietLoai_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_ChiTietLoai_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_ChiTietPhieuNhap_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_ChiTietPhieuNhap_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_ChiTietPhieuXuat_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_ChiTietPhieuXuat_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_ChucVu_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_ChucVu_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_CuaHang_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_CuaHang_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_DacDiemNoiBat_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_DacDiemNoiBat_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_DanhMuc_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_DanhMuc_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_DonHang_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_DonHang_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_HangTichDiem_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_HangTichDiem_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_KhachHang_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_KhachHang_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_Kho_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_Kho_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_KhuyenMai_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_KhuyenMai_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_Loai_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_Loai_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_NhaCungCap_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_NhaCungCap_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_NhanVien_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_NhanVien_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_PhanHoi_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_PhanHoi_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_PhieuBaoHanh_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_PhieuBaoHanh_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_PhieuNhap_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_PhieuNhap_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_PhieuXuat_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_PhieuXuat_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_SanPham_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_SanPham_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_ThanhPho_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_ThanhPho_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_TheTichDiem_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_TheTichDiem_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_ThongSoKiThuat_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_ThongSoKiThuat_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_TinhNang_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_TinhNang_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_Voucher_PARTITION_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_QLDienMay_CN2_Voucher_VIEW.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_replinfo.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_3B119D6CCA384A37AAD74B2C42C4FA58.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_4C57D6BFADB6403C9BD048B69EE9A711.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_648A29E871774465A8F217CFD7D3CC4A.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_897154BD00094B28AF9013C540B937CB.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_908276E0587D4863B9837BE92F24AFD5.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_93DE4593559C4750BC2B1B49700507B8.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_95F0C05A250749C193F5A538AD67F037.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_9D2B1E57F6EA4640855AC2F0DDC38569.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_9D35F9266C704F9AB231EFECD432DA84.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_9D9D6ED7CCCA49559191C7777C7C8AFB.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_9E6D847CD4B84C1494FB744C73333224.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_A1765C48C7D343B6AA97B011B00069F7.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_A66B25AFE51348DFB9AF6378E073C436.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_A954A882661F4156A723A72C0A59E1A5.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_ABD8B1EDB0E84A73816055D7FAE25E8B.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_B234B6FE02564F9EB38BAD96BCB2134A.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_BBD387789E9643D984216659C009D4D3.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_BC049454C2094EEE8EE01869FBDFC02D.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_C0541825B4094DAE9C4111318E45616B.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_C2F34DE67FB1426985C16D21CD5128AE.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_D9E091456FAE4AB185849640C91F03BB.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_DBC1EDC0DA6B448CA785DA16456E4965.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_E853DEECCB4C4671BF91158C75724958.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_F1F5B41C259641E488930519F3FBED8D.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_F2597FEE354C4E1A830E168382EDB99F.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_F39BD2298472454F9C0FE02D795211B0.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_F5B58F75BB214A39BDE451EFE6A5FC76.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_3B119D6CCA384A37AAD74B2C42C4FA58.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_4C57D6BFADB6403C9BD048B69EE9A711.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_648A29E871774465A8F217CFD7D3CC4A.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_897154BD00094B28AF9013C540B937CB.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_908276E0587D4863B9837BE92F24AFD5.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_93DE4593559C4750BC2B1B49700507B8.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_95F0C05A250749C193F5A538AD67F037.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_9D2B1E57F6EA4640855AC2F0DDC38569.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_9D35F9266C704F9AB231EFECD432DA84.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_9D9D6ED7CCCA49559191C7777C7C8AFB.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_9E6D847CD4B84C1494FB744C73333224.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_A1765C48C7D343B6AA97B011B00069F7.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_A66B25AFE51348DFB9AF6378E073C436.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_A954A882661F4156A723A72C0A59E1A5.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_ABD8B1EDB0E84A73816055D7FAE25E8B.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_B234B6FE02564F9EB38BAD96BCB2134A.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_BBD387789E9643D984216659C009D4D3.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_BC049454C2094EEE8EE01869FBDFC02D.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_C0541825B4094DAE9C4111318E45616B.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_C2F34DE67FB1426985C16D21CD5128AE.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_D9E091456FAE4AB185849640C91F03BB.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_DBC1EDC0DA6B448CA785DA16456E4965.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_E853DEECCB4C4671BF91158C75724958.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_F1F5B41C259641E488930519F3FBED8D.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_F2597FEE354C4E1A830E168382EDB99F.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_F39BD2298472454F9C0FE02D795211B0.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_F5B58F75BB214A39BDE451EFE6A5FC76.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_3B119D6CCA384A3791A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_3B119D6CCA384A37FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_4C57D6BFADB6403C91A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_4C57D6BFADB6403CFD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_648A29E87177446591A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_648A29E871774465FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_897154BD00094B2891A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_897154BD00094B28FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_908276E0587D486391A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_908276E0587D4863FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_93DE4593559C475091A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_93DE4593559C4750FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_95F0C05A250749C191A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_95F0C05A250749C1FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_9D2B1E57F6EA464091A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_9D2B1E57F6EA4640FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_9D35F9266C704F9A91A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_9D35F9266C704F9AFD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_9D9D6ED7CCCA495591A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_9D9D6ED7CCCA4955FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_9E6D847CD4B84C1491A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_9E6D847CD4B84C14FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_A1765C48C7D343B691A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_A1765C48C7D343B6FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_A66B25AFE51348DF91A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_A66B25AFE51348DFFD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_A954A882661F415691A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_A954A882661F4156FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_ABD8B1EDB0E84A7391A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_ABD8B1EDB0E84A73FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_B234B6FE02564F9E91A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_B234B6FE02564F9EFD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_BBD387789E9643D991A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_BBD387789E9643D9FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_BC049454C2094EEE91A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_BC049454C2094EEEFD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_C0541825B4094DAE91A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_C0541825B4094DAEFD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_C2F34DE67FB1426991A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_C2F34DE67FB14269FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_D9E091456FAE4AB191A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_D9E091456FAE4AB1FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_DBC1EDC0DA6B448C91A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_DBC1EDC0DA6B448CFD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_E853DEECCB4C467191A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_E853DEECCB4C4671FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_F1F5B41C259641E491A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_F1F5B41C259641E4FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_F2597FEE354C4E1A91A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_F2597FEE354C4E1AFD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_F39BD2298472454F91A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_F39BD2298472454FFD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_F5B58F75BB214A3991A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_F5B58F75BB214A39FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_3B119D6CCA384A3791A90624B30540B8_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_3B119D6CCA384A3791A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_3B119D6CCA384A37FD93D890BE1F4617_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_3B119D6CCA384A37FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_4C57D6BFADB6403C91A90624B30540B8_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_4C57D6BFADB6403C91A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_4C57D6BFADB6403CFD93D890BE1F4617_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_4C57D6BFADB6403CFD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_648A29E87177446591A90624B30540B8_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_648A29E87177446591A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_648A29E871774465FD93D890BE1F4617_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_648A29E871774465FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_897154BD00094B2891A90624B30540B8_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_897154BD00094B2891A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_897154BD00094B28FD93D890BE1F4617_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_897154BD00094B28FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_908276E0587D486391A90624B30540B8_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_908276E0587D486391A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_908276E0587D4863FD93D890BE1F4617_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_908276E0587D4863FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_93DE4593559C475091A90624B30540B8_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_93DE4593559C475091A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_93DE4593559C4750FD93D890BE1F4617_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_93DE4593559C4750FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_95F0C05A250749C191A90624B30540B8_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_95F0C05A250749C191A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_95F0C05A250749C1FD93D890BE1F4617_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_95F0C05A250749C1FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_9D2B1E57F6EA464091A90624B30540B8_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_9D2B1E57F6EA464091A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_9D2B1E57F6EA4640FD93D890BE1F4617_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_9D2B1E57F6EA4640FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_9D35F9266C704F9A91A90624B30540B8_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_9D35F9266C704F9A91A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_9D35F9266C704F9AFD93D890BE1F4617_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_9D35F9266C704F9AFD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_9D9D6ED7CCCA495591A90624B30540B8_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_9D9D6ED7CCCA495591A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_9D9D6ED7CCCA4955FD93D890BE1F4617_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_9D9D6ED7CCCA4955FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_9E6D847CD4B84C1491A90624B30540B8_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_9E6D847CD4B84C1491A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_9E6D847CD4B84C14FD93D890BE1F4617_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_9E6D847CD4B84C14FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_A1765C48C7D343B691A90624B30540B8_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_A1765C48C7D343B691A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_A1765C48C7D343B6FD93D890BE1F4617_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_A1765C48C7D343B6FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_A66B25AFE51348DF91A90624B30540B8_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_A66B25AFE51348DF91A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_A66B25AFE51348DFFD93D890BE1F4617_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_A66B25AFE51348DFFD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_A954A882661F415691A90624B30540B8_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_A954A882661F415691A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_A954A882661F4156FD93D890BE1F4617_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_A954A882661F4156FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_ABD8B1EDB0E84A7391A90624B30540B8_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_ABD8B1EDB0E84A7391A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_ABD8B1EDB0E84A73FD93D890BE1F4617_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_ABD8B1EDB0E84A73FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_B234B6FE02564F9E91A90624B30540B8_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_B234B6FE02564F9E91A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_B234B6FE02564F9EFD93D890BE1F4617_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_B234B6FE02564F9EFD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_BBD387789E9643D991A90624B30540B8_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_BBD387789E9643D991A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_BBD387789E9643D9FD93D890BE1F4617_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_BBD387789E9643D9FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_BC049454C2094EEE91A90624B30540B8_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_BC049454C2094EEE91A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_BC049454C2094EEEFD93D890BE1F4617_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_BC049454C2094EEEFD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_C0541825B4094DAE91A90624B30540B8_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_C0541825B4094DAE91A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_C0541825B4094DAEFD93D890BE1F4617_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_C0541825B4094DAEFD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_C2F34DE67FB1426991A90624B30540B8_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_C2F34DE67FB1426991A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_C2F34DE67FB14269FD93D890BE1F4617_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_C2F34DE67FB14269FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_D9E091456FAE4AB191A90624B30540B8_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_D9E091456FAE4AB191A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_D9E091456FAE4AB1FD93D890BE1F4617_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_D9E091456FAE4AB1FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_DBC1EDC0DA6B448C91A90624B30540B8_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_DBC1EDC0DA6B448C91A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_DBC1EDC0DA6B448CFD93D890BE1F4617_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_DBC1EDC0DA6B448CFD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_E853DEECCB4C467191A90624B30540B8_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_E853DEECCB4C467191A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_E853DEECCB4C4671FD93D890BE1F4617_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_E853DEECCB4C4671FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_F1F5B41C259641E491A90624B30540B8_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_F1F5B41C259641E491A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_F1F5B41C259641E4FD93D890BE1F4617_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_F1F5B41C259641E4FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_F2597FEE354C4E1A91A90624B30540B8_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_F2597FEE354C4E1A91A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_F2597FEE354C4E1AFD93D890BE1F4617_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_F2597FEE354C4E1AFD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_F39BD2298472454F91A90624B30540B8_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_F39BD2298472454F91A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_F39BD2298472454FFD93D890BE1F4617_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_F39BD2298472454FFD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_F5B58F75BB214A3991A90624B30540B8_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_F5B58F75BB214A3991A90624B30540B8_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_F5B58F75BB214A39FD93D890BE1F4617_metadata_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_sel_sp_F5B58F75BB214A39FD93D890BE1F4617_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_sessions.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_settingshistory.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_supportability_settings.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSmerge_tombstone.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_tsvw_3B119D6CCA384A37AAD74B2C42C4FA58.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_tsvw_4C57D6BFADB6403C9BD048B69EE9A711.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_tsvw_648A29E871774465A8F217CFD7D3CC4A.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_tsvw_897154BD00094B28AF9013C540B937CB.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_tsvw_908276E0587D4863B9837BE92F24AFD5.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_tsvw_93DE4593559C4750BC2B1B49700507B8.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_tsvw_95F0C05A250749C193F5A538AD67F037.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_tsvw_9D2B1E57F6EA4640855AC2F0DDC38569.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_tsvw_9D35F9266C704F9AB231EFECD432DA84.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_tsvw_9D9D6ED7CCCA49559191C7777C7C8AFB.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_tsvw_9E6D847CD4B84C1494FB744C73333224.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_tsvw_A1765C48C7D343B6AA97B011B00069F7.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_tsvw_A66B25AFE51348DFB9AF6378E073C436.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_tsvw_A954A882661F4156A723A72C0A59E1A5.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_tsvw_ABD8B1EDB0E84A73816055D7FAE25E8B.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_tsvw_B234B6FE02564F9EB38BAD96BCB2134A.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_tsvw_BBD387789E9643D984216659C009D4D3.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_tsvw_BC049454C2094EEE8EE01869FBDFC02D.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_tsvw_C0541825B4094DAE9C4111318E45616B.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_tsvw_C2F34DE67FB1426985C16D21CD5128AE.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_tsvw_D9E091456FAE4AB185849640C91F03BB.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_tsvw_DBC1EDC0DA6B448CA785DA16456E4965.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_tsvw_E853DEECCB4C4671BF91158C75724958.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_tsvw_F1F5B41C259641E488930519F3FBED8D.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_tsvw_F2597FEE354C4E1A830E168382EDB99F.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_tsvw_F39BD2298472454F9C0FE02D795211B0.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSmerge_tsvw_F5B58F75BB214A39BDE451EFE6A5FC76.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MSrepl_errors.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\NhaCungCap.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\NhanVien.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PhanHoi.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PhieuBaoHanh.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PhieuNhap.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PhieuXuat.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\QLCHModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLCHModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\QLCHModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLCHModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\QLCHModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLCHModel.edmx</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SanPham.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_test_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysmergearticle.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysmergeextendedarticlesview.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysmergepartitioninfo.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysmergepartitioninfoview.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysmergepublication.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysmergeschemaarticle.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysmergeschemachange.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysmergesubscription.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysmergesubsetfilter.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysreplserver.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\test_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ThanhPho.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TheTichDiem.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ThongSoKiThuat.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TinhNang.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Voucher.cs">
-      <DependentUpon>QLCHModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\css\bootstrap.min.css" />
+    <Content Include="Assets\css\font-awesome.min.css" />
+    <Content Include="Assets\css\owl.carousel.css" />
+    <Content Include="Assets\css\responsive.css" />
+    <Content Include="Assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\img\brand1.png" />
+    <Content Include="Assets\img\brand2.png" />
+    <Content Include="Assets\img\brand3.png" />
+    <Content Include="Assets\img\brand4.png" />
+    <Content Include="Assets\img\brand5.png" />
+    <Content Include="Assets\img\brand6.png" />
+    <Content Include="Assets\img\crossword.png" />
+    <Content Include="Assets\img\h4-slide.png" />
+    <Content Include="Assets\img\h4-slide2.png" />
+    <Content Include="Assets\img\h4-slide3.png" />
+    <Content Include="Assets\img\h4-slide4.png" />
+    <Content Include="Assets\img\h4-slide7.png" />
+    <Content Include="Assets\img\logo.png" />
+    <Content Include="Assets\img\product-1.jpg" />
+    <Content Include="Assets\img\product-2.jpg" />
+    <Content Include="Assets\img\product-3.jpg" />
+    <Content Include="Assets\img\product-4.jpg" />
+    <Content Include="Assets\img\product-5.jpg" />
+    <Content Include="Assets\img\product-6.jpg" />
+    <Content Include="Assets\img\product-thumb-1.jpg" />
+    <Content Include="Assets\img\product-thumb-2.jpg" />
+    <Content Include="Assets\img\product-thumb-3.jpg" />
+    <Content Include="Assets\img\product-thumb-4.jpg" />
+    <Content Include="Assets\img\tulanh_tosiba_312.PNG" />
+    <Content Include="Assets\img\tulanh_tosiba_493.PNG" />
+    <Content Include="Assets\js\bxslider.min.js" />
+    <Content Include="Assets\js\jquery.easing.1.3.min.js" />
+    <Content Include="Assets\js\jquery.sticky.js" />
+    <Content Include="Assets\js\main.js" />
+    <Content Include="Assets\js\owl.carousel.min.js" />
+    <Content Include="Assets\js\script.slider.js" />
+    <Content Include="Assets\style.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -488,24 +1930,31 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\QLCHModel.Context.tt">
+    <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QLCHModel.edmx</DependentUpon>
-      <LastGenOutput>QLCHModel.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\QLCHModel.tt">
+    <Content Include="Models\Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QLCHModel.edmx</DependentUpon>
-      <LastGenOutput>QLCHModel.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\QLCHModel.edmx">
+    <Content Include="Assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\fonts\FontAwesome.otf" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.woff" />
+    <EntityDeploy Include="Models\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>QLCHModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\QLCHModel.edmx.diagram">
-      <DependentUpon>QLCHModel.edmx</DependentUpon>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -529,13 +1978,27 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\test.cshtml" />
+    <Content Include="Views\Home\Shop.cshtml" />
+    <Content Include="Views\Home\SingleProduct.cshtml" />
+    <Content Include="Views\Home\Cart.cshtml" />
+    <Content Include="Views\Product\XemChiTiet.cshtml" />
+    <Content Include="Views\Home\Toshiba.cshtml" />
+    <Content Include="Views\Home\Sharp.cshtml" />
+    <Content Include="Views\Home\SamSung.cshtml" />
+    <Content Include="Views\Home\Iphone.cshtml" />
+    <Content Include="Views\Home\DienThoaiHot.cshtml" />
+    <Content Include="Views\Home\TiViHot.cshtml" />
+    <Content Include="Views\KhachHang\DangKy.cshtml" />
+    <Content Include="Views\KhachHang\DangNhap.cshtml" />
+    <Content Include="Views\GioHang\GioHang.cshtml" />
+    <Content Include="Views\GioHang\PartialGioHang.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Catalog\" />
+    <Folder Include="Views\DonHang\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

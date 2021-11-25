@@ -1,0 +1,53 @@
+﻿@model IEnumerable<QLCH.Models.SanPham>
+
+@{
+    ViewBag.Title = "Sharp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="product-big-title-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-bit-title text-center">
+                    <h2>SHARP</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="single-product-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="single-shop-product">
+                        <a href="@Url.Action("XemChiTiet","Product",new { @maSP=item.MaSanPham})" style="color:white">
+                            <div class="product-upper">
+                                <img src="~/Assets/img/@Html.DisplayFor(modelItem=>item.AnhMinhHoa)" />
+                            </div>
+                        </a>
+
+                        <h2>@Html.DisplayFor(modelItem => item.TenSanPham)</h2>
+
+                        <div class="product-carousel-price">
+                            <p>@Html.DisplayFor(modelItem => item.DonGia)</p>
+                        </div>
+
+                        <div class="product-option-shop">
+                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+
+

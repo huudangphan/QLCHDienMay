@@ -24,8 +24,8 @@ namespace QLCH.Models
         public Nullable<bool> TinhTrangXacNhan { get; set; }
         public Nullable<bool> TinhTrangThanhToan { get; set; }
         public Nullable<bool> TinhTrangGiaoHang { get; set; }
-        public System.Guid rowguid { get; set; }
         public Nullable<decimal> TongGiaTri { get; set; }
+        public System.Guid rowguid { get; set; }
         public Nullable<System.Guid> origin_datasource_id { get; set; }
     }
 }

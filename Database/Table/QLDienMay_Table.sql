@@ -53,7 +53,7 @@ CREATE TABLE Loai
 )
 GO
 
-CREATE TABLE SanPham
+create TABLE SanPham
 (
 	MaSanPham CHAR(10),
 	TenSanPham NVARCHAR(100) NOT NULL,
@@ -62,10 +62,11 @@ CREATE TABLE SanPham
 	DonGia DECIMAL(18,2) CHECK(DonGia >= 0) NOT NULL,
 	MaKhuyenMai CHAR(10),
 	CONSTRAINT PK_SP PRIMARY KEY(MaSanPham),
-	CONSTRAINT FK_KM_SP FOREIGN KEY(MaKhuyenMai) REFERENCES KhuyenMai(MaKhuyenMai)
+	CONSTRAINT FK_KM_SP FOREIGN KEY(MaKhuyenMai) REFERENCES KhuyenMai(MaKhuyenMai)	
 )
 GO
-
+alter table sanpham
+drop mathuonghieu
 CREATE TABLE ChiTietLoai
 (
 	MaSanPham CHAR(10),
@@ -337,3 +338,21 @@ CREATE TABLE PhanHoi
 	CONSTRAINT FK_KH_PhanHoi FOREIGN KEY(MaKhachHang) REFERENCES KhachHang(MaKhachHang)
 )
 GO
+
+create TABLE ThuongHieu
+(
+	MaThuongHieu char(5),
+	TenThuongHieu nvarchar(50)	
+	CONSTRAINT PK_ThuongHieu PRIMARY KEY(MaThuongHieu)
+)
+
+--drop table thuonghieu
+
+--select * from thuonghieu
+--select * from sanpham
+
+--alter table sanpham 
+--add CONSTRAINT FK_TH_SP FOREIGN KEY(MaThuongHieu) REFERENCES ThuongHieu(MaThuongHieu)
+
+alter table sanpham
+add MaLoai char(5) CONSTRAINT FK_Loai_SP FOREIGN KEY(MaLoai) REFERENCES Loai(MaLoai)

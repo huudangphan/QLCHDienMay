@@ -21,8 +21,8 @@ namespace QLCH.Models
         public string MaDonHang { get; set; }
         public Nullable<System.DateTime> ThoiGianTao { get; set; }
         public Nullable<decimal> TongGiaTri { get; set; }
-        public System.Guid rowguid { get; set; }
         public Nullable<bool> TrangThai { get; set; }
+        public System.Guid rowguid { get; set; }
         public Nullable<System.Guid> origin_datasource_id { get; set; }
     }
 }

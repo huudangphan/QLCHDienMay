@@ -17,6 +17,7 @@ namespace QLCH.Models
         public string MaKho { get; set; }
         public string MaCuaHang { get; set; }
         public string DiaChi { get; set; }
+        public string TruongKho { get; set; }
         public System.Guid rowguid { get; set; }
         public Nullable<System.Guid> origin_datasource_id { get; set; }
     }

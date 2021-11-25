@@ -624,3 +624,221 @@ INSERT INTO PhanHoi(MaKhachHang,NoiDung,TrangThai)
 VALUES('KH00000001',N'Sản phâm tốt vl',null)
 SELECT * FROM PhanHoi
 
+------ThuongHieu--------------
+insert into ThuongHieu(MaThuongHieu, TenThuongHieu)
+values('TH001',N'Tosiba'), ('TH002',N'Sharp'), ('TH003',N'Panasonic'),('TH004',N'SamSung'), ('TH005',N'Dell'), ('TH006',N'Iphone')
+
+-----SanPham----------------
+
+
+select * from thuonghieu
+select * From sanpham
+
+update sanpham
+set AnhMinhHoa='tulanh_tosiba_312.PNG'
+where MaSanPham='SP00000001'
+
+update sanpham
+set AnhMinhHoa='tulanh_tosiba_622.PNG'
+where MaSanPham='SP00000003'
+
+update sanpham
+set AnhMinhHoa='tulanh_tosiba_312.PNG'
+where MaSanPham='SP00000001'
+
+update sanpham
+set TenSanPham=N'Tủ lạnh Toshiba Inverter 312 lít GR-RT400WE'
+where MaSanPham='SP00000001'
+
+update sanpham
+set AnhMinhHoa='dienthoai_samsung_s5.png'
+where MaSanPham='SP00000007'
+
+update sanpham
+set TenSanPham='Samsung Galaxy Tab S5e Likenew 99% 4G LTE'
+where MaSanPham='SP00000007'
+
+
+update thuonghieu
+set TenThuongHieu='Iphone'
+where MaThuongHieu='TH004'
+
+update thuonghieu
+set TenThuongHieu='SamSung'
+where MaThuongHieu='TH006'
+
+select * from khuyenmai
+
+select * from thuonghieu
+select * From danhmuc
+select * from sanpham
+delete from sanpham where masanpham='SP00000019'
+-----tu lanh tosiba -------
+INSERT INTO SanPham(TenSanPham,MaThuongHieu,AnhMinhHoa,DonGia,MaKhuyenMai)
+VALUES(N'Tủ lạnh Toshiba Inverter 493 Lít GR-RS637WE-PMV','TH001','tulanh_tosiba_493.PNG',70000000,'KM00000001')
+go
+INSERT INTO SanPham(TenSanPham,MaThuongHieu,AnhMinhHoa,DonGia,MaKhuyenMai)
+VALUES(N'Tủ lạnh Toshiba Inverter 513 lít GR-RS682WE-PMV','TH001','tulanh_tosiba_513.PNG',80000000,'KM00000001')
+go
+INSERT INTO SanPham(TenSanPham,MaThuongHieu,AnhMinhHoa,DonGia,MaKhuyenMai)
+VALUES(N'Tủ lạnh Toshiba 233 lít GR-A28VM (UKG1) Inverter','TH001','tulanh_tosiba_233.PNG',80000000,'KM00000001')
+
+INSERT INTO SanPham(TenSanPham,MaThuongHieu,AnhMinhHoa,DonGia,MaKhuyenMai)
+VALUES(N'Tủ lạnh Toshiba 233 lít GR-A28VM (UKG1) Inverter','TH001','tulanh_tosiba_233.PNG',80000000,'KM00000001')
+
+INSERT INTO SanPham(TenSanPham,MaThuongHieu,AnhMinhHoa,DonGia,MaKhuyenMai)
+VALUES(N'Tủ Lạnh Tosiba Inverter 540 Lít R-FW690PGV7','TH001','tulanh_tosiba_540.PNG',78900000,'KM00000001')
+
+INSERT INTO SanPham(TenSanPham,MaThuongHieu,AnhMinhHoa,DonGia,MaKhuyenMai)
+VALUES(N'Tủ lạnh Toshiba Inverter 180 lít GR-B22VU UKG','TH001','tulanh_tosiba_180.PNG',3000000,'KM00000002')
+
+INSERT INTO SanPham(TenSanPham,MaThuongHieu,AnhMinhHoa,DonGia,MaKhuyenMai)
+VALUES(N'Tủ lạnh Toshiba Inverter 294 lít GR-RB385WE','TH001','tulanh_tosiba_294.PNG',5300000,'KM00000002')
+
+INSERT INTO SanPham(TenSanPham,MaThuongHieu,AnhMinhHoa,DonGia,MaKhuyenMai)
+VALUES(N'Tủ lạnh Toshiba Inverter 511 lít GR-RF610WE','TH001','tulanh_tosiba_511.PNG',7300000,'KM00000002')
+
+INSERT INTO SanPham(TenSanPham,MaThuongHieu,AnhMinhHoa,DonGia,MaKhuyenMai)
+VALUES(N'Tủ lạnh Toshiba inverter GR-AG66VA-X 608 lít','TH001','tulanh_tosiba_608.PNG',7300000,'KM00000002')
+
+
+--------tivi sharp-------
+INSERT INTO SanPham(TenSanPham,MaThuongHieu,AnhMinhHoa,DonGia,MaKhuyenMai)
+VALUES(N'Smart Tivi Sharp 40 inch LC-40SA5500X','TH002','tivi_sharp_40.png',6500000,'KM00000001')
+go
+INSERT INTO SanPham(TenSanPham,MaThuongHieu,AnhMinhHoa,DonGia,MaKhuyenMai)
+VALUES(N'tivi Sharp 4K 60 inch LC-60UA6800XXXX','TH002','tivi_sharp_60.png',14500000,'KM00000001')
+
+INSERT INTO SanPham(TenSanPham,MaThuongHieu,AnhMinhHoa,DonGia,MaKhuyenMai)
+VALUES(N'Smart Tivi Sharp 32 inch LC-32SA4500X ','TH002','tivi_sharp_32.png',4200000,'KM00000001')
+
+--INSERT INTO SanPham(TenSanPham,MaThuongHieu,AnhMinhHoa,DonGia,MaKhuyenMai)
+--VALUES(N'Tivi Led Sharp 32 inch 2T-chính hãng','TH002','tivi_sharp_321.png',2850000,'KM00000001')
+
+--INSERT INTO SanPham(TenSanPham,MaThuongHieu,AnhMinhHoa,DonGia,MaKhuyenMai)
+--VALUES(N'Smart Tivi Sharp 4K 55 inch 4T-C55CJ','TH002','tivi_sharp_55.png',10490000,'KM00000001')
+
+--INSERT INTO SanPham(TenSanPham,MaThuongHieu,AnhMinhHoa,DonGia,MaKhuyenMai)
+--VALUES(N'Smart Tivi Sharp 4K 50 inch 4T-C65CK','TH002','tivi_sharp_50.png',10490000,'KM00000001')
+
+--INSERT INTO SanPham(TenSanPham,MaThuongHieu,AnhMinhHoa,DonGia,MaKhuyenMai)
+--VALUES(N'Smart Tivi Sharp 4K 65 inch 65EG8000','TH002','tivi_sharp_65.png',10490000,'KM00000001')
+
+--INSERT INTO SanPham(TenSanPham,MaThuongHieu,AnhMinhHoa,DonGia,MaKhuyenMai)
+--VALUES(N'Smart Tivi Sharp 4K 65 inch 65EG8000','TH002','product-thumb-4.jpg',10490000,'KM00000001')
+
+select * from sanpham
+delete from sanpham where masanpham='SP021'
+-----dien thoai samsung----
+
+INSERT INTO SanPham(TenSanPham,MaThuongHieu,AnhMinhHoa,DonGia,MaKhuyenMai)
+VALUES(N'Samsung Galaxy Note 9 (SM-N960DS/) 128GB + 6GB','TH006','samsung_galaxy_note4.png',13900000,'KM00000002')
+
+INSERT INTO SanPham(TenSanPham,MaThuongHieu,AnhMinhHoa,DonGia,MaKhuyenMai)
+VALUES(N'Điện thoại Samsung Galaxy Note 10+ Plus 120TB','TH006','samsung_galaxy_note10.png',1900000,'KM00000002')
+
+INSERT INTO SanPham(TenSanPham,MaThuongHieu,AnhMinhHoa,DonGia,MaKhuyenMai)
+VALUES(N'Samsung Galaxy Note 8 (SM-N960DS/) 128GB + 6GB','TH006','samsung_galaxy_note8.png',1200000,'KM00000002')
+
+INSERT INTO SanPham(TenSanPham,MaThuongHieu,AnhMinhHoa,DonGia,MaKhuyenMai)
+VALUES(N'Samsung Galaxy Note 9 (SM-N100DS/) 128GB + 2GB','TH006','samsung_galaxy_note9.png',1110000,'KM00000002')
+
+INSERT INTO SanPham(TenSanPham,MaThuongHieu,AnhMinhHoa,DonGia,MaKhuyenMai)
+VALUES(N'Điện thoại Samsung Galaxy A12 Nacho 128 GB','TH006','dienthoai_samsung_galaxy_a12.png',4200000,'KM00000002')
+
+-----dien thoai iphone----
+INSERT INTO SanPham(TenSanPham,MaThuongHieu,AnhMinhHoa,DonGia,MaKhuyenMai)
+VALUES(N'Apple iPhone 6s 16GB Quốc Tế 120TB + 2GB','TH004','iphone_6s.png',2290000,'KM00000001')
+go
+INSERT INTO SanPham(TenSanPham,MaThuongHieu,AnhMinhHoa,DonGia,MaKhuyenMai)
+VALUES(N'Apple iPhone 7plus 8GB Quốc Tế + 2GB + đẹp','TH004','iphone_7plus.png',4290000,'KM00000001')
+go
+INSERT INTO SanPham(TenSanPham,MaThuongHieu,AnhMinhHoa,DonGia,MaKhuyenMai)
+VALUES(N'Apple iPhone 8 128GB Quốc Tế 120TB + 2GB','TH004','iphone_8.png',6290000,'KM00000001')
+go
+INSERT INTO SanPham(TenSanPham,MaThuongHieu,AnhMinhHoa,DonGia,MaKhuyenMai)
+VALUES(N'Apple iPhone 12 Pro 256GB chính hãng','TH004','iphone_12.png',2890000,'KM00000001')
+go
+
+INSERT INTO SanPham(TenSanPham,MaThuongHieu,AnhMinhHoa,DonGia,MaKhuyenMai)
+VALUES(N'Apple iPhone 13 Pro 256GB chính hãng','TH004','iphone_13.png',34890000,'KM00000001')
+go
+
+update sanpham
+set tensanpham='Apple iPhone 13 Pro 520GB chính hãng'
+where masanpham='SP00000057'
+
+select *From sanpham
+delete from sanpham where masanpham='SP00000040'
+INSERT INTO SanPham(TenSanPham,MaThuongHieu,AnhMinhHoa,DonGia,MaKhuyenMai)
+VALUES(N'Apple iPhone 13 Pro 520GB chính hãng','TH004','iphone_13pro.png',54890000,'KM00000001')
+
+select *From dacdiemnoibat
+delete from dacdiemnoibat
+
+-------Mo ta san pham-------
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP00000001',N'Luồng khí lạnh thác đổ Air Fall Cooling. Ngăn Cooling Zone giữ nguyên hương vị.')
+go
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP00000002',N'Luồng khí lạnh thác đổ Air Fall Cooling. Ngăn Cooling Zone giữ nguyên hương vị.')
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP00000003',N'Thiết kế sang trọng hiện đại nân tầm không gian nội thất. Dung tích 622 lít phù hợp với gia đình.')  
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP00000004',N'Luồng khí lạnh thác đổ Air Fall Cooling. Ngăn Cooling Zone giữ nguyên hương vị.')
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP00000005',N'Laptop Dell Inspiron 7306 i5 (N3I5202W) là mẫu laptop thuộc phân khúc cao cấp của nhà Dell.') 
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP00000006',N'Laptop Dell Inspiron 7306 i5 (N3I5202W) là mẫu laptop thuộc phân khúc cao cấp của nhà Dell.')
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP00000007',N'Samsung Galaxy Tab S5e mở ra một chân trời mới với màn hình tuyệt mỹ và thiết kế siêu mỏng nhẹ.')
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP00000008',N'Tủ lạnh 493 lít đáp ứng tốt nhu cầu bảo quản thực phẩm. Inverter giúp giảm thiểu chi phí điện năng')
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP00000009',N'Toshiba Inverter 513 lít GR-RS682WE-PMV(06)-MG thuộc mẫu tủ lạnh side by side, gam màu đen tinh tế.')
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP00000010',N'Công nghệ tiết kiệm điện	Inverter, chỉnh nhiệt độ thủ công, dung tích từ 150-300 lít')
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP00000011',N'Loại: 4 cánh/ Công nghệ Inverter. Tổng dung tích: 540 Lít. Công suất (W): 230.')
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP00000012',N'Với kiểu tủ ngăn đá trên, chiếc tủ lạnh Toshiba Inverter 180 lít GR-B22VU UKG được thiết kế nhỏ gọn')
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP00000013',N'Tủ lạnh Toshiba Inverter 294 lít GR-RB385WE-PMV(30)-BS được thiết kế hệ thống lấy nước bên ngoài.')
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP00000014',N'Toshiba Inverter 511 lít GR-RF610WE-PGV(22)-XK thuộc kiểu tủ lạnh hiện đại multi door.')
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP00000015',N'Tủ lạnh Toshiba Inverter 608 lít GR-AG66VA(XK) được trang bị ngăn đông mềm ULTRA FRESH.')
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP00000016',N'Smart Tivi Sharp 40 inch LC-40SA5500X được thiết kế với viền màn hình mỏng 1 cm đi kèm chân đế.')
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP00000017',N'LC-60UA6800X là thế hệ tivi 4K phiên bản 2018 hiện đại được sản xuất bởi thương hiệu Sharp Nhật Bản.')
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP00000018',N'Smart Tivi Sharp HD 32 inch LC-32SA4500 thuộc dòng tivi Sharp mới được ra mắt vào năm 2018.')
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP00000020',N'Smart Tivi Sharp 4K 55 inch 4T-C55CJ2X sở hữu thiết kế tràn viền 3 cạnh tinh tế.')
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP00000021',N'Galaxy Note 9 (6GB|128GB) (CTY) là flagship dòng Note mới nhất của Samsung.')
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP00000022',N'Ra mắt vào 8/2019, cấu hình Samsung Galaxy Note10 Plus gồm dung lượng pin 4300mAh.')
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP00000023',N'Galaxy Note 8 là niềm hy vọng vực lại dòng Note danh tiếng của điện thoại Samsung.')
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP00000024',N'Mang lại sự cải tiến đặc biệt trong cây bút S Pen, siêu phẩm Samsung Galaxy Note 9.')
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP00000052',N'iPhone 6s được nâng cấp độ phân giải camera sau lên 12 MP (thay vì 8 MP như trên iPhone 6).')
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP00000053',N'Ra mắt vào 9/2016, cấu hình Apple iPhone 7 Plus gồm dung lượng pin 2900mAh, màn hình 5.5".')
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP00000054',N'iPhone 8 Plus giữ nguyên thiết kế đã hoàn thiện từ thế hệ đàn em iPhone 7 Plus.')
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP00000055',N'IPhone 12 Pro 256GB chính hãng VN/A là máy mới 100% fullbox nguyên seal chưa active.')
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP00000056',N'iPhone 13 Series là dòng điện thoại flagship cao cấp nhất của Apple vừa được giới thiệu.')
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP00000057',N'iPhone 13 Pro Max 512GB một siêu phẩm đến từ nhà Apple đang được rất nhiều sự quan tâm từ iFan.')
+INSERT INTO DacDiemNoiBat(MaSanPham,TenDacDiem)
+VALUES('SP025',N'Galaxy A12 Nacho là điện thoại thuộc phân khúc giá rẻ được quan tâm nhiều nhất của Samsung.')
+
+create View v_sanpham
+as
+select SanPham.MaSanPham,TenSanPham, AnhMinhHoa, DonGia,TenDacDiem from SanPham, DacDiemNoiBat where sanpham.masanpham=dacdiemnoibat.masanpham

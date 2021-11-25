@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ad8235e9a55a49a09f4e61fb7693d537" Name="Diagram1">
+        <EntityTypeShape EntityType="QLDienMayModel.ChiTietDonHang" Width="1.5" PointX="5.25" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.ChiTietKho" Width="1.5" PointX="8.25" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.ChiTietLoai" Width="1.5" PointX="5.25" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.ChiTietPhieuNhap" Width="1.5" PointX="8.25" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.ChiTietPhieuXuat" Width="1.5" PointX="8.25" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.ChucVu" Width="1.5" PointX="1.5" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.CuaHang" Width="1.5" PointX="1.5" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.DacDiemNoiBat" Width="1.5" PointX="5.25" PointY="28.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.DanhMuc" Width="1.5" PointX="0.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.DonHang" Width="1.5" PointX="3" PointY="32.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.HangTichDiem" Width="1.5" PointX="3.75" PointY="26" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.KhachHang" Width="1.5" PointX="0.75" PointY="31.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.Kho" Width="1.5" PointX="3.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.KhuyenMai" Width="1.5" PointX="0.75" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.Loai" Width="1.5" PointX="3" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSdynamicsnapshotview" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_dynamic_snapshots" Width="1.5" PointX="8" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_partition_groups" Width="1.5" PointX="5.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.NhaCungCap" Width="1.5" PointX="3.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.NhanVien" Width="1.5" PointX="1.5" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.PhanHoi" Width="1.5" PointX="3" PointY="37.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.PhieuBaoHanh" Width="1.5" PointX="5.25" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.PhieuNhap" Width="1.5" PointX="6" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.PhieuXuat" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.SanPham" Width="1.5" PointX="3" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.sysreplserver" Width="1.5" PointX="8.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.ThanhPho" Width="1.5" PointX="8.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.TheTichDiem" Width="1.5" PointX="6" PointY="31.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.ThongSoKiThuat" Width="1.5" PointX="5.25" PointY="35.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.TinhNang" Width="1.5" PointX="5.25" PointY="38" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.Voucher" Width="1.5" PointX="0.75" PointY="35.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSdynamicsnapshotjob" Width="1.5" PointX="10.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_agent_parameters" Width="1.5" PointX="10.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_altsyncpartners" Width="1.5" PointX="10.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_articlehistory" Width="1.5" PointX="10.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_ChiTietDonHang" Width="1.5" PointX="12.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_ChiTietKho" Width="1.5" PointX="12.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_ChiTietLoai" Width="1.5" PointX="12.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuNhap" Width="1.5" PointX="12.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuXuat" Width="1.5" PointX="12.75" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_ChucVu" Width="1.5" PointX="14.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_CuaHang" Width="1.5" PointX="14.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_DacDiemNoiBat" Width="1.5" PointX="14.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_DanhMuc" Width="1.5" PointX="14.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_DonHang" Width="1.5" PointX="14.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_HangTichDiem" Width="1.5" PointX="16.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_KhachHang" Width="1.5" PointX="16.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_Kho" Width="1.5" PointX="16.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_KhuyenMai" Width="1.5" PointX="16.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_Loai" Width="1.5" PointX="10.75" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_NhaCungCap" Width="1.5" PointX="16.75" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_NhanVien" Width="1.5" PointX="12.75" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_PhanHoi" Width="1.5" PointX="14.75" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_PhieuBaoHanh" Width="1.5" PointX="16.75" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_PhieuNhap" Width="1.5" PointX="18.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_PhieuXuat" Width="1.5" PointX="18.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_SanPham" Width="1.5" PointX="18.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_ThanhPho" Width="1.5" PointX="18.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_TheTichDiem" Width="1.5" PointX="18.75" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_ThongSoKiThuat" Width="1.5" PointX="18.75" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_TinhNang" Width="1.5" PointX="20.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_Voucher" Width="1.5" PointX="20.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN2_ChiTietDonHang" Width="1.5" PointX="20.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN2_ChiTietKho" Width="1.5" PointX="7.75" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN2_ChiTietLoai" Width="1.5" PointX="9.75" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN2_ChiTietPhieuNhap" Width="1.5" PointX="20.75" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN2_ChiTietPhieuXuat" Width="1.5" PointX="20.75" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN2_ChucVu" Width="1.5" PointX="20.75" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN2_CuaHang" Width="1.5" PointX="20.75" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN2_DacDiemNoiBat" Width="1.5" PointX="14.75" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN2_DanhMuc" Width="1.5" PointX="22.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN2_DonHang" Width="1.5" PointX="22.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN2_HangTichDiem" Width="1.5" PointX="22.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN2_KhachHang" Width="1.5" PointX="22.75" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN2_Kho" Width="1.5" PointX="11.75" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN2_KhuyenMai" Width="1.5" PointX="22.75" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN2_Loai" Width="1.5" PointX="16.75" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN2_NhaCungCap" Width="1.5" PointX="22.75" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN2_NhanVien" Width="1.5" PointX="22.75" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN2_PhanHoi" Width="1.5" PointX="7.75" PointY="26" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN2_PhieuBaoHanh" Width="1.5" PointX="18.75" PointY="26" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN2_PhieuNhap" Width="1.5" PointX="24.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN2_PhieuXuat" Width="1.5" PointX="24.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN2_SanPham" Width="1.5" PointX="24.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN2_ThanhPho" Width="1.5" PointX="24.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN2_TheTichDiem" Width="1.5" PointX="13.75" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN2_ThongSoKiThuat" Width="1.5" PointX="24.75" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN2_TinhNang" Width="1.5" PointX="24.75" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflict_QLDienMay_CN2_Voucher" Width="1.5" PointX="24.75" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_conflicts_info" Width="1.5" PointX="9.75" PointY="28" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_contents" Width="1.5" PointX="15.75" PointY="28" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_current_partition_mappings" Width="1.5" PointX="24.75" PointY="28" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_errorlineage" Width="1.5" PointX="26.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_generation_partition_mappings" Width="1.5" PointX="26.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_genhistory" Width="1.5" PointX="26.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_history" Width="1.5" PointX="26.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_identity_range" Width="1.5" PointX="26.75" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_log_files" Width="1.5" PointX="26.75" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_metadataaction_request" Width="1.5" PointX="26.75" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_past_partition_mappings" Width="1.5" PointX="26.75" PointY="28" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_replinfo" Width="1.5" PointX="17.75" PointY="30" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_sessions" Width="1.5" PointX="19.75" PointY="30" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_settingshistory" Width="1.5" PointX="21.75" PointY="30" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_supportability_settings" Width="1.5" PointX="28.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_tombstone" Width="1.5" PointX="28.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSrepl_errors" Width="1.5" PointX="28.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.sysmergearticle" Width="1.5" PointX="11.75" PointY="31" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.sysmergepartitioninfo" Width="1.5" PointX="28.75" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.sysmergepublication" Width="1.5" PointX="28.75" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.sysmergeschemaarticle" Width="1.5" PointX="23.75" PointY="31" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.sysmergeschemachange" Width="1.5" PointX="25.75" PointY="31" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.sysmergesubscription" Width="1.5" PointX="8.75" PointY="32" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.sysmergesubsetfilter" Width="1.5" PointX="13.75" PointY="32" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_cpmv_3B119D6CCA384A37AAD74B2C42C4FA58" Width="1.5" PointX="30.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_cpmv_4C57D6BFADB6403C9BD048B69EE9A711" Width="1.5" PointX="30.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_cpmv_648A29E871774465A8F217CFD7D3CC4A" Width="1.5" PointX="30.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_cpmv_897154BD00094B28AF9013C540B937CB" Width="1.5" PointX="30.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_cpmv_908276E0587D4863B9837BE92F24AFD5" Width="1.5" PointX="30.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_cpmv_93DE4593559C4750BC2B1B49700507B8" Width="1.5" PointX="30.75" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_cpmv_95F0C05A250749C193F5A538AD67F037" Width="1.5" PointX="30.75" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_cpmv_9D2B1E57F6EA4640855AC2F0DDC38569" Width="1.5" PointX="30.75" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_cpmv_9D35F9266C704F9AB231EFECD432DA84" Width="1.5" PointX="30.75" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_cpmv_9D9D6ED7CCCA49559191C7777C7C8AFB" Width="1.5" PointX="30.75" PointY="30" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_cpmv_9E6D847CD4B84C1494FB744C73333224" Width="1.5" PointX="30.75" PointY="33" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_cpmv_A1765C48C7D343B6AA97B011B00069F7" Width="1.5" PointX="15.75" PointY="34" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_cpmv_A66B25AFE51348DFB9AF6378E073C436" Width="1.5" PointX="27.75" PointY="34" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_cpmv_A954A882661F4156A723A72C0A59E1A5" Width="1.5" PointX="32.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_cpmv_ABD8B1EDB0E84A73816055D7FAE25E8B" Width="1.5" PointX="32.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_cpmv_B234B6FE02564F9EB38BAD96BCB2134A" Width="1.5" PointX="32.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_cpmv_BBD387789E9643D984216659C009D4D3" Width="1.5" PointX="32.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_cpmv_BC049454C2094EEE8EE01869FBDFC02D" Width="1.5" PointX="32.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_cpmv_C0541825B4094DAE9C4111318E45616B" Width="1.5" PointX="32.75" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_cpmv_C2F34DE67FB1426985C16D21CD5128AE" Width="1.5" PointX="32.75" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_cpmv_D9E091456FAE4AB185849640C91F03BB" Width="1.5" PointX="32.75" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_cpmv_DBC1EDC0DA6B448CA785DA16456E4965" Width="1.5" PointX="32.75" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_cpmv_E853DEECCB4C4671BF91158C75724958" Width="1.5" PointX="32.75" PointY="30" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_cpmv_F1F5B41C259641E488930519F3FBED8D" Width="1.5" PointX="32.75" PointY="33" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_cpmv_F2597FEE354C4E1A830E168382EDB99F" Width="1.5" PointX="21.75" PointY="36" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_cpmv_F39BD2298472454F9C0FE02D795211B0" Width="1.5" PointX="23.75" PointY="36" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_cpmv_F5B58F75BB214A39BDE451EFE6A5FC76" Width="1.5" PointX="29.75" PointY="36" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ctsv_3B119D6CCA384A37AAD74B2C42C4FA58" Width="1.5" PointX="31.75" PointY="36" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ctsv_4C57D6BFADB6403C9BD048B69EE9A711" Width="1.5" PointX="33.75" PointY="36" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ctsv_648A29E871774465A8F217CFD7D3CC4A" Width="1.5" PointX="34.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ctsv_897154BD00094B28AF9013C540B937CB" Width="1.5" PointX="34.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ctsv_908276E0587D4863B9837BE92F24AFD5" Width="1.5" PointX="34.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ctsv_93DE4593559C4750BC2B1B49700507B8" Width="1.5" PointX="34.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ctsv_95F0C05A250749C193F5A538AD67F037" Width="1.5" PointX="13.75" PointY="37" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ctsv_9D2B1E57F6EA4640855AC2F0DDC38569" Width="1.5" PointX="15.75" PointY="37" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ctsv_9D35F9266C704F9AB231EFECD432DA84" Width="1.5" PointX="34.75" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ctsv_9D9D6ED7CCCA49559191C7777C7C8AFB" Width="1.5" PointX="34.75" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ctsv_9E6D847CD4B84C1494FB744C73333224" Width="1.5" PointX="34.75" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ctsv_A1765C48C7D343B6AA97B011B00069F7" Width="1.5" PointX="25.75" PointY="37" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ctsv_A66B25AFE51348DFB9AF6378E073C436" Width="1.5" PointX="34.75" PointY="31" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ctsv_A954A882661F4156A723A72C0A59E1A5" Width="1.5" PointX="35.75" PointY="35" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ctsv_ABD8B1EDB0E84A73816055D7FAE25E8B" Width="1.5" PointX="36.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ctsv_B234B6FE02564F9EB38BAD96BCB2134A" Width="1.5" PointX="36.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ctsv_BBD387789E9643D984216659C009D4D3" Width="1.5" PointX="36.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ctsv_BC049454C2094EEE8EE01869FBDFC02D" Width="1.5" PointX="36.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ctsv_C0541825B4094DAE9C4111318E45616B" Width="1.5" PointX="36.75" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ctsv_C2F34DE67FB1426985C16D21CD5128AE" Width="1.5" PointX="17.75" PointY="39" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ctsv_D9E091456FAE4AB185849640C91F03BB" Width="1.5" PointX="19.75" PointY="39" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ctsv_DBC1EDC0DA6B448CA785DA16456E4965" Width="1.5" PointX="36.75" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ctsv_E853DEECCB4C4671BF91158C75724958" Width="1.5" PointX="21.75" PointY="39" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ctsv_F1F5B41C259641E488930519F3FBED8D" Width="1.5" PointX="36.75" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ctsv_F2597FEE354C4E1A830E168382EDB99F" Width="1.5" PointX="27.75" PointY="39" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ctsv_F39BD2298472454F9C0FE02D795211B0" Width="1.5" PointX="36.75" PointY="31" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ctsv_F5B58F75BB214A39BDE451EFE6A5FC76" Width="1.5" PointX="35.75" PointY="39" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_genvw_3B119D6CCA384A37AAD74B2C42C4FA58" Width="1.5" PointX="29.75" PointY="40" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_genvw_4C57D6BFADB6403C9BD048B69EE9A711" Width="1.5" PointX="31.75" PointY="40" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_genvw_648A29E871774465A8F217CFD7D3CC4A" Width="1.5" PointX="37.75" PointY="35" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_genvw_897154BD00094B28AF9013C540B937CB" Width="1.5" PointX="37.75" PointY="39" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_genvw_908276E0587D4863B9837BE92F24AFD5" Width="1.5" PointX="38.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_genvw_93DE4593559C4750BC2B1B49700507B8" Width="1.5" PointX="0.75" PointY="41" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_genvw_95F0C05A250749C193F5A538AD67F037" Width="1.5" PointX="2.75" PointY="41" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_genvw_9D2B1E57F6EA4640855AC2F0DDC38569" Width="1.5" PointX="38.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_genvw_9D35F9266C704F9AB231EFECD432DA84" Width="1.5" PointX="4.75" PointY="41" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_genvw_9D9D6ED7CCCA49559191C7777C7C8AFB" Width="1.5" PointX="6.75" PointY="41" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_genvw_9E6D847CD4B84C1494FB744C73333224" Width="1.5" PointX="38.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_genvw_A1765C48C7D343B6AA97B011B00069F7" Width="1.5" PointX="8.75" PointY="41" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_genvw_A66B25AFE51348DFB9AF6378E073C436" Width="1.5" PointX="38.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_genvw_A954A882661F4156A723A72C0A59E1A5" Width="1.5" PointX="13.75" PointY="41" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_genvw_ABD8B1EDB0E84A73816055D7FAE25E8B" Width="1.5" PointX="38.75" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_genvw_B234B6FE02564F9EB38BAD96BCB2134A" Width="1.5" PointX="38.75" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_genvw_BBD387789E9643D984216659C009D4D3" Width="1.5" PointX="23.75" PointY="41" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_genvw_BC049454C2094EEE8EE01869FBDFC02D" Width="1.5" PointX="38.75" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_genvw_C0541825B4094DAE9C4111318E45616B" Width="1.5" PointX="38.75" PointY="31" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_genvw_C2F34DE67FB1426985C16D21CD5128AE" Width="1.5" PointX="39.75" PointY="35" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_genvw_D9E091456FAE4AB185849640C91F03BB" Width="1.5" PointX="39.75" PointY="39" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_genvw_DBC1EDC0DA6B448CA785DA16456E4965" Width="1.5" PointX="40.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_genvw_E853DEECCB4C4671BF91158C75724958" Width="1.5" PointX="40.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_genvw_F1F5B41C259641E488930519F3FBED8D" Width="1.5" PointX="40.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_genvw_F2597FEE354C4E1A830E168382EDB99F" Width="1.5" PointX="40.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_genvw_F39BD2298472454F9C0FE02D795211B0" Width="1.5" PointX="15.75" PointY="43" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_genvw_F5B58F75BB214A39BDE451EFE6A5FC76" Width="1.5" PointX="40.75" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ppmv_3B119D6CCA384A37AAD74B2C42C4FA58" Width="1.5" PointX="17.75" PointY="43" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ppmv_4C57D6BFADB6403C9BD048B69EE9A711" Width="1.5" PointX="19.75" PointY="43" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ppmv_648A29E871774465A8F217CFD7D3CC4A" Width="1.5" PointX="40.75" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ppmv_897154BD00094B28AF9013C540B937CB" Width="1.5" PointX="40.75" PointY="26" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ppmv_908276E0587D4863B9837BE92F24AFD5" Width="1.5" PointX="25.75" PointY="43" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ppmv_93DE4593559C4750BC2B1B49700507B8" Width="1.5" PointX="40.75" PointY="29" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ppmv_95F0C05A250749C193F5A538AD67F037" Width="1.5" PointX="40.75" PointY="32" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ppmv_9D2B1E57F6EA4640855AC2F0DDC38569" Width="1.5" PointX="33.75" PointY="43" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ppmv_9D35F9266C704F9AB231EFECD432DA84" Width="1.5" PointX="35.75" PointY="43" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ppmv_9D9D6ED7CCCA49559191C7777C7C8AFB" Width="1.5" PointX="37.75" PointY="43" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ppmv_9E6D847CD4B84C1494FB744C73333224" Width="1.5" PointX="39.75" PointY="43" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ppmv_A1765C48C7D343B6AA97B011B00069F7" Width="1.5" PointX="27.75" PointY="44" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ppmv_A66B25AFE51348DFB9AF6378E073C436" Width="1.5" PointX="29.75" PointY="44" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ppmv_A954A882661F4156A723A72C0A59E1A5" Width="1.5" PointX="41.75" PointY="35" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ppmv_ABD8B1EDB0E84A73816055D7FAE25E8B" Width="1.5" PointX="41.75" PointY="38" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ppmv_B234B6FE02564F9EB38BAD96BCB2134A" Width="1.5" PointX="41.75" PointY="41" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ppmv_BBD387789E9643D984216659C009D4D3" Width="1.5" PointX="41.75" PointY="44" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ppmv_BC049454C2094EEE8EE01869FBDFC02D" Width="1.5" PointX="42.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ppmv_C0541825B4094DAE9C4111318E45616B" Width="1.5" PointX="0.75" PointY="45" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ppmv_C2F34DE67FB1426985C16D21CD5128AE" Width="1.5" PointX="2.75" PointY="45" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ppmv_D9E091456FAE4AB185849640C91F03BB" Width="1.5" PointX="42.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ppmv_DBC1EDC0DA6B448CA785DA16456E4965" Width="1.5" PointX="4.75" PointY="45" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ppmv_E853DEECCB4C4671BF91158C75724958" Width="1.5" PointX="42.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ppmv_F1F5B41C259641E488930519F3FBED8D" Width="1.5" PointX="6.75" PointY="45" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ppmv_F2597FEE354C4E1A830E168382EDB99F" Width="1.5" PointX="8.75" PointY="45" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ppmv_F39BD2298472454F9C0FE02D795211B0" Width="1.5" PointX="42.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_ppmv_F5B58F75BB214A39BDE451EFE6A5FC76" Width="1.5" PointX="10.75" PointY="45" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_ChiTietDonHang_PARTITION_VIEW" Width="1.5" PointX="42.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_ChiTietDonHang_VIEW" Width="1.5" PointX="12.75" PointY="45" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_ChiTietKho_PARTITION_VIEW" Width="1.5" PointX="42.75" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_ChiTietKho_VIEW" Width="1.5" PointX="42.75" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_ChiTietLoai_PARTITION_VIEW" Width="1.5" PointX="42.75" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_ChiTietLoai_VIEW" Width="1.5" PointX="21.75" PointY="45" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_ChiTietPhieuNhap_PARTITION_VIEW" Width="1.5" PointX="42.75" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_ChiTietPhieuNhap_VIEW" Width="1.5" PointX="42.75" PointY="30" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_ChiTietPhieuXuat_PARTITION_VIEW" Width="1.5" PointX="17.75" PointY="46" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_ChiTietPhieuXuat_VIEW" Width="1.5" PointX="23.75" PointY="46" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_ChucVu_PARTITION_VIEW" Width="1.5" PointX="43.75" PointY="33" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_ChucVu_VIEW" Width="1.5" PointX="31.75" PointY="46" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_CuaHang_PARTITION_VIEW" Width="1.5" PointX="43.75" PointY="36" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_CuaHang_VIEW" Width="1.5" PointX="33.75" PointY="46" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_DacDiemNoiBat_PARTITION_VIEW" Width="1.5" PointX="35.75" PointY="46" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_DacDiemNoiBat_VIEW" Width="1.5" PointX="43.75" PointY="39" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_DanhMuc_PARTITION_VIEW" Width="1.5" PointX="37.75" PointY="46" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_DanhMuc_VIEW" Width="1.5" PointX="43.75" PointY="42" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_DonHang_PARTITION_VIEW" Width="1.5" PointX="43.75" PointY="45" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_DonHang_VIEW" Width="1.5" PointX="44.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_HangTichDiem_PARTITION_VIEW" Width="1.5" PointX="44.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_HangTichDiem_VIEW" Width="1.5" PointX="44.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_KhachHang_PARTITION_VIEW" Width="1.5" PointX="44.75" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_KhachHang_VIEW" Width="1.5" PointX="44.75" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_Kho_PARTITION_VIEW" Width="1.5" PointX="14.75" PointY="47" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_Kho_VIEW" Width="1.5" PointX="44.75" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_KhuyenMai_PARTITION_VIEW" Width="1.5" PointX="44.75" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_KhuyenMai_VIEW" Width="1.5" PointX="44.75" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_Loai_PARTITION_VIEW" Width="1.5" PointX="25.75" PointY="47" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_Loai_VIEW" Width="1.5" PointX="27.75" PointY="47" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_NhaCungCap_PARTITION_VIEW" Width="1.5" PointX="39.75" PointY="47" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_NhaCungCap_VIEW" Width="1.5" PointX="0.75" PointY="48" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_NhanVien_PARTITION_VIEW" Width="1.5" PointX="2.75" PointY="48" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_NhanVien_VIEW" Width="1.5" PointX="4.75" PointY="48" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_PhanHoi_PARTITION_VIEW" Width="1.5" PointX="6.75" PointY="48" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_PhanHoi_VIEW" Width="1.5" PointX="8.75" PointY="48" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_PhieuBaoHanh_PARTITION_VIEW" Width="1.5" PointX="10.75" PointY="48" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_PhieuBaoHanh_VIEW" Width="1.5" PointX="19.75" PointY="48" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_PhieuNhap_PARTITION_VIEW" Width="1.5" PointX="45.75" PointY="31" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_PhieuNhap_VIEW" Width="1.5" PointX="45.75" PointY="34" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_PhieuXuat_PARTITION_VIEW" Width="1.5" PointX="45.75" PointY="38" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_PhieuXuat_VIEW" Width="1.5" PointX="45.75" PointY="41" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_SanPham_PARTITION_VIEW" Width="1.5" PointX="41.75" PointY="48" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_SanPham_VIEW" Width="1.5" PointX="45.75" PointY="45" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_ThanhPho_PARTITION_VIEW" Width="1.5" PointX="46.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_ThanhPho_VIEW" Width="1.5" PointX="46.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_TheTichDiem_PARTITION_VIEW" Width="1.5" PointX="46.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_TheTichDiem_VIEW" Width="1.5" PointX="46.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_ThongSoKiThuat_PARTITION_VIEW" Width="1.5" PointX="46.75" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_ThongSoKiThuat_VIEW" Width="1.5" PointX="46.75" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_TinhNang_PARTITION_VIEW" Width="1.5" PointX="16.75" PointY="49" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_TinhNang_VIEW" Width="1.5" PointX="46.75" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_Voucher_PARTITION_VIEW" Width="1.5" PointX="21.75" PointY="49" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN1_Voucher_VIEW" Width="1.5" PointX="46.75" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_ChiTietDonHang_PARTITION_VIEW" Width="1.5" PointX="29.75" PointY="49" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_ChiTietDonHang_VIEW" Width="1.5" PointX="31.75" PointY="49" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_ChiTietKho_PARTITION_VIEW" Width="1.5" PointX="33.75" PointY="49" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_ChiTietKho_VIEW" Width="1.5" PointX="35.75" PointY="49" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_ChiTietLoai_PARTITION_VIEW" Width="1.5" PointX="43.75" PointY="49" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_ChiTietLoai_VIEW" Width="1.5" PointX="45.75" PointY="49" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_ChiTietPhieuNhap_PARTITION_VIEW" Width="1.5" PointX="12.75" PointY="50" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_ChiTietPhieuNhap_VIEW" Width="1.5" PointX="23.75" PointY="50" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_ChiTietPhieuXuat_PARTITION_VIEW" Width="1.5" PointX="25.75" PointY="50" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_ChiTietPhieuXuat_VIEW" Width="1.5" PointX="47.75" PointY="29" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_ChucVu_PARTITION_VIEW" Width="1.5" PointX="47.75" PointY="32" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_ChucVu_VIEW" Width="1.5" PointX="47.75" PointY="35" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_CuaHang_PARTITION_VIEW" Width="1.5" PointX="47.75" PointY="38" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_CuaHang_VIEW" Width="1.5" PointX="37.75" PointY="50" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_DacDiemNoiBat_PARTITION_VIEW" Width="1.5" PointX="47.75" PointY="41" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_DacDiemNoiBat_VIEW" Width="1.5" PointX="47.75" PointY="44" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_DanhMuc_PARTITION_VIEW" Width="1.5" PointX="47.75" PointY="47" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_DanhMuc_VIEW" Width="1.5" PointX="47.75" PointY="50" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_DonHang_PARTITION_VIEW" Width="1.5" PointX="48.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_DonHang_VIEW" Width="1.5" PointX="0.75" PointY="51" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_HangTichDiem_PARTITION_VIEW" Width="1.5" PointX="48.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_HangTichDiem_VIEW" Width="1.5" PointX="48.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_KhachHang_PARTITION_VIEW" Width="1.5" PointX="6.75" PointY="51" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_KhachHang_VIEW" Width="1.5" PointX="8.75" PointY="51" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_Kho_PARTITION_VIEW" Width="1.5" PointX="48.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_Kho_VIEW" Width="1.5" PointX="48.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_KhuyenMai_PARTITION_VIEW" Width="1.5" PointX="48.75" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_KhuyenMai_VIEW" Width="1.5" PointX="48.75" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_Loai_PARTITION_VIEW" Width="1.5" PointX="48.75" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_Loai_VIEW" Width="1.5" PointX="39.75" PointY="51" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_NhaCungCap_PARTITION_VIEW" Width="1.5" PointX="14.75" PointY="52" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_NhaCungCap_VIEW" Width="1.5" PointX="16.75" PointY="52" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_NhanVien_PARTITION_VIEW" Width="1.5" PointX="18.75" PointY="52" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_NhanVien_VIEW" Width="1.5" PointX="20.75" PointY="52" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_PhanHoi_PARTITION_VIEW" Width="1.5" PointX="49.75" PointY="28" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_PhanHoi_VIEW" Width="1.5" PointX="27.75" PointY="52" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_PhieuBaoHanh_PARTITION_VIEW" Width="1.5" PointX="49.75" PointY="31" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_PhieuBaoHanh_VIEW" Width="1.5" PointX="29.75" PointY="52" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_PhieuNhap_PARTITION_VIEW" Width="1.5" PointX="49.75" PointY="34" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_PhieuNhap_VIEW" Width="1.5" PointX="31.75" PointY="52" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_PhieuXuat_PARTITION_VIEW" Width="1.5" PointX="33.75" PointY="52" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_PhieuXuat_VIEW" Width="1.5" PointX="49.75" PointY="37" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_SanPham_PARTITION_VIEW" Width="1.5" PointX="49.75" PointY="41" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_SanPham_VIEW" Width="1.5" PointX="49.75" PointY="44" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_ThanhPho_PARTITION_VIEW" Width="1.5" PointX="41.75" PointY="52" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_ThanhPho_VIEW" Width="1.5" PointX="43.75" PointY="52" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_TheTichDiem_PARTITION_VIEW" Width="1.5" PointX="49.75" PointY="48" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_TheTichDiem_VIEW" Width="1.5" PointX="49.75" PointY="51" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_ThongSoKiThuat_PARTITION_VIEW" Width="1.5" PointX="50.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_ThongSoKiThuat_VIEW" Width="1.5" PointX="2.75" PointY="53" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_TinhNang_PARTITION_VIEW" Width="1.5" PointX="50.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_TinhNang_VIEW" Width="1.5" PointX="50.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_Voucher_PARTITION_VIEW" Width="1.5" PointX="50.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_QLDienMay_CN2_Voucher_VIEW" Width="1.5" PointX="10.75" PointY="53" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_3B119D6CCA384A37AAD74B2C42C4FA58" Width="1.5" PointX="50.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_4C57D6BFADB6403C9BD048B69EE9A711" Width="1.5" PointX="50.75" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_648A29E871774465A8F217CFD7D3CC4A" Width="1.5" PointX="50.75" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_897154BD00094B28AF9013C540B937CB" Width="1.5" PointX="50.75" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_908276E0587D4863B9837BE92F24AFD5" Width="1.5" PointX="22.75" PointY="53" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_93DE4593559C4750BC2B1B49700507B8" Width="1.5" PointX="24.75" PointY="53" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_95F0C05A250749C193F5A538AD67F037" Width="1.5" PointX="35.75" PointY="53" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_9D2B1E57F6EA4640855AC2F0DDC38569" Width="1.5" PointX="45.75" PointY="53" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_9D35F9266C704F9AB231EFECD432DA84" Width="1.5" PointX="4.75" PointY="54" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_9D9D6ED7CCCA49559191C7777C7C8AFB" Width="1.5" PointX="51.75" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_9E6D847CD4B84C1494FB744C73333224" Width="1.5" PointX="51.75" PointY="32" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_A1765C48C7D343B6AA97B011B00069F7" Width="1.5" PointX="51.75" PointY="35" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_A66B25AFE51348DFB9AF6378E073C436" Width="1.5" PointX="51.75" PointY="39" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_A954A882661F4156A723A72C0A59E1A5" Width="1.5" PointX="37.75" PointY="54" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_ABD8B1EDB0E84A73816055D7FAE25E8B" Width="1.5" PointX="51.75" PointY="43" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_B234B6FE02564F9EB38BAD96BCB2134A" Width="1.5" PointX="51.75" PointY="46" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_BBD387789E9643D984216659C009D4D3" Width="1.5" PointX="51.75" PointY="49" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_BC049454C2094EEE8EE01869FBDFC02D" Width="1.5" PointX="51.75" PointY="52" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_C0541825B4094DAE9C4111318E45616B" Width="1.5" PointX="52.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_C2F34DE67FB1426985C16D21CD5128AE" Width="1.5" PointX="52.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_D9E091456FAE4AB185849640C91F03BB" Width="1.5" PointX="6.75" PointY="55" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_DBC1EDC0DA6B448CA785DA16456E4965" Width="1.5" PointX="52.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_E853DEECCB4C4671BF91158C75724958" Width="1.5" PointX="52.75" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_F1F5B41C259641E488930519F3FBED8D" Width="1.5" PointX="12.75" PointY="55" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_F2597FEE354C4E1A830E168382EDB99F" Width="1.5" PointX="14.75" PointY="55" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_F39BD2298472454F9C0FE02D795211B0" Width="1.5" PointX="52.75" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_91A90624B30540B8A9D5136E5E47D25C_F5B58F75BB214A39BDE451EFE6A5FC76" Width="1.5" PointX="16.75" PointY="55" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_3B119D6CCA384A37AAD74B2C42C4FA58" Width="1.5" PointX="52.75" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_4C57D6BFADB6403C9BD048B69EE9A711" Width="1.5" PointX="26.75" PointY="55" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_648A29E871774465A8F217CFD7D3CC4A" Width="1.5" PointX="39.75" PointY="55" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_897154BD00094B28AF9013C540B937CB" Width="1.5" PointX="41.75" PointY="55" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_908276E0587D4863B9837BE92F24AFD5" Width="1.5" PointX="47.75" PointY="55" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_93DE4593559C4750BC2B1B49700507B8" Width="1.5" PointX="49.75" PointY="55" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_95F0C05A250749C193F5A538AD67F037" Width="1.5" PointX="51.75" PointY="55" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_9D2B1E57F6EA4640855AC2F0DDC38569" Width="1.5" PointX="0.75" PointY="56" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_9D35F9266C704F9AB231EFECD432DA84" Width="1.5" PointX="53.75" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_9D9D6ED7CCCA49559191C7777C7C8AFB" Width="1.5" PointX="53.75" PointY="28" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_9E6D847CD4B84C1494FB744C73333224" Width="1.5" PointX="28.75" PointY="56" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_A1765C48C7D343B6AA97B011B00069F7" Width="1.5" PointX="53.75" PointY="33" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_A66B25AFE51348DFB9AF6378E073C436" Width="1.5" PointX="30.75" PointY="56" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_A954A882661F4156A723A72C0A59E1A5" Width="1.5" PointX="32.75" PointY="56" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_ABD8B1EDB0E84A73816055D7FAE25E8B" Width="1.5" PointX="53.75" PointY="37" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_B234B6FE02564F9EB38BAD96BCB2134A" Width="1.5" PointX="34.75" PointY="56" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_BBD387789E9643D984216659C009D4D3" Width="1.5" PointX="53.75" PointY="40" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_BC049454C2094EEE8EE01869FBDFC02D" Width="1.5" PointX="53.75" PointY="43" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_C0541825B4094DAE9C4111318E45616B" Width="1.5" PointX="53.75" PointY="46" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_C2F34DE67FB1426985C16D21CD5128AE" Width="1.5" PointX="53.75" PointY="50" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_D9E091456FAE4AB185849640C91F03BB" Width="1.5" PointX="53.75" PointY="53" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_DBC1EDC0DA6B448CA785DA16456E4965" Width="1.5" PointX="53.75" PointY="56" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_E853DEECCB4C4671BF91158C75724958" Width="1.5" PointX="54.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_F1F5B41C259641E488930519F3FBED8D" Width="1.5" PointX="2.75" PointY="57" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_F2597FEE354C4E1A830E168382EDB99F" Width="1.5" PointX="54.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_F39BD2298472454F9C0FE02D795211B0" Width="1.5" PointX="54.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_repl_view_FD93D890BE1F46179C05EA77DA67C3C7_F5B58F75BB214A39BDE451EFE6A5FC76" Width="1.5" PointX="8.75" PointY="57" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_tsvw_3B119D6CCA384A37AAD74B2C42C4FA58" Width="1.5" PointX="54.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_tsvw_4C57D6BFADB6403C9BD048B69EE9A711" Width="1.5" PointX="54.75" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_tsvw_648A29E871774465A8F217CFD7D3CC4A" Width="1.5" PointX="18.75" PointY="57" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_tsvw_897154BD00094B28AF9013C540B937CB" Width="1.5" PointX="36.75" PointY="57" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_tsvw_908276E0587D4863B9837BE92F24AFD5" Width="1.5" PointX="43.75" PointY="57" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_tsvw_93DE4593559C4750BC2B1B49700507B8" Width="1.5" PointX="4.75" PointY="58" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_tsvw_95F0C05A250749C193F5A538AD67F037" Width="1.5" PointX="10.75" PointY="58" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_tsvw_9D2B1E57F6EA4640855AC2F0DDC38569" Width="1.5" PointX="55.75" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_tsvw_9D35F9266C704F9AB231EFECD432DA84" Width="1.5" PointX="20.75" PointY="58" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_tsvw_9D9D6ED7CCCA49559191C7777C7C8AFB" Width="1.5" PointX="22.75" PointY="58" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_tsvw_9E6D847CD4B84C1494FB744C73333224" Width="1.5" PointX="55.75" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_tsvw_A1765C48C7D343B6AA97B011B00069F7" Width="1.5" PointX="24.75" PointY="58" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_tsvw_A66B25AFE51348DFB9AF6378E073C436" Width="1.5" PointX="55.75" PointY="31" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_tsvw_A954A882661F4156A723A72C0A59E1A5" Width="1.5" PointX="55.75" PointY="35" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_tsvw_ABD8B1EDB0E84A73816055D7FAE25E8B" Width="1.5" PointX="55.75" PointY="39" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_tsvw_B234B6FE02564F9EB38BAD96BCB2134A" Width="1.5" PointX="38.75" PointY="58" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_tsvw_BBD387789E9643D984216659C009D4D3" Width="1.5" PointX="55.75" PointY="43" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_tsvw_BC049454C2094EEE8EE01869FBDFC02D" Width="1.5" PointX="40.75" PointY="58" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_tsvw_C0541825B4094DAE9C4111318E45616B" Width="1.5" PointX="55.75" PointY="47" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_tsvw_C2F34DE67FB1426985C16D21CD5128AE" Width="1.5" PointX="55.75" PointY="51" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_tsvw_D9E091456FAE4AB185849640C91F03BB" Width="1.5" PointX="49.75" PointY="58" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_tsvw_DBC1EDC0DA6B448CA785DA16456E4965" Width="1.5" PointX="55.75" PointY="55" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_tsvw_E853DEECCB4C4671BF91158C75724958" Width="1.5" PointX="56.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_tsvw_F1F5B41C259641E488930519F3FBED8D" Width="1.5" PointX="56.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_tsvw_F2597FEE354C4E1A830E168382EDB99F" Width="1.5" PointX="56.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_tsvw_F39BD2298472454F9C0FE02D795211B0" Width="1.5" PointX="56.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.MSmerge_tsvw_F5B58F75BB214A39BDE451EFE6A5FC76" Width="1.5" PointX="12.75" PointY="59" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.sysmergeextendedarticlesview" Width="1.5" PointX="14.75" PointY="59" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel.sysmergepartitioninfoview" Width="1.5" PointX="26.75" PointY="59" IsExpanded="true" />
+        <AssociationConnector Association="QLDienMayModel.FK_DonHang_ChiTietDonHang" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_SanPham_ChiTietDonHang" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_Kho_ChiTietKho" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_SanPham_ChiTietKho" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_Loai_ChiTietLoai" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_SP_ChiTietLoai" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_PhieuNhap_ChiTietPhieuNhap" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_SanPham_ChiTietPhieuNhap" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_PhieuXuat_CTPhieuXuat" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_SanPham_CTPhieuXuat" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_ChucVu_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK__NhanVien__CuaHan__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_CuaHang_DonHang" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_CuaHang_Kho" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_NhanVien_CuaHang" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_SP_DacDiemNoiBat" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_DM_LOAI" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_DH_BaoHanh" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_DonHang_PhieuXuat" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_KH_DonHang" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_NV_DonHang" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_Voucher_DonHang" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_HangThe_TheTichDiem" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_KH_BaoHanh" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_KH_PhanHoi" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_KH_TheTichDiem" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_Kho_PhieuNhap" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_Kho_PhieuXuat" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_KM_SP" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK__MSmerge_d__parti__1BFEC2B5" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_NCC_PhieuNhap" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_NhanVien_NVPhuTrach" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_NVTaoPhieu_PhieuXuat" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_NVTruongKho_PhieuXuat" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_SP_BaoHanh" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_SP_ThongSoKiThuat" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel.FK_SP_TinhNang" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
