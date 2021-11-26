@@ -65,6 +65,12 @@
     <Compile Include="DonHangXuat\fTaoDonHangOffline.Designer.cs">
       <DependentUpon>fTaoDonHangOffline.cs</DependentUpon>
     </Compile>
+    <Compile Include="fDanhSachSanPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="fDanhSachSanPham.Designer.cs">
+      <DependentUpon>fDanhSachSanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DonHangXuat\fTaoDonHangOffline.resx">
       <DependentUpon>fTaoDonHangOffline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDanhSachSanPham.resx">
+      <DependentUpon>fDanhSachSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>

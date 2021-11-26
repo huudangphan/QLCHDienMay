@@ -90,5 +90,22 @@ namespace QuanLy.KhachHang
             }
             
         }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                GlobalData.makh = txtmakh.Text;
+                GlobalData.tenkh = txttenkh.Text;
+                GlobalData.diachi = txtdiachi.Text;
+                GlobalData.sdt = txtsdt.Text;
+                MessageBox.Show("Chọn khách hàng thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+               
+            }
+        }
     }
 }

@@ -77,8 +77,9 @@ namespace QuanLy
             type = CheckType();
             if (type == 0 || type == 3)
             {
-                if (GlobalData.makh == "")
-                    MessageBox.Show("Vui lòng chọn khách hàng trước!");
+                
+                if (GlobalData.makh == null||GlobalData.listMasp==null)
+                    MessageBox.Show("Vui lòng chọn khách hàng và sản phẩm trước!");
                 else
                 {
                     ff.Controls.Clear();
@@ -202,6 +203,22 @@ namespace QuanLy
                 fDanhSachNhanVien f = new fDanhSachNhanVien();
                 f.Dock = DockStyle.Fill;
                 ff.Controls.Add(f);
+            }
+            else
+                MessageBox.Show("Người dùng không có quyền truy cập!");
+        }
+
+        private void accordionControlElement24_Click(object sender, EventArgs e)
+        {
+            type = CheckType();
+            if (type == 0 || type == 3)
+            {
+                ff.Controls.Clear();
+                fDanhSachSanPham f = new fDanhSachSanPham();
+                f.Dock = DockStyle.Fill;
+                ff.Controls.Add(f);
+
+
             }
             else
                 MessageBox.Show("Người dùng không có quyền truy cập!");
