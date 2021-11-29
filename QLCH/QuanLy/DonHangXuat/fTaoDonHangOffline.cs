@@ -15,6 +15,40 @@ namespace QuanLy.DonHangXuat
         public fTaoDonHangOffline()
         {
             InitializeComponent();
+            LoadData();
+        }
+        public void LoadData()
+        {
+            txtmakh.Text = GlobalData.makh;
+            txttenkh.Text = GlobalData.tenkh;
+            txtsdt.Text = GlobalData.sdt;
+            txtdiachi.Text = GlobalData.diachi;
+            //txtdiachi.Enabled = txtmakh.Enabled = txtsdt.Enabled = txttenkh.Enabled = false;
+            dataGridView1.DataSource = GlobalData.lstsp;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.Columns[0].HeaderText = "Mã Sản phẩm";
+            dataGridView1.Columns[1].HeaderText = "Tên sản phẩm";
+            dataGridView1.Columns[2].HeaderText = "Giá bán";
+            dataGridView1.Columns[2].HeaderText = "Số lượng";
+        }
+        
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DateTime now = DateTime.Now;
+                string query = string.Format("exec sp_TaoDonHangOffline '{0}','{1}','{2}','{3}',{4}", DataProvider.userName, txtmakh.Text, DataProvider.cuaHang, now, "HAPPY2021");
+                DataProvider.ExecuteNonQuery(query);
+                MessageBox.Show("Thêm hoá đơn thành công");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message.ToString(), "Thông báo");
+            }
+            
+
         }
     }
 }

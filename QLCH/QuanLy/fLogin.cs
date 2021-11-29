@@ -69,7 +69,7 @@ namespace QuanLy
                 DataProvider.maCN = cbChiNhanh.SelectedIndex;
                 DataProvider.mLoginDN = DataProvider.mLogin;
                 DataProvider.passWordDN = DataProvider.password;
-                string query = "exec sp_Lay_thong_tin_tu_login '" + DataProvider.mLogin + "'";
+                string query = "exec sp_Lay_thong_tin_tu_loginn '" + DataProvider.mLogin + "'";
                 DataProvider.myReader = DataProvider.ExecDataReader(query);
                 if (DataProvider.myReader == null)
                     MessageBox.Show("Tài khoản không hợp lệ!");
@@ -82,7 +82,8 @@ namespace QuanLy
                 }
                 DataProvider.mHoTen = DataProvider.myReader.GetString(1);
                 DataProvider.mGroup = DataProvider.myReader.GetString(2);
-                MessageBox.Show(DataProvider.userName);
+                DataProvider.cuaHang = DataProvider.myReader.GetString(3);
+                //MessageBox.Show(DataProvider.userName);
                 DataProvider.myReader.Close();
                 conn_publisher.Close();
                 fMain f = new fMain();
@@ -90,7 +91,7 @@ namespace QuanLy
             }
             catch (Exception ex)
             {
-
+                string err = ex.Message.ToString();
                 MessageBox.Show("Tài khoản hoặc mật khẩu sai!");
             }
            

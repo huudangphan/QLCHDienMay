@@ -26,7 +26,7 @@ namespace QuanLy
         public static String mLoginDN = "";
         public static String passWordDN = "";
         public static String mGroup = "";
-
+        public static String cuaHang = "";
         public static int maCN = 0;
         public static String mHoTen = "";
         public static BindingSource danhSachChiNhanh = new BindingSource();
