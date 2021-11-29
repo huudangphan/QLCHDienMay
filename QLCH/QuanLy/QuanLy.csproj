@@ -102,6 +102,18 @@
     <Compile Include="NhanVien\fDanhSachNhanVien.Designer.cs">
       <DependentUpon>fDanhSachNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhanVien\fThemTaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NhanVien\fThemTaiKhoan.Designer.cs">
+      <DependentUpon>fThemTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhapHang\fNhapThemHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NhapHang\fNhapThemHang.Designer.cs">
+      <DependentUpon>fNhapThemHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="test.cs">
@@ -130,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVien\fDanhSachNhanVien.resx">
       <DependentUpon>fDanhSachNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapHang\fNhapThemHang.resx">
+      <DependentUpon>fNhapThemHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

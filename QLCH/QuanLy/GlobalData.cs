@@ -13,6 +13,8 @@ namespace QuanLy
         public static string tenkh { get; set; }
         public static string diachi { get; set; }
         public static string sdt { get; set; }
+        public static int type { get; set; }
+        public static List<SanPham> lstsp { get; set; }
         
     }
     public class SanPham
@@ -20,5 +22,7 @@ namespace QuanLy
         public string masp { get; set; }
         public string tensp { get; set; }
         public double giaban { get; set; }
+        public int soluong { get; set; }
     }
+
 }

@@ -60,7 +60,7 @@ namespace QuanLy.DonHangXuat
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(37, 42);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(941, 134);
+            this.groupBox1.Size = new System.Drawing.Size(954, 134);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Khách hàng";
@@ -134,7 +134,7 @@ namespace QuanLy.DonHangXuat
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Location = new System.Drawing.Point(37, 182);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(941, 233);
+            this.groupBox2.Size = new System.Drawing.Size(954, 233);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách sản phẩm";
@@ -154,7 +154,7 @@ namespace QuanLy.DonHangXuat
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
             this.simpleButton1.Location = new System.Drawing.Point(861, 421);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(117, 55);
+            this.simpleButton1.Size = new System.Drawing.Size(130, 55);
             this.simpleButton1.TabIndex = 2;
             this.simpleButton1.Text = "Xác nhận";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);

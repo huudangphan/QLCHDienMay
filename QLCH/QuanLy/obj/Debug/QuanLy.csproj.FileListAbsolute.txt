@@ -61,3 +61,4 @@ D:\CSDLPT\QLCH\QuanLy\obj\Debug\QuanLy.DonHangXuat.fDanhSachDHOnline.resources
 D:\CSDLPT\QLCH\QuanLy\obj\Debug\QuanLy.KhachHang.fDanhSachKhach.resources
 D:\CSDLPT\QLCH\QuanLy\obj\Debug\QuanLy.NhanVien.fDanhSachNhanVien.resources
 D:\CSDLPT\QLCH\QuanLy\obj\Debug\QuanLy.fDanhSachSanPham.resources
+D:\CSDLPT\QLCH\QuanLy\obj\Debug\QuanLy.NhapHang.fNhapThemHang.resources

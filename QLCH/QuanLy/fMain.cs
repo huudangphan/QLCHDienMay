@@ -2,6 +2,7 @@
 using QuanLy.DonHangXuat;
 using QuanLy.KhachHang;
 using QuanLy.NhanVien;
+using QuanLy.NhapHang;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,6 +25,7 @@ namespace QuanLy
             manv.Text = DataProvider.userName;
             hoten.Text = DataProvider.mHoTen;
             ch.Text = DataProvider.mGroup;
+            cuahang.Text = DataProvider.cuaHang;
             
         }
         
@@ -78,7 +80,7 @@ namespace QuanLy
             if (type == 0 || type == 3)
             {
                 
-                if (GlobalData.makh == null||GlobalData.listMasp==null)
+                if (GlobalData.makh == null||GlobalData.lstsp==null)
                     MessageBox.Show("Vui lòng chọn khách hàng và sản phẩm trước!");
                 else
                 {
@@ -117,9 +119,13 @@ namespace QuanLy
         private void accordionControlElement9_Click(object sender, EventArgs e)
         {
             type = CheckType();
-            if (type == 2 || type == 3)
+            if (type == 2 || type == 3||type==0)
             {
-
+                GlobalData.type = type;
+                ff.Controls.Clear();
+                fNhapThemHang f = new fNhapThemHang();
+                f.Dock = DockStyle.Fill;
+                ff.Controls.Add(f);
             }
             else
                 MessageBox.Show("Người dùng không có quyền truy cập!");
@@ -215,6 +221,22 @@ namespace QuanLy
             {
                 ff.Controls.Clear();
                 fDanhSachSanPham f = new fDanhSachSanPham();
+                f.Dock = DockStyle.Fill;
+                ff.Controls.Add(f);
+
+
+            }
+            else
+                MessageBox.Show("Người dùng không có quyền truy cập!");
+        }
+
+        private void accordionControlElement23_Click(object sender, EventArgs e)
+        {
+            type = CheckType();
+            if (type == 3)
+            {
+                ff.Controls.Clear();
+                fThemTaiKhoan f = new fThemTaiKhoan();
                 f.Dock = DockStyle.Fill;
                 ff.Controls.Add(f);
 
