@@ -40,6 +40,12 @@ namespace QuanLy.DonHangXuat
                 DateTime now = DateTime.Now;
                 string query = string.Format("exec sp_TaoDonHangOffline '{0}','{1}','{2}','{3}',{4}", DataProvider.userName, txtmakh.Text, DataProvider.cuaHang, now, "HAPPY2021");
                 DataProvider.ExecuteNonQuery(query);
+                foreach (var item in GlobalData.lstsp)
+                {
+                    string query2 = string.Format("exec sp_InsertCTDH '{0}',{1},{2}", item.masp, item.soluong, item.giaban);
+                    DataProvider.ExecuteNonQuery(query2);
+                }
+
                 MessageBox.Show("Thêm hoá đơn thành công");
             }
             catch (Exception ex)

@@ -1,6 +1,7 @@
 ﻿using DevExpress.XtraBars;
 using QuanLy.DonHangXuat;
 using QuanLy.KhachHang;
+using QuanLy.Kho;
 using QuanLy.NhanVien;
 using QuanLy.NhapHang;
 using System;
@@ -167,8 +168,12 @@ namespace QuanLy
         private void accordionControlElement18_Click(object sender, EventArgs e)
         {
             type = CheckType();
-            if (type == 1 || type == 3)
+            if (type == 2 || type == 3)
             {
+                ff.Controls.Clear();
+                fPhieuXuat f = new fPhieuXuat();
+                f.Dock = DockStyle.Fill;
+                ff.Controls.Add(f);
 
             }
             else

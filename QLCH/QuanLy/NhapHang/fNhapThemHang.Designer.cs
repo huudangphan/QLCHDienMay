@@ -103,6 +103,7 @@ namespace QuanLy.NhapHang
             this.lưuToolStripMenuItem.Name = "lưuToolStripMenuItem";
             this.lưuToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
             this.lưuToolStripMenuItem.Text = "Lưu";
+            this.lưuToolStripMenuItem.Click += new System.EventHandler(this.lưuToolStripMenuItem_Click);
             // 
             // thoátToolStripMenuItem
             // 
