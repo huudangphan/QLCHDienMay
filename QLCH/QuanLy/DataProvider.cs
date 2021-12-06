@@ -87,7 +87,7 @@ namespace QuanLy
             catch (Exception ex)
             {
 
-               
+                string eror = ex.Message.ToString();
             }
             return null;
            

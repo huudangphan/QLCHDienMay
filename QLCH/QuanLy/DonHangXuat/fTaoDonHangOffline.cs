@@ -37,10 +37,26 @@ namespace QuanLy.DonHangXuat
         {
             try
             {
+                int temp = 0;
                 DateTime now = DateTime.Now;
                 string query = string.Format("exec sp_TaoDonHangOffline '{0}','{1}','{2}','{3}',{4}", DataProvider.userName, txtmakh.Text, DataProvider.cuaHang, now, "HAPPY2021");
                 DataProvider.ExecuteNonQuery(query);
-                MessageBox.Show("Thêm hoá đơn thành công");
+                foreach (var item in GlobalData.lstsp)
+                {
+                    string query2 = string.Format("exec sp_InsertCTDH '{0}',{1},{2}", item.masp, item.soluong, item.giaban);
+                    int a= DataProvider.ExecuteNonQuery(query2);
+                    if (a == 0)
+                    {
+                        temp = 1;
+                        MessageBox.Show(string.Format("Số lượng {0} trong kho không đủ!", item.tensp));
+                    }
+                     
+
+                   
+                }
+                if (temp != 1)
+                    MessageBox.Show("Thêm hoá đơn thành công. Vui lòng liên hệ nhân viên thủ kho để lấy hàng");
+
             }
             catch (Exception ex)
             {

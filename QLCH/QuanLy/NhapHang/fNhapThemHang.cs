@@ -84,17 +84,17 @@ namespace QuanLy.NhapHang
 
         private void thêmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            lưuToolStripMenuItem.Enabled = false;
+            lưuToolStripMenuItem.Enabled = true;
         }
 
         private void sửaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            lưuToolStripMenuItem.Enabled = false;
+            lưuToolStripMenuItem.Enabled = true;
         }
 
         private void xoáToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            lưuToolStripMenuItem.Enabled = false;
+            lưuToolStripMenuItem.Enabled = true;
         }
 
         private void chọnToolStripMenuItem_Click(object sender, EventArgs e)
@@ -104,6 +104,11 @@ namespace QuanLy.NhapHang
                 GlobalData.lstsp.Add(new SanPham() { masp = txtmasp.Text, tensp = txttensp.Text, giaban = double.Parse(txtdongia.Text), soluong = Int32.Parse(numericUpDown1.Value.ToString()) });
             }
             
+        }
+
+        private void lưuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

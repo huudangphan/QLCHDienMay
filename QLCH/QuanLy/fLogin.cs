@@ -69,25 +69,30 @@ namespace QuanLy
                 DataProvider.maCN = cbChiNhanh.SelectedIndex;
                 DataProvider.mLoginDN = DataProvider.mLogin;
                 DataProvider.passWordDN = DataProvider.password;
-                string query = "exec sp_Lay_thong_tin_tu_loginn '" + DataProvider.mLogin + "'";
+                string query = "exec sp_Lay_thong_tin_tu_login '" + DataProvider.mLogin + "'";
                 DataProvider.myReader = DataProvider.ExecDataReader(query);
                 if (DataProvider.myReader == null)
                     MessageBox.Show("Tài khoản không hợp lệ!");
-                DataProvider.myReader.Read();
-                DataProvider.userName = DataProvider.myReader.GetString(0);
-                if (Convert.IsDBNull(DataProvider.userName))
+                if(DataProvider.myReader!=null)
                 {
-                    MessageBox.Show("Tài khoản không hợp lệ");
+                    DataProvider.myReader.Read();
 
+                    DataProvider.userName = DataProvider.myReader.GetString(0);
+                    if (Convert.IsDBNull(DataProvider.userName))
+                    {
+                        MessageBox.Show("Tài khoản không hợp lệ");
+
+                    }
+                    DataProvider.mHoTen = DataProvider.myReader.GetString(1);
+                    DataProvider.mGroup = DataProvider.myReader.GetString(2);
+                    DataProvider.cuaHang = DataProvider.myReader.GetString(3);
+                    //MessageBox.Show(DataProvider.userName);
+                    DataProvider.myReader.Close();
+                    conn_publisher.Close();
+                    fMain f = new fMain();
+                    f.Show();
                 }
-                DataProvider.mHoTen = DataProvider.myReader.GetString(1);
-                DataProvider.mGroup = DataProvider.myReader.GetString(2);
-                DataProvider.cuaHang = DataProvider.myReader.GetString(3);
-                //MessageBox.Show(DataProvider.userName);
-                DataProvider.myReader.Close();
-                conn_publisher.Close();
-                fMain f = new fMain();
-                f.Show();
+                    
             }
             catch (Exception ex)
             {
