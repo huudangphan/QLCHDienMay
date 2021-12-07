@@ -69,10 +69,10 @@ namespace QuanLy
             // 
             this.ff.Controls.Add(this.statusStrip1);
             this.ff.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ff.Location = new System.Drawing.Point(208, 39);
+            this.ff.Location = new System.Drawing.Point(325, 39);
             this.ff.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ff.Name = "ff";
-            this.ff.Size = new System.Drawing.Size(903, 691);
+            this.ff.Size = new System.Drawing.Size(786, 691);
             this.ff.TabIndex = 0;
             // 
             // statusStrip1
@@ -85,7 +85,7 @@ namespace QuanLy
             this.cuahang});
             this.statusStrip1.Location = new System.Drawing.Point(0, 665);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(903, 26);
+            this.statusStrip1.Size = new System.Drawing.Size(786, 26);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -125,7 +125,7 @@ namespace QuanLy
             this.accordionControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(208, 691);
+            this.accordionControl1.Size = new System.Drawing.Size(325, 691);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 

@@ -113,6 +113,12 @@
     <Compile Include="KhachHang\fDanhSachKhach.Designer.cs">
       <DependentUpon>fDanhSachKhach.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kho\fPhieuNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Kho\fPhieuNhap.Designer.cs">
+      <DependentUpon>fPhieuNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kho\fPhieuXuat.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -173,6 +179,9 @@
     <EmbeddedResource Include="KhachHang\fDanhSachKhach.resx">
       <DependentUpon>fDanhSachKhach.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Kho\fPhieuNhap.resx">
+      <DependentUpon>fPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Kho\fPhieuXuat.resx">
       <DependentUpon>fPhieuXuat.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,6 +231,9 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

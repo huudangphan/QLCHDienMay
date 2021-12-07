@@ -103,3 +103,4 @@ D:\CSDLPT\QLCH\QuanLy\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.d
 D:\CSDLPT\QLCH\QuanLy\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
 D:\CSDLPT\QLCH\QuanLy\obj\Debug\QuanLy.Form1.resources
 D:\CSDLPT\QLCH\QuanLy\obj\Debug\QuanLy.Kho.fPhieuXuat.resources
+D:\CSDLPT\QLCH\QuanLy\obj\Debug\QuanLy.Kho.fPhieuNhap.resources
