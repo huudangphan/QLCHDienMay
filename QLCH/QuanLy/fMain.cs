@@ -185,7 +185,10 @@ namespace QuanLy
             type = CheckType();
             if (type == 1 || type == 3)
             {
-
+                ff.Controls.Clear();
+                fPhieuNhap f = new fPhieuNhap();
+                f.Dock = DockStyle.Fill;
+                ff.Controls.Add(f);
             }
             else
                 MessageBox.Show("Người dùng không có quyền truy cập!");
