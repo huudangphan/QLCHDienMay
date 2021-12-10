@@ -23,7 +23,7 @@ namespace QuanLy.NhanVien
         }
         public void LoadData()
         {
-            string query = "select MaNhanVien,TenNhanVien,NgaySinh,SDT,Email,DiaChi,CuaHang from NhanVien";
+            string query = "select MaNhanVien,TenNhanVien,NgaySinh,SDT,Email,DiaChi,CuaHang,ChucVu from NhanVien";
             DataTable dt = DataProvider.ExecuteQuery(query);
             dataGridView1.DataSource = dt;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -34,7 +34,21 @@ namespace QuanLy.NhanVien
             dataGridView1.Columns[3].HeaderText = "Địa chỉ";
             dataGridView1.Columns[4].HeaderText = "Email";
             dataGridView1.Columns[5].HeaderText = "Ngày sinh";
+            dataGridView1.Columns[5].ReadOnly = true;
             dataGridView1.Columns[6].HeaderText = "Mã cửa hàng";
+            dataGridView1.Columns[7].HeaderText = "Mã Chức vụ";
+
+        }
+        public void LoadChucVu(string ma)
+        {
+            string query = string.Format("select TenChucVu,MaChucVu from ChucVu where MaChucVu='{0}'", ma);
+            DataTable dt = DataProvider.ExecuteQuery(query);
+            BindingSource bds = new BindingSource();
+            bds.DataSource = dt;
+            cbchucvu.DataSource = bds;
+            cbchucvu.DisplayMember = "TenChucVu";
+            cbchucvu.ValueMember = "MaChucVu";
+
 
         }
         public bool CheckValidate(TextBox tb, string str)
@@ -125,8 +139,37 @@ namespace QuanLy.NhanVien
                 txtdiachi.Text = dataGridView1.Rows[index].Cells[5].Value.ToString();
                 txtemail.Text = dataGridView1.Rows[index].Cells[4].Value.ToString();
                 dateTimePicker1.Text = dataGridView1.Rows[index].Cells[2].Value.ToString();
+                string machucvu= dataGridView1.Rows[index].Cells[7].Value.ToString();
+                LoadChucVu(machucvu);
+            }
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            
+            int row = dataGridView1.Rows.Count;
+            for (int i = 0; i < row-1; i++)
+            {
+                
+                string  manv= dataGridView1.Rows[i].Cells[0].Value.ToString();
+                
+                string tennv= dataGridView1.Rows[i].Cells[1].Value.ToString();
+                string ngaysinh= dataGridView1.Rows[i].Cells[2].Value.ToString();
+                string sdt= dataGridView1.Rows[i].Cells[3].Value.ToString();
+                string email= dataGridView1.Rows[i].Cells[4].Value.ToString();
+                string diach= dataGridView1.Rows[i].Cells[5].Value.ToString();
+                string query = string.Format("exec sp_UpdateNV '{0}','{1}','{2}','{3}','{4}','{5}','{6}'", tennv, ngaysinh, sdt, email, diach, DataProvider.cuaHang, manv);
+
+
 
             }
+
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            fThemNV f = new fThemNV();
+            f.Show();
         }
     }
 }

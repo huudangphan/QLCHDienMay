@@ -23,6 +23,7 @@ namespace QuanLy
         public string tensp { get; set; }
         public double giaban { get; set; }
         public int soluong { get; set; }
+      
     }
 
 }

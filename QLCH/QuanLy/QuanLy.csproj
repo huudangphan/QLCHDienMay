@@ -113,6 +113,18 @@
     <Compile Include="KhachHang\fDanhSachKhach.Designer.cs">
       <DependentUpon>fDanhSachKhach.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kho\fChiTietPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kho\fChiTietPhieuNhap.Designer.cs">
+      <DependentUpon>fChiTietPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kho\fNhanHangMoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kho\fNhanHangMoi.Designer.cs">
+      <DependentUpon>fNhanHangMoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kho\fPhieuNhap.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -130,6 +142,12 @@
     </Compile>
     <Compile Include="NhanVien\fDanhSachNhanVien.Designer.cs">
       <DependentUpon>fDanhSachNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien\fThemNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien\fThemNV.Designer.cs">
+      <DependentUpon>fThemNV.cs</DependentUpon>
     </Compile>
     <Compile Include="NhanVien\fThemTaiKhoan.cs">
       <SubType>UserControl</SubType>
@@ -179,6 +197,12 @@
     <EmbeddedResource Include="KhachHang\fDanhSachKhach.resx">
       <DependentUpon>fDanhSachKhach.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Kho\fChiTietPhieuNhap.resx">
+      <DependentUpon>fChiTietPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kho\fNhanHangMoi.resx">
+      <DependentUpon>fNhanHangMoi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Kho\fPhieuNhap.resx">
       <DependentUpon>fPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,6 +211,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVien\fDanhSachNhanVien.resx">
       <DependentUpon>fDanhSachNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien\fThemNV.resx">
+      <DependentUpon>fThemNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien\fThemTaiKhoan.resx">
+      <DependentUpon>fThemTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhapHang\fDanhSachSanPham.resx">
       <DependentUpon>fDanhSachSanPham.cs</DependentUpon>
