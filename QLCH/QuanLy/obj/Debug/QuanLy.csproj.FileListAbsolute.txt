@@ -104,3 +104,7 @@ D:\CSDLPT\QLCH\QuanLy\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.d
 D:\CSDLPT\QLCH\QuanLy\obj\Debug\QuanLy.Form1.resources
 D:\CSDLPT\QLCH\QuanLy\obj\Debug\QuanLy.Kho.fPhieuXuat.resources
 D:\CSDLPT\QLCH\QuanLy\obj\Debug\QuanLy.Kho.fPhieuNhap.resources
+D:\CSDLPT\QLCH\QuanLy\obj\Debug\QuanLy.Kho.fChiTietPhieuNhap.resources
+D:\CSDLPT\QLCH\QuanLy\obj\Debug\QuanLy.NhanVien.fThemTaiKhoan.resources
+D:\CSDLPT\QLCH\QuanLy\obj\Debug\QuanLy.NhanVien.fThemNV.resources
+D:\CSDLPT\QLCH\QuanLy\obj\Debug\QuanLy.Kho.fNhanHangMoi.resources

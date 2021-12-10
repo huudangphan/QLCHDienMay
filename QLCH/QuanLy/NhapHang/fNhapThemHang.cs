@@ -21,15 +21,11 @@ namespace QuanLy.NhapHang
             GlobalData.lstsp = new List<SanPham>();
             if (GlobalData.type == 2 )
             {
-                lưuToolStripMenuItem.Enabled = false;
+                
                 chọnToolStripMenuItem.Enabled = false;
                 
             }
-            if (GlobalData.type == 0)
-            {
-                thêmToolStripMenuItem.Enabled = sửaToolStripMenuItem.Enabled = xoáToolStripMenuItem.Enabled = lưuToolStripMenuItem.Enabled = false;
-
-            }
+            
            
             txtdongia.Enabled = txtmasp.Enabled = txtsl.Enabled = txttensp.Enabled = false;
         }
@@ -84,17 +80,17 @@ namespace QuanLy.NhapHang
 
         private void thêmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            lưuToolStripMenuItem.Enabled = true;
+           
         }
 
         private void sửaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            lưuToolStripMenuItem.Enabled = true;
+           
         }
 
         private void xoáToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            lưuToolStripMenuItem.Enabled = true;
+           
         }
 
         private void chọnToolStripMenuItem_Click(object sender, EventArgs e)

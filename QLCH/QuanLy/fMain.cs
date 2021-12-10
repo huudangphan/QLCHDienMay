@@ -32,7 +32,7 @@ namespace QuanLy
         
         public int CheckType()
         {
-            if (DataProvider.mGroup == "USER")
+            if (DataProvider.mGroup == "BANHANG")
                 return 0;
             else if (DataProvider.mGroup == "KETOAN")
                 return 1;
@@ -64,16 +64,7 @@ namespace QuanLy
                 MessageBox.Show("Người dùng không có quyền truy cập!");
         }
 
-        private void accordionControlElement5_Click(object sender, EventArgs e)
-        {
-            type = CheckType();
-            if (type == 0 || type == 3)
-            {
-
-            }
-            else
-                MessageBox.Show("Người dùng không có quyền truy cập!");
-        }
+        
 
         private void accordionControlElement6_Click(object sender, EventArgs e)
         {
