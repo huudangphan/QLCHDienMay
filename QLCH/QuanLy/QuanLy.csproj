@@ -107,18 +107,6 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalData.cs" />
-    <Compile Include="KeToan\fDoanhThuOff.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="KeToan\fDoanhThuOff.Designer.cs">
-      <DependentUpon>fDoanhThuOff.cs</DependentUpon>
-    </Compile>
-    <Compile Include="KeToan\fDoanhThuOn.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="KeToan\fDoanhThuOn.Designer.cs">
-      <DependentUpon>fDoanhThuOn.cs</DependentUpon>
-    </Compile>
     <Compile Include="KhachHang\fDanhSachKhach.cs">
       <SubType>UserControl</SubType>
     </Compile>
