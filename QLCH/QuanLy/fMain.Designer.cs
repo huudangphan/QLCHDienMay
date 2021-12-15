@@ -55,6 +55,10 @@ namespace QuanLy
             this.accordionControlElement21 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement22 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement23 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement10 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement11 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement13 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
             this.ff.SuspendLayout();
@@ -119,7 +123,8 @@ namespace QuanLy
             this.accordionControlElement1,
             this.accordionControlElement7,
             this.accordionControlElement16,
-            this.accordionControlElement21});
+            this.accordionControlElement21,
+            this.accordionControlElement5});
             this.accordionControl1.Location = new System.Drawing.Point(0, 31);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
@@ -133,7 +138,6 @@ namespace QuanLy
             this.accordionControlElement2,
             this.accordionControlElement4,
             this.accordionControlElement8});
-            this.accordionControlElement1.Expanded = true;
             this.accordionControlElement1.Name = "accordionControlElement1";
             this.accordionControlElement1.Text = "Đơn hàng ";
             this.accordionControlElement1.Click += new System.EventHandler(this.accordionControlElement1_Click);
@@ -187,7 +191,6 @@ namespace QuanLy
             // 
             this.accordionControlElement7.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement12});
-            this.accordionControlElement7.Expanded = true;
             this.accordionControlElement7.Name = "accordionControlElement7";
             this.accordionControlElement7.Text = "Khách hàng";
             // 
@@ -196,7 +199,6 @@ namespace QuanLy
             this.accordionControlElement12.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement14,
             this.accordionControlElement20});
-            this.accordionControlElement12.Expanded = true;
             this.accordionControlElement12.Name = "accordionControlElement12";
             this.accordionControlElement12.Text = "Khách hàng";
             // 
@@ -220,7 +222,6 @@ namespace QuanLy
             this.accordionControlElement17,
             this.accordionControlElement18,
             this.accordionControlElement19});
-            this.accordionControlElement16.Expanded = true;
             this.accordionControlElement16.Name = "accordionControlElement16";
             this.accordionControlElement16.Text = "Kho";
             // 
@@ -250,7 +251,6 @@ namespace QuanLy
             this.accordionControlElement21.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement22,
             this.accordionControlElement23});
-            this.accordionControlElement21.Expanded = true;
             this.accordionControlElement21.Name = "accordionControlElement21";
             this.accordionControlElement21.Text = "Quản lý";
             // 
@@ -267,6 +267,37 @@ namespace QuanLy
             this.accordionControlElement23.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement23.Text = "Thêm tài khoản";
             this.accordionControlElement23.Click += new System.EventHandler(this.accordionControlElement23_Click);
+            // 
+            // accordionControlElement5
+            // 
+            this.accordionControlElement5.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement10,
+            this.accordionControlElement11,
+            this.accordionControlElement13});
+            this.accordionControlElement5.Expanded = true;
+            this.accordionControlElement5.Name = "accordionControlElement5";
+            this.accordionControlElement5.Text = "Báo cáo";
+            // 
+            // accordionControlElement10
+            // 
+            this.accordionControlElement10.Name = "accordionControlElement10";
+            this.accordionControlElement10.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement10.Text = "Đơn hàng trực tuyến";
+            this.accordionControlElement10.Click += new System.EventHandler(this.accordionControlElement10_Click_1);
+            // 
+            // accordionControlElement11
+            // 
+            this.accordionControlElement11.Name = "accordionControlElement11";
+            this.accordionControlElement11.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement11.Text = "Đơn hàng trực tiếp";
+            this.accordionControlElement11.Click += new System.EventHandler(this.accordionControlElement11_Click_1);
+            // 
+            // accordionControlElement13
+            // 
+            this.accordionControlElement13.Name = "accordionControlElement13";
+            this.accordionControlElement13.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement13.Text = "Danh sách nhân viên";
+            this.accordionControlElement13.Click += new System.EventHandler(this.accordionControlElement13_Click);
             // 
             // fluentDesignFormControl1
             // 
@@ -337,5 +368,9 @@ namespace QuanLy
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement22;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement23;
         private System.Windows.Forms.ToolStripStatusLabel cuahang;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement10;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement11;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement13;
     }
 }
