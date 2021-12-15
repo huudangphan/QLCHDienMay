@@ -107,4 +107,4 @@ D:\CSDLPT\QLCH\QuanLy\obj\Debug\QuanLy.Kho.fPhieuNhap.resources
 D:\CSDLPT\QLCH\QuanLy\obj\Debug\QuanLy.Kho.fChiTietPhieuNhap.resources
 D:\CSDLPT\QLCH\QuanLy\obj\Debug\QuanLy.NhanVien.fThemTaiKhoan.resources
 D:\CSDLPT\QLCH\QuanLy\obj\Debug\QuanLy.NhanVien.fThemNV.resources
-D:\CSDLPT\QLCH\QuanLy\obj\Debug\QuanLy.Kho.fNhanHangMoi.resources
+D:\CSDLPT\QLCH\QuanLy\obj\Debug\QuanLy.Kho.fNhapSPMoi.resources

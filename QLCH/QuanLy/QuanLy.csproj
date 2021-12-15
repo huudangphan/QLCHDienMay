@@ -119,11 +119,11 @@
     <Compile Include="Kho\fChiTietPhieuNhap.Designer.cs">
       <DependentUpon>fChiTietPhieuNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="Kho\fNhanHangMoi.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Kho\fNhapSPMoi.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Kho\fNhanHangMoi.Designer.cs">
-      <DependentUpon>fNhanHangMoi.cs</DependentUpon>
+    <Compile Include="Kho\fNhapSPMoi.Designer.cs">
+      <DependentUpon>fNhapSPMoi.cs</DependentUpon>
     </Compile>
     <Compile Include="Kho\fPhieuNhap.cs">
       <SubType>UserControl</SubType>
@@ -200,8 +200,8 @@
     <EmbeddedResource Include="Kho\fChiTietPhieuNhap.resx">
       <DependentUpon>fChiTietPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Kho\fNhanHangMoi.resx">
-      <DependentUpon>fNhanHangMoi.cs</DependentUpon>
+    <EmbeddedResource Include="Kho\fNhapSPMoi.resx">
+      <DependentUpon>fNhapSPMoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kho\fPhieuNhap.resx">
       <DependentUpon>fPhieuNhap.cs</DependentUpon>
@@ -264,6 +264,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="ThongKe\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
