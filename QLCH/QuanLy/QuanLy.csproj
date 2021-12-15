@@ -194,12 +194,6 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KeToan\fDoanhThuOff.resx">
-      <DependentUpon>fDoanhThuOff.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KeToan\fDoanhThuOn.resx">
-      <DependentUpon>fDoanhThuOn.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="KhachHang\fDanhSachKhach.resx">
       <DependentUpon>fDanhSachKhach.cs</DependentUpon>
     </EmbeddedResource>
@@ -270,6 +264,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="ThongKe\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
