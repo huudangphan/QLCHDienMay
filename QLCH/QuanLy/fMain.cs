@@ -4,6 +4,7 @@ using QuanLy.KhachHang;
 using QuanLy.Kho;
 using QuanLy.NhanVien;
 using QuanLy.NhapHang;
+using QuanLy.ThongKe;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,7 +33,7 @@ namespace QuanLy
         
         public int CheckType()
         {
-            if (DataProvider.mGroup == "BANHANG")
+            if (DataProvider.mGroup == "BANHA")
                 return 0;
             else if (DataProvider.mGroup == "KETOAN")
                 return 1;
@@ -150,7 +151,10 @@ namespace QuanLy
             type = CheckType();
             if (type == 1 || type == 3)
             {
-
+                ff.Controls.Clear();
+                fOffline f = new fOffline();
+                f.Dock = DockStyle.Fill;
+                ff.Controls.Add(f);
             }
             else
                 MessageBox.Show("Người dùng không có quyền truy cập!");
@@ -236,6 +240,54 @@ namespace QuanLy
             {
                 ff.Controls.Clear();
                 fThemTaiKhoan f = new fThemTaiKhoan();
+                f.Dock = DockStyle.Fill;
+                ff.Controls.Add(f);
+
+
+            }
+            else
+                MessageBox.Show("Người dùng không có quyền truy cập!");
+        }
+
+        private void accordionControlElement10_Click_1(object sender, EventArgs e)
+        {
+            type = CheckType();
+            if (type == 3||type==1)
+            {
+                ff.Controls.Clear();
+                fOnline f = new fOnline();
+                f.Dock = DockStyle.Fill;
+                ff.Controls.Add(f);
+
+
+            }
+            else
+                MessageBox.Show("Người dùng không có quyền truy cập!");
+        }
+
+        private void accordionControlElement11_Click_1(object sender, EventArgs e)
+        {
+            type = CheckType();
+            if (type == 3 || type == 1)
+            {
+                ff.Controls.Clear();
+                fOffline f = new fOffline();
+                f.Dock = DockStyle.Fill;
+                ff.Controls.Add(f);
+
+
+            }
+            else
+                MessageBox.Show("Người dùng không có quyền truy cập!");
+        }
+
+        private void accordionControlElement13_Click(object sender, EventArgs e)
+        {
+            type = CheckType();
+            if (type == 3 || type == 1)
+            {
+                ff.Controls.Clear();
+                fDSNV f = new fDSNV();
                 f.Dock = DockStyle.Fill;
                 ff.Controls.Add(f);
 

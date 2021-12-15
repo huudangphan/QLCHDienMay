@@ -33,12 +33,28 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Charts.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Export, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.1.UI, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.1.Extensions, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1440.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
@@ -176,6 +192,42 @@
     <Compile Include="test.Designer.cs">
       <DependentUpon>test.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThongKe\fDSNV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThongKe\fDSNV.Designer.cs">
+      <DependentUpon>fDSNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKe\fOffline.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThongKe\fOffline.Designer.cs">
+      <DependentUpon>fOffline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKe\fOnline.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThongKe\fOnline.Designer.cs">
+      <DependentUpon>fOnline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKe\rptDSNV.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ThongKe\rptDSNV.Designer.cs">
+      <DependentUpon>rptDSNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKe\rptOffline.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ThongKe\rptOffline.Designer.cs">
+      <DependentUpon>rptOffline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKe\rptOnline.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ThongKe\rptOnline.Designer.cs">
+      <DependentUpon>rptOnline.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DonHangXuat\fDanhSachDHOnline.resx">
       <DependentUpon>fDanhSachDHOnline.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +276,7 @@
     <EmbeddedResource Include="NhapHang\fNhapThemHang.resx">
       <DependentUpon>fNhapThemHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -233,6 +286,24 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ThongKe\fDSNV.resx">
+      <DependentUpon>fDSNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKe\fOffline.resx">
+      <DependentUpon>fOffline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKe\fOnline.resx">
+      <DependentUpon>fOnline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKe\rptDSNV.resx">
+      <DependentUpon>rptDSNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKe\rptOffline.resx">
+      <DependentUpon>rptOffline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKe\rptOnline.resx">
+      <DependentUpon>rptOnline.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -264,7 +335,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
-    <Folder Include="ThongKe\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
