@@ -1,0 +1,22 @@
+diff a/QLCH/QuanLy/fMain.Designer.cs b/QLCH/QuanLy/fMain.Designer.cs	(rejected hunks)
+@@ -219,20 +219,12 @@
+             // accordionControlElement16
+             // 
+             this.accordionControlElement16.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+-            this.accordionControlElement17,
+             this.accordionControlElement18,
+             this.accordionControlElement19});
+             this.accordionControlElement16.Expanded = true;
+             this.accordionControlElement16.Name = "accordionControlElement16";
+             this.accordionControlElement16.Text = "Kho";
+             // 
+-            // accordionControlElement17
+-            // 
+-            this.accordionControlElement17.Name = "accordionControlElement17";
+-            this.accordionControlElement17.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+-            this.accordionControlElement17.Text = "Thống kê doanh thu";
+-            this.accordionControlElement17.Click += new System.EventHandler(this.accordionControlElement17_Click);
+-            // 
+             // accordionControlElement18
+             // 
+             this.accordionControlElement18.Name = "accordionControlElement18";

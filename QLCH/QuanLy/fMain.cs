@@ -296,5 +296,21 @@ namespace QuanLy
             else
                 MessageBox.Show("Người dùng không có quyền truy cập!");
         }
+
+        private void accordionControlElement15_Click_1(object sender, EventArgs e)
+        {
+            type = CheckType();
+            if (type == 3 || type == 2)
+            {
+                ff.Controls.Clear();
+                fNhapSPMoi f = new fNhapSPMoi();
+                f.Dock = DockStyle.Fill;
+                ff.Controls.Add(f);
+
+
+            }
+            else
+                MessageBox.Show("Người dùng không có quyền truy cập!");
+        }
     }
 }
