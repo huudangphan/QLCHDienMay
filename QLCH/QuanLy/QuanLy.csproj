@@ -192,6 +192,18 @@
     <Compile Include="test.Designer.cs">
       <DependentUpon>test.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThongKe\fBaoCaoPhieuNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThongKe\fBaoCaoPhieuNhap.Designer.cs">
+      <DependentUpon>fBaoCaoPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKe\fBaoCaoPhieuXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThongKe\fBaoCaoPhieuXuat.Designer.cs">
+      <DependentUpon>fBaoCaoPhieuXuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThongKe\fDSNV.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -227,6 +239,18 @@
     </Compile>
     <Compile Include="ThongKe\rptOnline.Designer.cs">
       <DependentUpon>rptOnline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKe\rptPhieuNhap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ThongKe\rptPhieuNhap.Designer.cs">
+      <DependentUpon>rptPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKe\rptPhieuXuat.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ThongKe\rptPhieuXuat.Designer.cs">
+      <DependentUpon>rptPhieuXuat.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="DonHangXuat\fDanhSachDHOnline.resx">
       <DependentUpon>fDanhSachDHOnline.cs</DependentUpon>
@@ -285,7 +309,14 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ThongKe\fBaoCaoPhieuNhap.resx">
+      <DependentUpon>fBaoCaoPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKe\fBaoCaoPhieuXuat.resx">
+      <DependentUpon>fBaoCaoPhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThongKe\fDSNV.resx">
       <DependentUpon>fDSNV.cs</DependentUpon>
     </EmbeddedResource>
@@ -304,6 +335,12 @@
     <EmbeddedResource Include="ThongKe\rptOnline.resx">
       <DependentUpon>rptOnline.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThongKe\rptPhieuNhap.resx">
+      <DependentUpon>rptPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKe\rptPhieuXuat.resx">
+      <DependentUpon>rptPhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -319,6 +356,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\5d62b49ac544b_thumb900.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -333,8 +371,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

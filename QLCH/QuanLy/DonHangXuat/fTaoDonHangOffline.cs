@@ -56,6 +56,7 @@ namespace QuanLy.DonHangXuat
                 }
                 if (temp != 1)
                     MessageBox.Show("Thêm hoá đơn thành công. Vui lòng liên hệ nhân viên thủ kho để lấy hàng");
+                GlobalData.lstsp.Clear();
 
             }
             catch (Exception ex)

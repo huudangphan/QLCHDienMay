@@ -1,7 +1,7 @@
 ﻿
 namespace QuanLy.ThongKe
 {
-    partial class rptOnline
+    partial class rptPhieuNhap
     {
         /// <summary>
         /// Required designer variable.
@@ -33,7 +33,7 @@ namespace QuanLy.ThongKe
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rptOnline));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rptPhieuNhap));
             this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.Title = new DevExpress.XtraReports.UI.XRControlStyle();
             this.DetailCaption1 = new DevExpress.XtraReports.UI.XRControlStyle();
@@ -68,9 +68,9 @@ namespace QuanLy.ThongKe
             // 
             // sqlDataSource1
             // 
-            this.sqlDataSource1.ConnectionName = "localhost_QLDienMay_Connection 5";
+            this.sqlDataSource1.ConnectionName = "localhost_QLDienMay_Connection 3";
             this.sqlDataSource1.Name = "sqlDataSource1";
-            storedProcQuery1.Name = "sp_DoanhThuOnline";
+            storedProcQuery1.Name = "sp_BaoCaoPhieuNhap";
             queryParameter1.Name = "@from_date";
             queryParameter1.Type = typeof(System.DateTime);
             queryParameter1.ValueInfo = "1753-01-01";
@@ -79,7 +79,7 @@ namespace QuanLy.ThongKe
             queryParameter2.ValueInfo = "1753-01-01";
             storedProcQuery1.Parameters.Add(queryParameter1);
             storedProcQuery1.Parameters.Add(queryParameter2);
-            storedProcQuery1.StoredProcName = "sp_DoanhThuOnline";
+            storedProcQuery1.StoredProcName = "sp_BaoCaoPhieuNhap";
             this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
@@ -192,7 +192,7 @@ namespace QuanLy.ThongKe
             this.label1.Name = "label1";
             this.label1.SizeF = new System.Drawing.SizeF(888F, 24.19433F);
             this.label1.StyleName = "Title";
-            this.label1.Text = "BÁO CÁO DOANH THU ONLINE";
+            this.label1.Text = "BÁO CÁO PHIẾU NHẬP";
             // 
             // table1
             // 
@@ -219,36 +219,38 @@ namespace QuanLy.ThongKe
             this.tableCell1.Name = "tableCell1";
             this.tableCell1.StyleName = "DetailCaption1";
             this.tableCell1.StylePriority.UseBorders = false;
-            this.tableCell1.Text = "Ma Don Hang";
-            this.tableCell1.Weight = 0.23413981119791666D;
+            this.tableCell1.Text = "Ma Phieu Nhap";
+            this.tableCell1.Weight = 0.22671629163953994D;
             // 
             // tableCell2
             // 
             this.tableCell2.Name = "tableCell2";
             this.tableCell2.StyleName = "DetailCaption1";
-            this.tableCell2.Text = "Thoi Gian Tao";
-            this.tableCell2.Weight = 0.24267927381727431D;
+            this.tableCell2.Text = "Ten NCC";
+            this.tableCell2.Weight = 0.14718972100151909D;
             // 
             // tableCell3
             // 
             this.tableCell3.Name = "tableCell3";
             this.tableCell3.StyleName = "DetailCaption1";
-            this.tableCell3.Text = "Ten Khach Hang";
-            this.tableCell3.Weight = 0.28027389526367186D;
+            this.tableCell3.Text = "Ten Nhan Vien";
+            this.tableCell3.Weight = 0.22071751912434895D;
             // 
             // tableCell4
             // 
             this.tableCell4.Name = "tableCell4";
             this.tableCell4.StyleName = "DetailCaption1";
-            this.tableCell4.Text = "SDT";
-            this.tableCell4.Weight = 0.099249445597330732D;
+            this.tableCell4.Text = "Thoi Gian Tao";
+            this.tableCell4.Weight = 0.21318939208984375D;
             // 
             // tableCell5
             // 
             this.tableCell5.Name = "tableCell5";
             this.tableCell5.StyleName = "DetailCaption1";
-            this.tableCell5.Text = "Dia Chi";
-            this.tableCell5.Weight = 0.14365754869249131D;
+            this.tableCell5.StylePriority.UseTextAlignment = false;
+            this.tableCell5.Text = "Tong Gia Tri";
+            this.tableCell5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.tableCell5.Weight = 0.19218711005316841D;
             // 
             // table2
             // 
@@ -274,45 +276,48 @@ namespace QuanLy.ThongKe
             // 
             this.tableCell6.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.tableCell6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[MaDonHang]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[MaPhieuNhap]")});
             this.tableCell6.Name = "tableCell6";
             this.tableCell6.StyleName = "DetailData1";
             this.tableCell6.StylePriority.UseBorders = false;
-            this.tableCell6.Weight = 0.23413981119791666D;
+            this.tableCell6.Weight = 0.22671629163953994D;
             // 
             // tableCell7
             // 
             this.tableCell7.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[ThoiGianTao]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TenNCC]")});
             this.tableCell7.Name = "tableCell7";
             this.tableCell7.StyleName = "DetailData1";
-            this.tableCell7.Weight = 0.24267927381727431D;
+            this.tableCell7.Weight = 0.14718972100151909D;
             // 
             // tableCell8
             // 
             this.tableCell8.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TenKhachHang]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TenNhanVien]")});
             this.tableCell8.Name = "tableCell8";
             this.tableCell8.StyleName = "DetailData1";
-            this.tableCell8.Weight = 0.28027389526367186D;
+            this.tableCell8.Weight = 0.22071751912434895D;
             // 
             // tableCell9
             // 
             this.tableCell9.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[SDT]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[ThoiGianTao]")});
             this.tableCell9.Name = "tableCell9";
             this.tableCell9.StyleName = "DetailData1";
-            this.tableCell9.Weight = 0.099249445597330732D;
+            this.tableCell9.Weight = 0.21318939208984375D;
             // 
             // tableCell10
             // 
             this.tableCell10.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DiaChi]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TongGiaTri]")});
             this.tableCell10.Name = "tableCell10";
             this.tableCell10.StyleName = "DetailData1";
-            this.tableCell10.Weight = 0.1436575656467014D;
+            this.tableCell10.StylePriority.UseTextAlignment = false;
+            this.tableCell10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.tableCell10.TextFormatString = "{0:C2}";
+            this.tableCell10.Weight = 0.19218709309895835D;
             // 
-            // rptOnline
+            // rptPhieuNhap
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.TopMargin,
@@ -322,7 +327,7 @@ namespace QuanLy.ThongKe
             this.Detail});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.sqlDataSource1});
-            this.DataMember = "sp_DoanhThuOnline";
+            this.DataMember = "sp_BaoCaoPhieuNhap";
             this.DataSource = this.sqlDataSource1;
             this.Font = new System.Drawing.Font("Arial", 9.75F);
             this.Landscape = true;

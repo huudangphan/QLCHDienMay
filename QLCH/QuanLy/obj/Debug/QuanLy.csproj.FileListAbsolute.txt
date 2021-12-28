@@ -248,3 +248,7 @@ D:\CSDLPT\QLCH\QuanLy\obj\Debug\QuanLy.exe.licenses
 D:\CSDLPT\QLCH\QuanLy\obj\Debug\QuanLy.ThongKe.rptOffline.resources
 D:\CSDLPT\QLCH\QuanLy\obj\Debug\QuanLy.ThongKe.fDSNV.resources
 D:\CSDLPT\QLCH\QuanLy\obj\Debug\QuanLy.ThongKe.rptDSNV.resources
+D:\CSDLPT\QLCH\QuanLy\obj\Debug\QuanLy.ThongKe.fBaoCaoPhieuNhap.resources
+D:\CSDLPT\QLCH\QuanLy\obj\Debug\QuanLy.ThongKe.fBaoCaoPhieuXuat.resources
+D:\CSDLPT\QLCH\QuanLy\obj\Debug\QuanLy.ThongKe.rptPhieuNhap.resources
+D:\CSDLPT\QLCH\QuanLy\obj\Debug\QuanLy.ThongKe.rptPhieuXuat.resources
