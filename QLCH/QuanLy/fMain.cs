@@ -33,7 +33,7 @@ namespace QuanLy
         
         public int CheckType()
         {
-            if (DataProvider.mGroup == "BANHA")
+            if (DataProvider.mGroup == "BANHANG")
                 return 0;
             else if (DataProvider.mGroup == "KETOAN")
                 return 1;
@@ -62,7 +62,7 @@ namespace QuanLy
                 ff.Controls.Add(f);
             }
             else
-                MessageBox.Show("Người dùng không có quyền truy cập!");
+                MessageBox.Show("Người dùng không có quyền truy cập!","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Error);
         }
 
         
@@ -84,7 +84,7 @@ namespace QuanLy
                 }
             }
             else
-                MessageBox.Show("Người dùng không có quyền truy cập!");
+                MessageBox.Show("Người dùng không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void accordionControlElement14_Click(object sender, EventArgs e)
@@ -95,7 +95,7 @@ namespace QuanLy
 
             }
             else
-                MessageBox.Show("Người dùng không có quyền truy cập!");
+                MessageBox.Show("Người dùng không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void accordionControlElement15_Click(object sender, EventArgs e)
@@ -106,7 +106,7 @@ namespace QuanLy
 
             }
             else
-                MessageBox.Show("Người dùng không có quyền truy cập!");
+                MessageBox.Show("Người dùng không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void accordionControlElement9_Click(object sender, EventArgs e)
@@ -121,7 +121,7 @@ namespace QuanLy
                 ff.Controls.Add(f);
             }
             else
-                MessageBox.Show("Người dùng không có quyền truy cập!");
+                MessageBox.Show("Người dùng không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void accordionControlElement10_Click(object sender, EventArgs e)
@@ -132,7 +132,7 @@ namespace QuanLy
 
             }
             else
-                MessageBox.Show("Người dùng không có quyền truy cập!");
+                MessageBox.Show("Người dùng không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void accordionControlElement11_Click(object sender, EventArgs e)
@@ -143,7 +143,7 @@ namespace QuanLy
 
             }
             else
-                MessageBox.Show("Người dùng không có quyền truy cập!");
+                MessageBox.Show("Người dùng không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void accordionControlElement17_Click(object sender, EventArgs e)
@@ -157,7 +157,7 @@ namespace QuanLy
                 ff.Controls.Add(f);
             }
             else
-                MessageBox.Show("Người dùng không có quyền truy cập!");
+                MessageBox.Show("Người dùng không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void accordionControlElement18_Click(object sender, EventArgs e)
@@ -172,13 +172,13 @@ namespace QuanLy
 
             }
             else
-                MessageBox.Show("Người dùng không có quyền truy cập!");
+                MessageBox.Show("Người dùng không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void accordionControlElement19_Click(object sender, EventArgs e)
         {
             type = CheckType();
-            if (type == 1 || type == 3)
+            if (type == 2 || type == 3)
             {
                 ff.Controls.Clear();
                 fPhieuNhap f = new fPhieuNhap();
@@ -186,7 +186,7 @@ namespace QuanLy
                 ff.Controls.Add(f);
             }
             else
-                MessageBox.Show("Người dùng không có quyền truy cập!");
+                MessageBox.Show("Người dùng không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void accordionControlElement20_Click(object sender, EventArgs e)
@@ -200,7 +200,7 @@ namespace QuanLy
                 ff.Controls.Add(f);
             }
             else
-                MessageBox.Show("Người dùng không có quyền truy cập!");
+                MessageBox.Show("Người dùng không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void accordionControlElement22_Click(object sender, EventArgs e)
@@ -214,7 +214,7 @@ namespace QuanLy
                 ff.Controls.Add(f);
             }
             else
-                MessageBox.Show("Người dùng không có quyền truy cập!");
+                MessageBox.Show("Người dùng không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void accordionControlElement24_Click(object sender, EventArgs e)
@@ -230,7 +230,7 @@ namespace QuanLy
 
             }
             else
-                MessageBox.Show("Người dùng không có quyền truy cập!");
+                MessageBox.Show("Người dùng không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void accordionControlElement23_Click(object sender, EventArgs e)
@@ -246,7 +246,7 @@ namespace QuanLy
 
             }
             else
-                MessageBox.Show("Người dùng không có quyền truy cập!");
+                MessageBox.Show("Người dùng không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void accordionControlElement10_Click_1(object sender, EventArgs e)
@@ -262,7 +262,7 @@ namespace QuanLy
 
             }
             else
-                MessageBox.Show("Người dùng không có quyền truy cập!");
+                MessageBox.Show("Người dùng không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void accordionControlElement11_Click_1(object sender, EventArgs e)
@@ -278,7 +278,7 @@ namespace QuanLy
 
             }
             else
-                MessageBox.Show("Người dùng không có quyền truy cập!");
+                MessageBox.Show("Người dùng không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void accordionControlElement13_Click(object sender, EventArgs e)
@@ -294,7 +294,7 @@ namespace QuanLy
 
             }
             else
-                MessageBox.Show("Người dùng không có quyền truy cập!");
+                MessageBox.Show("Người dùng không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void accordionControlElement15_Click_1(object sender, EventArgs e)
@@ -310,7 +310,60 @@ namespace QuanLy
 
             }
             else
-                MessageBox.Show("Người dùng không có quyền truy cập!");
+                MessageBox.Show("Người dùng không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void accordionControlElement24_Click_1(object sender, EventArgs e)
+        {
+            type = CheckType();
+            if (type == 3 || type == 1)
+            {
+                ff.Controls.Clear();
+                fBaoCaoPhieuNhap f = new fBaoCaoPhieuNhap();
+                f.Dock = DockStyle.Fill;
+                ff.Controls.Add(f);
+
+
+            }
+            else
+                MessageBox.Show("Người dùng không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void accordionControlElement25_Click(object sender, EventArgs e)
+        {
+            type = CheckType();
+            if (type == 3 || type == 1)
+            {
+                ff.Controls.Clear();
+                fBaoCaoPhieuXuat f = new fBaoCaoPhieuXuat();
+                f.Dock = DockStyle.Fill;
+                ff.Controls.Add(f);
+
+
+            }
+            else
+                MessageBox.Show("Người dùng không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void accordionControlElement7_Click(object sender, EventArgs e)
+        {
+            type = CheckType();
+            if (type == 3 || type == 0)
+            {
+                ff.Controls.Clear();
+                fDanhSachKhach f = new fDanhSachKhach();
+                f.Dock = DockStyle.Fill;
+                ff.Controls.Add(f);
+
+
+            }
+            else
+                MessageBox.Show("Người dùng không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void accordionControlElement8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

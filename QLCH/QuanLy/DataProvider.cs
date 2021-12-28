@@ -44,8 +44,7 @@ namespace QuanLy
             }
             catch (Exception ex)
             {
-                string a = ex.ToString();
-                MessageBox.Show(a);
+                
                 return 0;
             }
         }

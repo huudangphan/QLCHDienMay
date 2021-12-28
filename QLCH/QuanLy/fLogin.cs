@@ -50,7 +50,7 @@ namespace QuanLy
             catch (Exception ex)
             {
                 string a = ex.ToString();
-                MessageBox.Show(ex.Message.ToString());
+              
                 return 0;
 
             }
@@ -64,8 +64,7 @@ namespace QuanLy
             {
                 DataProvider.mLogin = txtUserName.Text.Trim();
                 DataProvider.password = txtPassword.Text.Trim();
-                if (DataProvider.KetNoi() == 0)
-                    MessageBox.Show("Error");
+                if (DataProvider.KetNoi() == 0)                    
                 DataProvider.maCN = cbChiNhanh.SelectedIndex;
                 DataProvider.mLoginDN = DataProvider.mLogin;
                 DataProvider.passWordDN = DataProvider.password;

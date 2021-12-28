@@ -165,7 +165,7 @@ namespace QuanLy.Kho
             if (DataProvider.cuaHang == "CH001")
                 makho = "K0001";
             else
-                makho = "K002";
+                makho = "K0002";
             if (flag == "add")
             {
                 if (GlobalData.lstsp.Count > 0)
@@ -175,6 +175,7 @@ namespace QuanLy.Kho
 
                     if (a != 0)
                     {
+                        var t = GlobalData.lstsp.Count;
                         foreach (var item in GlobalData.lstsp)
                         {
                             string queryy = string.Format("exec sp_InsertCTPN '{0}',{1},{2},'{3}'", item.masp, item.soluong, item.giaban,makho);
@@ -248,13 +249,15 @@ namespace QuanLy.Kho
         {
             string masp = txtmasp.Text.Trim();
             string tensp = txttensp.Text.Trim();
-            int soluong = Int32.Parse(numericUpDown1.Value.ToString());
+            int soluong = Int32.Parse(numericUpDown1.Value.ToString())/2;
             double gianhap = double.Parse(txtdongia.Text.Trim());
+            
             if (MessageBox.Show("Bạn có muốn chọn " + tensp + "\nsố lượng:" + soluong + "\nVới giá nhập:" + gianhap, "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
             {
                 GlobalData.lstsp.Add(new SanPham() { masp = masp, tensp = tensp, soluong = soluong, giaban = gianhap });
                 chiTiếtToolStripMenuItem.Enabled = true;
             }
+            var a = GlobalData.lstsp;
         }
 
         private void chiTiếtToolStripMenuItem_Click(object sender, EventArgs e)
