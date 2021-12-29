@@ -20,10 +20,8 @@ namespace QuanLy.NhapHang
             LoadData();
             GlobalData.lstsp = new List<SanPham>();
             if (GlobalData.type == 2 )
-            {
-                
-                chọnToolStripMenuItem.Enabled = false;
-                
+            {                
+                chọnToolStripMenuItem.Enabled = false;                
             }
             
            
