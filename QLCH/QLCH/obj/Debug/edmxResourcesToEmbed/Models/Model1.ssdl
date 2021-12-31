@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="QLDienMayModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="QLDienMayModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="ChiTietDonHang">
     <Key>
       <PropertyRef Name="MaDonHang" />
@@ -101,8 +101,8 @@
     <Property Name="TinhTrangXacNhan" Type="bit" />
     <Property Name="TinhTrangThanhToan" Type="bit" />
     <Property Name="TinhTrangGiaoHang" Type="bit" />
-    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="TongGiaTri" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="HangTichDiem">
     <Key>
@@ -124,6 +124,7 @@
     <Property Name="TaiKhoan" Type="char" MaxLength="50" />
     <Property Name="MatKhau" Type="char" MaxLength="50" />
     <Property Name="TrangThai" Type="bit" />
+    <Property Name="Tongmua" Type="decimal" Precision="18" Scale="2" />
     <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="Kho">
@@ -133,6 +134,7 @@
     <Property Name="MaKho" Type="char" MaxLength="5" Nullable="false" />
     <Property Name="MaCuaHang" Type="char" MaxLength="5" Nullable="false" />
     <Property Name="DiaChi" Type="nvarchar" MaxLength="100" />
+    <Property Name="TruongKho" Type="char" MaxLength="10" />
     <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="KhuyenMai">
@@ -238,8 +240,8 @@ warning 6002: The table/view 'QLDienMay.dbo.MSmerge_articlehistory' does not hav
     <Property Name="relative_cost" Type="decimal" Precision="12" Scale="2" Nullable="false" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_ChiTietDonHang' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_ChiTietDonHang">
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN2_QLDM_ChiTietDonHang' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_ChiTietDonHang">
     <Key>
       <PropertyRef Name="MaDonHang" />
       <PropertyRef Name="MaSanPham" />
@@ -254,8 +256,8 @@ warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_ChiTi
     <Property Name="origin_datasource_id" Type="uniqueidentifier" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_ChiTietKho' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_ChiTietKho">
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN2_QLDM_ChiTietKho' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_ChiTietKho">
     <Key>
       <PropertyRef Name="MaKho" />
       <PropertyRef Name="MaSanPham" />
@@ -268,8 +270,8 @@ warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_ChiTi
     <Property Name="origin_datasource_id" Type="uniqueidentifier" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_ChiTietLoai' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_ChiTietLoai">
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN2_QLDM_ChiTietLoai' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_ChiTietLoai">
     <Key>
       <PropertyRef Name="MaSanPham" />
       <PropertyRef Name="MaLoai" />
@@ -281,8 +283,8 @@ warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_ChiTi
     <Property Name="origin_datasource_id" Type="uniqueidentifier" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuNhap' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuNhap">
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN2_QLDM_ChiTietPhieuNhap' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_ChiTietPhieuNhap">
     <Key>
       <PropertyRef Name="MaPhieuNhap" />
       <PropertyRef Name="MaSanPham" />
@@ -296,8 +298,8 @@ warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_ChiTi
     <Property Name="origin_datasource_id" Type="uniqueidentifier" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuXuat' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuXuat">
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN2_QLDM_ChiTietPhieuXuat' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_ChiTietPhieuXuat">
     <Key>
       <PropertyRef Name="MaPhieuXuat" />
       <PropertyRef Name="MaSanPham" />
@@ -310,8 +312,8 @@ warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_ChiTi
     <Property Name="origin_datasource_id" Type="uniqueidentifier" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_ChucVu' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_ChucVu">
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN2_QLDM_ChucVu' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_ChucVu">
     <Key>
       <PropertyRef Name="MaChucVu" />
       <PropertyRef Name="TenChucVu" />
@@ -323,8 +325,8 @@ warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_ChucV
     <Property Name="origin_datasource_id" Type="uniqueidentifier" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_CuaHang' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_CuaHang">
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN2_QLDM_CuaHang' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_CuaHang">
     <Key>
       <PropertyRef Name="MaCuaHang" />
       <PropertyRef Name="rowguid" />
@@ -337,8 +339,8 @@ warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_CuaHa
     <Property Name="origin_datasource_id" Type="uniqueidentifier" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_DacDiemNoiBat' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_DacDiemNoiBat">
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN2_QLDM_DacDiemNoiBat' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_DacDiemNoiBat">
     <Key>
       <PropertyRef Name="MaSanPham" />
       <PropertyRef Name="TenDacDiem" />
@@ -350,8 +352,8 @@ warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_DacDi
     <Property Name="origin_datasource_id" Type="uniqueidentifier" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_DanhMuc' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_DanhMuc">
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN2_QLDM_DanhMuc' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_DanhMuc">
     <Key>
       <PropertyRef Name="MaDanhMuc" />
       <PropertyRef Name="TenDanhMuc" />
@@ -363,8 +365,8 @@ warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_DanhM
     <Property Name="origin_datasource_id" Type="uniqueidentifier" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_DonHang' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_DonHang">
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN2_QLDM_DonHang' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_DonHang">
     <Key>
       <PropertyRef Name="MaDonHang" />
       <PropertyRef Name="rowguid" />
@@ -379,13 +381,13 @@ warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_DonHa
     <Property Name="TinhTrangXacNhan" Type="bit" />
     <Property Name="TinhTrangThanhToan" Type="bit" />
     <Property Name="TinhTrangGiaoHang" Type="bit" />
-    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="TongGiaTri" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="origin_datasource_id" Type="uniqueidentifier" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_HangTichDiem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_HangTichDiem">
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN2_QLDM_HangTichDiem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_HangTichDiem">
     <Key>
       <PropertyRef Name="MaHang" />
       <PropertyRef Name="rowguid" />
@@ -396,8 +398,8 @@ warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_HangT
     <Property Name="origin_datasource_id" Type="uniqueidentifier" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_KhachHang' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_KhachHang">
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN2_QLDM_KhachHang' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_KhachHang">
     <Key>
       <PropertyRef Name="MaKhachHang" />
       <PropertyRef Name="TenKhachHang" />
@@ -414,12 +416,13 @@ warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_Khach
     <Property Name="TaiKhoan" Type="char" MaxLength="50" />
     <Property Name="MatKhau" Type="char" MaxLength="50" />
     <Property Name="TrangThai" Type="bit" />
+    <Property Name="Tongmua" Type="decimal" Precision="18" Scale="2" />
     <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="origin_datasource_id" Type="uniqueidentifier" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_Kho' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_Kho">
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN2_QLDM_Kho' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_Kho">
     <Key>
       <PropertyRef Name="MaKho" />
       <PropertyRef Name="MaCuaHang" />
@@ -428,12 +431,13 @@ warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_Kho' 
     <Property Name="MaKho" Type="char" MaxLength="5" Nullable="false" />
     <Property Name="MaCuaHang" Type="char" MaxLength="5" Nullable="false" />
     <Property Name="DiaChi" Type="nvarchar" MaxLength="100" />
+    <Property Name="TruongKho" Type="char" MaxLength="10" />
     <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="origin_datasource_id" Type="uniqueidentifier" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_KhuyenMai' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_KhuyenMai">
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN2_QLDM_KhuyenMai' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_KhuyenMai">
     <Key>
       <PropertyRef Name="MaKhuyenMai" />
       <PropertyRef Name="TenKM" />
@@ -453,8 +457,8 @@ warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_Khuye
     <Property Name="origin_datasource_id" Type="uniqueidentifier" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_Loai' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_Loai">
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN2_QLDM_Loai' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_Loai">
     <Key>
       <PropertyRef Name="MaLoai" />
       <PropertyRef Name="TenLoai" />
@@ -468,8 +472,8 @@ warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_Loai'
     <Property Name="origin_datasource_id" Type="uniqueidentifier" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_NhaCungCap' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_NhaCungCap">
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN2_QLDM_NhaCungCap' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_NhaCungCap">
     <Key>
       <PropertyRef Name="MaNCC" />
       <PropertyRef Name="TenNCC" />
@@ -485,8 +489,8 @@ warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_NhaCu
     <Property Name="origin_datasource_id" Type="uniqueidentifier" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_NhanVien' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_NhanVien">
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN2_QLDM_NhanVien' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_NhanVien">
     <Key>
       <PropertyRef Name="MaNhanVien" />
       <PropertyRef Name="TenNhanVien" />
@@ -520,8 +524,8 @@ warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_NhanV
     <Property Name="origin_datasource_id" Type="uniqueidentifier" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_PhanHoi' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_PhanHoi">
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN2_QLDM_PhanHoi' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_PhanHoi">
     <Key>
       <PropertyRef Name="MaPhanHoi" />
       <PropertyRef Name="rowguid" />
@@ -534,8 +538,8 @@ warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_PhanH
     <Property Name="origin_datasource_id" Type="uniqueidentifier" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_PhieuBaoHanh' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_PhieuBaoHanh">
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN2_QLDM_PhieuBaoHanh' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_PhieuBaoHanh">
     <Key>
       <PropertyRef Name="MaPhieuBH" />
       <PropertyRef Name="rowguid" />
@@ -546,13 +550,13 @@ warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_Phieu
     <Property Name="MaDonHang" Type="char" MaxLength="10" />
     <Property Name="NgayTao" Type="datetime" />
     <Property Name="NgayHetHan" Type="datetime" />
-    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="TrangThai" Type="bit" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="origin_datasource_id" Type="uniqueidentifier" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_PhieuNhap' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_PhieuNhap">
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN2_QLDM_PhieuNhap' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_PhieuNhap">
     <Key>
       <PropertyRef Name="MaPhieuNhap" />
       <PropertyRef Name="rowguid" />
@@ -563,13 +567,13 @@ warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_Phieu
     <Property Name="MaKho" Type="char" MaxLength="5" />
     <Property Name="ThoiGianTao" Type="datetime" />
     <Property Name="TongGiaTri" Type="decimal" Precision="18" Scale="2" />
-    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="TrangThai" Type="bit" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="origin_datasource_id" Type="uniqueidentifier" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_PhieuXuat' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_PhieuXuat">
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN2_QLDM_PhieuXuat' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_PhieuXuat">
     <Key>
       <PropertyRef Name="MaPhieuXuat" />
       <PropertyRef Name="MaKho" />
@@ -582,13 +586,13 @@ warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_Phieu
     <Property Name="MaDonHang" Type="char" MaxLength="10" />
     <Property Name="ThoiGianTao" Type="datetime" />
     <Property Name="TongGiaTri" Type="decimal" Precision="18" Scale="2" />
-    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="TrangThai" Type="bit" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="origin_datasource_id" Type="uniqueidentifier" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_SanPham' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_SanPham">
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN2_QLDM_SanPham' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_SanPham">
     <Key>
       <PropertyRef Name="MaSanPham" />
       <PropertyRef Name="TenSanPham" />
@@ -602,12 +606,26 @@ warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_SanPh
     <Property Name="AnhMinhHoa" Type="varchar" MaxLength="100" />
     <Property Name="DonGia" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="MaKhuyenMai" Type="char" MaxLength="10" />
+    <Property Name="MaLoai" Type="char" MaxLength="5" />
     <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="origin_datasource_id" Type="uniqueidentifier" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_TheTichDiem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_TheTichDiem">
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN2_QLDM_ThanhPho' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_ThanhPho">
+    <Key>
+      <PropertyRef Name="MaThanhPho" />
+      <PropertyRef Name="TenThanhPho" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaThanhPho" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="TenThanhPho" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN2_QLDM_TheTichDiem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_TheTichDiem">
     <Key>
       <PropertyRef Name="MaThe" />
       <PropertyRef Name="rowguid" />
@@ -622,8 +640,8 @@ warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_TheTi
     <Property Name="origin_datasource_id" Type="uniqueidentifier" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_ThongSoKiThuat' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_ThongSoKiThuat">
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN2_QLDM_ThongSoKiThuat' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_ThongSoKiThuat">
     <Key>
       <PropertyRef Name="MaSanPham" />
       <PropertyRef Name="TenThongSo" />
@@ -637,8 +655,20 @@ warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_Thong
     <Property Name="origin_datasource_id" Type="uniqueidentifier" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_TinhNang' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_TinhNang">
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN2_QLDM_ThuongHieu' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_ThuongHieu">
+    <Key>
+      <PropertyRef Name="MaThuongHieu" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaThuongHieu" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="TenThuongHieu" Type="nvarchar" MaxLength="50" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN2_QLDM_TinhNang' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_TinhNang">
     <Key>
       <PropertyRef Name="MaSanPham" />
       <PropertyRef Name="TenTinhNang" />
@@ -653,8 +683,472 @@ warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_TinhN
     <Property Name="origin_datasource_id" Type="uniqueidentifier" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_QLDienMay_CN1_Voucher' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_Voucher">
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN2_QLDM_Voucher' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_Voucher">
+    <Key>
+      <PropertyRef Name="MaVoucher" />
+      <PropertyRef Name="TenVoucher" />
+      <PropertyRef Name="PhanTramKhuyenMai" />
+      <PropertyRef Name="NgayBatDau" />
+      <PropertyRef Name="NgayKetThuc" />
+      <PropertyRef Name="MoTa" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaVoucher" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="TenVoucher" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PhanTramKhuyenMai" Type="float" Nullable="false" />
+    <Property Name="NgayBatDau" Type="datetime" Nullable="false" />
+    <Property Name="NgayKetThuc" Type="datetime" Nullable="false" />
+    <Property Name="MoTa" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN3_QLDM_ChiTietDonHang' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_ChiTietDonHang">
+    <Key>
+      <PropertyRef Name="MaDonHang" />
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaDonHang" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="MaSanPham" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="SoLuong" Type="int" />
+    <Property Name="DonGia" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ThanhTien" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN3_QLDM_ChiTietKho' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_ChiTietKho">
+    <Key>
+      <PropertyRef Name="MaKho" />
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaKho" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="MaSanPham" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="SoLuong" Type="int" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN3_QLDM_ChiTietLoai' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_ChiTietLoai">
+    <Key>
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="MaLoai" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaSanPham" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="MaLoai" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN3_QLDM_ChiTietPhieuNhap' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_ChiTietPhieuNhap">
+    <Key>
+      <PropertyRef Name="MaPhieuNhap" />
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaPhieuNhap" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="MaSanPham" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="SoLuong" Type="int" />
+    <Property Name="DonGiaNhap" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN3_QLDM_ChiTietPhieuXuat' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_ChiTietPhieuXuat">
+    <Key>
+      <PropertyRef Name="MaPhieuXuat" />
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaPhieuXuat" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="MaSanPham" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="SoLuong" Type="int" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN3_QLDM_ChucVu' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_ChucVu">
+    <Key>
+      <PropertyRef Name="MaChucVu" />
+      <PropertyRef Name="TenChucVu" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaChucVu" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="TenChucVu" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN3_QLDM_CuaHang' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_CuaHang">
+    <Key>
+      <PropertyRef Name="MaCuaHang" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaCuaHang" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="100" />
+    <Property Name="CuaHangTruong" Type="char" MaxLength="10" />
+    <Property Name="NgayThanhLap" Type="datetime" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN3_QLDM_DacDiemNoiBat' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_DacDiemNoiBat">
+    <Key>
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="TenDacDiem" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaSanPham" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="TenDacDiem" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN3_QLDM_DanhMuc' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_DanhMuc">
+    <Key>
+      <PropertyRef Name="MaDanhMuc" />
+      <PropertyRef Name="TenDanhMuc" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaDanhMuc" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="TenDanhMuc" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN3_QLDM_DonHang' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_DonHang">
+    <Key>
+      <PropertyRef Name="MaDonHang" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaDonHang" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="NhanVienPhuTrach" Type="char" MaxLength="10" />
+    <Property Name="MaKhachHang" Type="char" MaxLength="10" />
+    <Property Name="MaCuaHang" Type="char" MaxLength="5" />
+    <Property Name="ThoiGianTao" Type="datetime" />
+    <Property Name="MaVoucher" Type="char" MaxLength="10" />
+    <Property Name="Loai" Type="bit" />
+    <Property Name="TinhTrangXacNhan" Type="bit" />
+    <Property Name="TinhTrangThanhToan" Type="bit" />
+    <Property Name="TinhTrangGiaoHang" Type="bit" />
+    <Property Name="TongGiaTri" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN3_QLDM_HangTichDiem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_HangTichDiem">
+    <Key>
+      <PropertyRef Name="MaHang" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaHang" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="TenHang" Type="nvarchar" MaxLength="20" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN3_QLDM_KhachHang' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_KhachHang">
+    <Key>
+      <PropertyRef Name="MaKhachHang" />
+      <PropertyRef Name="TenKhachHang" />
+      <PropertyRef Name="SDT" />
+      <PropertyRef Name="DiaChi" />
+      <PropertyRef Name="Email" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaKhachHang" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="TenKhachHang" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SDT" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Email" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="TaiKhoan" Type="char" MaxLength="50" />
+    <Property Name="MatKhau" Type="char" MaxLength="50" />
+    <Property Name="TrangThai" Type="bit" />
+    <Property Name="Tongmua" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN3_QLDM_Kho' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_Kho">
+    <Key>
+      <PropertyRef Name="MaKho" />
+      <PropertyRef Name="MaCuaHang" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaKho" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="MaCuaHang" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="100" />
+    <Property Name="TruongKho" Type="char" MaxLength="10" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN3_QLDM_KhuyenMai' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_KhuyenMai">
+    <Key>
+      <PropertyRef Name="MaKhuyenMai" />
+      <PropertyRef Name="TenKM" />
+      <PropertyRef Name="PhanTramKhuyenMai" />
+      <PropertyRef Name="NgayBatDau" />
+      <PropertyRef Name="NgayKetThuc" />
+      <PropertyRef Name="MoTa" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaKhuyenMai" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="TenKM" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PhanTramKhuyenMai" Type="float" Nullable="false" />
+    <Property Name="NgayBatDau" Type="datetime" Nullable="false" />
+    <Property Name="NgayKetThuc" Type="datetime" Nullable="false" />
+    <Property Name="MoTa" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN3_QLDM_Loai' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_Loai">
+    <Key>
+      <PropertyRef Name="MaLoai" />
+      <PropertyRef Name="TenLoai" />
+      <PropertyRef Name="MaDanhMuc" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaLoai" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="TenLoai" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MaDanhMuc" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN3_QLDM_NhaCungCap' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_NhaCungCap">
+    <Key>
+      <PropertyRef Name="MaNCC" />
+      <PropertyRef Name="TenNCC" />
+      <PropertyRef Name="MaSoThue" />
+      <PropertyRef Name="DiaChi" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaNCC" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="TenNCC" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MaSoThue" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN3_QLDM_NhanVien' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_NhanVien">
+    <Key>
+      <PropertyRef Name="MaNhanVien" />
+      <PropertyRef Name="TenNhanVien" />
+      <PropertyRef Name="NgaySinh" />
+      <PropertyRef Name="SDT" />
+      <PropertyRef Name="Email" />
+      <PropertyRef Name="DiaChi" />
+      <PropertyRef Name="GioiTinh" />
+      <PropertyRef Name="ChucVu" />
+      <PropertyRef Name="CuaHang" />
+      <PropertyRef Name="HinhThuc" />
+      <PropertyRef Name="TaiKhoan" />
+      <PropertyRef Name="MatKhau" />
+      <PropertyRef Name="TrangThai" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaNhanVien" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="TenNhanVien" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NgaySinh" Type="datetime" Nullable="false" />
+    <Property Name="SDT" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="Email" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="GioiTinh" Type="bit" Nullable="false" />
+    <Property Name="ChucVu" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="CuaHang" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="HinhThuc" Type="bit" Nullable="false" />
+    <Property Name="TaiKhoan" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="MatKhau" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="TrangThai" Type="bit" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN3_QLDM_PhanHoi' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_PhanHoi">
+    <Key>
+      <PropertyRef Name="MaPhanHoi" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaPhanHoi" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="MaKhachHang" Type="char" MaxLength="10" />
+    <Property Name="NoiDung" Type="nvarchar" MaxLength="300" />
+    <Property Name="TrangThai" Type="bit" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN3_QLDM_PhieuBaoHanh' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_PhieuBaoHanh">
+    <Key>
+      <PropertyRef Name="MaPhieuBH" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaPhieuBH" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="MaSanPham" Type="char" MaxLength="10" />
+    <Property Name="MaKhachHang" Type="char" MaxLength="10" />
+    <Property Name="MaDonHang" Type="char" MaxLength="10" />
+    <Property Name="NgayTao" Type="datetime" />
+    <Property Name="NgayHetHan" Type="datetime" />
+    <Property Name="TrangThai" Type="bit" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN3_QLDM_PhieuNhap' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_PhieuNhap">
+    <Key>
+      <PropertyRef Name="MaPhieuNhap" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaPhieuNhap" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="NhaCungCap" Type="char" MaxLength="5" />
+    <Property Name="NhanVienTrucKho" Type="char" MaxLength="10" />
+    <Property Name="MaKho" Type="char" MaxLength="5" />
+    <Property Name="ThoiGianTao" Type="datetime" />
+    <Property Name="TongGiaTri" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TrangThai" Type="bit" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN3_QLDM_PhieuXuat' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_PhieuXuat">
+    <Key>
+      <PropertyRef Name="MaPhieuXuat" />
+      <PropertyRef Name="MaKho" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaPhieuXuat" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="NhanVienTaoPhieu" Type="char" MaxLength="10" />
+    <Property Name="NhanVienTruongKho" Type="char" MaxLength="10" />
+    <Property Name="MaKho" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="MaDonHang" Type="char" MaxLength="10" />
+    <Property Name="ThoiGianTao" Type="datetime" />
+    <Property Name="TongGiaTri" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TrangThai" Type="bit" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN3_QLDM_SanPham' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_SanPham">
+    <Key>
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="TenSanPham" />
+      <PropertyRef Name="MaThuongHieu" />
+      <PropertyRef Name="DonGia" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaSanPham" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="TenSanPham" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="MaThuongHieu" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="AnhMinhHoa" Type="varchar" MaxLength="100" />
+    <Property Name="DonGia" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MaKhuyenMai" Type="char" MaxLength="10" />
+    <Property Name="MaLoai" Type="char" MaxLength="5" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN3_QLDM_ThanhPho' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_ThanhPho">
+    <Key>
+      <PropertyRef Name="MaThanhPho" />
+      <PropertyRef Name="TenThanhPho" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaThanhPho" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="TenThanhPho" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN3_QLDM_TheTichDiem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_TheTichDiem">
+    <Key>
+      <PropertyRef Name="MaThe" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaThe" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="MaKhachHang" Type="char" MaxLength="10" />
+    <Property Name="Hang" Type="char" MaxLength="5" />
+    <Property Name="NgayTao" Type="datetime" />
+    <Property Name="Diem" Type="int" />
+    <Property Name="TrangThai" Type="bit" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN3_QLDM_ThongSoKiThuat' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_ThongSoKiThuat">
+    <Key>
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="TenThongSo" />
+      <PropertyRef Name="MoTa" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaSanPham" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="TenThongSo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MoTa" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN3_QLDM_ThuongHieu' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_ThuongHieu">
+    <Key>
+      <PropertyRef Name="MaThuongHieu" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaThuongHieu" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="TenThuongHieu" Type="nvarchar" MaxLength="50" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN3_QLDM_TinhNang' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_TinhNang">
+    <Key>
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="TenTinhNang" />
+      <PropertyRef Name="MoTa" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaSanPham" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="TenTinhNang" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="MoTa" Type="nvarchar" MaxLength="400" Nullable="false" />
+    <Property Name="HinhAnh" Type="varchar" MaxLength="100" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLDienMay.dbo.MSmerge_conflict_CN3_QLDM_Voucher' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_Voucher">
     <Key>
       <PropertyRef Name="MaVoucher" />
       <PropertyRef Name="TenVoucher" />
@@ -1031,19 +1525,6 @@ warning 6002: The table/view 'QLDienMay.dbo.MSrepl_errors' does not have a prima
     <Property Name="command_id" Type="int" />
     <Property Name="session_id" Type="int" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'QLDienMay.dbo.MSsnapshotdeliveryprogress' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="MSsnapshotdeliveryprogress">
-    <Key>
-      <PropertyRef Name="session_token" />
-      <PropertyRef Name="progress_token_hash" />
-      <PropertyRef Name="progress_token" />
-    </Key>
-    <Property Name="session_token" Type="nvarchar" MaxLength="260" Nullable="false" />
-    <Property Name="progress_token_hash" Type="int" Nullable="false" />
-    <Property Name="progress_token" Type="nvarchar" MaxLength="500" Nullable="false" />
-    <Property Name="progress_timestamp" Type="datetime" />
-  </EntityType>
   <EntityType Name="NhaCungCap">
     <Key>
       <PropertyRef Name="MaNCC" />
@@ -1093,8 +1574,8 @@ warning 6002: The table/view 'QLDienMay.dbo.MSsnapshotdeliveryprogress' does not
     <Property Name="MaDonHang" Type="char" MaxLength="10" />
     <Property Name="NgayTao" Type="datetime" />
     <Property Name="NgayHetHan" Type="datetime" />
-    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="TrangThai" Type="bit" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="PhieuNhap">
     <Key>
@@ -1106,8 +1587,8 @@ warning 6002: The table/view 'QLDienMay.dbo.MSsnapshotdeliveryprogress' does not
     <Property Name="MaKho" Type="char" MaxLength="5" />
     <Property Name="ThoiGianTao" Type="datetime" />
     <Property Name="TongGiaTri" Type="decimal" Precision="18" Scale="2" />
-    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="TrangThai" Type="bit" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="PhieuXuat">
     <Key>
@@ -1120,8 +1601,8 @@ warning 6002: The table/view 'QLDienMay.dbo.MSsnapshotdeliveryprogress' does not
     <Property Name="MaDonHang" Type="char" MaxLength="10" />
     <Property Name="ThoiGianTao" Type="datetime" />
     <Property Name="TongGiaTri" Type="decimal" Precision="18" Scale="2" />
-    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="TrangThai" Type="bit" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="SanPham">
     <Key>
@@ -1133,7 +1614,18 @@ warning 6002: The table/view 'QLDienMay.dbo.MSsnapshotdeliveryprogress' does not
     <Property Name="AnhMinhHoa" Type="varchar" MaxLength="100" />
     <Property Name="DonGia" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="MaKhuyenMai" Type="char" MaxLength="10" />
+    <Property Name="MaLoai" Type="char" MaxLength="5" />
     <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <!--Errors Found During Generation:
 warning 6002: The table/view 'QLDienMay.dbo.sysmergearticles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -1448,6 +1940,21 @@ warning 6002: The table/view 'QLDienMay.dbo.sysmergesubsetfilters' does not have
     <Property Name="join_filterclause" Type="nvarchar" MaxLength="1000" />
     <Property Name="filter_type" Type="tinyint" Nullable="false" />
   </EntityType>
+  <EntityType Name="sysreplservers">
+    <Key>
+      <PropertyRef Name="srvname" />
+    </Key>
+    <Property Name="srvname" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="srvid" Type="int" />
+  </EntityType>
+  <EntityType Name="ThanhPho">
+    <Key>
+      <PropertyRef Name="MaThanhPho" />
+    </Key>
+    <Property Name="MaThanhPho" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="TenThanhPho" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
   <EntityType Name="TheTichDiem">
     <Key>
       <PropertyRef Name="MaThe" />
@@ -1468,6 +1975,14 @@ warning 6002: The table/view 'QLDienMay.dbo.sysmergesubsetfilters' does not have
     <Property Name="MaSanPham" Type="char" MaxLength="10" Nullable="false" />
     <Property Name="TenThongSo" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="MoTa" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ThuongHieu">
+    <Key>
+      <PropertyRef Name="MaThuongHieu" />
+    </Key>
+    <Property Name="MaThuongHieu" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="TenThuongHieu" Type="nvarchar" MaxLength="50" />
     <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="TinhNang">
@@ -1493,7 +2008,7 @@ warning 6002: The table/view 'QLDienMay.dbo.sysmergesubsetfilters' does not have
     <Property Name="MoTa" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
-  <Association Name="FK__MSmerge_d__parti__2739D489">
+  <Association Name="FK__MSmerge_d__parti__3BC31D7F">
     <End Role="MSmerge_partition_groups" Type="Self.MSmerge_partition_groups" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
@@ -1516,18 +2031,6 @@ warning 6002: The table/view 'QLDienMay.dbo.sysmergesubsetfilters' does not have
       </Principal>
       <Dependent Role="NhanVien">
         <PropertyRef Name="CuaHang" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_ChucVu_NhanVien">
-    <End Role="ChucVu" Type="Self.ChucVu" Multiplicity="1" />
-    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ChucVu">
-        <PropertyRef Name="MaChucVu" />
-      </Principal>
-      <Dependent Role="NhanVien">
-        <PropertyRef Name="ChucVu" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1719,6 +2222,18 @@ warning 6002: The table/view 'QLDienMay.dbo.sysmergesubsetfilters' does not have
         <PropertyRef Name="MaLoai" />
       </Principal>
       <Dependent Role="ChiTietLoai">
+        <PropertyRef Name="MaLoai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Loai_SP">
+    <End Role="Loai" Type="Self.Loai" Multiplicity="0..1" />
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Loai">
+        <PropertyRef Name="MaLoai" />
+      </Principal>
+      <Dependent Role="SanPham">
         <PropertyRef Name="MaLoai" />
       </Dependent>
     </ReferentialConstraint>
@@ -1939,8 +2454,22 @@ warning 6002: The table/view 'QLDienMay.dbo.sysmergesubsetfilters' does not have
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Function Name="test" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-  <EntityContainer Name="QLDienMayModelStoreContainer">
+  <Function Name="sp_CTHD_Online" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="maDH" Type="char" Mode="In" />
+    <Parameter Name="maSP" Type="char" Mode="In" />
+    <Parameter Name="sl" Type="int" Mode="In" />
+    <Parameter Name="dongia" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="sp_DatHang_Online" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaKH" Type="char" Mode="In" />
+    <Parameter Name="MaCH" Type="char" Mode="In" />
+    <Parameter Name="Loai" Type="bit" Mode="In" />
+    <Parameter Name="TTXacNhan" Type="bit" Mode="In" />
+    <Parameter Name="TTThanhToan" Type="bit" Mode="In" />
+    <Parameter Name="TTGiaoHang" Type="bit" Mode="In" />
+    <Parameter Name="TongGT" Type="decimal" Mode="In" />
+  </Function>
+  <EntityContainer Name="QLDienMayModel1StoreContainer">
     <EntitySet Name="ChiTietDonHang" EntityType="Self.ChiTietDonHang" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ChiTietKho" EntityType="Self.ChiTietKho" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ChiTietLoai" EntityType="Self.ChiTietLoai" Schema="dbo" store:Type="Tables" />
@@ -1966,8 +2495,12 @@ warning 6002: The table/view 'QLDienMay.dbo.sysmergesubsetfilters' does not have
     <EntitySet Name="PhieuNhap" EntityType="Self.PhieuNhap" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PhieuXuat" EntityType="Self.PhieuXuat" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysreplservers" EntityType="Self.sysreplservers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ThanhPho" EntityType="Self.ThanhPho" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TheTichDiem" EntityType="Self.TheTichDiem" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ThongSoKiThuat" EntityType="Self.ThongSoKiThuat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ThuongHieu" EntityType="Self.ThuongHieu" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TinhNang" EntityType="Self.TinhNang" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Voucher" EntityType="Self.Voucher" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MSdynamicsnapshotjobs" EntityType="Self.MSdynamicsnapshotjobs" store:Type="Tables" store:Schema="dbo">
@@ -2015,289 +2548,611 @@ warning 6002: The table/view 'QLDienMay.dbo.sysmergesubsetfilters' does not have
     [MSmerge_articlehistory].[relative_cost] AS [relative_cost]
     FROM [dbo].[MSmerge_articlehistory] AS [MSmerge_articlehistory]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_ChiTietDonHang" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_ChiTietDonHang" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_ChiTietDonHang" EntityType="Self.MSmerge_conflict_CN2_QLDM_ChiTietDonHang" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [MSmerge_conflict_QLDienMay_CN1_ChiTietDonHang].[MaDonHang] AS [MaDonHang], 
-    [MSmerge_conflict_QLDienMay_CN1_ChiTietDonHang].[MaSanPham] AS [MaSanPham], 
-    [MSmerge_conflict_QLDienMay_CN1_ChiTietDonHang].[SoLuong] AS [SoLuong], 
-    [MSmerge_conflict_QLDienMay_CN1_ChiTietDonHang].[DonGia] AS [DonGia], 
-    [MSmerge_conflict_QLDienMay_CN1_ChiTietDonHang].[ThanhTien] AS [ThanhTien], 
-    [MSmerge_conflict_QLDienMay_CN1_ChiTietDonHang].[rowguid] AS [rowguid], 
-    [MSmerge_conflict_QLDienMay_CN1_ChiTietDonHang].[origin_datasource_id] AS [origin_datasource_id]
-    FROM [dbo].[MSmerge_conflict_QLDienMay_CN1_ChiTietDonHang] AS [MSmerge_conflict_QLDienMay_CN1_ChiTietDonHang]</DefiningQuery>
+    [MSmerge_conflict_CN2_QLDM_ChiTietDonHang].[MaDonHang] AS [MaDonHang], 
+    [MSmerge_conflict_CN2_QLDM_ChiTietDonHang].[MaSanPham] AS [MaSanPham], 
+    [MSmerge_conflict_CN2_QLDM_ChiTietDonHang].[SoLuong] AS [SoLuong], 
+    [MSmerge_conflict_CN2_QLDM_ChiTietDonHang].[DonGia] AS [DonGia], 
+    [MSmerge_conflict_CN2_QLDM_ChiTietDonHang].[ThanhTien] AS [ThanhTien], 
+    [MSmerge_conflict_CN2_QLDM_ChiTietDonHang].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN2_QLDM_ChiTietDonHang].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN2_QLDM_ChiTietDonHang] AS [MSmerge_conflict_CN2_QLDM_ChiTietDonHang]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_ChiTietKho" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_ChiTietKho" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_ChiTietKho" EntityType="Self.MSmerge_conflict_CN2_QLDM_ChiTietKho" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [MSmerge_conflict_QLDienMay_CN1_ChiTietKho].[MaKho] AS [MaKho], 
-    [MSmerge_conflict_QLDienMay_CN1_ChiTietKho].[MaSanPham] AS [MaSanPham], 
-    [MSmerge_conflict_QLDienMay_CN1_ChiTietKho].[SoLuong] AS [SoLuong], 
-    [MSmerge_conflict_QLDienMay_CN1_ChiTietKho].[rowguid] AS [rowguid], 
-    [MSmerge_conflict_QLDienMay_CN1_ChiTietKho].[origin_datasource_id] AS [origin_datasource_id]
-    FROM [dbo].[MSmerge_conflict_QLDienMay_CN1_ChiTietKho] AS [MSmerge_conflict_QLDienMay_CN1_ChiTietKho]</DefiningQuery>
+    [MSmerge_conflict_CN2_QLDM_ChiTietKho].[MaKho] AS [MaKho], 
+    [MSmerge_conflict_CN2_QLDM_ChiTietKho].[MaSanPham] AS [MaSanPham], 
+    [MSmerge_conflict_CN2_QLDM_ChiTietKho].[SoLuong] AS [SoLuong], 
+    [MSmerge_conflict_CN2_QLDM_ChiTietKho].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN2_QLDM_ChiTietKho].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN2_QLDM_ChiTietKho] AS [MSmerge_conflict_CN2_QLDM_ChiTietKho]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_ChiTietLoai" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_ChiTietLoai" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_ChiTietLoai" EntityType="Self.MSmerge_conflict_CN2_QLDM_ChiTietLoai" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [MSmerge_conflict_QLDienMay_CN1_ChiTietLoai].[MaSanPham] AS [MaSanPham], 
-    [MSmerge_conflict_QLDienMay_CN1_ChiTietLoai].[MaLoai] AS [MaLoai], 
-    [MSmerge_conflict_QLDienMay_CN1_ChiTietLoai].[rowguid] AS [rowguid], 
-    [MSmerge_conflict_QLDienMay_CN1_ChiTietLoai].[origin_datasource_id] AS [origin_datasource_id]
-    FROM [dbo].[MSmerge_conflict_QLDienMay_CN1_ChiTietLoai] AS [MSmerge_conflict_QLDienMay_CN1_ChiTietLoai]</DefiningQuery>
+    [MSmerge_conflict_CN2_QLDM_ChiTietLoai].[MaSanPham] AS [MaSanPham], 
+    [MSmerge_conflict_CN2_QLDM_ChiTietLoai].[MaLoai] AS [MaLoai], 
+    [MSmerge_conflict_CN2_QLDM_ChiTietLoai].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN2_QLDM_ChiTietLoai].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN2_QLDM_ChiTietLoai] AS [MSmerge_conflict_CN2_QLDM_ChiTietLoai]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuNhap" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuNhap" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_ChiTietPhieuNhap" EntityType="Self.MSmerge_conflict_CN2_QLDM_ChiTietPhieuNhap" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuNhap].[MaPhieuNhap] AS [MaPhieuNhap], 
-    [MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuNhap].[MaSanPham] AS [MaSanPham], 
-    [MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuNhap].[SoLuong] AS [SoLuong], 
-    [MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuNhap].[DonGiaNhap] AS [DonGiaNhap], 
-    [MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuNhap].[rowguid] AS [rowguid], 
-    [MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuNhap].[origin_datasource_id] AS [origin_datasource_id]
-    FROM [dbo].[MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuNhap] AS [MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuNhap]</DefiningQuery>
+    [MSmerge_conflict_CN2_QLDM_ChiTietPhieuNhap].[MaPhieuNhap] AS [MaPhieuNhap], 
+    [MSmerge_conflict_CN2_QLDM_ChiTietPhieuNhap].[MaSanPham] AS [MaSanPham], 
+    [MSmerge_conflict_CN2_QLDM_ChiTietPhieuNhap].[SoLuong] AS [SoLuong], 
+    [MSmerge_conflict_CN2_QLDM_ChiTietPhieuNhap].[DonGiaNhap] AS [DonGiaNhap], 
+    [MSmerge_conflict_CN2_QLDM_ChiTietPhieuNhap].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN2_QLDM_ChiTietPhieuNhap].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN2_QLDM_ChiTietPhieuNhap] AS [MSmerge_conflict_CN2_QLDM_ChiTietPhieuNhap]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuXuat" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuXuat" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_ChiTietPhieuXuat" EntityType="Self.MSmerge_conflict_CN2_QLDM_ChiTietPhieuXuat" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuXuat].[MaPhieuXuat] AS [MaPhieuXuat], 
-    [MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuXuat].[MaSanPham] AS [MaSanPham], 
-    [MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuXuat].[SoLuong] AS [SoLuong], 
-    [MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuXuat].[rowguid] AS [rowguid], 
-    [MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuXuat].[origin_datasource_id] AS [origin_datasource_id]
-    FROM [dbo].[MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuXuat] AS [MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuXuat]</DefiningQuery>
+    [MSmerge_conflict_CN2_QLDM_ChiTietPhieuXuat].[MaPhieuXuat] AS [MaPhieuXuat], 
+    [MSmerge_conflict_CN2_QLDM_ChiTietPhieuXuat].[MaSanPham] AS [MaSanPham], 
+    [MSmerge_conflict_CN2_QLDM_ChiTietPhieuXuat].[SoLuong] AS [SoLuong], 
+    [MSmerge_conflict_CN2_QLDM_ChiTietPhieuXuat].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN2_QLDM_ChiTietPhieuXuat].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN2_QLDM_ChiTietPhieuXuat] AS [MSmerge_conflict_CN2_QLDM_ChiTietPhieuXuat]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_ChucVu" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_ChucVu" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_ChucVu" EntityType="Self.MSmerge_conflict_CN2_QLDM_ChucVu" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [MSmerge_conflict_QLDienMay_CN1_ChucVu].[MaChucVu] AS [MaChucVu], 
-    [MSmerge_conflict_QLDienMay_CN1_ChucVu].[TenChucVu] AS [TenChucVu], 
-    [MSmerge_conflict_QLDienMay_CN1_ChucVu].[rowguid] AS [rowguid], 
-    [MSmerge_conflict_QLDienMay_CN1_ChucVu].[origin_datasource_id] AS [origin_datasource_id]
-    FROM [dbo].[MSmerge_conflict_QLDienMay_CN1_ChucVu] AS [MSmerge_conflict_QLDienMay_CN1_ChucVu]</DefiningQuery>
+    [MSmerge_conflict_CN2_QLDM_ChucVu].[MaChucVu] AS [MaChucVu], 
+    [MSmerge_conflict_CN2_QLDM_ChucVu].[TenChucVu] AS [TenChucVu], 
+    [MSmerge_conflict_CN2_QLDM_ChucVu].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN2_QLDM_ChucVu].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN2_QLDM_ChucVu] AS [MSmerge_conflict_CN2_QLDM_ChucVu]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_CuaHang" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_CuaHang" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_CuaHang" EntityType="Self.MSmerge_conflict_CN2_QLDM_CuaHang" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [MSmerge_conflict_QLDienMay_CN1_CuaHang].[MaCuaHang] AS [MaCuaHang], 
-    [MSmerge_conflict_QLDienMay_CN1_CuaHang].[DiaChi] AS [DiaChi], 
-    [MSmerge_conflict_QLDienMay_CN1_CuaHang].[CuaHangTruong] AS [CuaHangTruong], 
-    [MSmerge_conflict_QLDienMay_CN1_CuaHang].[NgayThanhLap] AS [NgayThanhLap], 
-    [MSmerge_conflict_QLDienMay_CN1_CuaHang].[rowguid] AS [rowguid], 
-    [MSmerge_conflict_QLDienMay_CN1_CuaHang].[origin_datasource_id] AS [origin_datasource_id]
-    FROM [dbo].[MSmerge_conflict_QLDienMay_CN1_CuaHang] AS [MSmerge_conflict_QLDienMay_CN1_CuaHang]</DefiningQuery>
+    [MSmerge_conflict_CN2_QLDM_CuaHang].[MaCuaHang] AS [MaCuaHang], 
+    [MSmerge_conflict_CN2_QLDM_CuaHang].[DiaChi] AS [DiaChi], 
+    [MSmerge_conflict_CN2_QLDM_CuaHang].[CuaHangTruong] AS [CuaHangTruong], 
+    [MSmerge_conflict_CN2_QLDM_CuaHang].[NgayThanhLap] AS [NgayThanhLap], 
+    [MSmerge_conflict_CN2_QLDM_CuaHang].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN2_QLDM_CuaHang].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN2_QLDM_CuaHang] AS [MSmerge_conflict_CN2_QLDM_CuaHang]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_DacDiemNoiBat" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_DacDiemNoiBat" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_DacDiemNoiBat" EntityType="Self.MSmerge_conflict_CN2_QLDM_DacDiemNoiBat" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [MSmerge_conflict_QLDienMay_CN1_DacDiemNoiBat].[MaSanPham] AS [MaSanPham], 
-    [MSmerge_conflict_QLDienMay_CN1_DacDiemNoiBat].[TenDacDiem] AS [TenDacDiem], 
-    [MSmerge_conflict_QLDienMay_CN1_DacDiemNoiBat].[rowguid] AS [rowguid], 
-    [MSmerge_conflict_QLDienMay_CN1_DacDiemNoiBat].[origin_datasource_id] AS [origin_datasource_id]
-    FROM [dbo].[MSmerge_conflict_QLDienMay_CN1_DacDiemNoiBat] AS [MSmerge_conflict_QLDienMay_CN1_DacDiemNoiBat]</DefiningQuery>
+    [MSmerge_conflict_CN2_QLDM_DacDiemNoiBat].[MaSanPham] AS [MaSanPham], 
+    [MSmerge_conflict_CN2_QLDM_DacDiemNoiBat].[TenDacDiem] AS [TenDacDiem], 
+    [MSmerge_conflict_CN2_QLDM_DacDiemNoiBat].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN2_QLDM_DacDiemNoiBat].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN2_QLDM_DacDiemNoiBat] AS [MSmerge_conflict_CN2_QLDM_DacDiemNoiBat]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_DanhMuc" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_DanhMuc" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_DanhMuc" EntityType="Self.MSmerge_conflict_CN2_QLDM_DanhMuc" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [MSmerge_conflict_QLDienMay_CN1_DanhMuc].[MaDanhMuc] AS [MaDanhMuc], 
-    [MSmerge_conflict_QLDienMay_CN1_DanhMuc].[TenDanhMuc] AS [TenDanhMuc], 
-    [MSmerge_conflict_QLDienMay_CN1_DanhMuc].[rowguid] AS [rowguid], 
-    [MSmerge_conflict_QLDienMay_CN1_DanhMuc].[origin_datasource_id] AS [origin_datasource_id]
-    FROM [dbo].[MSmerge_conflict_QLDienMay_CN1_DanhMuc] AS [MSmerge_conflict_QLDienMay_CN1_DanhMuc]</DefiningQuery>
+    [MSmerge_conflict_CN2_QLDM_DanhMuc].[MaDanhMuc] AS [MaDanhMuc], 
+    [MSmerge_conflict_CN2_QLDM_DanhMuc].[TenDanhMuc] AS [TenDanhMuc], 
+    [MSmerge_conflict_CN2_QLDM_DanhMuc].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN2_QLDM_DanhMuc].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN2_QLDM_DanhMuc] AS [MSmerge_conflict_CN2_QLDM_DanhMuc]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_DonHang" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_DonHang" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_DonHang" EntityType="Self.MSmerge_conflict_CN2_QLDM_DonHang" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [MSmerge_conflict_QLDienMay_CN1_DonHang].[MaDonHang] AS [MaDonHang], 
-    [MSmerge_conflict_QLDienMay_CN1_DonHang].[NhanVienPhuTrach] AS [NhanVienPhuTrach], 
-    [MSmerge_conflict_QLDienMay_CN1_DonHang].[MaKhachHang] AS [MaKhachHang], 
-    [MSmerge_conflict_QLDienMay_CN1_DonHang].[MaCuaHang] AS [MaCuaHang], 
-    [MSmerge_conflict_QLDienMay_CN1_DonHang].[ThoiGianTao] AS [ThoiGianTao], 
-    [MSmerge_conflict_QLDienMay_CN1_DonHang].[MaVoucher] AS [MaVoucher], 
-    [MSmerge_conflict_QLDienMay_CN1_DonHang].[Loai] AS [Loai], 
-    [MSmerge_conflict_QLDienMay_CN1_DonHang].[TinhTrangXacNhan] AS [TinhTrangXacNhan], 
-    [MSmerge_conflict_QLDienMay_CN1_DonHang].[TinhTrangThanhToan] AS [TinhTrangThanhToan], 
-    [MSmerge_conflict_QLDienMay_CN1_DonHang].[TinhTrangGiaoHang] AS [TinhTrangGiaoHang], 
-    [MSmerge_conflict_QLDienMay_CN1_DonHang].[rowguid] AS [rowguid], 
-    [MSmerge_conflict_QLDienMay_CN1_DonHang].[TongGiaTri] AS [TongGiaTri], 
-    [MSmerge_conflict_QLDienMay_CN1_DonHang].[origin_datasource_id] AS [origin_datasource_id]
-    FROM [dbo].[MSmerge_conflict_QLDienMay_CN1_DonHang] AS [MSmerge_conflict_QLDienMay_CN1_DonHang]</DefiningQuery>
+    [MSmerge_conflict_CN2_QLDM_DonHang].[MaDonHang] AS [MaDonHang], 
+    [MSmerge_conflict_CN2_QLDM_DonHang].[NhanVienPhuTrach] AS [NhanVienPhuTrach], 
+    [MSmerge_conflict_CN2_QLDM_DonHang].[MaKhachHang] AS [MaKhachHang], 
+    [MSmerge_conflict_CN2_QLDM_DonHang].[MaCuaHang] AS [MaCuaHang], 
+    [MSmerge_conflict_CN2_QLDM_DonHang].[ThoiGianTao] AS [ThoiGianTao], 
+    [MSmerge_conflict_CN2_QLDM_DonHang].[MaVoucher] AS [MaVoucher], 
+    [MSmerge_conflict_CN2_QLDM_DonHang].[Loai] AS [Loai], 
+    [MSmerge_conflict_CN2_QLDM_DonHang].[TinhTrangXacNhan] AS [TinhTrangXacNhan], 
+    [MSmerge_conflict_CN2_QLDM_DonHang].[TinhTrangThanhToan] AS [TinhTrangThanhToan], 
+    [MSmerge_conflict_CN2_QLDM_DonHang].[TinhTrangGiaoHang] AS [TinhTrangGiaoHang], 
+    [MSmerge_conflict_CN2_QLDM_DonHang].[TongGiaTri] AS [TongGiaTri], 
+    [MSmerge_conflict_CN2_QLDM_DonHang].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN2_QLDM_DonHang].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN2_QLDM_DonHang] AS [MSmerge_conflict_CN2_QLDM_DonHang]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_HangTichDiem" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_HangTichDiem" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_HangTichDiem" EntityType="Self.MSmerge_conflict_CN2_QLDM_HangTichDiem" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [MSmerge_conflict_QLDienMay_CN1_HangTichDiem].[MaHang] AS [MaHang], 
-    [MSmerge_conflict_QLDienMay_CN1_HangTichDiem].[TenHang] AS [TenHang], 
-    [MSmerge_conflict_QLDienMay_CN1_HangTichDiem].[rowguid] AS [rowguid], 
-    [MSmerge_conflict_QLDienMay_CN1_HangTichDiem].[origin_datasource_id] AS [origin_datasource_id]
-    FROM [dbo].[MSmerge_conflict_QLDienMay_CN1_HangTichDiem] AS [MSmerge_conflict_QLDienMay_CN1_HangTichDiem]</DefiningQuery>
+    [MSmerge_conflict_CN2_QLDM_HangTichDiem].[MaHang] AS [MaHang], 
+    [MSmerge_conflict_CN2_QLDM_HangTichDiem].[TenHang] AS [TenHang], 
+    [MSmerge_conflict_CN2_QLDM_HangTichDiem].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN2_QLDM_HangTichDiem].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN2_QLDM_HangTichDiem] AS [MSmerge_conflict_CN2_QLDM_HangTichDiem]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_KhachHang" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_KhachHang" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_KhachHang" EntityType="Self.MSmerge_conflict_CN2_QLDM_KhachHang" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [MSmerge_conflict_QLDienMay_CN1_KhachHang].[MaKhachHang] AS [MaKhachHang], 
-    [MSmerge_conflict_QLDienMay_CN1_KhachHang].[TenKhachHang] AS [TenKhachHang], 
-    [MSmerge_conflict_QLDienMay_CN1_KhachHang].[SDT] AS [SDT], 
-    [MSmerge_conflict_QLDienMay_CN1_KhachHang].[DiaChi] AS [DiaChi], 
-    [MSmerge_conflict_QLDienMay_CN1_KhachHang].[Email] AS [Email], 
-    [MSmerge_conflict_QLDienMay_CN1_KhachHang].[TaiKhoan] AS [TaiKhoan], 
-    [MSmerge_conflict_QLDienMay_CN1_KhachHang].[MatKhau] AS [MatKhau], 
-    [MSmerge_conflict_QLDienMay_CN1_KhachHang].[TrangThai] AS [TrangThai], 
-    [MSmerge_conflict_QLDienMay_CN1_KhachHang].[rowguid] AS [rowguid], 
-    [MSmerge_conflict_QLDienMay_CN1_KhachHang].[origin_datasource_id] AS [origin_datasource_id]
-    FROM [dbo].[MSmerge_conflict_QLDienMay_CN1_KhachHang] AS [MSmerge_conflict_QLDienMay_CN1_KhachHang]</DefiningQuery>
+    [MSmerge_conflict_CN2_QLDM_KhachHang].[MaKhachHang] AS [MaKhachHang], 
+    [MSmerge_conflict_CN2_QLDM_KhachHang].[TenKhachHang] AS [TenKhachHang], 
+    [MSmerge_conflict_CN2_QLDM_KhachHang].[SDT] AS [SDT], 
+    [MSmerge_conflict_CN2_QLDM_KhachHang].[DiaChi] AS [DiaChi], 
+    [MSmerge_conflict_CN2_QLDM_KhachHang].[Email] AS [Email], 
+    [MSmerge_conflict_CN2_QLDM_KhachHang].[TaiKhoan] AS [TaiKhoan], 
+    [MSmerge_conflict_CN2_QLDM_KhachHang].[MatKhau] AS [MatKhau], 
+    [MSmerge_conflict_CN2_QLDM_KhachHang].[TrangThai] AS [TrangThai], 
+    [MSmerge_conflict_CN2_QLDM_KhachHang].[Tongmua] AS [Tongmua], 
+    [MSmerge_conflict_CN2_QLDM_KhachHang].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN2_QLDM_KhachHang].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN2_QLDM_KhachHang] AS [MSmerge_conflict_CN2_QLDM_KhachHang]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_Kho" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_Kho" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_Kho" EntityType="Self.MSmerge_conflict_CN2_QLDM_Kho" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [MSmerge_conflict_QLDienMay_CN1_Kho].[MaKho] AS [MaKho], 
-    [MSmerge_conflict_QLDienMay_CN1_Kho].[MaCuaHang] AS [MaCuaHang], 
-    [MSmerge_conflict_QLDienMay_CN1_Kho].[DiaChi] AS [DiaChi], 
-    [MSmerge_conflict_QLDienMay_CN1_Kho].[rowguid] AS [rowguid], 
-    [MSmerge_conflict_QLDienMay_CN1_Kho].[origin_datasource_id] AS [origin_datasource_id]
-    FROM [dbo].[MSmerge_conflict_QLDienMay_CN1_Kho] AS [MSmerge_conflict_QLDienMay_CN1_Kho]</DefiningQuery>
+    [MSmerge_conflict_CN2_QLDM_Kho].[MaKho] AS [MaKho], 
+    [MSmerge_conflict_CN2_QLDM_Kho].[MaCuaHang] AS [MaCuaHang], 
+    [MSmerge_conflict_CN2_QLDM_Kho].[DiaChi] AS [DiaChi], 
+    [MSmerge_conflict_CN2_QLDM_Kho].[TruongKho] AS [TruongKho], 
+    [MSmerge_conflict_CN2_QLDM_Kho].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN2_QLDM_Kho].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN2_QLDM_Kho] AS [MSmerge_conflict_CN2_QLDM_Kho]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_KhuyenMai" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_KhuyenMai" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_KhuyenMai" EntityType="Self.MSmerge_conflict_CN2_QLDM_KhuyenMai" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [MSmerge_conflict_QLDienMay_CN1_KhuyenMai].[MaKhuyenMai] AS [MaKhuyenMai], 
-    [MSmerge_conflict_QLDienMay_CN1_KhuyenMai].[TenKM] AS [TenKM], 
-    [MSmerge_conflict_QLDienMay_CN1_KhuyenMai].[PhanTramKhuyenMai] AS [PhanTramKhuyenMai], 
-    [MSmerge_conflict_QLDienMay_CN1_KhuyenMai].[NgayBatDau] AS [NgayBatDau], 
-    [MSmerge_conflict_QLDienMay_CN1_KhuyenMai].[NgayKetThuc] AS [NgayKetThuc], 
-    [MSmerge_conflict_QLDienMay_CN1_KhuyenMai].[MoTa] AS [MoTa], 
-    [MSmerge_conflict_QLDienMay_CN1_KhuyenMai].[rowguid] AS [rowguid], 
-    [MSmerge_conflict_QLDienMay_CN1_KhuyenMai].[origin_datasource_id] AS [origin_datasource_id]
-    FROM [dbo].[MSmerge_conflict_QLDienMay_CN1_KhuyenMai] AS [MSmerge_conflict_QLDienMay_CN1_KhuyenMai]</DefiningQuery>
+    [MSmerge_conflict_CN2_QLDM_KhuyenMai].[MaKhuyenMai] AS [MaKhuyenMai], 
+    [MSmerge_conflict_CN2_QLDM_KhuyenMai].[TenKM] AS [TenKM], 
+    [MSmerge_conflict_CN2_QLDM_KhuyenMai].[PhanTramKhuyenMai] AS [PhanTramKhuyenMai], 
+    [MSmerge_conflict_CN2_QLDM_KhuyenMai].[NgayBatDau] AS [NgayBatDau], 
+    [MSmerge_conflict_CN2_QLDM_KhuyenMai].[NgayKetThuc] AS [NgayKetThuc], 
+    [MSmerge_conflict_CN2_QLDM_KhuyenMai].[MoTa] AS [MoTa], 
+    [MSmerge_conflict_CN2_QLDM_KhuyenMai].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN2_QLDM_KhuyenMai].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN2_QLDM_KhuyenMai] AS [MSmerge_conflict_CN2_QLDM_KhuyenMai]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_Loai" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_Loai" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_Loai" EntityType="Self.MSmerge_conflict_CN2_QLDM_Loai" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [MSmerge_conflict_QLDienMay_CN1_Loai].[MaLoai] AS [MaLoai], 
-    [MSmerge_conflict_QLDienMay_CN1_Loai].[TenLoai] AS [TenLoai], 
-    [MSmerge_conflict_QLDienMay_CN1_Loai].[MaDanhMuc] AS [MaDanhMuc], 
-    [MSmerge_conflict_QLDienMay_CN1_Loai].[rowguid] AS [rowguid], 
-    [MSmerge_conflict_QLDienMay_CN1_Loai].[origin_datasource_id] AS [origin_datasource_id]
-    FROM [dbo].[MSmerge_conflict_QLDienMay_CN1_Loai] AS [MSmerge_conflict_QLDienMay_CN1_Loai]</DefiningQuery>
+    [MSmerge_conflict_CN2_QLDM_Loai].[MaLoai] AS [MaLoai], 
+    [MSmerge_conflict_CN2_QLDM_Loai].[TenLoai] AS [TenLoai], 
+    [MSmerge_conflict_CN2_QLDM_Loai].[MaDanhMuc] AS [MaDanhMuc], 
+    [MSmerge_conflict_CN2_QLDM_Loai].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN2_QLDM_Loai].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN2_QLDM_Loai] AS [MSmerge_conflict_CN2_QLDM_Loai]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_NhaCungCap" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_NhaCungCap" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_NhaCungCap" EntityType="Self.MSmerge_conflict_CN2_QLDM_NhaCungCap" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [MSmerge_conflict_QLDienMay_CN1_NhaCungCap].[MaNCC] AS [MaNCC], 
-    [MSmerge_conflict_QLDienMay_CN1_NhaCungCap].[TenNCC] AS [TenNCC], 
-    [MSmerge_conflict_QLDienMay_CN1_NhaCungCap].[MaSoThue] AS [MaSoThue], 
-    [MSmerge_conflict_QLDienMay_CN1_NhaCungCap].[DiaChi] AS [DiaChi], 
-    [MSmerge_conflict_QLDienMay_CN1_NhaCungCap].[rowguid] AS [rowguid], 
-    [MSmerge_conflict_QLDienMay_CN1_NhaCungCap].[origin_datasource_id] AS [origin_datasource_id]
-    FROM [dbo].[MSmerge_conflict_QLDienMay_CN1_NhaCungCap] AS [MSmerge_conflict_QLDienMay_CN1_NhaCungCap]</DefiningQuery>
+    [MSmerge_conflict_CN2_QLDM_NhaCungCap].[MaNCC] AS [MaNCC], 
+    [MSmerge_conflict_CN2_QLDM_NhaCungCap].[TenNCC] AS [TenNCC], 
+    [MSmerge_conflict_CN2_QLDM_NhaCungCap].[MaSoThue] AS [MaSoThue], 
+    [MSmerge_conflict_CN2_QLDM_NhaCungCap].[DiaChi] AS [DiaChi], 
+    [MSmerge_conflict_CN2_QLDM_NhaCungCap].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN2_QLDM_NhaCungCap].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN2_QLDM_NhaCungCap] AS [MSmerge_conflict_CN2_QLDM_NhaCungCap]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_NhanVien" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_NhanVien" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_NhanVien" EntityType="Self.MSmerge_conflict_CN2_QLDM_NhanVien" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [MSmerge_conflict_QLDienMay_CN1_NhanVien].[MaNhanVien] AS [MaNhanVien], 
-    [MSmerge_conflict_QLDienMay_CN1_NhanVien].[TenNhanVien] AS [TenNhanVien], 
-    [MSmerge_conflict_QLDienMay_CN1_NhanVien].[NgaySinh] AS [NgaySinh], 
-    [MSmerge_conflict_QLDienMay_CN1_NhanVien].[SDT] AS [SDT], 
-    [MSmerge_conflict_QLDienMay_CN1_NhanVien].[Email] AS [Email], 
-    [MSmerge_conflict_QLDienMay_CN1_NhanVien].[DiaChi] AS [DiaChi], 
-    [MSmerge_conflict_QLDienMay_CN1_NhanVien].[GioiTinh] AS [GioiTinh], 
-    [MSmerge_conflict_QLDienMay_CN1_NhanVien].[ChucVu] AS [ChucVu], 
-    [MSmerge_conflict_QLDienMay_CN1_NhanVien].[CuaHang] AS [CuaHang], 
-    [MSmerge_conflict_QLDienMay_CN1_NhanVien].[HinhThuc] AS [HinhThuc], 
-    [MSmerge_conflict_QLDienMay_CN1_NhanVien].[TaiKhoan] AS [TaiKhoan], 
-    [MSmerge_conflict_QLDienMay_CN1_NhanVien].[MatKhau] AS [MatKhau], 
-    [MSmerge_conflict_QLDienMay_CN1_NhanVien].[TrangThai] AS [TrangThai], 
-    [MSmerge_conflict_QLDienMay_CN1_NhanVien].[rowguid] AS [rowguid], 
-    [MSmerge_conflict_QLDienMay_CN1_NhanVien].[origin_datasource_id] AS [origin_datasource_id]
-    FROM [dbo].[MSmerge_conflict_QLDienMay_CN1_NhanVien] AS [MSmerge_conflict_QLDienMay_CN1_NhanVien]</DefiningQuery>
+    [MSmerge_conflict_CN2_QLDM_NhanVien].[MaNhanVien] AS [MaNhanVien], 
+    [MSmerge_conflict_CN2_QLDM_NhanVien].[TenNhanVien] AS [TenNhanVien], 
+    [MSmerge_conflict_CN2_QLDM_NhanVien].[NgaySinh] AS [NgaySinh], 
+    [MSmerge_conflict_CN2_QLDM_NhanVien].[SDT] AS [SDT], 
+    [MSmerge_conflict_CN2_QLDM_NhanVien].[Email] AS [Email], 
+    [MSmerge_conflict_CN2_QLDM_NhanVien].[DiaChi] AS [DiaChi], 
+    [MSmerge_conflict_CN2_QLDM_NhanVien].[GioiTinh] AS [GioiTinh], 
+    [MSmerge_conflict_CN2_QLDM_NhanVien].[ChucVu] AS [ChucVu], 
+    [MSmerge_conflict_CN2_QLDM_NhanVien].[CuaHang] AS [CuaHang], 
+    [MSmerge_conflict_CN2_QLDM_NhanVien].[HinhThuc] AS [HinhThuc], 
+    [MSmerge_conflict_CN2_QLDM_NhanVien].[TaiKhoan] AS [TaiKhoan], 
+    [MSmerge_conflict_CN2_QLDM_NhanVien].[MatKhau] AS [MatKhau], 
+    [MSmerge_conflict_CN2_QLDM_NhanVien].[TrangThai] AS [TrangThai], 
+    [MSmerge_conflict_CN2_QLDM_NhanVien].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN2_QLDM_NhanVien].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN2_QLDM_NhanVien] AS [MSmerge_conflict_CN2_QLDM_NhanVien]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_PhanHoi" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_PhanHoi" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_PhanHoi" EntityType="Self.MSmerge_conflict_CN2_QLDM_PhanHoi" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [MSmerge_conflict_QLDienMay_CN1_PhanHoi].[MaPhanHoi] AS [MaPhanHoi], 
-    [MSmerge_conflict_QLDienMay_CN1_PhanHoi].[MaKhachHang] AS [MaKhachHang], 
-    [MSmerge_conflict_QLDienMay_CN1_PhanHoi].[NoiDung] AS [NoiDung], 
-    [MSmerge_conflict_QLDienMay_CN1_PhanHoi].[TrangThai] AS [TrangThai], 
-    [MSmerge_conflict_QLDienMay_CN1_PhanHoi].[rowguid] AS [rowguid], 
-    [MSmerge_conflict_QLDienMay_CN1_PhanHoi].[origin_datasource_id] AS [origin_datasource_id]
-    FROM [dbo].[MSmerge_conflict_QLDienMay_CN1_PhanHoi] AS [MSmerge_conflict_QLDienMay_CN1_PhanHoi]</DefiningQuery>
+    [MSmerge_conflict_CN2_QLDM_PhanHoi].[MaPhanHoi] AS [MaPhanHoi], 
+    [MSmerge_conflict_CN2_QLDM_PhanHoi].[MaKhachHang] AS [MaKhachHang], 
+    [MSmerge_conflict_CN2_QLDM_PhanHoi].[NoiDung] AS [NoiDung], 
+    [MSmerge_conflict_CN2_QLDM_PhanHoi].[TrangThai] AS [TrangThai], 
+    [MSmerge_conflict_CN2_QLDM_PhanHoi].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN2_QLDM_PhanHoi].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN2_QLDM_PhanHoi] AS [MSmerge_conflict_CN2_QLDM_PhanHoi]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_PhieuBaoHanh" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_PhieuBaoHanh" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_PhieuBaoHanh" EntityType="Self.MSmerge_conflict_CN2_QLDM_PhieuBaoHanh" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [MSmerge_conflict_QLDienMay_CN1_PhieuBaoHanh].[MaPhieuBH] AS [MaPhieuBH], 
-    [MSmerge_conflict_QLDienMay_CN1_PhieuBaoHanh].[MaSanPham] AS [MaSanPham], 
-    [MSmerge_conflict_QLDienMay_CN1_PhieuBaoHanh].[MaKhachHang] AS [MaKhachHang], 
-    [MSmerge_conflict_QLDienMay_CN1_PhieuBaoHanh].[MaDonHang] AS [MaDonHang], 
-    [MSmerge_conflict_QLDienMay_CN1_PhieuBaoHanh].[NgayTao] AS [NgayTao], 
-    [MSmerge_conflict_QLDienMay_CN1_PhieuBaoHanh].[NgayHetHan] AS [NgayHetHan], 
-    [MSmerge_conflict_QLDienMay_CN1_PhieuBaoHanh].[rowguid] AS [rowguid], 
-    [MSmerge_conflict_QLDienMay_CN1_PhieuBaoHanh].[TrangThai] AS [TrangThai], 
-    [MSmerge_conflict_QLDienMay_CN1_PhieuBaoHanh].[origin_datasource_id] AS [origin_datasource_id]
-    FROM [dbo].[MSmerge_conflict_QLDienMay_CN1_PhieuBaoHanh] AS [MSmerge_conflict_QLDienMay_CN1_PhieuBaoHanh]</DefiningQuery>
+    [MSmerge_conflict_CN2_QLDM_PhieuBaoHanh].[MaPhieuBH] AS [MaPhieuBH], 
+    [MSmerge_conflict_CN2_QLDM_PhieuBaoHanh].[MaSanPham] AS [MaSanPham], 
+    [MSmerge_conflict_CN2_QLDM_PhieuBaoHanh].[MaKhachHang] AS [MaKhachHang], 
+    [MSmerge_conflict_CN2_QLDM_PhieuBaoHanh].[MaDonHang] AS [MaDonHang], 
+    [MSmerge_conflict_CN2_QLDM_PhieuBaoHanh].[NgayTao] AS [NgayTao], 
+    [MSmerge_conflict_CN2_QLDM_PhieuBaoHanh].[NgayHetHan] AS [NgayHetHan], 
+    [MSmerge_conflict_CN2_QLDM_PhieuBaoHanh].[TrangThai] AS [TrangThai], 
+    [MSmerge_conflict_CN2_QLDM_PhieuBaoHanh].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN2_QLDM_PhieuBaoHanh].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN2_QLDM_PhieuBaoHanh] AS [MSmerge_conflict_CN2_QLDM_PhieuBaoHanh]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_PhieuNhap" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_PhieuNhap" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_PhieuNhap" EntityType="Self.MSmerge_conflict_CN2_QLDM_PhieuNhap" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [MSmerge_conflict_QLDienMay_CN1_PhieuNhap].[MaPhieuNhap] AS [MaPhieuNhap], 
-    [MSmerge_conflict_QLDienMay_CN1_PhieuNhap].[NhaCungCap] AS [NhaCungCap], 
-    [MSmerge_conflict_QLDienMay_CN1_PhieuNhap].[NhanVienTrucKho] AS [NhanVienTrucKho], 
-    [MSmerge_conflict_QLDienMay_CN1_PhieuNhap].[MaKho] AS [MaKho], 
-    [MSmerge_conflict_QLDienMay_CN1_PhieuNhap].[ThoiGianTao] AS [ThoiGianTao], 
-    [MSmerge_conflict_QLDienMay_CN1_PhieuNhap].[TongGiaTri] AS [TongGiaTri], 
-    [MSmerge_conflict_QLDienMay_CN1_PhieuNhap].[rowguid] AS [rowguid], 
-    [MSmerge_conflict_QLDienMay_CN1_PhieuNhap].[TrangThai] AS [TrangThai], 
-    [MSmerge_conflict_QLDienMay_CN1_PhieuNhap].[origin_datasource_id] AS [origin_datasource_id]
-    FROM [dbo].[MSmerge_conflict_QLDienMay_CN1_PhieuNhap] AS [MSmerge_conflict_QLDienMay_CN1_PhieuNhap]</DefiningQuery>
+    [MSmerge_conflict_CN2_QLDM_PhieuNhap].[MaPhieuNhap] AS [MaPhieuNhap], 
+    [MSmerge_conflict_CN2_QLDM_PhieuNhap].[NhaCungCap] AS [NhaCungCap], 
+    [MSmerge_conflict_CN2_QLDM_PhieuNhap].[NhanVienTrucKho] AS [NhanVienTrucKho], 
+    [MSmerge_conflict_CN2_QLDM_PhieuNhap].[MaKho] AS [MaKho], 
+    [MSmerge_conflict_CN2_QLDM_PhieuNhap].[ThoiGianTao] AS [ThoiGianTao], 
+    [MSmerge_conflict_CN2_QLDM_PhieuNhap].[TongGiaTri] AS [TongGiaTri], 
+    [MSmerge_conflict_CN2_QLDM_PhieuNhap].[TrangThai] AS [TrangThai], 
+    [MSmerge_conflict_CN2_QLDM_PhieuNhap].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN2_QLDM_PhieuNhap].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN2_QLDM_PhieuNhap] AS [MSmerge_conflict_CN2_QLDM_PhieuNhap]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_PhieuXuat" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_PhieuXuat" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_PhieuXuat" EntityType="Self.MSmerge_conflict_CN2_QLDM_PhieuXuat" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [MSmerge_conflict_QLDienMay_CN1_PhieuXuat].[MaPhieuXuat] AS [MaPhieuXuat], 
-    [MSmerge_conflict_QLDienMay_CN1_PhieuXuat].[NhanVienTaoPhieu] AS [NhanVienTaoPhieu], 
-    [MSmerge_conflict_QLDienMay_CN1_PhieuXuat].[NhanVienTruongKho] AS [NhanVienTruongKho], 
-    [MSmerge_conflict_QLDienMay_CN1_PhieuXuat].[MaKho] AS [MaKho], 
-    [MSmerge_conflict_QLDienMay_CN1_PhieuXuat].[MaDonHang] AS [MaDonHang], 
-    [MSmerge_conflict_QLDienMay_CN1_PhieuXuat].[ThoiGianTao] AS [ThoiGianTao], 
-    [MSmerge_conflict_QLDienMay_CN1_PhieuXuat].[TongGiaTri] AS [TongGiaTri], 
-    [MSmerge_conflict_QLDienMay_CN1_PhieuXuat].[rowguid] AS [rowguid], 
-    [MSmerge_conflict_QLDienMay_CN1_PhieuXuat].[TrangThai] AS [TrangThai], 
-    [MSmerge_conflict_QLDienMay_CN1_PhieuXuat].[origin_datasource_id] AS [origin_datasource_id]
-    FROM [dbo].[MSmerge_conflict_QLDienMay_CN1_PhieuXuat] AS [MSmerge_conflict_QLDienMay_CN1_PhieuXuat]</DefiningQuery>
+    [MSmerge_conflict_CN2_QLDM_PhieuXuat].[MaPhieuXuat] AS [MaPhieuXuat], 
+    [MSmerge_conflict_CN2_QLDM_PhieuXuat].[NhanVienTaoPhieu] AS [NhanVienTaoPhieu], 
+    [MSmerge_conflict_CN2_QLDM_PhieuXuat].[NhanVienTruongKho] AS [NhanVienTruongKho], 
+    [MSmerge_conflict_CN2_QLDM_PhieuXuat].[MaKho] AS [MaKho], 
+    [MSmerge_conflict_CN2_QLDM_PhieuXuat].[MaDonHang] AS [MaDonHang], 
+    [MSmerge_conflict_CN2_QLDM_PhieuXuat].[ThoiGianTao] AS [ThoiGianTao], 
+    [MSmerge_conflict_CN2_QLDM_PhieuXuat].[TongGiaTri] AS [TongGiaTri], 
+    [MSmerge_conflict_CN2_QLDM_PhieuXuat].[TrangThai] AS [TrangThai], 
+    [MSmerge_conflict_CN2_QLDM_PhieuXuat].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN2_QLDM_PhieuXuat].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN2_QLDM_PhieuXuat] AS [MSmerge_conflict_CN2_QLDM_PhieuXuat]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_SanPham" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_SanPham" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_SanPham" EntityType="Self.MSmerge_conflict_CN2_QLDM_SanPham" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [MSmerge_conflict_QLDienMay_CN1_SanPham].[MaSanPham] AS [MaSanPham], 
-    [MSmerge_conflict_QLDienMay_CN1_SanPham].[TenSanPham] AS [TenSanPham], 
-    [MSmerge_conflict_QLDienMay_CN1_SanPham].[MaThuongHieu] AS [MaThuongHieu], 
-    [MSmerge_conflict_QLDienMay_CN1_SanPham].[AnhMinhHoa] AS [AnhMinhHoa], 
-    [MSmerge_conflict_QLDienMay_CN1_SanPham].[DonGia] AS [DonGia], 
-    [MSmerge_conflict_QLDienMay_CN1_SanPham].[MaKhuyenMai] AS [MaKhuyenMai], 
-    [MSmerge_conflict_QLDienMay_CN1_SanPham].[rowguid] AS [rowguid], 
-    [MSmerge_conflict_QLDienMay_CN1_SanPham].[origin_datasource_id] AS [origin_datasource_id]
-    FROM [dbo].[MSmerge_conflict_QLDienMay_CN1_SanPham] AS [MSmerge_conflict_QLDienMay_CN1_SanPham]</DefiningQuery>
+    [MSmerge_conflict_CN2_QLDM_SanPham].[MaSanPham] AS [MaSanPham], 
+    [MSmerge_conflict_CN2_QLDM_SanPham].[TenSanPham] AS [TenSanPham], 
+    [MSmerge_conflict_CN2_QLDM_SanPham].[MaThuongHieu] AS [MaThuongHieu], 
+    [MSmerge_conflict_CN2_QLDM_SanPham].[AnhMinhHoa] AS [AnhMinhHoa], 
+    [MSmerge_conflict_CN2_QLDM_SanPham].[DonGia] AS [DonGia], 
+    [MSmerge_conflict_CN2_QLDM_SanPham].[MaKhuyenMai] AS [MaKhuyenMai], 
+    [MSmerge_conflict_CN2_QLDM_SanPham].[MaLoai] AS [MaLoai], 
+    [MSmerge_conflict_CN2_QLDM_SanPham].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN2_QLDM_SanPham].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN2_QLDM_SanPham] AS [MSmerge_conflict_CN2_QLDM_SanPham]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_TheTichDiem" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_TheTichDiem" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_ThanhPho" EntityType="Self.MSmerge_conflict_CN2_QLDM_ThanhPho" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [MSmerge_conflict_QLDienMay_CN1_TheTichDiem].[MaThe] AS [MaThe], 
-    [MSmerge_conflict_QLDienMay_CN1_TheTichDiem].[MaKhachHang] AS [MaKhachHang], 
-    [MSmerge_conflict_QLDienMay_CN1_TheTichDiem].[Hang] AS [Hang], 
-    [MSmerge_conflict_QLDienMay_CN1_TheTichDiem].[NgayTao] AS [NgayTao], 
-    [MSmerge_conflict_QLDienMay_CN1_TheTichDiem].[Diem] AS [Diem], 
-    [MSmerge_conflict_QLDienMay_CN1_TheTichDiem].[TrangThai] AS [TrangThai], 
-    [MSmerge_conflict_QLDienMay_CN1_TheTichDiem].[rowguid] AS [rowguid], 
-    [MSmerge_conflict_QLDienMay_CN1_TheTichDiem].[origin_datasource_id] AS [origin_datasource_id]
-    FROM [dbo].[MSmerge_conflict_QLDienMay_CN1_TheTichDiem] AS [MSmerge_conflict_QLDienMay_CN1_TheTichDiem]</DefiningQuery>
+    [MSmerge_conflict_CN2_QLDM_ThanhPho].[MaThanhPho] AS [MaThanhPho], 
+    [MSmerge_conflict_CN2_QLDM_ThanhPho].[TenThanhPho] AS [TenThanhPho], 
+    [MSmerge_conflict_CN2_QLDM_ThanhPho].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN2_QLDM_ThanhPho].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN2_QLDM_ThanhPho] AS [MSmerge_conflict_CN2_QLDM_ThanhPho]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_ThongSoKiThuat" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_ThongSoKiThuat" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_TheTichDiem" EntityType="Self.MSmerge_conflict_CN2_QLDM_TheTichDiem" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [MSmerge_conflict_QLDienMay_CN1_ThongSoKiThuat].[MaSanPham] AS [MaSanPham], 
-    [MSmerge_conflict_QLDienMay_CN1_ThongSoKiThuat].[TenThongSo] AS [TenThongSo], 
-    [MSmerge_conflict_QLDienMay_CN1_ThongSoKiThuat].[MoTa] AS [MoTa], 
-    [MSmerge_conflict_QLDienMay_CN1_ThongSoKiThuat].[rowguid] AS [rowguid], 
-    [MSmerge_conflict_QLDienMay_CN1_ThongSoKiThuat].[origin_datasource_id] AS [origin_datasource_id]
-    FROM [dbo].[MSmerge_conflict_QLDienMay_CN1_ThongSoKiThuat] AS [MSmerge_conflict_QLDienMay_CN1_ThongSoKiThuat]</DefiningQuery>
+    [MSmerge_conflict_CN2_QLDM_TheTichDiem].[MaThe] AS [MaThe], 
+    [MSmerge_conflict_CN2_QLDM_TheTichDiem].[MaKhachHang] AS [MaKhachHang], 
+    [MSmerge_conflict_CN2_QLDM_TheTichDiem].[Hang] AS [Hang], 
+    [MSmerge_conflict_CN2_QLDM_TheTichDiem].[NgayTao] AS [NgayTao], 
+    [MSmerge_conflict_CN2_QLDM_TheTichDiem].[Diem] AS [Diem], 
+    [MSmerge_conflict_CN2_QLDM_TheTichDiem].[TrangThai] AS [TrangThai], 
+    [MSmerge_conflict_CN2_QLDM_TheTichDiem].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN2_QLDM_TheTichDiem].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN2_QLDM_TheTichDiem] AS [MSmerge_conflict_CN2_QLDM_TheTichDiem]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_TinhNang" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_TinhNang" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_ThongSoKiThuat" EntityType="Self.MSmerge_conflict_CN2_QLDM_ThongSoKiThuat" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [MSmerge_conflict_QLDienMay_CN1_TinhNang].[MaSanPham] AS [MaSanPham], 
-    [MSmerge_conflict_QLDienMay_CN1_TinhNang].[TenTinhNang] AS [TenTinhNang], 
-    [MSmerge_conflict_QLDienMay_CN1_TinhNang].[MoTa] AS [MoTa], 
-    [MSmerge_conflict_QLDienMay_CN1_TinhNang].[HinhAnh] AS [HinhAnh], 
-    [MSmerge_conflict_QLDienMay_CN1_TinhNang].[rowguid] AS [rowguid], 
-    [MSmerge_conflict_QLDienMay_CN1_TinhNang].[origin_datasource_id] AS [origin_datasource_id]
-    FROM [dbo].[MSmerge_conflict_QLDienMay_CN1_TinhNang] AS [MSmerge_conflict_QLDienMay_CN1_TinhNang]</DefiningQuery>
+    [MSmerge_conflict_CN2_QLDM_ThongSoKiThuat].[MaSanPham] AS [MaSanPham], 
+    [MSmerge_conflict_CN2_QLDM_ThongSoKiThuat].[TenThongSo] AS [TenThongSo], 
+    [MSmerge_conflict_CN2_QLDM_ThongSoKiThuat].[MoTa] AS [MoTa], 
+    [MSmerge_conflict_CN2_QLDM_ThongSoKiThuat].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN2_QLDM_ThongSoKiThuat].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN2_QLDM_ThongSoKiThuat] AS [MSmerge_conflict_CN2_QLDM_ThongSoKiThuat]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_Voucher" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_Voucher" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_ThuongHieu" EntityType="Self.MSmerge_conflict_CN2_QLDM_ThuongHieu" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [MSmerge_conflict_QLDienMay_CN1_Voucher].[MaVoucher] AS [MaVoucher], 
-    [MSmerge_conflict_QLDienMay_CN1_Voucher].[TenVoucher] AS [TenVoucher], 
-    [MSmerge_conflict_QLDienMay_CN1_Voucher].[PhanTramKhuyenMai] AS [PhanTramKhuyenMai], 
-    [MSmerge_conflict_QLDienMay_CN1_Voucher].[NgayBatDau] AS [NgayBatDau], 
-    [MSmerge_conflict_QLDienMay_CN1_Voucher].[NgayKetThuc] AS [NgayKetThuc], 
-    [MSmerge_conflict_QLDienMay_CN1_Voucher].[MoTa] AS [MoTa], 
-    [MSmerge_conflict_QLDienMay_CN1_Voucher].[rowguid] AS [rowguid], 
-    [MSmerge_conflict_QLDienMay_CN1_Voucher].[origin_datasource_id] AS [origin_datasource_id]
-    FROM [dbo].[MSmerge_conflict_QLDienMay_CN1_Voucher] AS [MSmerge_conflict_QLDienMay_CN1_Voucher]</DefiningQuery>
+    [MSmerge_conflict_CN2_QLDM_ThuongHieu].[MaThuongHieu] AS [MaThuongHieu], 
+    [MSmerge_conflict_CN2_QLDM_ThuongHieu].[TenThuongHieu] AS [TenThuongHieu], 
+    [MSmerge_conflict_CN2_QLDM_ThuongHieu].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN2_QLDM_ThuongHieu].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN2_QLDM_ThuongHieu] AS [MSmerge_conflict_CN2_QLDM_ThuongHieu]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_TinhNang" EntityType="Self.MSmerge_conflict_CN2_QLDM_TinhNang" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN2_QLDM_TinhNang].[MaSanPham] AS [MaSanPham], 
+    [MSmerge_conflict_CN2_QLDM_TinhNang].[TenTinhNang] AS [TenTinhNang], 
+    [MSmerge_conflict_CN2_QLDM_TinhNang].[MoTa] AS [MoTa], 
+    [MSmerge_conflict_CN2_QLDM_TinhNang].[HinhAnh] AS [HinhAnh], 
+    [MSmerge_conflict_CN2_QLDM_TinhNang].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN2_QLDM_TinhNang].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN2_QLDM_TinhNang] AS [MSmerge_conflict_CN2_QLDM_TinhNang]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_Voucher" EntityType="Self.MSmerge_conflict_CN2_QLDM_Voucher" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN2_QLDM_Voucher].[MaVoucher] AS [MaVoucher], 
+    [MSmerge_conflict_CN2_QLDM_Voucher].[TenVoucher] AS [TenVoucher], 
+    [MSmerge_conflict_CN2_QLDM_Voucher].[PhanTramKhuyenMai] AS [PhanTramKhuyenMai], 
+    [MSmerge_conflict_CN2_QLDM_Voucher].[NgayBatDau] AS [NgayBatDau], 
+    [MSmerge_conflict_CN2_QLDM_Voucher].[NgayKetThuc] AS [NgayKetThuc], 
+    [MSmerge_conflict_CN2_QLDM_Voucher].[MoTa] AS [MoTa], 
+    [MSmerge_conflict_CN2_QLDM_Voucher].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN2_QLDM_Voucher].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN2_QLDM_Voucher] AS [MSmerge_conflict_CN2_QLDM_Voucher]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_ChiTietDonHang" EntityType="Self.MSmerge_conflict_CN3_QLDM_ChiTietDonHang" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN3_QLDM_ChiTietDonHang].[MaDonHang] AS [MaDonHang], 
+    [MSmerge_conflict_CN3_QLDM_ChiTietDonHang].[MaSanPham] AS [MaSanPham], 
+    [MSmerge_conflict_CN3_QLDM_ChiTietDonHang].[SoLuong] AS [SoLuong], 
+    [MSmerge_conflict_CN3_QLDM_ChiTietDonHang].[DonGia] AS [DonGia], 
+    [MSmerge_conflict_CN3_QLDM_ChiTietDonHang].[ThanhTien] AS [ThanhTien], 
+    [MSmerge_conflict_CN3_QLDM_ChiTietDonHang].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN3_QLDM_ChiTietDonHang].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN3_QLDM_ChiTietDonHang] AS [MSmerge_conflict_CN3_QLDM_ChiTietDonHang]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_ChiTietKho" EntityType="Self.MSmerge_conflict_CN3_QLDM_ChiTietKho" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN3_QLDM_ChiTietKho].[MaKho] AS [MaKho], 
+    [MSmerge_conflict_CN3_QLDM_ChiTietKho].[MaSanPham] AS [MaSanPham], 
+    [MSmerge_conflict_CN3_QLDM_ChiTietKho].[SoLuong] AS [SoLuong], 
+    [MSmerge_conflict_CN3_QLDM_ChiTietKho].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN3_QLDM_ChiTietKho].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN3_QLDM_ChiTietKho] AS [MSmerge_conflict_CN3_QLDM_ChiTietKho]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_ChiTietLoai" EntityType="Self.MSmerge_conflict_CN3_QLDM_ChiTietLoai" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN3_QLDM_ChiTietLoai].[MaSanPham] AS [MaSanPham], 
+    [MSmerge_conflict_CN3_QLDM_ChiTietLoai].[MaLoai] AS [MaLoai], 
+    [MSmerge_conflict_CN3_QLDM_ChiTietLoai].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN3_QLDM_ChiTietLoai].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN3_QLDM_ChiTietLoai] AS [MSmerge_conflict_CN3_QLDM_ChiTietLoai]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_ChiTietPhieuNhap" EntityType="Self.MSmerge_conflict_CN3_QLDM_ChiTietPhieuNhap" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN3_QLDM_ChiTietPhieuNhap].[MaPhieuNhap] AS [MaPhieuNhap], 
+    [MSmerge_conflict_CN3_QLDM_ChiTietPhieuNhap].[MaSanPham] AS [MaSanPham], 
+    [MSmerge_conflict_CN3_QLDM_ChiTietPhieuNhap].[SoLuong] AS [SoLuong], 
+    [MSmerge_conflict_CN3_QLDM_ChiTietPhieuNhap].[DonGiaNhap] AS [DonGiaNhap], 
+    [MSmerge_conflict_CN3_QLDM_ChiTietPhieuNhap].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN3_QLDM_ChiTietPhieuNhap].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN3_QLDM_ChiTietPhieuNhap] AS [MSmerge_conflict_CN3_QLDM_ChiTietPhieuNhap]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_ChiTietPhieuXuat" EntityType="Self.MSmerge_conflict_CN3_QLDM_ChiTietPhieuXuat" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN3_QLDM_ChiTietPhieuXuat].[MaPhieuXuat] AS [MaPhieuXuat], 
+    [MSmerge_conflict_CN3_QLDM_ChiTietPhieuXuat].[MaSanPham] AS [MaSanPham], 
+    [MSmerge_conflict_CN3_QLDM_ChiTietPhieuXuat].[SoLuong] AS [SoLuong], 
+    [MSmerge_conflict_CN3_QLDM_ChiTietPhieuXuat].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN3_QLDM_ChiTietPhieuXuat].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN3_QLDM_ChiTietPhieuXuat] AS [MSmerge_conflict_CN3_QLDM_ChiTietPhieuXuat]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_ChucVu" EntityType="Self.MSmerge_conflict_CN3_QLDM_ChucVu" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN3_QLDM_ChucVu].[MaChucVu] AS [MaChucVu], 
+    [MSmerge_conflict_CN3_QLDM_ChucVu].[TenChucVu] AS [TenChucVu], 
+    [MSmerge_conflict_CN3_QLDM_ChucVu].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN3_QLDM_ChucVu].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN3_QLDM_ChucVu] AS [MSmerge_conflict_CN3_QLDM_ChucVu]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_CuaHang" EntityType="Self.MSmerge_conflict_CN3_QLDM_CuaHang" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN3_QLDM_CuaHang].[MaCuaHang] AS [MaCuaHang], 
+    [MSmerge_conflict_CN3_QLDM_CuaHang].[DiaChi] AS [DiaChi], 
+    [MSmerge_conflict_CN3_QLDM_CuaHang].[CuaHangTruong] AS [CuaHangTruong], 
+    [MSmerge_conflict_CN3_QLDM_CuaHang].[NgayThanhLap] AS [NgayThanhLap], 
+    [MSmerge_conflict_CN3_QLDM_CuaHang].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN3_QLDM_CuaHang].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN3_QLDM_CuaHang] AS [MSmerge_conflict_CN3_QLDM_CuaHang]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_DacDiemNoiBat" EntityType="Self.MSmerge_conflict_CN3_QLDM_DacDiemNoiBat" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN3_QLDM_DacDiemNoiBat].[MaSanPham] AS [MaSanPham], 
+    [MSmerge_conflict_CN3_QLDM_DacDiemNoiBat].[TenDacDiem] AS [TenDacDiem], 
+    [MSmerge_conflict_CN3_QLDM_DacDiemNoiBat].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN3_QLDM_DacDiemNoiBat].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN3_QLDM_DacDiemNoiBat] AS [MSmerge_conflict_CN3_QLDM_DacDiemNoiBat]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_DanhMuc" EntityType="Self.MSmerge_conflict_CN3_QLDM_DanhMuc" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN3_QLDM_DanhMuc].[MaDanhMuc] AS [MaDanhMuc], 
+    [MSmerge_conflict_CN3_QLDM_DanhMuc].[TenDanhMuc] AS [TenDanhMuc], 
+    [MSmerge_conflict_CN3_QLDM_DanhMuc].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN3_QLDM_DanhMuc].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN3_QLDM_DanhMuc] AS [MSmerge_conflict_CN3_QLDM_DanhMuc]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_DonHang" EntityType="Self.MSmerge_conflict_CN3_QLDM_DonHang" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN3_QLDM_DonHang].[MaDonHang] AS [MaDonHang], 
+    [MSmerge_conflict_CN3_QLDM_DonHang].[NhanVienPhuTrach] AS [NhanVienPhuTrach], 
+    [MSmerge_conflict_CN3_QLDM_DonHang].[MaKhachHang] AS [MaKhachHang], 
+    [MSmerge_conflict_CN3_QLDM_DonHang].[MaCuaHang] AS [MaCuaHang], 
+    [MSmerge_conflict_CN3_QLDM_DonHang].[ThoiGianTao] AS [ThoiGianTao], 
+    [MSmerge_conflict_CN3_QLDM_DonHang].[MaVoucher] AS [MaVoucher], 
+    [MSmerge_conflict_CN3_QLDM_DonHang].[Loai] AS [Loai], 
+    [MSmerge_conflict_CN3_QLDM_DonHang].[TinhTrangXacNhan] AS [TinhTrangXacNhan], 
+    [MSmerge_conflict_CN3_QLDM_DonHang].[TinhTrangThanhToan] AS [TinhTrangThanhToan], 
+    [MSmerge_conflict_CN3_QLDM_DonHang].[TinhTrangGiaoHang] AS [TinhTrangGiaoHang], 
+    [MSmerge_conflict_CN3_QLDM_DonHang].[TongGiaTri] AS [TongGiaTri], 
+    [MSmerge_conflict_CN3_QLDM_DonHang].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN3_QLDM_DonHang].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN3_QLDM_DonHang] AS [MSmerge_conflict_CN3_QLDM_DonHang]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_HangTichDiem" EntityType="Self.MSmerge_conflict_CN3_QLDM_HangTichDiem" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN3_QLDM_HangTichDiem].[MaHang] AS [MaHang], 
+    [MSmerge_conflict_CN3_QLDM_HangTichDiem].[TenHang] AS [TenHang], 
+    [MSmerge_conflict_CN3_QLDM_HangTichDiem].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN3_QLDM_HangTichDiem].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN3_QLDM_HangTichDiem] AS [MSmerge_conflict_CN3_QLDM_HangTichDiem]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_KhachHang" EntityType="Self.MSmerge_conflict_CN3_QLDM_KhachHang" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN3_QLDM_KhachHang].[MaKhachHang] AS [MaKhachHang], 
+    [MSmerge_conflict_CN3_QLDM_KhachHang].[TenKhachHang] AS [TenKhachHang], 
+    [MSmerge_conflict_CN3_QLDM_KhachHang].[SDT] AS [SDT], 
+    [MSmerge_conflict_CN3_QLDM_KhachHang].[DiaChi] AS [DiaChi], 
+    [MSmerge_conflict_CN3_QLDM_KhachHang].[Email] AS [Email], 
+    [MSmerge_conflict_CN3_QLDM_KhachHang].[TaiKhoan] AS [TaiKhoan], 
+    [MSmerge_conflict_CN3_QLDM_KhachHang].[MatKhau] AS [MatKhau], 
+    [MSmerge_conflict_CN3_QLDM_KhachHang].[TrangThai] AS [TrangThai], 
+    [MSmerge_conflict_CN3_QLDM_KhachHang].[Tongmua] AS [Tongmua], 
+    [MSmerge_conflict_CN3_QLDM_KhachHang].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN3_QLDM_KhachHang].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN3_QLDM_KhachHang] AS [MSmerge_conflict_CN3_QLDM_KhachHang]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_Kho" EntityType="Self.MSmerge_conflict_CN3_QLDM_Kho" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN3_QLDM_Kho].[MaKho] AS [MaKho], 
+    [MSmerge_conflict_CN3_QLDM_Kho].[MaCuaHang] AS [MaCuaHang], 
+    [MSmerge_conflict_CN3_QLDM_Kho].[DiaChi] AS [DiaChi], 
+    [MSmerge_conflict_CN3_QLDM_Kho].[TruongKho] AS [TruongKho], 
+    [MSmerge_conflict_CN3_QLDM_Kho].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN3_QLDM_Kho].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN3_QLDM_Kho] AS [MSmerge_conflict_CN3_QLDM_Kho]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_KhuyenMai" EntityType="Self.MSmerge_conflict_CN3_QLDM_KhuyenMai" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN3_QLDM_KhuyenMai].[MaKhuyenMai] AS [MaKhuyenMai], 
+    [MSmerge_conflict_CN3_QLDM_KhuyenMai].[TenKM] AS [TenKM], 
+    [MSmerge_conflict_CN3_QLDM_KhuyenMai].[PhanTramKhuyenMai] AS [PhanTramKhuyenMai], 
+    [MSmerge_conflict_CN3_QLDM_KhuyenMai].[NgayBatDau] AS [NgayBatDau], 
+    [MSmerge_conflict_CN3_QLDM_KhuyenMai].[NgayKetThuc] AS [NgayKetThuc], 
+    [MSmerge_conflict_CN3_QLDM_KhuyenMai].[MoTa] AS [MoTa], 
+    [MSmerge_conflict_CN3_QLDM_KhuyenMai].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN3_QLDM_KhuyenMai].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN3_QLDM_KhuyenMai] AS [MSmerge_conflict_CN3_QLDM_KhuyenMai]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_Loai" EntityType="Self.MSmerge_conflict_CN3_QLDM_Loai" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN3_QLDM_Loai].[MaLoai] AS [MaLoai], 
+    [MSmerge_conflict_CN3_QLDM_Loai].[TenLoai] AS [TenLoai], 
+    [MSmerge_conflict_CN3_QLDM_Loai].[MaDanhMuc] AS [MaDanhMuc], 
+    [MSmerge_conflict_CN3_QLDM_Loai].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN3_QLDM_Loai].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN3_QLDM_Loai] AS [MSmerge_conflict_CN3_QLDM_Loai]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_NhaCungCap" EntityType="Self.MSmerge_conflict_CN3_QLDM_NhaCungCap" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN3_QLDM_NhaCungCap].[MaNCC] AS [MaNCC], 
+    [MSmerge_conflict_CN3_QLDM_NhaCungCap].[TenNCC] AS [TenNCC], 
+    [MSmerge_conflict_CN3_QLDM_NhaCungCap].[MaSoThue] AS [MaSoThue], 
+    [MSmerge_conflict_CN3_QLDM_NhaCungCap].[DiaChi] AS [DiaChi], 
+    [MSmerge_conflict_CN3_QLDM_NhaCungCap].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN3_QLDM_NhaCungCap].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN3_QLDM_NhaCungCap] AS [MSmerge_conflict_CN3_QLDM_NhaCungCap]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_NhanVien" EntityType="Self.MSmerge_conflict_CN3_QLDM_NhanVien" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN3_QLDM_NhanVien].[MaNhanVien] AS [MaNhanVien], 
+    [MSmerge_conflict_CN3_QLDM_NhanVien].[TenNhanVien] AS [TenNhanVien], 
+    [MSmerge_conflict_CN3_QLDM_NhanVien].[NgaySinh] AS [NgaySinh], 
+    [MSmerge_conflict_CN3_QLDM_NhanVien].[SDT] AS [SDT], 
+    [MSmerge_conflict_CN3_QLDM_NhanVien].[Email] AS [Email], 
+    [MSmerge_conflict_CN3_QLDM_NhanVien].[DiaChi] AS [DiaChi], 
+    [MSmerge_conflict_CN3_QLDM_NhanVien].[GioiTinh] AS [GioiTinh], 
+    [MSmerge_conflict_CN3_QLDM_NhanVien].[ChucVu] AS [ChucVu], 
+    [MSmerge_conflict_CN3_QLDM_NhanVien].[CuaHang] AS [CuaHang], 
+    [MSmerge_conflict_CN3_QLDM_NhanVien].[HinhThuc] AS [HinhThuc], 
+    [MSmerge_conflict_CN3_QLDM_NhanVien].[TaiKhoan] AS [TaiKhoan], 
+    [MSmerge_conflict_CN3_QLDM_NhanVien].[MatKhau] AS [MatKhau], 
+    [MSmerge_conflict_CN3_QLDM_NhanVien].[TrangThai] AS [TrangThai], 
+    [MSmerge_conflict_CN3_QLDM_NhanVien].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN3_QLDM_NhanVien].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN3_QLDM_NhanVien] AS [MSmerge_conflict_CN3_QLDM_NhanVien]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_PhanHoi" EntityType="Self.MSmerge_conflict_CN3_QLDM_PhanHoi" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN3_QLDM_PhanHoi].[MaPhanHoi] AS [MaPhanHoi], 
+    [MSmerge_conflict_CN3_QLDM_PhanHoi].[MaKhachHang] AS [MaKhachHang], 
+    [MSmerge_conflict_CN3_QLDM_PhanHoi].[NoiDung] AS [NoiDung], 
+    [MSmerge_conflict_CN3_QLDM_PhanHoi].[TrangThai] AS [TrangThai], 
+    [MSmerge_conflict_CN3_QLDM_PhanHoi].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN3_QLDM_PhanHoi].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN3_QLDM_PhanHoi] AS [MSmerge_conflict_CN3_QLDM_PhanHoi]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_PhieuBaoHanh" EntityType="Self.MSmerge_conflict_CN3_QLDM_PhieuBaoHanh" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN3_QLDM_PhieuBaoHanh].[MaPhieuBH] AS [MaPhieuBH], 
+    [MSmerge_conflict_CN3_QLDM_PhieuBaoHanh].[MaSanPham] AS [MaSanPham], 
+    [MSmerge_conflict_CN3_QLDM_PhieuBaoHanh].[MaKhachHang] AS [MaKhachHang], 
+    [MSmerge_conflict_CN3_QLDM_PhieuBaoHanh].[MaDonHang] AS [MaDonHang], 
+    [MSmerge_conflict_CN3_QLDM_PhieuBaoHanh].[NgayTao] AS [NgayTao], 
+    [MSmerge_conflict_CN3_QLDM_PhieuBaoHanh].[NgayHetHan] AS [NgayHetHan], 
+    [MSmerge_conflict_CN3_QLDM_PhieuBaoHanh].[TrangThai] AS [TrangThai], 
+    [MSmerge_conflict_CN3_QLDM_PhieuBaoHanh].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN3_QLDM_PhieuBaoHanh].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN3_QLDM_PhieuBaoHanh] AS [MSmerge_conflict_CN3_QLDM_PhieuBaoHanh]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_PhieuNhap" EntityType="Self.MSmerge_conflict_CN3_QLDM_PhieuNhap" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN3_QLDM_PhieuNhap].[MaPhieuNhap] AS [MaPhieuNhap], 
+    [MSmerge_conflict_CN3_QLDM_PhieuNhap].[NhaCungCap] AS [NhaCungCap], 
+    [MSmerge_conflict_CN3_QLDM_PhieuNhap].[NhanVienTrucKho] AS [NhanVienTrucKho], 
+    [MSmerge_conflict_CN3_QLDM_PhieuNhap].[MaKho] AS [MaKho], 
+    [MSmerge_conflict_CN3_QLDM_PhieuNhap].[ThoiGianTao] AS [ThoiGianTao], 
+    [MSmerge_conflict_CN3_QLDM_PhieuNhap].[TongGiaTri] AS [TongGiaTri], 
+    [MSmerge_conflict_CN3_QLDM_PhieuNhap].[TrangThai] AS [TrangThai], 
+    [MSmerge_conflict_CN3_QLDM_PhieuNhap].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN3_QLDM_PhieuNhap].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN3_QLDM_PhieuNhap] AS [MSmerge_conflict_CN3_QLDM_PhieuNhap]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_PhieuXuat" EntityType="Self.MSmerge_conflict_CN3_QLDM_PhieuXuat" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN3_QLDM_PhieuXuat].[MaPhieuXuat] AS [MaPhieuXuat], 
+    [MSmerge_conflict_CN3_QLDM_PhieuXuat].[NhanVienTaoPhieu] AS [NhanVienTaoPhieu], 
+    [MSmerge_conflict_CN3_QLDM_PhieuXuat].[NhanVienTruongKho] AS [NhanVienTruongKho], 
+    [MSmerge_conflict_CN3_QLDM_PhieuXuat].[MaKho] AS [MaKho], 
+    [MSmerge_conflict_CN3_QLDM_PhieuXuat].[MaDonHang] AS [MaDonHang], 
+    [MSmerge_conflict_CN3_QLDM_PhieuXuat].[ThoiGianTao] AS [ThoiGianTao], 
+    [MSmerge_conflict_CN3_QLDM_PhieuXuat].[TongGiaTri] AS [TongGiaTri], 
+    [MSmerge_conflict_CN3_QLDM_PhieuXuat].[TrangThai] AS [TrangThai], 
+    [MSmerge_conflict_CN3_QLDM_PhieuXuat].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN3_QLDM_PhieuXuat].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN3_QLDM_PhieuXuat] AS [MSmerge_conflict_CN3_QLDM_PhieuXuat]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_SanPham" EntityType="Self.MSmerge_conflict_CN3_QLDM_SanPham" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN3_QLDM_SanPham].[MaSanPham] AS [MaSanPham], 
+    [MSmerge_conflict_CN3_QLDM_SanPham].[TenSanPham] AS [TenSanPham], 
+    [MSmerge_conflict_CN3_QLDM_SanPham].[MaThuongHieu] AS [MaThuongHieu], 
+    [MSmerge_conflict_CN3_QLDM_SanPham].[AnhMinhHoa] AS [AnhMinhHoa], 
+    [MSmerge_conflict_CN3_QLDM_SanPham].[DonGia] AS [DonGia], 
+    [MSmerge_conflict_CN3_QLDM_SanPham].[MaKhuyenMai] AS [MaKhuyenMai], 
+    [MSmerge_conflict_CN3_QLDM_SanPham].[MaLoai] AS [MaLoai], 
+    [MSmerge_conflict_CN3_QLDM_SanPham].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN3_QLDM_SanPham].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN3_QLDM_SanPham] AS [MSmerge_conflict_CN3_QLDM_SanPham]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_ThanhPho" EntityType="Self.MSmerge_conflict_CN3_QLDM_ThanhPho" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN3_QLDM_ThanhPho].[MaThanhPho] AS [MaThanhPho], 
+    [MSmerge_conflict_CN3_QLDM_ThanhPho].[TenThanhPho] AS [TenThanhPho], 
+    [MSmerge_conflict_CN3_QLDM_ThanhPho].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN3_QLDM_ThanhPho].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN3_QLDM_ThanhPho] AS [MSmerge_conflict_CN3_QLDM_ThanhPho]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_TheTichDiem" EntityType="Self.MSmerge_conflict_CN3_QLDM_TheTichDiem" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN3_QLDM_TheTichDiem].[MaThe] AS [MaThe], 
+    [MSmerge_conflict_CN3_QLDM_TheTichDiem].[MaKhachHang] AS [MaKhachHang], 
+    [MSmerge_conflict_CN3_QLDM_TheTichDiem].[Hang] AS [Hang], 
+    [MSmerge_conflict_CN3_QLDM_TheTichDiem].[NgayTao] AS [NgayTao], 
+    [MSmerge_conflict_CN3_QLDM_TheTichDiem].[Diem] AS [Diem], 
+    [MSmerge_conflict_CN3_QLDM_TheTichDiem].[TrangThai] AS [TrangThai], 
+    [MSmerge_conflict_CN3_QLDM_TheTichDiem].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN3_QLDM_TheTichDiem].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN3_QLDM_TheTichDiem] AS [MSmerge_conflict_CN3_QLDM_TheTichDiem]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_ThongSoKiThuat" EntityType="Self.MSmerge_conflict_CN3_QLDM_ThongSoKiThuat" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN3_QLDM_ThongSoKiThuat].[MaSanPham] AS [MaSanPham], 
+    [MSmerge_conflict_CN3_QLDM_ThongSoKiThuat].[TenThongSo] AS [TenThongSo], 
+    [MSmerge_conflict_CN3_QLDM_ThongSoKiThuat].[MoTa] AS [MoTa], 
+    [MSmerge_conflict_CN3_QLDM_ThongSoKiThuat].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN3_QLDM_ThongSoKiThuat].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN3_QLDM_ThongSoKiThuat] AS [MSmerge_conflict_CN3_QLDM_ThongSoKiThuat]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_ThuongHieu" EntityType="Self.MSmerge_conflict_CN3_QLDM_ThuongHieu" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN3_QLDM_ThuongHieu].[MaThuongHieu] AS [MaThuongHieu], 
+    [MSmerge_conflict_CN3_QLDM_ThuongHieu].[TenThuongHieu] AS [TenThuongHieu], 
+    [MSmerge_conflict_CN3_QLDM_ThuongHieu].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN3_QLDM_ThuongHieu].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN3_QLDM_ThuongHieu] AS [MSmerge_conflict_CN3_QLDM_ThuongHieu]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_TinhNang" EntityType="Self.MSmerge_conflict_CN3_QLDM_TinhNang" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN3_QLDM_TinhNang].[MaSanPham] AS [MaSanPham], 
+    [MSmerge_conflict_CN3_QLDM_TinhNang].[TenTinhNang] AS [TenTinhNang], 
+    [MSmerge_conflict_CN3_QLDM_TinhNang].[MoTa] AS [MoTa], 
+    [MSmerge_conflict_CN3_QLDM_TinhNang].[HinhAnh] AS [HinhAnh], 
+    [MSmerge_conflict_CN3_QLDM_TinhNang].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN3_QLDM_TinhNang].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN3_QLDM_TinhNang] AS [MSmerge_conflict_CN3_QLDM_TinhNang]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_Voucher" EntityType="Self.MSmerge_conflict_CN3_QLDM_Voucher" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSmerge_conflict_CN3_QLDM_Voucher].[MaVoucher] AS [MaVoucher], 
+    [MSmerge_conflict_CN3_QLDM_Voucher].[TenVoucher] AS [TenVoucher], 
+    [MSmerge_conflict_CN3_QLDM_Voucher].[PhanTramKhuyenMai] AS [PhanTramKhuyenMai], 
+    [MSmerge_conflict_CN3_QLDM_Voucher].[NgayBatDau] AS [NgayBatDau], 
+    [MSmerge_conflict_CN3_QLDM_Voucher].[NgayKetThuc] AS [NgayKetThuc], 
+    [MSmerge_conflict_CN3_QLDM_Voucher].[MoTa] AS [MoTa], 
+    [MSmerge_conflict_CN3_QLDM_Voucher].[rowguid] AS [rowguid], 
+    [MSmerge_conflict_CN3_QLDM_Voucher].[origin_datasource_id] AS [origin_datasource_id]
+    FROM [dbo].[MSmerge_conflict_CN3_QLDM_Voucher] AS [MSmerge_conflict_CN3_QLDM_Voucher]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="MSmerge_conflicts_info" EntityType="Self.MSmerge_conflicts_info" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
@@ -2525,14 +3380,6 @@ warning 6002: The table/view 'QLDienMay.dbo.sysmergesubsetfilters' does not have
     [MSrepl_errors].[session_id] AS [session_id]
     FROM [dbo].[MSrepl_errors] AS [MSrepl_errors]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="MSsnapshotdeliveryprogress" EntityType="Self.MSsnapshotdeliveryprogress" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [MSsnapshotdeliveryprogress].[session_token] AS [session_token], 
-    [MSsnapshotdeliveryprogress].[progress_token_hash] AS [progress_token_hash], 
-    [MSsnapshotdeliveryprogress].[progress_token] AS [progress_token], 
-    [MSsnapshotdeliveryprogress].[progress_timestamp] AS [progress_timestamp]
-    FROM [dbo].[MSsnapshotdeliveryprogress] AS [MSsnapshotdeliveryprogress]</DefiningQuery>
-    </EntitySet>
     <EntitySet Name="sysmergearticles" EntityType="Self.sysmergearticles" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [sysmergearticles].[name] AS [name], 
@@ -2755,16 +3602,12 @@ warning 6002: The table/view 'QLDienMay.dbo.sysmergesubsetfilters' does not have
     [sysmergesubsetfilters].[filter_type] AS [filter_type]
     FROM [dbo].[sysmergesubsetfilters] AS [sysmergesubsetfilters]</DefiningQuery>
     </EntitySet>
-    <AssociationSet Name="FK__MSmerge_d__parti__2739D489" Association="Self.FK__MSmerge_d__parti__2739D489">
+    <AssociationSet Name="FK__MSmerge_d__parti__3BC31D7F" Association="Self.FK__MSmerge_d__parti__3BC31D7F">
       <End Role="MSmerge_partition_groups" EntitySet="MSmerge_partition_groups" />
       <End Role="MSmerge_dynamic_snapshots" EntitySet="MSmerge_dynamic_snapshots" />
     </AssociationSet>
     <AssociationSet Name="FK__NhanVien__CuaHan__48CFD27E" Association="Self.FK__NhanVien__CuaHan__48CFD27E">
       <End Role="CuaHang" EntitySet="CuaHang" />
-      <End Role="NhanVien" EntitySet="NhanVien" />
-    </AssociationSet>
-    <AssociationSet Name="FK_ChucVu_NhanVien" Association="Self.FK_ChucVu_NhanVien">
-      <End Role="ChucVu" EntitySet="ChucVu" />
       <End Role="NhanVien" EntitySet="NhanVien" />
     </AssociationSet>
     <AssociationSet Name="FK_CuaHang_DonHang" Association="Self.FK_CuaHang_DonHang">
@@ -2830,6 +3673,10 @@ warning 6002: The table/view 'QLDienMay.dbo.sysmergesubsetfilters' does not have
     <AssociationSet Name="FK_Loai_ChiTietLoai" Association="Self.FK_Loai_ChiTietLoai">
       <End Role="Loai" EntitySet="Loai" />
       <End Role="ChiTietLoai" EntitySet="ChiTietLoai" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Loai_SP" Association="Self.FK_Loai_SP">
+      <End Role="Loai" EntitySet="Loai" />
+      <End Role="SanPham" EntitySet="SanPham" />
     </AssociationSet>
     <AssociationSet Name="FK_NCC_PhieuNhap" Association="Self.FK_NCC_PhieuNhap">
       <End Role="NhaCungCap" EntitySet="NhaCungCap" />

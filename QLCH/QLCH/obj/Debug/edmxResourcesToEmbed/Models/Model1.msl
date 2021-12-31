@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="QLDienMayModelStoreContainer" CdmEntityContainer="QLDienMayEntities">
+  <EntityContainerMapping StorageEntityContainer="QLDienMayModel1StoreContainer" CdmEntityContainer="QLDienMayEntities">
     <EntitySetMapping Name="ChiTietDonHangs">
-      <EntityTypeMapping TypeName="QLDienMayModel.ChiTietDonHang">
+      <EntityTypeMapping TypeName="QLDienMayModel1.ChiTietDonHang">
         <MappingFragment StoreEntitySet="ChiTietDonHang">
           <ScalarProperty Name="MaDonHang" ColumnName="MaDonHang" />
           <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
@@ -14,7 +14,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ChiTietKhoes">
-      <EntityTypeMapping TypeName="QLDienMayModel.ChiTietKho">
+      <EntityTypeMapping TypeName="QLDienMayModel1.ChiTietKho">
         <MappingFragment StoreEntitySet="ChiTietKho">
           <ScalarProperty Name="MaKho" ColumnName="MaKho" />
           <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
@@ -24,7 +24,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ChiTietLoais">
-      <EntityTypeMapping TypeName="QLDienMayModel.ChiTietLoai">
+      <EntityTypeMapping TypeName="QLDienMayModel1.ChiTietLoai">
         <MappingFragment StoreEntitySet="ChiTietLoai">
           <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
           <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
@@ -33,7 +33,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ChiTietPhieuNhaps">
-      <EntityTypeMapping TypeName="QLDienMayModel.ChiTietPhieuNhap">
+      <EntityTypeMapping TypeName="QLDienMayModel1.ChiTietPhieuNhap">
         <MappingFragment StoreEntitySet="ChiTietPhieuNhap">
           <ScalarProperty Name="MaPhieuNhap" ColumnName="MaPhieuNhap" />
           <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
@@ -44,7 +44,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ChiTietPhieuXuats">
-      <EntityTypeMapping TypeName="QLDienMayModel.ChiTietPhieuXuat">
+      <EntityTypeMapping TypeName="QLDienMayModel1.ChiTietPhieuXuat">
         <MappingFragment StoreEntitySet="ChiTietPhieuXuat">
           <ScalarProperty Name="MaPhieuXuat" ColumnName="MaPhieuXuat" />
           <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
@@ -54,7 +54,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ChucVus">
-      <EntityTypeMapping TypeName="QLDienMayModel.ChucVu">
+      <EntityTypeMapping TypeName="QLDienMayModel1.ChucVu">
         <MappingFragment StoreEntitySet="ChucVu">
           <ScalarProperty Name="MaChucVu" ColumnName="MaChucVu" />
           <ScalarProperty Name="TenChucVu" ColumnName="TenChucVu" />
@@ -63,7 +63,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CuaHangs">
-      <EntityTypeMapping TypeName="QLDienMayModel.CuaHang">
+      <EntityTypeMapping TypeName="QLDienMayModel1.CuaHang">
         <MappingFragment StoreEntitySet="CuaHang">
           <ScalarProperty Name="MaCuaHang" ColumnName="MaCuaHang" />
           <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
@@ -74,7 +74,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="DacDiemNoiBats">
-      <EntityTypeMapping TypeName="QLDienMayModel.DacDiemNoiBat">
+      <EntityTypeMapping TypeName="QLDienMayModel1.DacDiemNoiBat">
         <MappingFragment StoreEntitySet="DacDiemNoiBat">
           <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
           <ScalarProperty Name="TenDacDiem" ColumnName="TenDacDiem" />
@@ -83,7 +83,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="DanhMucs">
-      <EntityTypeMapping TypeName="QLDienMayModel.DanhMuc">
+      <EntityTypeMapping TypeName="QLDienMayModel1.DanhMuc">
         <MappingFragment StoreEntitySet="DanhMuc">
           <ScalarProperty Name="MaDanhMuc" ColumnName="MaDanhMuc" />
           <ScalarProperty Name="TenDanhMuc" ColumnName="TenDanhMuc" />
@@ -92,7 +92,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="DonHangs">
-      <EntityTypeMapping TypeName="QLDienMayModel.DonHang">
+      <EntityTypeMapping TypeName="QLDienMayModel1.DonHang">
         <MappingFragment StoreEntitySet="DonHang">
           <ScalarProperty Name="MaDonHang" ColumnName="MaDonHang" />
           <ScalarProperty Name="NhanVienPhuTrach" ColumnName="NhanVienPhuTrach" />
@@ -104,13 +104,13 @@
           <ScalarProperty Name="TinhTrangXacNhan" ColumnName="TinhTrangXacNhan" />
           <ScalarProperty Name="TinhTrangThanhToan" ColumnName="TinhTrangThanhToan" />
           <ScalarProperty Name="TinhTrangGiaoHang" ColumnName="TinhTrangGiaoHang" />
-          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
           <ScalarProperty Name="TongGiaTri" ColumnName="TongGiaTri" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="HangTichDiems">
-      <EntityTypeMapping TypeName="QLDienMayModel.HangTichDiem">
+      <EntityTypeMapping TypeName="QLDienMayModel1.HangTichDiem">
         <MappingFragment StoreEntitySet="HangTichDiem">
           <ScalarProperty Name="MaHang" ColumnName="MaHang" />
           <ScalarProperty Name="TenHang" ColumnName="TenHang" />
@@ -119,7 +119,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="KhachHangs">
-      <EntityTypeMapping TypeName="QLDienMayModel.KhachHang">
+      <EntityTypeMapping TypeName="QLDienMayModel1.KhachHang">
         <MappingFragment StoreEntitySet="KhachHang">
           <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
           <ScalarProperty Name="TenKhachHang" ColumnName="TenKhachHang" />
@@ -129,22 +129,24 @@
           <ScalarProperty Name="TaiKhoan" ColumnName="TaiKhoan" />
           <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
           <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="Tongmua" ColumnName="Tongmua" />
           <ScalarProperty Name="rowguid" ColumnName="rowguid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Khoes">
-      <EntityTypeMapping TypeName="QLDienMayModel.Kho">
+      <EntityTypeMapping TypeName="QLDienMayModel1.Kho">
         <MappingFragment StoreEntitySet="Kho">
           <ScalarProperty Name="MaKho" ColumnName="MaKho" />
           <ScalarProperty Name="MaCuaHang" ColumnName="MaCuaHang" />
           <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="TruongKho" ColumnName="TruongKho" />
           <ScalarProperty Name="rowguid" ColumnName="rowguid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="KhuyenMais">
-      <EntityTypeMapping TypeName="QLDienMayModel.KhuyenMai">
+      <EntityTypeMapping TypeName="QLDienMayModel1.KhuyenMai">
         <MappingFragment StoreEntitySet="KhuyenMai">
           <ScalarProperty Name="MaKhuyenMai" ColumnName="MaKhuyenMai" />
           <ScalarProperty Name="TenKM" ColumnName="TenKM" />
@@ -157,7 +159,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Loais">
-      <EntityTypeMapping TypeName="QLDienMayModel.Loai">
+      <EntityTypeMapping TypeName="QLDienMayModel1.Loai">
         <MappingFragment StoreEntitySet="Loai">
           <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
           <ScalarProperty Name="TenLoai" ColumnName="TenLoai" />
@@ -167,14 +169,14 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MSdynamicsnapshotviews">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSdynamicsnapshotview">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSdynamicsnapshotview">
         <MappingFragment StoreEntitySet="MSdynamicsnapshotviews">
           <ScalarProperty Name="dynamic_snapshot_view_name" ColumnName="dynamic_snapshot_view_name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MSmerge_dynamic_snapshots">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_dynamic_snapshots">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_dynamic_snapshots">
         <MappingFragment StoreEntitySet="MSmerge_dynamic_snapshots">
           <ScalarProperty Name="partition_id" ColumnName="partition_id" />
           <ScalarProperty Name="dynamic_snapshot_location" ColumnName="dynamic_snapshot_location" />
@@ -184,7 +186,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MSmerge_partition_groups">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_partition_groups">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_partition_groups">
         <MappingFragment StoreEntitySet="MSmerge_partition_groups">
           <ScalarProperty Name="partition_id" ColumnName="partition_id" />
           <ScalarProperty Name="publication_number" ColumnName="publication_number" />
@@ -195,7 +197,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="NhaCungCaps">
-      <EntityTypeMapping TypeName="QLDienMayModel.NhaCungCap">
+      <EntityTypeMapping TypeName="QLDienMayModel1.NhaCungCap">
         <MappingFragment StoreEntitySet="NhaCungCap">
           <ScalarProperty Name="MaNCC" ColumnName="MaNCC" />
           <ScalarProperty Name="TenNCC" ColumnName="TenNCC" />
@@ -206,7 +208,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="NhanViens">
-      <EntityTypeMapping TypeName="QLDienMayModel.NhanVien">
+      <EntityTypeMapping TypeName="QLDienMayModel1.NhanVien">
         <MappingFragment StoreEntitySet="NhanVien">
           <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
           <ScalarProperty Name="TenNhanVien" ColumnName="TenNhanVien" />
@@ -226,7 +228,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PhanHois">
-      <EntityTypeMapping TypeName="QLDienMayModel.PhanHoi">
+      <EntityTypeMapping TypeName="QLDienMayModel1.PhanHoi">
         <MappingFragment StoreEntitySet="PhanHoi">
           <ScalarProperty Name="MaPhanHoi" ColumnName="MaPhanHoi" />
           <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
@@ -237,7 +239,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PhieuBaoHanhs">
-      <EntityTypeMapping TypeName="QLDienMayModel.PhieuBaoHanh">
+      <EntityTypeMapping TypeName="QLDienMayModel1.PhieuBaoHanh">
         <MappingFragment StoreEntitySet="PhieuBaoHanh">
           <ScalarProperty Name="MaPhieuBH" ColumnName="MaPhieuBH" />
           <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
@@ -245,13 +247,13 @@
           <ScalarProperty Name="MaDonHang" ColumnName="MaDonHang" />
           <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
           <ScalarProperty Name="NgayHetHan" ColumnName="NgayHetHan" />
-          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
           <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PhieuNhaps">
-      <EntityTypeMapping TypeName="QLDienMayModel.PhieuNhap">
+      <EntityTypeMapping TypeName="QLDienMayModel1.PhieuNhap">
         <MappingFragment StoreEntitySet="PhieuNhap">
           <ScalarProperty Name="MaPhieuNhap" ColumnName="MaPhieuNhap" />
           <ScalarProperty Name="NhaCungCap" ColumnName="NhaCungCap" />
@@ -259,13 +261,13 @@
           <ScalarProperty Name="MaKho" ColumnName="MaKho" />
           <ScalarProperty Name="ThoiGianTao" ColumnName="ThoiGianTao" />
           <ScalarProperty Name="TongGiaTri" ColumnName="TongGiaTri" />
-          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
           <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PhieuXuats">
-      <EntityTypeMapping TypeName="QLDienMayModel.PhieuXuat">
+      <EntityTypeMapping TypeName="QLDienMayModel1.PhieuXuat">
         <MappingFragment StoreEntitySet="PhieuXuat">
           <ScalarProperty Name="MaPhieuXuat" ColumnName="MaPhieuXuat" />
           <ScalarProperty Name="NhanVienTaoPhieu" ColumnName="NhanVienTaoPhieu" />
@@ -274,13 +276,13 @@
           <ScalarProperty Name="MaDonHang" ColumnName="MaDonHang" />
           <ScalarProperty Name="ThoiGianTao" ColumnName="ThoiGianTao" />
           <ScalarProperty Name="TongGiaTri" ColumnName="TongGiaTri" />
-          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
           <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SanPhams">
-      <EntityTypeMapping TypeName="QLDienMayModel.SanPham">
+      <EntityTypeMapping TypeName="QLDienMayModel1.SanPham">
         <MappingFragment StoreEntitySet="SanPham">
           <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
           <ScalarProperty Name="TenSanPham" ColumnName="TenSanPham" />
@@ -288,12 +290,41 @@
           <ScalarProperty Name="AnhMinhHoa" ColumnName="AnhMinhHoa" />
           <ScalarProperty Name="DonGia" ColumnName="DonGia" />
           <ScalarProperty Name="MaKhuyenMai" ColumnName="MaKhuyenMai" />
+          <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="QLDienMayModel1.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysreplservers">
+      <EntityTypeMapping TypeName="QLDienMayModel1.sysreplserver">
+        <MappingFragment StoreEntitySet="sysreplservers">
+          <ScalarProperty Name="srvname" ColumnName="srvname" />
+          <ScalarProperty Name="srvid" ColumnName="srvid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ThanhPhoes">
+      <EntityTypeMapping TypeName="QLDienMayModel1.ThanhPho">
+        <MappingFragment StoreEntitySet="ThanhPho">
+          <ScalarProperty Name="MaThanhPho" ColumnName="MaThanhPho" />
+          <ScalarProperty Name="TenThanhPho" ColumnName="TenThanhPho" />
           <ScalarProperty Name="rowguid" ColumnName="rowguid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TheTichDiems">
-      <EntityTypeMapping TypeName="QLDienMayModel.TheTichDiem">
+      <EntityTypeMapping TypeName="QLDienMayModel1.TheTichDiem">
         <MappingFragment StoreEntitySet="TheTichDiem">
           <ScalarProperty Name="MaThe" ColumnName="MaThe" />
           <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
@@ -306,7 +337,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ThongSoKiThuats">
-      <EntityTypeMapping TypeName="QLDienMayModel.ThongSoKiThuat">
+      <EntityTypeMapping TypeName="QLDienMayModel1.ThongSoKiThuat">
         <MappingFragment StoreEntitySet="ThongSoKiThuat">
           <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
           <ScalarProperty Name="TenThongSo" ColumnName="TenThongSo" />
@@ -315,8 +346,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="ThuongHieux">
+      <EntityTypeMapping TypeName="QLDienMayModel1.ThuongHieu">
+        <MappingFragment StoreEntitySet="ThuongHieu">
+          <ScalarProperty Name="MaThuongHieu" ColumnName="MaThuongHieu" />
+          <ScalarProperty Name="TenThuongHieu" ColumnName="TenThuongHieu" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="TinhNangs">
-      <EntityTypeMapping TypeName="QLDienMayModel.TinhNang">
+      <EntityTypeMapping TypeName="QLDienMayModel1.TinhNang">
         <MappingFragment StoreEntitySet="TinhNang">
           <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
           <ScalarProperty Name="TenTinhNang" ColumnName="TenTinhNang" />
@@ -327,7 +367,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Vouchers">
-      <EntityTypeMapping TypeName="QLDienMayModel.Voucher">
+      <EntityTypeMapping TypeName="QLDienMayModel1.Voucher">
         <MappingFragment StoreEntitySet="Voucher">
           <ScalarProperty Name="MaVoucher" ColumnName="MaVoucher" />
           <ScalarProperty Name="TenVoucher" ColumnName="TenVoucher" />
@@ -340,7 +380,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MSdynamicsnapshotjobs">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSdynamicsnapshotjob">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSdynamicsnapshotjob">
         <MappingFragment StoreEntitySet="MSdynamicsnapshotjobs">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="name" ColumnName="name" />
@@ -356,7 +396,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MSmerge_agent_parameters">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_agent_parameters">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_agent_parameters">
         <MappingFragment StoreEntitySet="MSmerge_agent_parameters">
           <ScalarProperty Name="profile_name" ColumnName="profile_name" />
           <ScalarProperty Name="parameter_name" ColumnName="parameter_name" />
@@ -365,7 +405,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MSmerge_altsyncpartners">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_altsyncpartners">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_altsyncpartners">
         <MappingFragment StoreEntitySet="MSmerge_altsyncpartners">
           <ScalarProperty Name="subid" ColumnName="subid" />
           <ScalarProperty Name="alternate_subid" ColumnName="alternate_subid" />
@@ -374,7 +414,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MSmerge_articlehistory">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_articlehistory">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_articlehistory">
         <MappingFragment StoreEntitySet="MSmerge_articlehistory">
           <ScalarProperty Name="session_id" ColumnName="session_id" />
           <ScalarProperty Name="phase_id" ColumnName="phase_id" />
@@ -392,9 +432,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MSmerge_conflict_QLDienMay_CN1_ChiTietDonHang">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_ChiTietDonHang">
-        <MappingFragment StoreEntitySet="MSmerge_conflict_QLDienMay_CN1_ChiTietDonHang">
+    <EntitySetMapping Name="MSmerge_conflict_CN2_QLDM_ChiTietDonHang">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_ChiTietDonHang">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN2_QLDM_ChiTietDonHang">
           <ScalarProperty Name="MaDonHang" ColumnName="MaDonHang" />
           <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
           <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
@@ -405,9 +445,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MSmerge_conflict_QLDienMay_CN1_ChiTietKho">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_ChiTietKho">
-        <MappingFragment StoreEntitySet="MSmerge_conflict_QLDienMay_CN1_ChiTietKho">
+    <EntitySetMapping Name="MSmerge_conflict_CN2_QLDM_ChiTietKho">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_ChiTietKho">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN2_QLDM_ChiTietKho">
           <ScalarProperty Name="MaKho" ColumnName="MaKho" />
           <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
           <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
@@ -416,9 +456,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MSmerge_conflict_QLDienMay_CN1_ChiTietLoai">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_ChiTietLoai">
-        <MappingFragment StoreEntitySet="MSmerge_conflict_QLDienMay_CN1_ChiTietLoai">
+    <EntitySetMapping Name="MSmerge_conflict_CN2_QLDM_ChiTietLoai">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_ChiTietLoai">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN2_QLDM_ChiTietLoai">
           <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
           <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
           <ScalarProperty Name="rowguid" ColumnName="rowguid" />
@@ -426,9 +466,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuNhap">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuNhap">
-        <MappingFragment StoreEntitySet="MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuNhap">
+    <EntitySetMapping Name="MSmerge_conflict_CN2_QLDM_ChiTietPhieuNhap">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_ChiTietPhieuNhap">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN2_QLDM_ChiTietPhieuNhap">
           <ScalarProperty Name="MaPhieuNhap" ColumnName="MaPhieuNhap" />
           <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
           <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
@@ -438,9 +478,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuXuat">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuXuat">
-        <MappingFragment StoreEntitySet="MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuXuat">
+    <EntitySetMapping Name="MSmerge_conflict_CN2_QLDM_ChiTietPhieuXuat">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_ChiTietPhieuXuat">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN2_QLDM_ChiTietPhieuXuat">
           <ScalarProperty Name="MaPhieuXuat" ColumnName="MaPhieuXuat" />
           <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
           <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
@@ -449,9 +489,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MSmerge_conflict_QLDienMay_CN1_ChucVu">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_ChucVu">
-        <MappingFragment StoreEntitySet="MSmerge_conflict_QLDienMay_CN1_ChucVu">
+    <EntitySetMapping Name="MSmerge_conflict_CN2_QLDM_ChucVu">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_ChucVu">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN2_QLDM_ChucVu">
           <ScalarProperty Name="MaChucVu" ColumnName="MaChucVu" />
           <ScalarProperty Name="TenChucVu" ColumnName="TenChucVu" />
           <ScalarProperty Name="rowguid" ColumnName="rowguid" />
@@ -459,9 +499,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MSmerge_conflict_QLDienMay_CN1_CuaHang">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_CuaHang">
-        <MappingFragment StoreEntitySet="MSmerge_conflict_QLDienMay_CN1_CuaHang">
+    <EntitySetMapping Name="MSmerge_conflict_CN2_QLDM_CuaHang">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_CuaHang">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN2_QLDM_CuaHang">
           <ScalarProperty Name="MaCuaHang" ColumnName="MaCuaHang" />
           <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
           <ScalarProperty Name="CuaHangTruong" ColumnName="CuaHangTruong" />
@@ -471,9 +511,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MSmerge_conflict_QLDienMay_CN1_DacDiemNoiBat">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_DacDiemNoiBat">
-        <MappingFragment StoreEntitySet="MSmerge_conflict_QLDienMay_CN1_DacDiemNoiBat">
+    <EntitySetMapping Name="MSmerge_conflict_CN2_QLDM_DacDiemNoiBat">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_DacDiemNoiBat">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN2_QLDM_DacDiemNoiBat">
           <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
           <ScalarProperty Name="TenDacDiem" ColumnName="TenDacDiem" />
           <ScalarProperty Name="rowguid" ColumnName="rowguid" />
@@ -481,9 +521,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MSmerge_conflict_QLDienMay_CN1_DanhMuc">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_DanhMuc">
-        <MappingFragment StoreEntitySet="MSmerge_conflict_QLDienMay_CN1_DanhMuc">
+    <EntitySetMapping Name="MSmerge_conflict_CN2_QLDM_DanhMuc">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_DanhMuc">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN2_QLDM_DanhMuc">
           <ScalarProperty Name="MaDanhMuc" ColumnName="MaDanhMuc" />
           <ScalarProperty Name="TenDanhMuc" ColumnName="TenDanhMuc" />
           <ScalarProperty Name="rowguid" ColumnName="rowguid" />
@@ -491,9 +531,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MSmerge_conflict_QLDienMay_CN1_DonHang">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_DonHang">
-        <MappingFragment StoreEntitySet="MSmerge_conflict_QLDienMay_CN1_DonHang">
+    <EntitySetMapping Name="MSmerge_conflict_CN2_QLDM_DonHang">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_DonHang">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN2_QLDM_DonHang">
           <ScalarProperty Name="MaDonHang" ColumnName="MaDonHang" />
           <ScalarProperty Name="NhanVienPhuTrach" ColumnName="NhanVienPhuTrach" />
           <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
@@ -504,15 +544,15 @@
           <ScalarProperty Name="TinhTrangXacNhan" ColumnName="TinhTrangXacNhan" />
           <ScalarProperty Name="TinhTrangThanhToan" ColumnName="TinhTrangThanhToan" />
           <ScalarProperty Name="TinhTrangGiaoHang" ColumnName="TinhTrangGiaoHang" />
-          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
           <ScalarProperty Name="TongGiaTri" ColumnName="TongGiaTri" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
           <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MSmerge_conflict_QLDienMay_CN1_HangTichDiem">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_HangTichDiem">
-        <MappingFragment StoreEntitySet="MSmerge_conflict_QLDienMay_CN1_HangTichDiem">
+    <EntitySetMapping Name="MSmerge_conflict_CN2_QLDM_HangTichDiem">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_HangTichDiem">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN2_QLDM_HangTichDiem">
           <ScalarProperty Name="MaHang" ColumnName="MaHang" />
           <ScalarProperty Name="TenHang" ColumnName="TenHang" />
           <ScalarProperty Name="rowguid" ColumnName="rowguid" />
@@ -520,9 +560,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MSmerge_conflict_QLDienMay_CN1_KhachHang">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_KhachHang">
-        <MappingFragment StoreEntitySet="MSmerge_conflict_QLDienMay_CN1_KhachHang">
+    <EntitySetMapping Name="MSmerge_conflict_CN2_QLDM_KhachHang">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_KhachHang">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN2_QLDM_KhachHang">
           <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
           <ScalarProperty Name="TenKhachHang" ColumnName="TenKhachHang" />
           <ScalarProperty Name="SDT" ColumnName="SDT" />
@@ -531,25 +571,27 @@
           <ScalarProperty Name="TaiKhoan" ColumnName="TaiKhoan" />
           <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
           <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="Tongmua" ColumnName="Tongmua" />
           <ScalarProperty Name="rowguid" ColumnName="rowguid" />
           <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MSmerge_conflict_QLDienMay_CN1_Kho">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_Kho">
-        <MappingFragment StoreEntitySet="MSmerge_conflict_QLDienMay_CN1_Kho">
+    <EntitySetMapping Name="MSmerge_conflict_CN2_QLDM_Kho">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_Kho">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN2_QLDM_Kho">
           <ScalarProperty Name="MaKho" ColumnName="MaKho" />
           <ScalarProperty Name="MaCuaHang" ColumnName="MaCuaHang" />
           <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="TruongKho" ColumnName="TruongKho" />
           <ScalarProperty Name="rowguid" ColumnName="rowguid" />
           <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MSmerge_conflict_QLDienMay_CN1_KhuyenMai">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_KhuyenMai">
-        <MappingFragment StoreEntitySet="MSmerge_conflict_QLDienMay_CN1_KhuyenMai">
+    <EntitySetMapping Name="MSmerge_conflict_CN2_QLDM_KhuyenMai">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_KhuyenMai">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN2_QLDM_KhuyenMai">
           <ScalarProperty Name="MaKhuyenMai" ColumnName="MaKhuyenMai" />
           <ScalarProperty Name="TenKM" ColumnName="TenKM" />
           <ScalarProperty Name="PhanTramKhuyenMai" ColumnName="PhanTramKhuyenMai" />
@@ -561,9 +603,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MSmerge_conflict_QLDienMay_CN1_Loai">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_Loai">
-        <MappingFragment StoreEntitySet="MSmerge_conflict_QLDienMay_CN1_Loai">
+    <EntitySetMapping Name="MSmerge_conflict_CN2_QLDM_Loai">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_Loai">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN2_QLDM_Loai">
           <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
           <ScalarProperty Name="TenLoai" ColumnName="TenLoai" />
           <ScalarProperty Name="MaDanhMuc" ColumnName="MaDanhMuc" />
@@ -572,9 +614,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MSmerge_conflict_QLDienMay_CN1_NhaCungCap">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_NhaCungCap">
-        <MappingFragment StoreEntitySet="MSmerge_conflict_QLDienMay_CN1_NhaCungCap">
+    <EntitySetMapping Name="MSmerge_conflict_CN2_QLDM_NhaCungCap">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_NhaCungCap">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN2_QLDM_NhaCungCap">
           <ScalarProperty Name="MaNCC" ColumnName="MaNCC" />
           <ScalarProperty Name="TenNCC" ColumnName="TenNCC" />
           <ScalarProperty Name="MaSoThue" ColumnName="MaSoThue" />
@@ -584,9 +626,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MSmerge_conflict_QLDienMay_CN1_NhanVien">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_NhanVien">
-        <MappingFragment StoreEntitySet="MSmerge_conflict_QLDienMay_CN1_NhanVien">
+    <EntitySetMapping Name="MSmerge_conflict_CN2_QLDM_NhanVien">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_NhanVien">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN2_QLDM_NhanVien">
           <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
           <ScalarProperty Name="TenNhanVien" ColumnName="TenNhanVien" />
           <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
@@ -605,9 +647,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MSmerge_conflict_QLDienMay_CN1_PhanHoi">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_PhanHoi">
-        <MappingFragment StoreEntitySet="MSmerge_conflict_QLDienMay_CN1_PhanHoi">
+    <EntitySetMapping Name="MSmerge_conflict_CN2_QLDM_PhanHoi">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_PhanHoi">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN2_QLDM_PhanHoi">
           <ScalarProperty Name="MaPhanHoi" ColumnName="MaPhanHoi" />
           <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
           <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
@@ -617,39 +659,39 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MSmerge_conflict_QLDienMay_CN1_PhieuBaoHanh">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_PhieuBaoHanh">
-        <MappingFragment StoreEntitySet="MSmerge_conflict_QLDienMay_CN1_PhieuBaoHanh">
+    <EntitySetMapping Name="MSmerge_conflict_CN2_QLDM_PhieuBaoHanh">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_PhieuBaoHanh">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN2_QLDM_PhieuBaoHanh">
           <ScalarProperty Name="MaPhieuBH" ColumnName="MaPhieuBH" />
           <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
           <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
           <ScalarProperty Name="MaDonHang" ColumnName="MaDonHang" />
           <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
           <ScalarProperty Name="NgayHetHan" ColumnName="NgayHetHan" />
-          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
           <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
           <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MSmerge_conflict_QLDienMay_CN1_PhieuNhap">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_PhieuNhap">
-        <MappingFragment StoreEntitySet="MSmerge_conflict_QLDienMay_CN1_PhieuNhap">
+    <EntitySetMapping Name="MSmerge_conflict_CN2_QLDM_PhieuNhap">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_PhieuNhap">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN2_QLDM_PhieuNhap">
           <ScalarProperty Name="MaPhieuNhap" ColumnName="MaPhieuNhap" />
           <ScalarProperty Name="NhaCungCap" ColumnName="NhaCungCap" />
           <ScalarProperty Name="NhanVienTrucKho" ColumnName="NhanVienTrucKho" />
           <ScalarProperty Name="MaKho" ColumnName="MaKho" />
           <ScalarProperty Name="ThoiGianTao" ColumnName="ThoiGianTao" />
           <ScalarProperty Name="TongGiaTri" ColumnName="TongGiaTri" />
-          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
           <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
           <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MSmerge_conflict_QLDienMay_CN1_PhieuXuat">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_PhieuXuat">
-        <MappingFragment StoreEntitySet="MSmerge_conflict_QLDienMay_CN1_PhieuXuat">
+    <EntitySetMapping Name="MSmerge_conflict_CN2_QLDM_PhieuXuat">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_PhieuXuat">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN2_QLDM_PhieuXuat">
           <ScalarProperty Name="MaPhieuXuat" ColumnName="MaPhieuXuat" />
           <ScalarProperty Name="NhanVienTaoPhieu" ColumnName="NhanVienTaoPhieu" />
           <ScalarProperty Name="NhanVienTruongKho" ColumnName="NhanVienTruongKho" />
@@ -657,29 +699,40 @@
           <ScalarProperty Name="MaDonHang" ColumnName="MaDonHang" />
           <ScalarProperty Name="ThoiGianTao" ColumnName="ThoiGianTao" />
           <ScalarProperty Name="TongGiaTri" ColumnName="TongGiaTri" />
-          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
           <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
           <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MSmerge_conflict_QLDienMay_CN1_SanPham">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_SanPham">
-        <MappingFragment StoreEntitySet="MSmerge_conflict_QLDienMay_CN1_SanPham">
+    <EntitySetMapping Name="MSmerge_conflict_CN2_QLDM_SanPham">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_SanPham">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN2_QLDM_SanPham">
           <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
           <ScalarProperty Name="TenSanPham" ColumnName="TenSanPham" />
           <ScalarProperty Name="MaThuongHieu" ColumnName="MaThuongHieu" />
           <ScalarProperty Name="AnhMinhHoa" ColumnName="AnhMinhHoa" />
           <ScalarProperty Name="DonGia" ColumnName="DonGia" />
           <ScalarProperty Name="MaKhuyenMai" ColumnName="MaKhuyenMai" />
+          <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
           <ScalarProperty Name="rowguid" ColumnName="rowguid" />
           <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MSmerge_conflict_QLDienMay_CN1_TheTichDiem">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_TheTichDiem">
-        <MappingFragment StoreEntitySet="MSmerge_conflict_QLDienMay_CN1_TheTichDiem">
+    <EntitySetMapping Name="MSmerge_conflict_CN2_QLDM_ThanhPho">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_ThanhPho">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN2_QLDM_ThanhPho">
+          <ScalarProperty Name="MaThanhPho" ColumnName="MaThanhPho" />
+          <ScalarProperty Name="TenThanhPho" ColumnName="TenThanhPho" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN2_QLDM_TheTichDiem">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_TheTichDiem">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN2_QLDM_TheTichDiem">
           <ScalarProperty Name="MaThe" ColumnName="MaThe" />
           <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
           <ScalarProperty Name="Hang" ColumnName="Hang" />
@@ -691,9 +744,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MSmerge_conflict_QLDienMay_CN1_ThongSoKiThuat">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_ThongSoKiThuat">
-        <MappingFragment StoreEntitySet="MSmerge_conflict_QLDienMay_CN1_ThongSoKiThuat">
+    <EntitySetMapping Name="MSmerge_conflict_CN2_QLDM_ThongSoKiThuat">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_ThongSoKiThuat">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN2_QLDM_ThongSoKiThuat">
           <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
           <ScalarProperty Name="TenThongSo" ColumnName="TenThongSo" />
           <ScalarProperty Name="MoTa" ColumnName="MoTa" />
@@ -702,9 +755,19 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MSmerge_conflict_QLDienMay_CN1_TinhNang">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_TinhNang">
-        <MappingFragment StoreEntitySet="MSmerge_conflict_QLDienMay_CN1_TinhNang">
+    <EntitySetMapping Name="MSmerge_conflict_CN2_QLDM_ThuongHieu">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_ThuongHieu">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN2_QLDM_ThuongHieu">
+          <ScalarProperty Name="MaThuongHieu" ColumnName="MaThuongHieu" />
+          <ScalarProperty Name="TenThuongHieu" ColumnName="TenThuongHieu" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN2_QLDM_TinhNang">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_TinhNang">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN2_QLDM_TinhNang">
           <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
           <ScalarProperty Name="TenTinhNang" ColumnName="TenTinhNang" />
           <ScalarProperty Name="MoTa" ColumnName="MoTa" />
@@ -714,9 +777,368 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MSmerge_conflict_QLDienMay_CN1_Voucher">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_conflict_QLDienMay_CN1_Voucher">
-        <MappingFragment StoreEntitySet="MSmerge_conflict_QLDienMay_CN1_Voucher">
+    <EntitySetMapping Name="MSmerge_conflict_CN2_QLDM_Voucher">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_Voucher">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN2_QLDM_Voucher">
+          <ScalarProperty Name="MaVoucher" ColumnName="MaVoucher" />
+          <ScalarProperty Name="TenVoucher" ColumnName="TenVoucher" />
+          <ScalarProperty Name="PhanTramKhuyenMai" ColumnName="PhanTramKhuyenMai" />
+          <ScalarProperty Name="NgayBatDau" ColumnName="NgayBatDau" />
+          <ScalarProperty Name="NgayKetThuc" ColumnName="NgayKetThuc" />
+          <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN3_QLDM_ChiTietDonHang">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_ChiTietDonHang">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN3_QLDM_ChiTietDonHang">
+          <ScalarProperty Name="MaDonHang" ColumnName="MaDonHang" />
+          <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+          <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+          <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN3_QLDM_ChiTietKho">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_ChiTietKho">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN3_QLDM_ChiTietKho">
+          <ScalarProperty Name="MaKho" ColumnName="MaKho" />
+          <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN3_QLDM_ChiTietLoai">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_ChiTietLoai">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN3_QLDM_ChiTietLoai">
+          <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
+          <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN3_QLDM_ChiTietPhieuNhap">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_ChiTietPhieuNhap">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN3_QLDM_ChiTietPhieuNhap">
+          <ScalarProperty Name="MaPhieuNhap" ColumnName="MaPhieuNhap" />
+          <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+          <ScalarProperty Name="DonGiaNhap" ColumnName="DonGiaNhap" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN3_QLDM_ChiTietPhieuXuat">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_ChiTietPhieuXuat">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN3_QLDM_ChiTietPhieuXuat">
+          <ScalarProperty Name="MaPhieuXuat" ColumnName="MaPhieuXuat" />
+          <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN3_QLDM_ChucVu">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_ChucVu">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN3_QLDM_ChucVu">
+          <ScalarProperty Name="MaChucVu" ColumnName="MaChucVu" />
+          <ScalarProperty Name="TenChucVu" ColumnName="TenChucVu" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN3_QLDM_CuaHang">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_CuaHang">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN3_QLDM_CuaHang">
+          <ScalarProperty Name="MaCuaHang" ColumnName="MaCuaHang" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="CuaHangTruong" ColumnName="CuaHangTruong" />
+          <ScalarProperty Name="NgayThanhLap" ColumnName="NgayThanhLap" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN3_QLDM_DacDiemNoiBat">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_DacDiemNoiBat">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN3_QLDM_DacDiemNoiBat">
+          <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
+          <ScalarProperty Name="TenDacDiem" ColumnName="TenDacDiem" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN3_QLDM_DanhMuc">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_DanhMuc">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN3_QLDM_DanhMuc">
+          <ScalarProperty Name="MaDanhMuc" ColumnName="MaDanhMuc" />
+          <ScalarProperty Name="TenDanhMuc" ColumnName="TenDanhMuc" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN3_QLDM_DonHang">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_DonHang">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN3_QLDM_DonHang">
+          <ScalarProperty Name="MaDonHang" ColumnName="MaDonHang" />
+          <ScalarProperty Name="NhanVienPhuTrach" ColumnName="NhanVienPhuTrach" />
+          <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
+          <ScalarProperty Name="MaCuaHang" ColumnName="MaCuaHang" />
+          <ScalarProperty Name="ThoiGianTao" ColumnName="ThoiGianTao" />
+          <ScalarProperty Name="MaVoucher" ColumnName="MaVoucher" />
+          <ScalarProperty Name="Loai" ColumnName="Loai" />
+          <ScalarProperty Name="TinhTrangXacNhan" ColumnName="TinhTrangXacNhan" />
+          <ScalarProperty Name="TinhTrangThanhToan" ColumnName="TinhTrangThanhToan" />
+          <ScalarProperty Name="TinhTrangGiaoHang" ColumnName="TinhTrangGiaoHang" />
+          <ScalarProperty Name="TongGiaTri" ColumnName="TongGiaTri" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN3_QLDM_HangTichDiem">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_HangTichDiem">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN3_QLDM_HangTichDiem">
+          <ScalarProperty Name="MaHang" ColumnName="MaHang" />
+          <ScalarProperty Name="TenHang" ColumnName="TenHang" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN3_QLDM_KhachHang">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_KhachHang">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN3_QLDM_KhachHang">
+          <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
+          <ScalarProperty Name="TenKhachHang" ColumnName="TenKhachHang" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="TaiKhoan" ColumnName="TaiKhoan" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="Tongmua" ColumnName="Tongmua" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN3_QLDM_Kho">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_Kho">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN3_QLDM_Kho">
+          <ScalarProperty Name="MaKho" ColumnName="MaKho" />
+          <ScalarProperty Name="MaCuaHang" ColumnName="MaCuaHang" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="TruongKho" ColumnName="TruongKho" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN3_QLDM_KhuyenMai">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_KhuyenMai">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN3_QLDM_KhuyenMai">
+          <ScalarProperty Name="MaKhuyenMai" ColumnName="MaKhuyenMai" />
+          <ScalarProperty Name="TenKM" ColumnName="TenKM" />
+          <ScalarProperty Name="PhanTramKhuyenMai" ColumnName="PhanTramKhuyenMai" />
+          <ScalarProperty Name="NgayBatDau" ColumnName="NgayBatDau" />
+          <ScalarProperty Name="NgayKetThuc" ColumnName="NgayKetThuc" />
+          <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN3_QLDM_Loai">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_Loai">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN3_QLDM_Loai">
+          <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
+          <ScalarProperty Name="TenLoai" ColumnName="TenLoai" />
+          <ScalarProperty Name="MaDanhMuc" ColumnName="MaDanhMuc" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN3_QLDM_NhaCungCap">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_NhaCungCap">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN3_QLDM_NhaCungCap">
+          <ScalarProperty Name="MaNCC" ColumnName="MaNCC" />
+          <ScalarProperty Name="TenNCC" ColumnName="TenNCC" />
+          <ScalarProperty Name="MaSoThue" ColumnName="MaSoThue" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN3_QLDM_NhanVien">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_NhanVien">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN3_QLDM_NhanVien">
+          <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
+          <ScalarProperty Name="TenNhanVien" ColumnName="TenNhanVien" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="ChucVu" ColumnName="ChucVu" />
+          <ScalarProperty Name="CuaHang" ColumnName="CuaHang" />
+          <ScalarProperty Name="HinhThuc" ColumnName="HinhThuc" />
+          <ScalarProperty Name="TaiKhoan" ColumnName="TaiKhoan" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN3_QLDM_PhanHoi">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_PhanHoi">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN3_QLDM_PhanHoi">
+          <ScalarProperty Name="MaPhanHoi" ColumnName="MaPhanHoi" />
+          <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN3_QLDM_PhieuBaoHanh">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_PhieuBaoHanh">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN3_QLDM_PhieuBaoHanh">
+          <ScalarProperty Name="MaPhieuBH" ColumnName="MaPhieuBH" />
+          <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
+          <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
+          <ScalarProperty Name="MaDonHang" ColumnName="MaDonHang" />
+          <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+          <ScalarProperty Name="NgayHetHan" ColumnName="NgayHetHan" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN3_QLDM_PhieuNhap">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_PhieuNhap">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN3_QLDM_PhieuNhap">
+          <ScalarProperty Name="MaPhieuNhap" ColumnName="MaPhieuNhap" />
+          <ScalarProperty Name="NhaCungCap" ColumnName="NhaCungCap" />
+          <ScalarProperty Name="NhanVienTrucKho" ColumnName="NhanVienTrucKho" />
+          <ScalarProperty Name="MaKho" ColumnName="MaKho" />
+          <ScalarProperty Name="ThoiGianTao" ColumnName="ThoiGianTao" />
+          <ScalarProperty Name="TongGiaTri" ColumnName="TongGiaTri" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN3_QLDM_PhieuXuat">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_PhieuXuat">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN3_QLDM_PhieuXuat">
+          <ScalarProperty Name="MaPhieuXuat" ColumnName="MaPhieuXuat" />
+          <ScalarProperty Name="NhanVienTaoPhieu" ColumnName="NhanVienTaoPhieu" />
+          <ScalarProperty Name="NhanVienTruongKho" ColumnName="NhanVienTruongKho" />
+          <ScalarProperty Name="MaKho" ColumnName="MaKho" />
+          <ScalarProperty Name="MaDonHang" ColumnName="MaDonHang" />
+          <ScalarProperty Name="ThoiGianTao" ColumnName="ThoiGianTao" />
+          <ScalarProperty Name="TongGiaTri" ColumnName="TongGiaTri" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN3_QLDM_SanPham">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_SanPham">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN3_QLDM_SanPham">
+          <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
+          <ScalarProperty Name="TenSanPham" ColumnName="TenSanPham" />
+          <ScalarProperty Name="MaThuongHieu" ColumnName="MaThuongHieu" />
+          <ScalarProperty Name="AnhMinhHoa" ColumnName="AnhMinhHoa" />
+          <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+          <ScalarProperty Name="MaKhuyenMai" ColumnName="MaKhuyenMai" />
+          <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN3_QLDM_ThanhPho">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_ThanhPho">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN3_QLDM_ThanhPho">
+          <ScalarProperty Name="MaThanhPho" ColumnName="MaThanhPho" />
+          <ScalarProperty Name="TenThanhPho" ColumnName="TenThanhPho" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN3_QLDM_TheTichDiem">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_TheTichDiem">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN3_QLDM_TheTichDiem">
+          <ScalarProperty Name="MaThe" ColumnName="MaThe" />
+          <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
+          <ScalarProperty Name="Hang" ColumnName="Hang" />
+          <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+          <ScalarProperty Name="Diem" ColumnName="Diem" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN3_QLDM_ThongSoKiThuat">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_ThongSoKiThuat">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN3_QLDM_ThongSoKiThuat">
+          <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
+          <ScalarProperty Name="TenThongSo" ColumnName="TenThongSo" />
+          <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN3_QLDM_ThuongHieu">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_ThuongHieu">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN3_QLDM_ThuongHieu">
+          <ScalarProperty Name="MaThuongHieu" ColumnName="MaThuongHieu" />
+          <ScalarProperty Name="TenThuongHieu" ColumnName="TenThuongHieu" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN3_QLDM_TinhNang">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_TinhNang">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN3_QLDM_TinhNang">
+          <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
+          <ScalarProperty Name="TenTinhNang" ColumnName="TenTinhNang" />
+          <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+          <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="origin_datasource_id" ColumnName="origin_datasource_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSmerge_conflict_CN3_QLDM_Voucher">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_Voucher">
+        <MappingFragment StoreEntitySet="MSmerge_conflict_CN3_QLDM_Voucher">
           <ScalarProperty Name="MaVoucher" ColumnName="MaVoucher" />
           <ScalarProperty Name="TenVoucher" ColumnName="TenVoucher" />
           <ScalarProperty Name="PhanTramKhuyenMai" ColumnName="PhanTramKhuyenMai" />
@@ -729,7 +1151,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MSmerge_conflicts_info">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_conflicts_info">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_conflicts_info">
         <MappingFragment StoreEntitySet="MSmerge_conflicts_info">
           <ScalarProperty Name="tablenick" ColumnName="tablenick" />
           <ScalarProperty Name="rowguid" ColumnName="rowguid" />
@@ -744,7 +1166,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MSmerge_contents">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_contents">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_contents">
         <MappingFragment StoreEntitySet="MSmerge_contents">
           <ScalarProperty Name="tablenick" ColumnName="tablenick" />
           <ScalarProperty Name="rowguid" ColumnName="rowguid" />
@@ -759,7 +1181,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MSmerge_current_partition_mappings">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_current_partition_mappings">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_current_partition_mappings">
         <MappingFragment StoreEntitySet="MSmerge_current_partition_mappings">
           <ScalarProperty Name="publication_number" ColumnName="publication_number" />
           <ScalarProperty Name="tablenick" ColumnName="tablenick" />
@@ -769,7 +1191,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MSmerge_errorlineage">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_errorlineage">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_errorlineage">
         <MappingFragment StoreEntitySet="MSmerge_errorlineage">
           <ScalarProperty Name="tablenick" ColumnName="tablenick" />
           <ScalarProperty Name="rowguid" ColumnName="rowguid" />
@@ -778,7 +1200,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MSmerge_generation_partition_mappings">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_generation_partition_mappings">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_generation_partition_mappings">
         <MappingFragment StoreEntitySet="MSmerge_generation_partition_mappings">
           <ScalarProperty Name="publication_number" ColumnName="publication_number" />
           <ScalarProperty Name="generation" ColumnName="generation" />
@@ -788,7 +1210,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MSmerge_genhistory">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_genhistory">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_genhistory">
         <MappingFragment StoreEntitySet="MSmerge_genhistory">
           <ScalarProperty Name="guidsrc" ColumnName="guidsrc" />
           <ScalarProperty Name="pubid" ColumnName="pubid" />
@@ -803,7 +1225,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MSmerge_history">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_history">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_history">
         <MappingFragment StoreEntitySet="MSmerge_history">
           <ScalarProperty Name="session_id" ColumnName="session_id" />
           <ScalarProperty Name="agent_id" ColumnName="agent_id" />
@@ -816,7 +1238,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MSmerge_identity_range">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_identity_range">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_identity_range">
         <MappingFragment StoreEntitySet="MSmerge_identity_range">
           <ScalarProperty Name="subid" ColumnName="subid" />
           <ScalarProperty Name="artid" ColumnName="artid" />
@@ -830,7 +1252,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MSmerge_log_files">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_log_files">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_log_files">
         <MappingFragment StoreEntitySet="MSmerge_log_files">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="pubid" ColumnName="pubid" />
@@ -844,7 +1266,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MSmerge_metadataaction_request">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_metadataaction_request">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_metadataaction_request">
         <MappingFragment StoreEntitySet="MSmerge_metadataaction_request">
           <ScalarProperty Name="tablenick" ColumnName="tablenick" />
           <ScalarProperty Name="rowguid" ColumnName="rowguid" />
@@ -855,7 +1277,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MSmerge_past_partition_mappings">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_past_partition_mappings">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_past_partition_mappings">
         <MappingFragment StoreEntitySet="MSmerge_past_partition_mappings">
           <ScalarProperty Name="publication_number" ColumnName="publication_number" />
           <ScalarProperty Name="tablenick" ColumnName="tablenick" />
@@ -867,7 +1289,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MSmerge_replinfo">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_replinfo">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_replinfo">
         <MappingFragment StoreEntitySet="MSmerge_replinfo">
           <ScalarProperty Name="repid" ColumnName="repid" />
           <ScalarProperty Name="use_interactive_resolver" ColumnName="use_interactive_resolver" />
@@ -881,7 +1303,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MSmerge_sessions">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_sessions">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_sessions">
         <MappingFragment StoreEntitySet="MSmerge_sessions">
           <ScalarProperty Name="subid" ColumnName="subid" />
           <ScalarProperty Name="session_id" ColumnName="session_id" />
@@ -922,7 +1344,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MSmerge_settingshistory">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_settingshistory">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_settingshistory">
         <MappingFragment StoreEntitySet="MSmerge_settingshistory">
           <ScalarProperty Name="eventtime" ColumnName="eventtime" />
           <ScalarProperty Name="pubid" ColumnName="pubid" />
@@ -936,7 +1358,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MSmerge_supportability_settings">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_supportability_settings">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_supportability_settings">
         <MappingFragment StoreEntitySet="MSmerge_supportability_settings">
           <ScalarProperty Name="pubid" ColumnName="pubid" />
           <ScalarProperty Name="subid" ColumnName="subid" />
@@ -960,7 +1382,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MSmerge_tombstone">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSmerge_tombstone">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSmerge_tombstone">
         <MappingFragment StoreEntitySet="MSmerge_tombstone">
           <ScalarProperty Name="rowguid" ColumnName="rowguid" />
           <ScalarProperty Name="tablenick" ColumnName="tablenick" />
@@ -973,7 +1395,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MSrepl_errors">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSrepl_errors">
+      <EntityTypeMapping TypeName="QLDienMayModel1.MSrepl_errors">
         <MappingFragment StoreEntitySet="MSrepl_errors">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="time" ColumnName="time" />
@@ -988,18 +1410,8 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MSsnapshotdeliveryprogresses">
-      <EntityTypeMapping TypeName="QLDienMayModel.MSsnapshotdeliveryprogress">
-        <MappingFragment StoreEntitySet="MSsnapshotdeliveryprogress">
-          <ScalarProperty Name="session_token" ColumnName="session_token" />
-          <ScalarProperty Name="progress_token_hash" ColumnName="progress_token_hash" />
-          <ScalarProperty Name="progress_token" ColumnName="progress_token" />
-          <ScalarProperty Name="progress_timestamp" ColumnName="progress_timestamp" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="sysmergearticles">
-      <EntityTypeMapping TypeName="QLDienMayModel.sysmergearticle">
+      <EntityTypeMapping TypeName="QLDienMayModel1.sysmergearticle">
         <MappingFragment StoreEntitySet="sysmergearticles">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="type" ColumnName="type" />
@@ -1064,7 +1476,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysmergepartitioninfoes">
-      <EntityTypeMapping TypeName="QLDienMayModel.sysmergepartitioninfo">
+      <EntityTypeMapping TypeName="QLDienMayModel1.sysmergepartitioninfo">
         <MappingFragment StoreEntitySet="sysmergepartitioninfo">
           <ScalarProperty Name="artid" ColumnName="artid" />
           <ScalarProperty Name="pubid" ColumnName="pubid" />
@@ -1086,7 +1498,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysmergepublications">
-      <EntityTypeMapping TypeName="QLDienMayModel.sysmergepublication">
+      <EntityTypeMapping TypeName="QLDienMayModel1.sysmergepublication">
         <MappingFragment StoreEntitySet="sysmergepublications">
           <ScalarProperty Name="publisher" ColumnName="publisher" />
           <ScalarProperty Name="publisher_db" ColumnName="publisher_db" />
@@ -1144,7 +1556,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysmergeschemaarticles">
-      <EntityTypeMapping TypeName="QLDienMayModel.sysmergeschemaarticle">
+      <EntityTypeMapping TypeName="QLDienMayModel1.sysmergeschemaarticle">
         <MappingFragment StoreEntitySet="sysmergeschemaarticles">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="type" ColumnName="type" />
@@ -1163,7 +1575,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysmergeschemachanges">
-      <EntityTypeMapping TypeName="QLDienMayModel.sysmergeschemachange">
+      <EntityTypeMapping TypeName="QLDienMayModel1.sysmergeschemachange">
         <MappingFragment StoreEntitySet="sysmergeschemachange">
           <ScalarProperty Name="pubid" ColumnName="pubid" />
           <ScalarProperty Name="artid" ColumnName="artid" />
@@ -1177,7 +1589,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysmergesubscriptions">
-      <EntityTypeMapping TypeName="QLDienMayModel.sysmergesubscription">
+      <EntityTypeMapping TypeName="QLDienMayModel1.sysmergesubscription">
         <MappingFragment StoreEntitySet="sysmergesubscriptions">
           <ScalarProperty Name="subscriber_server" ColumnName="subscriber_server" />
           <ScalarProperty Name="db_name" ColumnName="db_name" />
@@ -1218,7 +1630,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysmergesubsetfilters">
-      <EntityTypeMapping TypeName="QLDienMayModel.sysmergesubsetfilter">
+      <EntityTypeMapping TypeName="QLDienMayModel1.sysmergesubsetfilter">
         <MappingFragment StoreEntitySet="sysmergesubsetfilters">
           <ScalarProperty Name="filtername" ColumnName="filtername" />
           <ScalarProperty Name="join_filterid" ColumnName="join_filterid" />
@@ -1234,16 +1646,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="test" FunctionName="QLDienMayModel.Store.test">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="QLDienMayModel.test_Result">
-          <ScalarProperty Name="MaCuaHang" ColumnName="MaCuaHang" />
-          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
-          <ScalarProperty Name="CuaHangTruong" ColumnName="CuaHangTruong" />
-          <ScalarProperty Name="NgayThanhLap" ColumnName="NgayThanhLap" />
-          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_CTHD_Online" FunctionName="QLDienMayModel1.Store.sp_CTHD_Online" />
+    <FunctionImportMapping FunctionImportName="sp_DatHang_Online" FunctionName="QLDienMayModel1.Store.sp_DatHang_Online" />
   </EntityContainerMapping>
 </Mapping>
