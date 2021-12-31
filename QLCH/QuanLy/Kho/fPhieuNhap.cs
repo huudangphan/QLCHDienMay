@@ -77,7 +77,7 @@ namespace QuanLy.Kho
         {
             try
             {
-                string path = @"D:\CSDLPT\QLCH\QuanLy\Resources\" + link+".jpg";
+                string path = @"D:\CSDLPT\QLCH\QLCH\Assets\img\" + link;
                 pictureBox1.Image = Image.FromFile(path);
                 pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             }

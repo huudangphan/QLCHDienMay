@@ -20,7 +20,7 @@ namespace QuanLy
             if (KetNoiVoiMayChu() == 0)
                 return;
             LayThongTin("select * from v_getSubcribes");
-            cbChiNhanh.SelectedIndex = 1;
+            cbChiNhanh.SelectedIndex = 0;
             var a= cbChiNhanh.SelectedValue.ToString();
             DataProvider.serverName = cbChiNhanh.SelectedValue.ToString();
         }
