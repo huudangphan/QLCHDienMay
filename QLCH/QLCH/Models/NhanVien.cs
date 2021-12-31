@@ -39,7 +39,6 @@ namespace QLCH.Models
         public bool TrangThai { get; set; }
         public System.Guid rowguid { get; set; }
     
-        public virtual ChucVu ChucVu1 { get; set; }
         public virtual CuaHang CuaHang1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CuaHang> CuaHangs { get; set; }

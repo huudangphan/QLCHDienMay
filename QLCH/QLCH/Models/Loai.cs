@@ -18,6 +18,7 @@ namespace QLCH.Models
         public Loai()
         {
             this.ChiTietLoais = new HashSet<ChiTietLoai>();
+            this.SanPhams = new HashSet<SanPham>();
         }
     
         public string MaLoai { get; set; }
@@ -28,5 +29,7 @@ namespace QLCH.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietLoai> ChiTietLoais { get; set; }
         public virtual DanhMuc DanhMuc { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SanPham> SanPhams { get; set; }
     }
 }

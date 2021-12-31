@@ -34,6 +34,7 @@ namespace QLCH.Models
         public string AnhMinhHoa { get; set; }
         public decimal DonGia { get; set; }
         public string MaKhuyenMai { get; set; }
+        public string MaLoai { get; set; }
         public System.Guid rowguid { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -49,6 +50,7 @@ namespace QLCH.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DacDiemNoiBat> DacDiemNoiBats { get; set; }
         public virtual KhuyenMai KhuyenMai { get; set; }
+        public virtual Loai Loai { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhieuBaoHanh> PhieuBaoHanhs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

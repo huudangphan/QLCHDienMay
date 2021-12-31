@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2e8238abf3a149acb633c98e3fbeb50c" Name="Diagram1">
+        <EntityTypeShape EntityType="QLDienMayModel1.ChiTietDonHang" Width="1.5" PointX="10.5" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.ChiTietKho" Width="1.5" PointX="13.5" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.ChiTietLoai" Width="1.5" PointX="5.25" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.ChiTietPhieuNhap" Width="1.5" PointX="13.5" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.ChiTietPhieuXuat" Width="1.5" PointX="13.5" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.ChucVu" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.CuaHang" Width="1.5" PointX="6" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.DacDiemNoiBat" Width="1.5" PointX="10.5" PointY="24.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.DanhMuc" Width="1.5" PointX="0.75" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.DonHang" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.HangTichDiem" Width="1.5" PointX="6" PointY="26.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.KhachHang" Width="1.5" PointX="6" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.Kho" Width="1.5" PointX="9" PointY="37.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.KhuyenMai" Width="1.5" PointX="6" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.Loai" Width="1.5" PointX="3" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSdynamicsnapshotview" Width="1.5" PointX="2.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_dynamic_snapshots" Width="1.5" PointX="11" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_partition_groups" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.NhaCungCap" Width="1.5" PointX="9" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.NhanVien" Width="1.5" PointX="3.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.PhanHoi" Width="1.5" PointX="8.25" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.PhieuBaoHanh" Width="1.5" PointX="10.5" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.PhieuNhap" Width="1.5" PointX="11.25" PointY="38.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.PhieuXuat" Width="1.5" PointX="11.25" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.SanPham" Width="1.5" PointX="8.25" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.sysdiagram" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.sysreplserver" Width="1.5" PointX="4.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.ThanhPho" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.TheTichDiem" Width="1.5" PointX="8.25" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.ThongSoKiThuat" Width="1.5" PointX="10.5" PointY="31" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.ThuongHieu" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.TinhNang" Width="1.5" PointX="10.5" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.Voucher" Width="1.5" PointX="6" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSdynamicsnapshotjob" Width="1.5" PointX="2.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_agent_parameters" Width="1.5" PointX="10.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_altsyncpartners" Width="1.5" PointX="12.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_articlehistory" Width="1.5" PointX="13.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_ChiTietDonHang" Width="1.5" PointX="15.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_ChiTietKho" Width="1.5" PointX="15.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_ChiTietLoai" Width="1.5" PointX="15.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_ChiTietPhieuNhap" Width="1.5" PointX="15.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_ChiTietPhieuXuat" Width="1.5" PointX="15.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_ChucVu" Width="1.5" PointX="15.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_CuaHang" Width="1.5" PointX="17.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_DacDiemNoiBat" Width="1.5" PointX="0.75" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_DanhMuc" Width="1.5" PointX="2.75" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_DonHang" Width="1.5" PointX="17.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_HangTichDiem" Width="1.5" PointX="17.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_KhachHang" Width="1.5" PointX="17.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_Kho" Width="1.5" PointX="17.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_KhuyenMai" Width="1.5" PointX="17.75" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_Loai" Width="1.5" PointX="19.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_NhaCungCap" Width="1.5" PointX="19.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_NhanVien" Width="1.5" PointX="19.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_PhanHoi" Width="1.5" PointX="19.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_PhieuBaoHanh" Width="1.5" PointX="19.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_PhieuNhap" Width="1.5" PointX="19.75" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_PhieuXuat" Width="1.5" PointX="0.75" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_SanPham" Width="1.5" PointX="2.75" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_ThanhPho" Width="1.5" PointX="13.75" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_TheTichDiem" Width="1.5" PointX="21.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_ThongSoKiThuat" Width="1.5" PointX="21.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_ThuongHieu" Width="1.5" PointX="21.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_TinhNang" Width="1.5" PointX="21.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN2_QLDM_Voucher" Width="1.5" PointX="21.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_ChiTietDonHang" Width="1.5" PointX="21.75" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_ChiTietKho" Width="1.5" PointX="21.75" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_ChiTietLoai" Width="1.5" PointX="15.75" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_ChiTietPhieuNhap" Width="1.5" PointX="17.75" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_ChiTietPhieuXuat" Width="1.5" PointX="23.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_ChucVu" Width="1.5" PointX="23.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_CuaHang" Width="1.5" PointX="23.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_DacDiemNoiBat" Width="1.5" PointX="23.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_DanhMuc" Width="1.5" PointX="23.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_DonHang" Width="1.5" PointX="12.75" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_HangTichDiem" Width="1.5" PointX="23.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_KhachHang" Width="1.5" PointX="23.75" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_Kho" Width="1.5" PointX="23.75" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_KhuyenMai" Width="1.5" PointX="0.75" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_Loai" Width="1.5" PointX="2.75" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_NhaCungCap" Width="1.5" PointX="19.75" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_NhanVien" Width="1.5" PointX="25.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_PhanHoi" Width="1.5" PointX="25.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_PhieuBaoHanh" Width="1.5" PointX="25.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_PhieuNhap" Width="1.5" PointX="25.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_PhieuXuat" Width="1.5" PointX="14.75" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_SanPham" Width="1.5" PointX="25.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_ThanhPho" Width="1.5" PointX="16.75" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_TheTichDiem" Width="1.5" PointX="25.75" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_ThongSoKiThuat" Width="1.5" PointX="21.75" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_ThuongHieu" Width="1.5" PointX="23.75" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_TinhNang" Width="1.5" PointX="25.75" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflict_CN3_QLDM_Voucher" Width="1.5" PointX="8.75" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_conflicts_info" Width="1.5" PointX="27.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_contents" Width="1.5" PointX="2.75" PointY="28.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_current_partition_mappings" Width="1.5" PointX="27.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_errorlineage" Width="1.5" PointX="27.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_generation_partition_mappings" Width="1.5" PointX="27.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_genhistory" Width="1.5" PointX="27.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_history" Width="1.5" PointX="27.75" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_identity_range" Width="1.5" PointX="18.75" PointY="28.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_log_files" Width="1.5" PointX="27.75" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_metadataaction_request" Width="1.5" PointX="27.75" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_past_partition_mappings" Width="1.5" PointX="4.75" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_replinfo" Width="1.5" PointX="20.75" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_sessions" Width="1.5" PointX="22.75" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_settingshistory" Width="1.5" PointX="24.75" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_supportability_settings" Width="1.5" PointX="26.75" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSmerge_tombstone" Width="1.5" PointX="28.75" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.MSrepl_errors" Width="1.5" PointX="29.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.sysmergearticle" Width="1.5" PointX="29.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.sysmergepartitioninfo" Width="1.5" PointX="12.75" PointY="30.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.sysmergepublication" Width="1.5" PointX="14.75" PointY="30.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.sysmergeschemaarticle" Width="1.5" PointX="29.75" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.sysmergeschemachange" Width="1.5" PointX="29.75" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.sysmergesubscription" Width="1.5" PointX="30.75" PointY="28.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDienMayModel1.sysmergesubsetfilter" Width="1.5" PointX="6.75" PointY="31.5" IsExpanded="true" />
+        <AssociationConnector Association="QLDienMayModel1.FK_DonHang_ChiTietDonHang" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_SanPham_ChiTietDonHang" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_Kho_ChiTietKho" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_SanPham_ChiTietKho" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_Loai_ChiTietLoai" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_SP_ChiTietLoai" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_PhieuNhap_ChiTietPhieuNhap" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_SanPham_ChiTietPhieuNhap" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_PhieuXuat_CTPhieuXuat" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_SanPham_CTPhieuXuat" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK__NhanVien__CuaHan__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_CuaHang_DonHang" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_CuaHang_Kho" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_NhanVien_CuaHang" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_SP_DacDiemNoiBat" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_DM_LOAI" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_DH_BaoHanh" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_DonHang_PhieuXuat" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_KH_DonHang" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_NV_DonHang" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_Voucher_DonHang" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_HangThe_TheTichDiem" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_KH_BaoHanh" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_KH_PhanHoi" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_KH_TheTichDiem" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_Kho_PhieuNhap" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_Kho_PhieuXuat" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_KM_SP" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_Loai_SP" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK__MSmerge_d__parti__3BC31D7F" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_NCC_PhieuNhap" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_NhanVien_NVPhuTrach" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_NVTaoPhieu_PhieuXuat" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_NVTruongKho_PhieuXuat" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_SP_BaoHanh" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_SP_ThongSoKiThuat" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDienMayModel1.FK_SP_TinhNang" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
