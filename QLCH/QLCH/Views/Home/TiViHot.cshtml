@@ -1,0 +1,29 @@
+﻿@model IEnumerable<QLCH.Models.SanPham>
+
+
+                    @foreach (var item in Model)
+                    {
+
+                        <div class="single-wid-product">
+                            <a href="@Url.Action("XemChiTiet","Product",new { @maSP=item.MaSanPham})" style="color:white">
+                                <img src="~/Assets/img/@Html.DisplayFor(modelItem=>item.AnhMinhHoa)" />
+                            </a>
+                            <div class="product-wid-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>                                   
+                
+                             <h2>@Html.DisplayFor(modelItem => item.TenSanPham)</h2>
+
+                             <div class="product-carousel-price">
+                                    <p>@Html.DisplayFor(modelItem => item.DonGia)</p>
+                             </div>
+
+                        </div>
+                    }
+   
+
+

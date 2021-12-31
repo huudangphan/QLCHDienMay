@@ -1,0 +1,43 @@
+﻿@model QLCH.Models.KhachHang
+
+@{
+    ViewBag.Title = "DangNhap";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="width:50%;height:auto;">
+    <h2 style="color: rebeccapurple;">Đăng Nhập Vào Tài Khoản Khách Hàng</h2>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <hr />
+            <div class="form-group">
+                Tài Khoản
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.TaiKhoan, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Mật Khẩu
+                <div class="col-md-10">
+                    <input class="form-control text-box single-line" id="MatKhau" name="MatKhau" type="password" value="">
+                </div>
+                <br />
+
+            </div>
+            <span style="color:red;">* @ViewBag.Error</span>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-8">
+                    <input type="submit" value="Đăng nhập" class="btn btn-primary" />
+                </div>
+
+                <div class="col-md-offset-2 col-md-10">
+                    Chưa có tài khoản? <span>@Html.ActionLink("Đăng Ký", "DangKy", "KhachHang")</span>
+                </div>
+            </div>
+        </div>
+    }
+</div>
