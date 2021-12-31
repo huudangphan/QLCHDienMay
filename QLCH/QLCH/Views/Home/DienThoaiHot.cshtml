@@ -1,0 +1,42 @@
+﻿@model IEnumerable<QLCH.Models.SanPham>
+
+<div class="maincontent-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="latest-product">
+                    <h2 class="section-title">Sản Phẩm Nổi Bật</h2>
+                    <div class="product-carousel">
+                        @foreach (var item in Model)
+                        {
+
+                            <div class="single-product">
+                                <div class="product-f-image">
+                                    <a href="@Url.Action("XemChiTiet","Product",new { @maSP=item.MaSanPham})" style="color:white">
+
+                                        <img src="~/Assets/img/@Html.DisplayFor(modelItem=>item.AnhMinhHoa)" />
+
+                                    </a>
+                                    <div class="product-hover">
+                                        <a href="@Url.Action("XemChiTiet","Product",new { @maSP=item.MaSanPham})" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                        <a href="@Url.Action("XemChiTiet","Product",new { @maSP=item.MaSanPham})" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                    </div>
+                                </div>
+                                <h2>@Html.DisplayFor(modelItem => item.TenSanPham)</h2>
+
+                                <div class="product-carousel-price">
+                                    <p>@Html.DisplayFor(modelItem => item.DonGia)</p>
+                                </div>
+
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

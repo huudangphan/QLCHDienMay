@@ -1,0 +1,92 @@
+﻿@model  QLCH.Models.SanPham
+
+@{
+    ViewBag.Title = "XemChiTiet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="product-big-title-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-bit-title text-center">
+                    <h2>Chi Tiết Sản Phẩm</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="single-product-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="single-sidebar">
+                    <h2 class="sidebar-title">Search Products</h2>
+                    <form action="">
+                        <input type="text" placeholder="Search products...">
+                        <input type="submit" value="Search">
+                    </form>
+                </div>
+
+                <div class="single-sidebar">
+                    <h2 class="sidebar-title">Products</h2>
+                    <div class="thubmnail-recent">
+                        @{ Html.RenderAction("TiViHot", "Home");}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="product-content-right">
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="product-images">
+                                <div class="product-main-img">
+                                    <img src="~/Assets/img/@Model.AnhMinhHoa" alt="Alternate Text" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="product-inner">
+                                <h2 class="product-name">@Model.TenSanPham</h2>
+                                <div class="product-inner-price">
+                                    Giá:@String.Format("{0:0,0}", Model.DonGia) VNĐ
+                                </div>
+                                
+                                    @*<div class="quantity">
+                                        <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
+                                    </div>*@
+
+                                            @using (Html.BeginForm("ThemGioHang", "GioHang", new { @masp = Model.MaSanPham, @url = Request.Url.ToString() }))
+                                            {
+                                                <input type="submit" class="btn btn-secondary" name="name" value="Thêm vào giỏ" />
+                                            }
+                                        @*</a>*@
+                                   
+                            <br />
+
+                                <div role="tabpanel">
+                                    <ul class="product-tab" role="tablist">
+                                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Mô tả</a></li>
+                                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Home</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane fade in active" id="home">
+                                            <h2>Thông tin chi tiết sản phẩm</h2>
+                                            <p>@Model.DacDiemNoiBats</p>
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+

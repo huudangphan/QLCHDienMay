@@ -1,0 +1,8 @@
+﻿@model QLCH.Models.GioHang
+
+
+    <a href="@Url.Action("GioHang","GioHang")">Giỏ hàng - <span class="cart-amunt">@*@ViewBag.TongTien*@ @Html.FormatValue(@ViewBag.TongTien, "{0:#,###}") VNĐ</span> <i class="fa fa-shopping-cart"></i> <span class="product-count"> @ViewBag.TongSoluong </span></a>
+
+@*<a href="@Url.Action("GioHang","GioHang")" style=" font-weight:bold;text-decoration:none;">
+    <img src="~/Assit/Images/Images/giohang.png" style="height:20px;" /> Giỏ Hàng(@ViewBag.TongSoluong)
+</a>*@
