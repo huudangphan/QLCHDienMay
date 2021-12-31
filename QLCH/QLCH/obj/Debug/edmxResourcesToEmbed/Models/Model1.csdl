@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="QLDienMayModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="QLDienMayModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="ChiTietDonHang">
     <Key>
       <PropertyRef Name="MaDonHang" />
@@ -69,7 +69,6 @@
     <Property Name="MaChucVu" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
     <Property Name="TenChucVu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="rowguid" Type="Guid" Nullable="false" />
-    <NavigationProperty Name="NhanViens" Relationship="Self.FK_ChucVu_NhanVien" FromRole="ChucVu" ToRole="NhanVien" />
   </EntityType>
   <EntityType Name="CuaHang">
     <Key>
@@ -118,8 +117,8 @@
     <Property Name="TinhTrangXacNhan" Type="Boolean" />
     <Property Name="TinhTrangThanhToan" Type="Boolean" />
     <Property Name="TinhTrangGiaoHang" Type="Boolean" />
-    <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="TongGiaTri" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
     <NavigationProperty Name="ChiTietDonHangs" Relationship="Self.FK_DonHang_ChiTietDonHang" FromRole="DonHang" ToRole="ChiTietDonHang" />
     <NavigationProperty Name="CuaHang" Relationship="Self.FK_CuaHang_DonHang" FromRole="DonHang" ToRole="CuaHang" />
     <NavigationProperty Name="PhieuBaoHanhs" Relationship="Self.FK_DH_BaoHanh" FromRole="DonHang" ToRole="PhieuBaoHanh" />
@@ -149,6 +148,7 @@
     <Property Name="TaiKhoan" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
     <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
     <Property Name="TrangThai" Type="Boolean" />
+    <Property Name="Tongmua" Type="Decimal" Precision="18" Scale="2" />
     <Property Name="rowguid" Type="Guid" Nullable="false" />
     <NavigationProperty Name="DonHangs" Relationship="Self.FK_KH_DonHang" FromRole="KhachHang" ToRole="DonHang" />
     <NavigationProperty Name="PhieuBaoHanhs" Relationship="Self.FK_KH_BaoHanh" FromRole="KhachHang" ToRole="PhieuBaoHanh" />
@@ -162,6 +162,7 @@
     <Property Name="MaKho" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
     <Property Name="MaCuaHang" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
     <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TruongKho" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
     <Property Name="rowguid" Type="Guid" Nullable="false" />
     <NavigationProperty Name="ChiTietKhoes" Relationship="Self.FK_Kho_ChiTietKho" FromRole="Kho" ToRole="ChiTietKho" />
     <NavigationProperty Name="CuaHang" Relationship="Self.FK_CuaHang_Kho" FromRole="Kho" ToRole="CuaHang" />
@@ -191,6 +192,7 @@
     <Property Name="rowguid" Type="Guid" Nullable="false" />
     <NavigationProperty Name="ChiTietLoais" Relationship="Self.FK_Loai_ChiTietLoai" FromRole="Loai" ToRole="ChiTietLoai" />
     <NavigationProperty Name="DanhMuc" Relationship="Self.FK_DM_LOAI" FromRole="Loai" ToRole="DanhMuc" />
+    <NavigationProperty Name="SanPhams" Relationship="Self.FK_Loai_SP" FromRole="Loai" ToRole="SanPham" />
   </EntityType>
   <EntityType Name="MSdynamicsnapshotview">
     <Key>
@@ -206,7 +208,7 @@
     <Property Name="dynamic_snapshot_location" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="last_updated" Type="DateTime" Precision="3" />
     <Property Name="last_started" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="MSmerge_partition_groups" Relationship="Self.FK__MSmerge_d__parti__2739D489" FromRole="MSmerge_dynamic_snapshots" ToRole="MSmerge_partition_groups" />
+    <NavigationProperty Name="MSmerge_partition_groups" Relationship="Self.FK__MSmerge_d__parti__3BC31D7F" FromRole="MSmerge_dynamic_snapshots" ToRole="MSmerge_partition_groups" />
   </EntityType>
   <EntityType Name="MSmerge_partition_groups">
     <Key>
@@ -217,7 +219,7 @@
     <Property Name="maxgen_whenadded" Type="Int64" />
     <Property Name="using_partition_groups" Type="Boolean" />
     <Property Name="is_partition_active" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="MSmerge_dynamic_snapshots" Relationship="Self.FK__MSmerge_d__parti__2739D489" FromRole="MSmerge_partition_groups" ToRole="MSmerge_dynamic_snapshots" />
+    <NavigationProperty Name="MSmerge_dynamic_snapshots" Relationship="Self.FK__MSmerge_d__parti__3BC31D7F" FromRole="MSmerge_partition_groups" ToRole="MSmerge_dynamic_snapshots" />
   </EntityType>
   <EntityType Name="NhaCungCap">
     <Key>
@@ -248,7 +250,6 @@
     <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
     <Property Name="TrangThai" Type="Boolean" Nullable="false" />
     <Property Name="rowguid" Type="Guid" Nullable="false" />
-    <NavigationProperty Name="ChucVu1" Relationship="Self.FK_ChucVu_NhanVien" FromRole="NhanVien" ToRole="ChucVu" />
     <NavigationProperty Name="CuaHang1" Relationship="Self.FK__NhanVien__CuaHan__48CFD27E" FromRole="NhanVien" ToRole="CuaHang" />
     <NavigationProperty Name="CuaHangs" Relationship="Self.FK_NhanVien_CuaHang" FromRole="NhanVien" ToRole="CuaHang" />
     <NavigationProperty Name="DonHangs" Relationship="Self.FK_NV_DonHang" FromRole="NhanVien" ToRole="DonHang" />
@@ -277,8 +278,8 @@
     <Property Name="MaDonHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
     <Property Name="NgayTao" Type="DateTime" Precision="3" />
     <Property Name="NgayHetHan" Type="DateTime" Precision="3" />
-    <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="TrangThai" Type="Boolean" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
     <NavigationProperty Name="DonHang" Relationship="Self.FK_DH_BaoHanh" FromRole="PhieuBaoHanh" ToRole="DonHang" />
     <NavigationProperty Name="KhachHang" Relationship="Self.FK_KH_BaoHanh" FromRole="PhieuBaoHanh" ToRole="KhachHang" />
     <NavigationProperty Name="SanPham" Relationship="Self.FK_SP_BaoHanh" FromRole="PhieuBaoHanh" ToRole="SanPham" />
@@ -293,8 +294,8 @@
     <Property Name="MaKho" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
     <Property Name="ThoiGianTao" Type="DateTime" Precision="3" />
     <Property Name="TongGiaTri" Type="Decimal" Precision="18" Scale="2" />
-    <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="TrangThai" Type="Boolean" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
     <NavigationProperty Name="ChiTietPhieuNhaps" Relationship="Self.FK_PhieuNhap_ChiTietPhieuNhap" FromRole="PhieuNhap" ToRole="ChiTietPhieuNhap" />
     <NavigationProperty Name="Kho" Relationship="Self.FK_Kho_PhieuNhap" FromRole="PhieuNhap" ToRole="Kho" />
     <NavigationProperty Name="NhaCungCap1" Relationship="Self.FK_NCC_PhieuNhap" FromRole="PhieuNhap" ToRole="NhaCungCap" />
@@ -311,8 +312,8 @@
     <Property Name="MaDonHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
     <Property Name="ThoiGianTao" Type="DateTime" Precision="3" />
     <Property Name="TongGiaTri" Type="Decimal" Precision="18" Scale="2" />
-    <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="TrangThai" Type="Boolean" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
     <NavigationProperty Name="ChiTietPhieuXuats" Relationship="Self.FK_PhieuXuat_CTPhieuXuat" FromRole="PhieuXuat" ToRole="ChiTietPhieuXuat" />
     <NavigationProperty Name="DonHang" Relationship="Self.FK_DonHang_PhieuXuat" FromRole="PhieuXuat" ToRole="DonHang" />
     <NavigationProperty Name="Kho" Relationship="Self.FK_Kho_PhieuXuat" FromRole="PhieuXuat" ToRole="Kho" />
@@ -329,6 +330,7 @@
     <Property Name="AnhMinhHoa" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="DonGia" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="MaKhuyenMai" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MaLoai" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
     <Property Name="rowguid" Type="Guid" Nullable="false" />
     <NavigationProperty Name="ChiTietDonHangs" Relationship="Self.FK_SanPham_ChiTietDonHang" FromRole="SanPham" ToRole="ChiTietDonHang" />
     <NavigationProperty Name="ChiTietKhoes" Relationship="Self.FK_SanPham_ChiTietKho" FromRole="SanPham" ToRole="ChiTietKho" />
@@ -337,9 +339,35 @@
     <NavigationProperty Name="ChiTietPhieuXuats" Relationship="Self.FK_SanPham_CTPhieuXuat" FromRole="SanPham" ToRole="ChiTietPhieuXuat" />
     <NavigationProperty Name="DacDiemNoiBats" Relationship="Self.FK_SP_DacDiemNoiBat" FromRole="SanPham" ToRole="DacDiemNoiBat" />
     <NavigationProperty Name="KhuyenMai" Relationship="Self.FK_KM_SP" FromRole="SanPham" ToRole="KhuyenMai" />
+    <NavigationProperty Name="Loai" Relationship="Self.FK_Loai_SP" FromRole="SanPham" ToRole="Loai" />
     <NavigationProperty Name="PhieuBaoHanhs" Relationship="Self.FK_SP_BaoHanh" FromRole="SanPham" ToRole="PhieuBaoHanh" />
     <NavigationProperty Name="ThongSoKiThuats" Relationship="Self.FK_SP_ThongSoKiThuat" FromRole="SanPham" ToRole="ThongSoKiThuat" />
     <NavigationProperty Name="TinhNangs" Relationship="Self.FK_SP_TinhNang" FromRole="SanPham" ToRole="TinhNang" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="sysreplserver">
+    <Key>
+      <PropertyRef Name="srvname" />
+    </Key>
+    <Property Name="srvname" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="srvid" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ThanhPho">
+    <Key>
+      <PropertyRef Name="MaThanhPho" />
+    </Key>
+    <Property Name="MaThanhPho" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenThanhPho" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
   </EntityType>
   <EntityType Name="TheTichDiem">
     <Key>
@@ -365,6 +393,14 @@
     <Property Name="MoTa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="rowguid" Type="Guid" Nullable="false" />
     <NavigationProperty Name="SanPham" Relationship="Self.FK_SP_ThongSoKiThuat" FromRole="ThongSoKiThuat" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="ThuongHieu">
+    <Key>
+      <PropertyRef Name="MaThuongHieu" />
+    </Key>
+    <Property Name="MaThuongHieu" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenThuongHieu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
   </EntityType>
   <EntityType Name="TinhNang">
     <Key>
@@ -458,7 +494,7 @@
     <Property Name="estimated_changes" Type="Int32" />
     <Property Name="relative_cost" Type="Decimal" Precision="12" Scale="2" Nullable="false" />
   </EntityType>
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_ChiTietDonHang">
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_ChiTietDonHang">
     <Key>
       <PropertyRef Name="MaDonHang" />
       <PropertyRef Name="MaSanPham" />
@@ -472,7 +508,7 @@
     <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="origin_datasource_id" Type="Guid" />
   </EntityType>
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_ChiTietKho">
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_ChiTietKho">
     <Key>
       <PropertyRef Name="MaKho" />
       <PropertyRef Name="MaSanPham" />
@@ -484,7 +520,7 @@
     <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="origin_datasource_id" Type="Guid" />
   </EntityType>
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_ChiTietLoai">
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_ChiTietLoai">
     <Key>
       <PropertyRef Name="MaSanPham" />
       <PropertyRef Name="MaLoai" />
@@ -495,7 +531,7 @@
     <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="origin_datasource_id" Type="Guid" />
   </EntityType>
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuNhap">
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_ChiTietPhieuNhap">
     <Key>
       <PropertyRef Name="MaPhieuNhap" />
       <PropertyRef Name="MaSanPham" />
@@ -508,7 +544,7 @@
     <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="origin_datasource_id" Type="Guid" />
   </EntityType>
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuXuat">
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_ChiTietPhieuXuat">
     <Key>
       <PropertyRef Name="MaPhieuXuat" />
       <PropertyRef Name="MaSanPham" />
@@ -520,7 +556,7 @@
     <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="origin_datasource_id" Type="Guid" />
   </EntityType>
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_ChucVu">
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_ChucVu">
     <Key>
       <PropertyRef Name="MaChucVu" />
       <PropertyRef Name="TenChucVu" />
@@ -531,7 +567,7 @@
     <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="origin_datasource_id" Type="Guid" />
   </EntityType>
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_CuaHang">
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_CuaHang">
     <Key>
       <PropertyRef Name="MaCuaHang" />
       <PropertyRef Name="rowguid" />
@@ -543,7 +579,7 @@
     <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="origin_datasource_id" Type="Guid" />
   </EntityType>
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_DacDiemNoiBat">
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_DacDiemNoiBat">
     <Key>
       <PropertyRef Name="MaSanPham" />
       <PropertyRef Name="TenDacDiem" />
@@ -554,7 +590,7 @@
     <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="origin_datasource_id" Type="Guid" />
   </EntityType>
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_DanhMuc">
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_DanhMuc">
     <Key>
       <PropertyRef Name="MaDanhMuc" />
       <PropertyRef Name="TenDanhMuc" />
@@ -565,7 +601,7 @@
     <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="origin_datasource_id" Type="Guid" />
   </EntityType>
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_DonHang">
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_DonHang">
     <Key>
       <PropertyRef Name="MaDonHang" />
       <PropertyRef Name="rowguid" />
@@ -580,11 +616,11 @@
     <Property Name="TinhTrangXacNhan" Type="Boolean" />
     <Property Name="TinhTrangThanhToan" Type="Boolean" />
     <Property Name="TinhTrangGiaoHang" Type="Boolean" />
-    <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="TongGiaTri" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="origin_datasource_id" Type="Guid" />
   </EntityType>
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_HangTichDiem">
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_HangTichDiem">
     <Key>
       <PropertyRef Name="MaHang" />
       <PropertyRef Name="rowguid" />
@@ -594,7 +630,7 @@
     <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="origin_datasource_id" Type="Guid" />
   </EntityType>
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_KhachHang">
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_KhachHang">
     <Key>
       <PropertyRef Name="MaKhachHang" />
       <PropertyRef Name="TenKhachHang" />
@@ -611,10 +647,11 @@
     <Property Name="TaiKhoan" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
     <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
     <Property Name="TrangThai" Type="Boolean" />
+    <Property Name="Tongmua" Type="Decimal" Precision="18" Scale="2" />
     <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="origin_datasource_id" Type="Guid" />
   </EntityType>
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_Kho">
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_Kho">
     <Key>
       <PropertyRef Name="MaKho" />
       <PropertyRef Name="MaCuaHang" />
@@ -623,10 +660,11 @@
     <Property Name="MaKho" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
     <Property Name="MaCuaHang" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
     <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TruongKho" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
     <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="origin_datasource_id" Type="Guid" />
   </EntityType>
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_KhuyenMai">
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_KhuyenMai">
     <Key>
       <PropertyRef Name="MaKhuyenMai" />
       <PropertyRef Name="TenKM" />
@@ -645,7 +683,7 @@
     <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="origin_datasource_id" Type="Guid" />
   </EntityType>
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_Loai">
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_Loai">
     <Key>
       <PropertyRef Name="MaLoai" />
       <PropertyRef Name="TenLoai" />
@@ -658,7 +696,7 @@
     <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="origin_datasource_id" Type="Guid" />
   </EntityType>
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_NhaCungCap">
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_NhaCungCap">
     <Key>
       <PropertyRef Name="MaNCC" />
       <PropertyRef Name="TenNCC" />
@@ -673,7 +711,7 @@
     <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="origin_datasource_id" Type="Guid" />
   </EntityType>
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_NhanVien">
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_NhanVien">
     <Key>
       <PropertyRef Name="MaNhanVien" />
       <PropertyRef Name="TenNhanVien" />
@@ -706,7 +744,7 @@
     <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="origin_datasource_id" Type="Guid" />
   </EntityType>
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_PhanHoi">
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_PhanHoi">
     <Key>
       <PropertyRef Name="MaPhanHoi" />
       <PropertyRef Name="rowguid" />
@@ -718,7 +756,7 @@
     <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="origin_datasource_id" Type="Guid" />
   </EntityType>
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_PhieuBaoHanh">
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_PhieuBaoHanh">
     <Key>
       <PropertyRef Name="MaPhieuBH" />
       <PropertyRef Name="rowguid" />
@@ -729,11 +767,11 @@
     <Property Name="MaDonHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
     <Property Name="NgayTao" Type="DateTime" Precision="3" />
     <Property Name="NgayHetHan" Type="DateTime" Precision="3" />
-    <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="TrangThai" Type="Boolean" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="origin_datasource_id" Type="Guid" />
   </EntityType>
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_PhieuNhap">
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_PhieuNhap">
     <Key>
       <PropertyRef Name="MaPhieuNhap" />
       <PropertyRef Name="rowguid" />
@@ -744,11 +782,11 @@
     <Property Name="MaKho" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
     <Property Name="ThoiGianTao" Type="DateTime" Precision="3" />
     <Property Name="TongGiaTri" Type="Decimal" Precision="18" Scale="2" />
-    <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="TrangThai" Type="Boolean" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="origin_datasource_id" Type="Guid" />
   </EntityType>
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_PhieuXuat">
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_PhieuXuat">
     <Key>
       <PropertyRef Name="MaPhieuXuat" />
       <PropertyRef Name="MaKho" />
@@ -761,11 +799,11 @@
     <Property Name="MaDonHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
     <Property Name="ThoiGianTao" Type="DateTime" Precision="3" />
     <Property Name="TongGiaTri" Type="Decimal" Precision="18" Scale="2" />
-    <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="TrangThai" Type="Boolean" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="origin_datasource_id" Type="Guid" />
   </EntityType>
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_SanPham">
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_SanPham">
     <Key>
       <PropertyRef Name="MaSanPham" />
       <PropertyRef Name="TenSanPham" />
@@ -779,10 +817,22 @@
     <Property Name="AnhMinhHoa" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="DonGia" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="MaKhuyenMai" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MaLoai" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
     <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="origin_datasource_id" Type="Guid" />
   </EntityType>
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_TheTichDiem">
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_ThanhPho">
+    <Key>
+      <PropertyRef Name="MaThanhPho" />
+      <PropertyRef Name="TenThanhPho" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaThanhPho" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenThanhPho" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_TheTichDiem">
     <Key>
       <PropertyRef Name="MaThe" />
       <PropertyRef Name="rowguid" />
@@ -796,7 +846,7 @@
     <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="origin_datasource_id" Type="Guid" />
   </EntityType>
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_ThongSoKiThuat">
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_ThongSoKiThuat">
     <Key>
       <PropertyRef Name="MaSanPham" />
       <PropertyRef Name="TenThongSo" />
@@ -809,7 +859,17 @@
     <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="origin_datasource_id" Type="Guid" />
   </EntityType>
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_TinhNang">
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_ThuongHieu">
+    <Key>
+      <PropertyRef Name="MaThuongHieu" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaThuongHieu" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenThuongHieu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_TinhNang">
     <Key>
       <PropertyRef Name="MaSanPham" />
       <PropertyRef Name="TenTinhNang" />
@@ -823,7 +883,415 @@
     <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="origin_datasource_id" Type="Guid" />
   </EntityType>
-  <EntityType Name="MSmerge_conflict_QLDienMay_CN1_Voucher">
+  <EntityType Name="MSmerge_conflict_CN2_QLDM_Voucher">
+    <Key>
+      <PropertyRef Name="MaVoucher" />
+      <PropertyRef Name="TenVoucher" />
+      <PropertyRef Name="PhanTramKhuyenMai" />
+      <PropertyRef Name="NgayBatDau" />
+      <PropertyRef Name="NgayKetThuc" />
+      <PropertyRef Name="MoTa" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaVoucher" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenVoucher" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PhanTramKhuyenMai" Type="Double" Nullable="false" />
+    <Property Name="NgayBatDau" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NgayKetThuc" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="MoTa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_ChiTietDonHang">
+    <Key>
+      <PropertyRef Name="MaDonHang" />
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaDonHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="DonGia" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ThanhTien" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_ChiTietKho">
+    <Key>
+      <PropertyRef Name="MaKho" />
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaKho" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_ChiTietLoai">
+    <Key>
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="MaLoai" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaLoai" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_ChiTietPhieuNhap">
+    <Key>
+      <PropertyRef Name="MaPhieuNhap" />
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaPhieuNhap" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="DonGiaNhap" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_ChiTietPhieuXuat">
+    <Key>
+      <PropertyRef Name="MaPhieuXuat" />
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaPhieuXuat" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_ChucVu">
+    <Key>
+      <PropertyRef Name="MaChucVu" />
+      <PropertyRef Name="TenChucVu" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaChucVu" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenChucVu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_CuaHang">
+    <Key>
+      <PropertyRef Name="MaCuaHang" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaCuaHang" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CuaHangTruong" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="NgayThanhLap" Type="DateTime" Precision="3" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_DacDiemNoiBat">
+    <Key>
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="TenDacDiem" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenDacDiem" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_DanhMuc">
+    <Key>
+      <PropertyRef Name="MaDanhMuc" />
+      <PropertyRef Name="TenDanhMuc" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaDanhMuc" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenDanhMuc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_DonHang">
+    <Key>
+      <PropertyRef Name="MaDonHang" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaDonHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="NhanVienPhuTrach" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MaKhachHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MaCuaHang" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="ThoiGianTao" Type="DateTime" Precision="3" />
+    <Property Name="MaVoucher" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Loai" Type="Boolean" />
+    <Property Name="TinhTrangXacNhan" Type="Boolean" />
+    <Property Name="TinhTrangThanhToan" Type="Boolean" />
+    <Property Name="TinhTrangGiaoHang" Type="Boolean" />
+    <Property Name="TongGiaTri" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_HangTichDiem">
+    <Key>
+      <PropertyRef Name="MaHang" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaHang" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenHang" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_KhachHang">
+    <Key>
+      <PropertyRef Name="MaKhachHang" />
+      <PropertyRef Name="TenKhachHang" />
+      <PropertyRef Name="SDT" />
+      <PropertyRef Name="DiaChi" />
+      <PropertyRef Name="Email" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaKhachHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenKhachHang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SDT" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TaiKhoan" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="TrangThai" Type="Boolean" />
+    <Property Name="Tongmua" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_Kho">
+    <Key>
+      <PropertyRef Name="MaKho" />
+      <PropertyRef Name="MaCuaHang" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaKho" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaCuaHang" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TruongKho" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_KhuyenMai">
+    <Key>
+      <PropertyRef Name="MaKhuyenMai" />
+      <PropertyRef Name="TenKM" />
+      <PropertyRef Name="PhanTramKhuyenMai" />
+      <PropertyRef Name="NgayBatDau" />
+      <PropertyRef Name="NgayKetThuc" />
+      <PropertyRef Name="MoTa" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaKhuyenMai" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenKM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PhanTramKhuyenMai" Type="Double" Nullable="false" />
+    <Property Name="NgayBatDau" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NgayKetThuc" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="MoTa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_Loai">
+    <Key>
+      <PropertyRef Name="MaLoai" />
+      <PropertyRef Name="TenLoai" />
+      <PropertyRef Name="MaDanhMuc" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaLoai" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenLoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaDanhMuc" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_NhaCungCap">
+    <Key>
+      <PropertyRef Name="MaNCC" />
+      <PropertyRef Name="TenNCC" />
+      <PropertyRef Name="MaSoThue" />
+      <PropertyRef Name="DiaChi" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaNCC" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenNCC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaSoThue" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_NhanVien">
+    <Key>
+      <PropertyRef Name="MaNhanVien" />
+      <PropertyRef Name="TenNhanVien" />
+      <PropertyRef Name="NgaySinh" />
+      <PropertyRef Name="SDT" />
+      <PropertyRef Name="Email" />
+      <PropertyRef Name="DiaChi" />
+      <PropertyRef Name="GioiTinh" />
+      <PropertyRef Name="ChucVu" />
+      <PropertyRef Name="CuaHang" />
+      <PropertyRef Name="HinhThuc" />
+      <PropertyRef Name="TaiKhoan" />
+      <PropertyRef Name="MatKhau" />
+      <PropertyRef Name="TrangThai" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaNhanVien" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenNhanVien" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SDT" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GioiTinh" Type="Boolean" Nullable="false" />
+    <Property Name="ChucVu" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CuaHang" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="HinhThuc" Type="Boolean" Nullable="false" />
+    <Property Name="TaiKhoan" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TrangThai" Type="Boolean" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_PhanHoi">
+    <Key>
+      <PropertyRef Name="MaPhanHoi" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaPhanHoi" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaKhachHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="NoiDung" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="TrangThai" Type="Boolean" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_PhieuBaoHanh">
+    <Key>
+      <PropertyRef Name="MaPhieuBH" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaPhieuBH" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MaKhachHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MaDonHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="NgayTao" Type="DateTime" Precision="3" />
+    <Property Name="NgayHetHan" Type="DateTime" Precision="3" />
+    <Property Name="TrangThai" Type="Boolean" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_PhieuNhap">
+    <Key>
+      <PropertyRef Name="MaPhieuNhap" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaPhieuNhap" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="NhaCungCap" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="NhanVienTrucKho" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MaKho" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="ThoiGianTao" Type="DateTime" Precision="3" />
+    <Property Name="TongGiaTri" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TrangThai" Type="Boolean" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_PhieuXuat">
+    <Key>
+      <PropertyRef Name="MaPhieuXuat" />
+      <PropertyRef Name="MaKho" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaPhieuXuat" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="NhanVienTaoPhieu" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="NhanVienTruongKho" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MaKho" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaDonHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ThoiGianTao" Type="DateTime" Precision="3" />
+    <Property Name="TongGiaTri" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TrangThai" Type="Boolean" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_SanPham">
+    <Key>
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="TenSanPham" />
+      <PropertyRef Name="MaThuongHieu" />
+      <PropertyRef Name="DonGia" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenSanPham" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaThuongHieu" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="AnhMinhHoa" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DonGia" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MaKhuyenMai" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MaLoai" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_ThanhPho">
+    <Key>
+      <PropertyRef Name="MaThanhPho" />
+      <PropertyRef Name="TenThanhPho" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaThanhPho" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenThanhPho" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_TheTichDiem">
+    <Key>
+      <PropertyRef Name="MaThe" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaThe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaKhachHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Hang" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="NgayTao" Type="DateTime" Precision="3" />
+    <Property Name="Diem" Type="Int32" />
+    <Property Name="TrangThai" Type="Boolean" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_ThongSoKiThuat">
+    <Key>
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="TenThongSo" />
+      <PropertyRef Name="MoTa" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenThongSo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MoTa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_ThuongHieu">
+    <Key>
+      <PropertyRef Name="MaThuongHieu" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaThuongHieu" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenThuongHieu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_TinhNang">
+    <Key>
+      <PropertyRef Name="MaSanPham" />
+      <PropertyRef Name="TenTinhNang" />
+      <PropertyRef Name="MoTa" />
+      <PropertyRef Name="rowguid" />
+    </Key>
+    <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenTinhNang" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MoTa" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="HinhAnh" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="origin_datasource_id" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MSmerge_conflict_CN3_QLDM_Voucher">
     <Key>
       <PropertyRef Name="MaVoucher" />
       <PropertyRef Name="TenVoucher" />
@@ -1146,17 +1614,6 @@
     <Property Name="xact_seqno" Type="Binary" MaxLength="16" FixedLength="false" />
     <Property Name="command_id" Type="Int32" />
     <Property Name="session_id" Type="Int32" />
-  </EntityType>
-  <EntityType Name="MSsnapshotdeliveryprogress">
-    <Key>
-      <PropertyRef Name="session_token" />
-      <PropertyRef Name="progress_token_hash" />
-      <PropertyRef Name="progress_token" />
-    </Key>
-    <Property Name="session_token" Type="String" MaxLength="260" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="progress_token_hash" Type="Int32" Nullable="false" />
-    <Property Name="progress_token" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="progress_timestamp" Type="DateTime" Precision="3" />
   </EntityType>
   <EntityType Name="sysmergearticle">
     <Key>
@@ -1577,18 +2034,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_ChucVu_NhanVien">
-    <End Role="ChucVu" Type="Self.ChucVu" Multiplicity="1" />
-    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ChucVu">
-        <PropertyRef Name="MaChucVu" />
-      </Principal>
-      <Dependent Role="NhanVien">
-        <PropertyRef Name="ChucVu" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK__NhanVien__CuaHan__48CFD27E">
     <End Role="CuaHang" Type="Self.CuaHang" Multiplicity="1" />
     <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" />
@@ -1805,7 +2250,19 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__MSmerge_d__parti__2739D489">
+  <Association Name="FK_Loai_SP">
+    <End Role="Loai" Type="Self.Loai" Multiplicity="0..1" />
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Loai">
+        <PropertyRef Name="MaLoai" />
+      </Principal>
+      <Dependent Role="SanPham">
+        <PropertyRef Name="MaLoai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MSmerge_d__parti__3BC31D7F">
     <End Role="MSmerge_partition_groups" Type="Self.MSmerge_partition_groups" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
@@ -1929,40 +2386,74 @@
     <EntitySet Name="PhieuNhaps" EntityType="Self.PhieuNhap" />
     <EntitySet Name="PhieuXuats" EntityType="Self.PhieuXuat" />
     <EntitySet Name="SanPhams" EntityType="Self.SanPham" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="sysreplservers" EntityType="Self.sysreplserver" />
+    <EntitySet Name="ThanhPhoes" EntityType="Self.ThanhPho" />
     <EntitySet Name="TheTichDiems" EntityType="Self.TheTichDiem" />
     <EntitySet Name="ThongSoKiThuats" EntityType="Self.ThongSoKiThuat" />
+    <EntitySet Name="ThuongHieux" EntityType="Self.ThuongHieu" />
     <EntitySet Name="TinhNangs" EntityType="Self.TinhNang" />
     <EntitySet Name="Vouchers" EntityType="Self.Voucher" />
     <EntitySet Name="MSdynamicsnapshotjobs" EntityType="Self.MSdynamicsnapshotjob" />
     <EntitySet Name="MSmerge_agent_parameters" EntityType="Self.MSmerge_agent_parameters" />
     <EntitySet Name="MSmerge_altsyncpartners" EntityType="Self.MSmerge_altsyncpartners" />
     <EntitySet Name="MSmerge_articlehistory" EntityType="Self.MSmerge_articlehistory" />
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_ChiTietDonHang" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_ChiTietDonHang" />
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_ChiTietKho" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_ChiTietKho" />
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_ChiTietLoai" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_ChiTietLoai" />
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuNhap" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuNhap" />
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuXuat" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_ChiTietPhieuXuat" />
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_ChucVu" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_ChucVu" />
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_CuaHang" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_CuaHang" />
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_DacDiemNoiBat" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_DacDiemNoiBat" />
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_DanhMuc" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_DanhMuc" />
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_DonHang" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_DonHang" />
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_HangTichDiem" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_HangTichDiem" />
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_KhachHang" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_KhachHang" />
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_Kho" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_Kho" />
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_KhuyenMai" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_KhuyenMai" />
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_Loai" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_Loai" />
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_NhaCungCap" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_NhaCungCap" />
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_NhanVien" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_NhanVien" />
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_PhanHoi" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_PhanHoi" />
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_PhieuBaoHanh" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_PhieuBaoHanh" />
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_PhieuNhap" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_PhieuNhap" />
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_PhieuXuat" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_PhieuXuat" />
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_SanPham" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_SanPham" />
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_TheTichDiem" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_TheTichDiem" />
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_ThongSoKiThuat" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_ThongSoKiThuat" />
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_TinhNang" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_TinhNang" />
-    <EntitySet Name="MSmerge_conflict_QLDienMay_CN1_Voucher" EntityType="Self.MSmerge_conflict_QLDienMay_CN1_Voucher" />
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_ChiTietDonHang" EntityType="Self.MSmerge_conflict_CN2_QLDM_ChiTietDonHang" />
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_ChiTietKho" EntityType="Self.MSmerge_conflict_CN2_QLDM_ChiTietKho" />
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_ChiTietLoai" EntityType="Self.MSmerge_conflict_CN2_QLDM_ChiTietLoai" />
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_ChiTietPhieuNhap" EntityType="Self.MSmerge_conflict_CN2_QLDM_ChiTietPhieuNhap" />
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_ChiTietPhieuXuat" EntityType="Self.MSmerge_conflict_CN2_QLDM_ChiTietPhieuXuat" />
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_ChucVu" EntityType="Self.MSmerge_conflict_CN2_QLDM_ChucVu" />
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_CuaHang" EntityType="Self.MSmerge_conflict_CN2_QLDM_CuaHang" />
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_DacDiemNoiBat" EntityType="Self.MSmerge_conflict_CN2_QLDM_DacDiemNoiBat" />
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_DanhMuc" EntityType="Self.MSmerge_conflict_CN2_QLDM_DanhMuc" />
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_DonHang" EntityType="Self.MSmerge_conflict_CN2_QLDM_DonHang" />
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_HangTichDiem" EntityType="Self.MSmerge_conflict_CN2_QLDM_HangTichDiem" />
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_KhachHang" EntityType="Self.MSmerge_conflict_CN2_QLDM_KhachHang" />
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_Kho" EntityType="Self.MSmerge_conflict_CN2_QLDM_Kho" />
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_KhuyenMai" EntityType="Self.MSmerge_conflict_CN2_QLDM_KhuyenMai" />
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_Loai" EntityType="Self.MSmerge_conflict_CN2_QLDM_Loai" />
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_NhaCungCap" EntityType="Self.MSmerge_conflict_CN2_QLDM_NhaCungCap" />
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_NhanVien" EntityType="Self.MSmerge_conflict_CN2_QLDM_NhanVien" />
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_PhanHoi" EntityType="Self.MSmerge_conflict_CN2_QLDM_PhanHoi" />
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_PhieuBaoHanh" EntityType="Self.MSmerge_conflict_CN2_QLDM_PhieuBaoHanh" />
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_PhieuNhap" EntityType="Self.MSmerge_conflict_CN2_QLDM_PhieuNhap" />
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_PhieuXuat" EntityType="Self.MSmerge_conflict_CN2_QLDM_PhieuXuat" />
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_SanPham" EntityType="Self.MSmerge_conflict_CN2_QLDM_SanPham" />
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_ThanhPho" EntityType="Self.MSmerge_conflict_CN2_QLDM_ThanhPho" />
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_TheTichDiem" EntityType="Self.MSmerge_conflict_CN2_QLDM_TheTichDiem" />
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_ThongSoKiThuat" EntityType="Self.MSmerge_conflict_CN2_QLDM_ThongSoKiThuat" />
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_ThuongHieu" EntityType="Self.MSmerge_conflict_CN2_QLDM_ThuongHieu" />
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_TinhNang" EntityType="Self.MSmerge_conflict_CN2_QLDM_TinhNang" />
+    <EntitySet Name="MSmerge_conflict_CN2_QLDM_Voucher" EntityType="Self.MSmerge_conflict_CN2_QLDM_Voucher" />
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_ChiTietDonHang" EntityType="Self.MSmerge_conflict_CN3_QLDM_ChiTietDonHang" />
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_ChiTietKho" EntityType="Self.MSmerge_conflict_CN3_QLDM_ChiTietKho" />
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_ChiTietLoai" EntityType="Self.MSmerge_conflict_CN3_QLDM_ChiTietLoai" />
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_ChiTietPhieuNhap" EntityType="Self.MSmerge_conflict_CN3_QLDM_ChiTietPhieuNhap" />
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_ChiTietPhieuXuat" EntityType="Self.MSmerge_conflict_CN3_QLDM_ChiTietPhieuXuat" />
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_ChucVu" EntityType="Self.MSmerge_conflict_CN3_QLDM_ChucVu" />
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_CuaHang" EntityType="Self.MSmerge_conflict_CN3_QLDM_CuaHang" />
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_DacDiemNoiBat" EntityType="Self.MSmerge_conflict_CN3_QLDM_DacDiemNoiBat" />
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_DanhMuc" EntityType="Self.MSmerge_conflict_CN3_QLDM_DanhMuc" />
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_DonHang" EntityType="Self.MSmerge_conflict_CN3_QLDM_DonHang" />
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_HangTichDiem" EntityType="Self.MSmerge_conflict_CN3_QLDM_HangTichDiem" />
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_KhachHang" EntityType="Self.MSmerge_conflict_CN3_QLDM_KhachHang" />
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_Kho" EntityType="Self.MSmerge_conflict_CN3_QLDM_Kho" />
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_KhuyenMai" EntityType="Self.MSmerge_conflict_CN3_QLDM_KhuyenMai" />
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_Loai" EntityType="Self.MSmerge_conflict_CN3_QLDM_Loai" />
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_NhaCungCap" EntityType="Self.MSmerge_conflict_CN3_QLDM_NhaCungCap" />
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_NhanVien" EntityType="Self.MSmerge_conflict_CN3_QLDM_NhanVien" />
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_PhanHoi" EntityType="Self.MSmerge_conflict_CN3_QLDM_PhanHoi" />
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_PhieuBaoHanh" EntityType="Self.MSmerge_conflict_CN3_QLDM_PhieuBaoHanh" />
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_PhieuNhap" EntityType="Self.MSmerge_conflict_CN3_QLDM_PhieuNhap" />
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_PhieuXuat" EntityType="Self.MSmerge_conflict_CN3_QLDM_PhieuXuat" />
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_SanPham" EntityType="Self.MSmerge_conflict_CN3_QLDM_SanPham" />
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_ThanhPho" EntityType="Self.MSmerge_conflict_CN3_QLDM_ThanhPho" />
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_TheTichDiem" EntityType="Self.MSmerge_conflict_CN3_QLDM_TheTichDiem" />
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_ThongSoKiThuat" EntityType="Self.MSmerge_conflict_CN3_QLDM_ThongSoKiThuat" />
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_ThuongHieu" EntityType="Self.MSmerge_conflict_CN3_QLDM_ThuongHieu" />
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_TinhNang" EntityType="Self.MSmerge_conflict_CN3_QLDM_TinhNang" />
+    <EntitySet Name="MSmerge_conflict_CN3_QLDM_Voucher" EntityType="Self.MSmerge_conflict_CN3_QLDM_Voucher" />
     <EntitySet Name="MSmerge_conflicts_info" EntityType="Self.MSmerge_conflicts_info" />
     <EntitySet Name="MSmerge_contents" EntityType="Self.MSmerge_contents" />
     <EntitySet Name="MSmerge_current_partition_mappings" EntityType="Self.MSmerge_current_partition_mappings" />
@@ -1980,7 +2471,6 @@
     <EntitySet Name="MSmerge_supportability_settings" EntityType="Self.MSmerge_supportability_settings" />
     <EntitySet Name="MSmerge_tombstone" EntityType="Self.MSmerge_tombstone" />
     <EntitySet Name="MSrepl_errors" EntityType="Self.MSrepl_errors" />
-    <EntitySet Name="MSsnapshotdeliveryprogresses" EntityType="Self.MSsnapshotdeliveryprogress" />
     <EntitySet Name="sysmergearticles" EntityType="Self.sysmergearticle" />
     <EntitySet Name="sysmergepartitioninfoes" EntityType="Self.sysmergepartitioninfo" />
     <EntitySet Name="sysmergepublications" EntityType="Self.sysmergepublication" />
@@ -2027,10 +2517,6 @@
     <AssociationSet Name="FK_SanPham_CTPhieuXuat" Association="Self.FK_SanPham_CTPhieuXuat">
       <End Role="SanPham" EntitySet="SanPhams" />
       <End Role="ChiTietPhieuXuat" EntitySet="ChiTietPhieuXuats" />
-    </AssociationSet>
-    <AssociationSet Name="FK_ChucVu_NhanVien" Association="Self.FK_ChucVu_NhanVien">
-      <End Role="ChucVu" EntitySet="ChucVus" />
-      <End Role="NhanVien" EntitySet="NhanViens" />
     </AssociationSet>
     <AssociationSet Name="FK__NhanVien__CuaHan__48CFD27E" Association="Self.FK__NhanVien__CuaHan__48CFD27E">
       <End Role="CuaHang" EntitySet="CuaHangs" />
@@ -2104,7 +2590,11 @@
       <End Role="KhuyenMai" EntitySet="KhuyenMais" />
       <End Role="SanPham" EntitySet="SanPhams" />
     </AssociationSet>
-    <AssociationSet Name="FK__MSmerge_d__parti__2739D489" Association="Self.FK__MSmerge_d__parti__2739D489">
+    <AssociationSet Name="FK_Loai_SP" Association="Self.FK_Loai_SP">
+      <End Role="Loai" EntitySet="Loais" />
+      <End Role="SanPham" EntitySet="SanPhams" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MSmerge_d__parti__3BC31D7F" Association="Self.FK__MSmerge_d__parti__3BC31D7F">
       <End Role="MSmerge_partition_groups" EntitySet="MSmerge_partition_groups" />
       <End Role="MSmerge_dynamic_snapshots" EntitySet="MSmerge_dynamic_snapshots" />
     </AssociationSet>
@@ -2136,13 +2626,20 @@
       <End Role="SanPham" EntitySet="SanPhams" />
       <End Role="TinhNang" EntitySet="TinhNangs" />
     </AssociationSet>
-    <FunctionImport Name="test" ReturnType="Collection(QLDienMayModel.test_Result)" />
+    <FunctionImport Name="sp_CTHD_Online">
+      <Parameter Name="maDH" Mode="In" Type="String" />
+      <Parameter Name="maSP" Mode="In" Type="String" />
+      <Parameter Name="sl" Mode="In" Type="Int32" />
+      <Parameter Name="dongia" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DatHang_Online">
+      <Parameter Name="MaKH" Mode="In" Type="String" />
+      <Parameter Name="MaCH" Mode="In" Type="String" />
+      <Parameter Name="Loai" Mode="In" Type="Boolean" />
+      <Parameter Name="TTXacNhan" Mode="In" Type="Boolean" />
+      <Parameter Name="TTThanhToan" Mode="In" Type="Boolean" />
+      <Parameter Name="TTGiaoHang" Mode="In" Type="Boolean" />
+      <Parameter Name="TongGT" Mode="In" Type="Decimal" />
+    </FunctionImport>
   </EntityContainer>
-  <ComplexType Name="test_Result">
-    <Property Type="String" Name="MaCuaHang" Nullable="false" MaxLength="5" />
-    <Property Type="String" Name="DiaChi" Nullable="true" MaxLength="100" />
-    <Property Type="String" Name="CuaHangTruong" Nullable="true" MaxLength="10" />
-    <Property Type="DateTime" Name="NgayThanhLap" Nullable="true" Precision="23" />
-    <Property Type="Guid" Name="rowguid" Nullable="false" />
-  </ComplexType>
 </Schema>
