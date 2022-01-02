@@ -14,7 +14,7 @@ namespace QuanLy
         
         public static SqlConnection conn = new SqlConnection();
         public static String connStr = "";
-        public static String con_pulisher = @"Data Source= DESKTOP-2021EVR\MAYCHU ; Initial Catalog= QLDienMay; Integrated Security=True";
+        public static String con_pulisher = @"Data Source= DESKTOP-2021EVR\MCHU ; Initial Catalog= QLDienMay; Integrated Security=True";
         public static SqlDataReader myReader;
         public static String serverName = "";
         public static String userName = "";

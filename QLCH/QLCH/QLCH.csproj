@@ -153,6 +153,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="GlobalData.cs" />
     <Compile Include="Models\ChiTietDonHang.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
