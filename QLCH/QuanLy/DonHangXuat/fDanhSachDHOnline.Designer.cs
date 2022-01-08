@@ -39,15 +39,15 @@ namespace QuanLy.DonHangXuat
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dtgv_cthd = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgv_cthd = new System.Windows.Forms.DataGridView();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_dshd)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgv_cthd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgv_cthd)).BeginInit();
             this.SuspendLayout();
             // 
             // dtg_dshd
@@ -134,16 +134,6 @@ namespace QuanLy.DonHangXuat
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết hoá đơn";
             // 
-            // dtgv_cthd
-            // 
-            this.dtgv_cthd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgv_cthd.Location = new System.Drawing.Point(6, 22);
-            this.dtgv_cthd.Name = "dtgv_cthd";
-            this.dtgv_cthd.RowHeadersWidth = 51;
-            this.dtgv_cthd.RowTemplate.Height = 24;
-            this.dtgv_cthd.Size = new System.Drawing.Size(423, 190);
-            this.dtgv_cthd.TabIndex = 0;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -154,6 +144,16 @@ namespace QuanLy.DonHangXuat
             this.dataGridView1.Size = new System.Drawing.Size(463, 190);
             this.dataGridView1.TabIndex = 1;
             // 
+            // dtgv_cthd
+            // 
+            this.dtgv_cthd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgv_cthd.Location = new System.Drawing.Point(6, 22);
+            this.dtgv_cthd.Name = "dtgv_cthd";
+            this.dtgv_cthd.RowHeadersWidth = 51;
+            this.dtgv_cthd.RowTemplate.Height = 24;
+            this.dtgv_cthd.Size = new System.Drawing.Size(423, 190);
+            this.dtgv_cthd.TabIndex = 0;
+            // 
             // simpleButton1
             // 
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
@@ -162,6 +162,7 @@ namespace QuanLy.DonHangXuat
             this.simpleButton1.Size = new System.Drawing.Size(122, 51);
             this.simpleButton1.TabIndex = 11;
             this.simpleButton1.Text = "Gửi hàng";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // simpleButton2
             // 
@@ -171,6 +172,7 @@ namespace QuanLy.DonHangXuat
             this.simpleButton2.Size = new System.Drawing.Size(122, 51);
             this.simpleButton2.TabIndex = 12;
             this.simpleButton2.Text = "Đã giao";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // fDanhSachDHOnline
             // 
@@ -191,8 +193,8 @@ namespace QuanLy.DonHangXuat
             ((System.ComponentModel.ISupportInitialize)(this.dtg_dshd)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgv_cthd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgv_cthd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

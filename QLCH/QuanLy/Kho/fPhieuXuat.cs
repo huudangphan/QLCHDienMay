@@ -36,7 +36,7 @@ namespace QuanLy.Kho
         }
         public void LoadCTHD(string hd)
         {
-            DataTable dt2 = DataProvider.ExecuteQuery(string.Format("select sp.MaSanPham  sp.TenSanPham, dh.SoLuong, dh.DonGia " +
+            DataTable dt2 = DataProvider.ExecuteQuery(string.Format("select sp.MaSanPham , sp.TenSanPham, dh.SoLuong, dh.DonGia " +
                 "From SanPham sp join(select ct.MaSanPham, ct.SoLuong, ct.DonGia, ct.MaDonHang from ChiTietDonHang ct where ct.MaDonHang = '{0}') dh  " +
                 "on sp.MaSanPham = dh.MaSanPham",hd));
 

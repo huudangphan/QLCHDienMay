@@ -38,7 +38,7 @@ namespace QuanLy.DonHangXuat
         }
         public void LoadCTHD(string hd)
         {
-            DataTable dt2 = DataProvider.ExecuteQuery("select sp.TenSanPham,dh.SoLuong,dh.DonGia From SanPham sp join(select ct.MaSanPham,ct.SoLuong,ct.DonGia,ct.MaDonHang from ChiTietDonHang ct where ct.MaDonHang="+hd+") dh on sp.MaSanPham = dh.MaSanPham");
+            DataTable dt2 = DataProvider.ExecuteQuery("select sp.TenSanPham,dh.SoLuong,dh.DonGia From SanPham sp join(select ct.MaSanPham,ct.SoLuong,ct.DonGia,ct.MaDonHang from ChiTietDonHang ct where ct.MaDonHang='"+hd+"') dh on sp.MaSanPham = dh.MaSanPham");
             dtgv_cthd.DataSource = dt2;
             dtgv_cthd.Columns[0].HeaderText = "Tên sản phẩm";
             dtgv_cthd.Columns[1].HeaderText = "Số lượng";
@@ -81,6 +81,56 @@ namespace QuanLy.DonHangXuat
                 
             }
             
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            string makho = "";
+            int b = 0;
+            if (DataProvider.cuaHang == "CH001")
+                makho = "K0001";
+            else
+                makho = "K002";
+            int index = dtg_dshd.CurrentCell.RowIndex;
+            string madh = dtg_dshd.Rows[index].Cells[0].Value.ToString().Trim();
+            var status = dtg_dshd.Rows[index].Cells[3].Value.ToString().Trim();
+            if (status == "True")
+                MessageBox.Show("Đơn hàng đã được xác nhận rồi");
+            else
+            {
+                string query = string.Format("exec Xac_Nhan_Don_Hang '{0}'", madh);
+                try
+                {
+                    int a = DataProvider.ExecuteNonQuery(query);
+                    if (a != 0)
+                        MessageBox.Show("Xác nhận đơn hàng thành công!");
+                    else
+                        MessageBox.Show("Xác nhận đơn hàng thất bại, vui lòng thử lại sau");
+                    string querypx = string.Format("exec sp_InsertPX '{0}','{1}','{2}','{3}','{4}'", DataProvider.userName, DataProvider.userName, makho, madh, DateTime.Now.ToString());
+                    DataProvider.ExecuteNonQuery(querypx);
+                    for (int i = 0; i < dtgv_cthd.Rows.Count - 1; i++)
+                    {
+                        string masp = dtgv_cthd.Rows[i].Cells[0].Value.ToString();
+                        string sl = dtgv_cthd.Rows[i].Cells[2].Value.ToString();
+                        string queryct = string.Format("exec sp_InsertCTPX '{0}',{1}", masp, sl);
+                        DataProvider.ExecuteNonQuery(queryct);
+                    }
+
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message.ToString());
+                }
+                LoadData();
+
+            }
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
