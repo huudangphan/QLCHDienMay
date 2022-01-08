@@ -18,6 +18,7 @@ namespace QuanLy.Kho
         {
             InitializeComponent();
             LoadThuongHieu();
+            LoadLoai();
         }
         public void LoadThuongHieu()
         {
@@ -28,6 +29,16 @@ namespace QuanLy.Kho
             cbth.DataSource = bds;
             cbth.DisplayMember = "TenThuongHieu";
             cbth.ValueMember = "MaThuongHieu";
+        }
+        public void LoadLoai()
+        {
+            string query = "select MaLoai,TenLoai from Loai";
+            DataTable dt = DataProvider.ExecuteQuery(query);
+            BindingSource bds = new BindingSource();
+            bds.DataSource = dt;
+            cbLoai.DataSource = bds;
+            cbLoai.DisplayMember = "TenLoai";
+            cbLoai.ValueMember = "MaLoai";
         }
         private void simpleButton2_Click(object sender, EventArgs e)
         {
@@ -80,7 +91,7 @@ namespace QuanLy.Kho
                     MessageBox.Show("Vui lòng chọn ảnh minh hoạ", "Thông báo", MessageBoxButtons.OKCancel);
                 else
                 {
-                    string query = string.Format("exec sp_InsertSP '{0}','{1}','{2}',{3}", txtttensp.Text, cbth.SelectedValue, image, txtgiaban.Text);
+                    string query = string.Format("exec sp_InsertSP '{0}','{1}','{2}',{3},'{4}'", txtttensp.Text, cbth.SelectedValue, image, txtgiaban.Text,cbLoai.SelectedValue);
                     int a = DataProvider.ExecuteNonQuery(query);
                     if (a != 0)
                         MessageBox.Show("Thêm sản phẩm thành công", "Thông báo", MessageBoxButtons.OKCancel);

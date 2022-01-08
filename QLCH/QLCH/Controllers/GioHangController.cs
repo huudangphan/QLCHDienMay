@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -161,10 +162,15 @@ namespace QLCH.Controllers
         public ActionResult DatHang(FormCollection f)
         {
             var genderradio = f["Gender"].ToString();
+            string nv = "NV00000001";
             if (genderradio == "tphcm")
             { genderradio = "CH001"; }                    
             else if(genderradio=="hanoi")
+            {
                 genderradio = "CH002";
+                nv = "NV00000004";
+            }
+               
 
             DonHang ddh = new DonHang();
             KhachHang kh = (KhachHang)Session["taiKhoan"];
@@ -177,38 +183,65 @@ namespace QLCH.Controllers
                 ddh.TinhTrangXacNhan = false;
                 ddh.TinhTrangThanhToan = false;
                 ddh.TinhTrangGiaoHang = false;
-                ddh.TongGiaTri = null;
-                //PhieuXuat.MaPhieuXuat = ddh.MaDonHang;
+                ddh.TongGiaTri = 0;
+               
+            string query = string.Format("sp_TaoDonHangOffline '{3}','{0}','{1}','{2}',''", kh.MaKhachHang, genderradio,DateTime.Now.ToString(),nv);
+            ExcuteOnline(genderradio, query);
+               
 
-                db.sp_DatHang_Online(ddh.MaKhachHang, ddh.MaCuaHang, ddh.Loai, ddh.TinhTrangXacNhan, ddh.TinhTrangThanhToan, ddh.TinhTrangGiaoHang, ddh.TongGiaTri);
-                
-                db.SaveChanges();
-             
-                
+
             foreach (var item in gioHang)
                 {
-                    ChiTietDonHang ctdh = new ChiTietDonHang();
-
-                    ctdh.MaDonHang = ddh.MaDonHang;
-                    ctdh.MaSanPham = item.maSP;
-                    ctdh.SoLuong = item.soLuong;
-                    ctdh.DonGia = Convert.ToDecimal(item.donGia);
-
-                    db.sp_CTHD_Online(ctdh.MaDonHang, ctdh.MaSanPham, ctdh.SoLuong, ctdh.DonGia);
-                    db.SaveChanges();
-               }
+               
+                string query2 = string.Format("exec sp_InsertCTDH '{0}',{1},{2}", item.maSP, item.soLuong, item.donGia);
+                ExcuteOnline(genderradio, query2);
+            }
                 
                 Session["GioHang"] = null;
                 return RedirectToAction("XacNhanDonHang", "GioHang");
                     
-            //}
+           
+        }
+        public void ExcuteOnline(string mach, string query, object[] parameter = null)
+        {
+            string cnt = @"Data Source=DESKTOP-2021EVR\TRAM1;Initial Catalog=QLDienMay;Integrated Security=True";
+            if (mach == "CH002")
+                cnt = @"Data Source=DESKTOP-2021EVR\TRAM2;Initial Catalog=QLDienMay;Integrated Security=True";
+            int data = 0;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(cnt))
+                {
+                    connection.Open();
 
-            //catch
-            //{
-            //   ViewBag.LoiDatHang = "Số lượng trong kho không đủ rồi!!!";
-            //}
-                 
-            //return View(gioHang);
+                    SqlCommand command = new SqlCommand(query, connection);
+
+                    if (parameter != null)
+                    {
+                        string[] listPara = query.Split(' ');
+                        int i = 0;
+                        foreach (string item in listPara)
+                        {
+                            if (item.Contains('@'))
+                            {
+                                command.Parameters.AddWithValue(item, parameter[i]);
+                                i++;
+                            }
+                        }
+                    }
+
+                    data = command.ExecuteNonQuery();
+
+                    connection.Close();
+                }
+
+              
+            }
+            catch (Exception ex)
+            {
+                string error = ex.Message.ToString();
+              
+            }
         }
         public ActionResult XacNhanDonHang()
         {

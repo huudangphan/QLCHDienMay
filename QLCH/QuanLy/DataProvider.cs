@@ -14,7 +14,7 @@ namespace QuanLy
         
         public static SqlConnection conn = new SqlConnection();
         public static String connStr = "";
-        public static String con_pulisher = @"Data Source= DESKTOP-2021EVR\MAYCHU ; Initial Catalog= QLDienMay; Integrated Security=True";
+        public static String con_pulisher = @"Data Source= DESKTOP-2021EVR\MCHU ; Initial Catalog= QLDienMay; Integrated Security=True";
         public static SqlDataReader myReader;
         public static String serverName = "";
         public static String userName = "";
@@ -91,7 +91,47 @@ namespace QuanLy
             return null;
            
         }
+        public static int ExcuteOnline(string mach,string query, object[] parameter = null)
+        {
+            string cnt = @"Data Source=DESKTOP-2021EVR\TRAM1;Initial Catalog=QLDienMay;Integrated Security=True";
+            if (mach == "CH002")
+                cnt = @"Data Source=DESKTOP-2021EVR\TRAM2;Initial Catalog=QLDienMay;Integrated Security=True";
+            int data = 0;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(cnt))
+                {
+                    connection.Open();
 
+                    SqlCommand command = new SqlCommand(query, connection);
+
+                    if (parameter != null)
+                    {
+                        string[] listPara = query.Split(' ');
+                        int i = 0;
+                        foreach (string item in listPara)
+                        {
+                            if (item.Contains('@'))
+                            {
+                                command.Parameters.AddWithValue(item, parameter[i]);
+                                i++;
+                            }
+                        }
+                    }
+
+                    data = command.ExecuteNonQuery();
+
+                    connection.Close();
+                }
+
+                return data;
+            }
+            catch (Exception ex)
+            {
+                string error = ex.Message.ToString();
+                return data;
+            }
+        }
         public static int ExecuteNonQuery(string query, object[] parameter = null)
         {
             int data = 0;

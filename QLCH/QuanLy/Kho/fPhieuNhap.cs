@@ -249,7 +249,7 @@ namespace QuanLy.Kho
         {
             string masp = txtmasp.Text.Trim();
             string tensp = txttensp.Text.Trim();
-            int soluong = Int32.Parse(numericUpDown1.Value.ToString())/2;
+            int soluong = Int32.Parse(numericUpDown1.Value.ToString());
             double gianhap = double.Parse(txtdongia.Text.Trim());
             
             if (MessageBox.Show("Bạn có muốn chọn " + tensp + "\nsố lượng:" + soluong + "\nVới giá nhập:" + gianhap, "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
