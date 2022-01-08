@@ -32,13 +32,13 @@ namespace QuanLy.Kho
         }
         public void LoadLoai()
         {
-            string query = "	select MaLoai,TenLoai from Loai";
+            string query = "select MaLoai,TenLoai from Loai";
             DataTable dt = DataProvider.ExecuteQuery(query);
             BindingSource bds = new BindingSource();
             bds.DataSource = dt;
-            cbth.DataSource = bds;
-            cbth.DisplayMember = "TenLoai";
-            cbth.ValueMember = "MaLoai";
+            cbLoai.DataSource = bds;
+            cbLoai.DisplayMember = "TenLoai";
+            cbLoai.ValueMember = "MaLoai";
         }
         private void simpleButton2_Click(object sender, EventArgs e)
         {
