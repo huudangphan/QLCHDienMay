@@ -36,7 +36,7 @@ namespace QuanLy.Kho
         }
         public void LoadCTHD(string hd)
         {
-            DataTable dt2 = DataProvider.ExecuteQuery(string.Format("select sp.MaSanPham  sp.TenSanPham, dh.SoLuong, dh.DonGia " +
+            DataTable dt2 = DataProvider.ExecuteQuery(string.Format("select sp.MaSanPham , sp.TenSanPham, dh.SoLuong, dh.DonGia " +
                 "From SanPham sp join(select ct.MaSanPham, ct.SoLuong, ct.DonGia, ct.MaDonHang from ChiTietDonHang ct where ct.MaDonHang = '{0}') dh  " +
                 "on sp.MaSanPham = dh.MaSanPham",hd));
 
@@ -89,6 +89,7 @@ namespace QuanLy.Kho
             int index = dataGridView1.CurrentCell.RowIndex;
             string madh = dataGridView1.Rows[index].Cells[0].Value.ToString().Trim();
             var status= dataGridView1.Rows[index].Cells[3].Value.ToString().Trim();
+            string makh= dataGridView1.Rows[index].Cells[1].Value.ToString().Trim();
             if (status == "True")
                 MessageBox.Show("Đơn hàng đã được xác nhận rồi");
             else
@@ -108,7 +109,9 @@ namespace QuanLy.Kho
                         string masp = dataGridView2.Rows[i].Cells[0].Value.ToString();
                         string sl = dataGridView2.Rows[i].Cells[2].Value.ToString();
                         string queryct = string.Format("exec sp_InsertCTPX '{0}',{1}", masp, sl);
-                        DataProvider.ExecuteNonQuery(queryct); 
+                        DataProvider.ExecuteNonQuery(queryct);
+                        string querybh = string.Format("exec sp_InsertPhieuBaoHanh '{0}','{1}','{2}','2020-1-1','false'", masp, makh, madh);
+                        DataProvider.ExecuteNonQuery(querybh);
                     }
 
 

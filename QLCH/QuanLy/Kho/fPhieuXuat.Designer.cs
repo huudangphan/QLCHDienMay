@@ -72,7 +72,7 @@ namespace QuanLy.Kho
             this.groupBox2.Controls.Add(this.dataGridView2);
             this.groupBox2.Location = new System.Drawing.Point(636, 104);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(489, 410);
+            this.groupBox2.Size = new System.Drawing.Size(650, 410);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết hoá đơn";
@@ -84,7 +84,7 @@ namespace QuanLy.Kho
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(468, 357);
+            this.dataGridView2.Size = new System.Drawing.Size(638, 357);
             this.dataGridView2.TabIndex = 0;
             // 
             // dateTimePicker1
@@ -123,7 +123,7 @@ namespace QuanLy.Kho
             // simpleButton1
             // 
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(927, 544);
+            this.simpleButton1.Location = new System.Drawing.Point(1088, 535);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(198, 53);
             this.simpleButton1.TabIndex = 14;
@@ -142,7 +142,7 @@ namespace QuanLy.Kho
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "fPhieuXuat";
-            this.Size = new System.Drawing.Size(1147, 685);
+            this.Size = new System.Drawing.Size(1303, 685);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);

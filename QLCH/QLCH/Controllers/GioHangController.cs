@@ -185,7 +185,7 @@ namespace QLCH.Controllers
                 ddh.TinhTrangGiaoHang = false;
                 ddh.TongGiaTri = 0;
                
-            string query = string.Format("sp_TaoDonHangOffline '{3}','{0}','{1}','{2}',''", kh.MaKhachHang, genderradio,DateTime.Now.ToString(),nv);
+            string query = string.Format("sp_TaoDonHangOnline '{3}','{0}','{1}','{2}','HAPPY2021'", kh.MaKhachHang, genderradio,DateTime.Now.ToString(),nv);
             ExcuteOnline(genderradio, query);
                
 

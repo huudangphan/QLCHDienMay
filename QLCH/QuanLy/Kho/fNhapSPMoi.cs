@@ -69,7 +69,7 @@ namespace QuanLy.Kho
             {
                 name += filename[i];
             }
-            return format2(name);
+            return name;
         }
         public string format2(string filename)
         {
