@@ -15,6 +15,7 @@ namespace QuanLy
         public static string sdt { get; set; }
         public static int type { get; set; }
         public static List<SanPham> lstsp { get; set; }
+        public static DateTime ngay_sinh { get; set; }
         
     }
     public class SanPham

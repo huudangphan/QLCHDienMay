@@ -186,6 +186,7 @@ namespace QuanLy.Kho
                         else
                             MessageBox.Show("Xảy ra lỗi, vui lòng thử lại sau");
                     }
+                    GlobalData.lstsp.Clear();
                 }
                 else
                     MessageBox.Show("Vui lòng chọn sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
