@@ -204,6 +204,12 @@
     <Compile Include="ThongKe\fBaoCaoPhieuXuat.Designer.cs">
       <DependentUpon>fBaoCaoPhieuXuat.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThongKe\fDoanhSoNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThongKe\fDoanhSoNhanVien.Designer.cs">
+      <DependentUpon>fDoanhSoNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThongKe\fDSNV.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -251,6 +257,12 @@
     </Compile>
     <Compile Include="ThongKe\rptPhieuXuat.Designer.cs">
       <DependentUpon>rptPhieuXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKe\rptThuongDoanhSo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ThongKe\rptThuongDoanhSo.Designer.cs">
+      <DependentUpon>rptThuongDoanhSo.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="DonHangXuat\fDanhSachDHOnline.resx">
       <DependentUpon>fDanhSachDHOnline.cs</DependentUpon>
@@ -317,6 +329,9 @@
     <EmbeddedResource Include="ThongKe\fBaoCaoPhieuXuat.resx">
       <DependentUpon>fBaoCaoPhieuXuat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThongKe\fDoanhSoNhanVien.resx">
+      <DependentUpon>fDoanhSoNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThongKe\fDSNV.resx">
       <DependentUpon>fDSNV.cs</DependentUpon>
     </EmbeddedResource>
@@ -340,6 +355,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThongKe\rptPhieuXuat.resx">
       <DependentUpon>rptPhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKe\rptThuongDoanhSo.resx">
+      <DependentUpon>rptThuongDoanhSo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

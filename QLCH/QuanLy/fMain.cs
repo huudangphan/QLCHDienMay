@@ -365,5 +365,21 @@ namespace QuanLy
         {
 
         }
+
+        private void accordionControlElement12_Click(object sender, EventArgs e)
+        {
+            type = CheckType();
+            if (type == 3 || type == 1)
+            {
+                ff.Controls.Clear();
+                fDoanhSoNhanVien f = new fDoanhSoNhanVien();
+                f.Dock = DockStyle.Fill;
+                ff.Controls.Add(f);
+
+
+            }
+            else
+                MessageBox.Show("Người dùng không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }

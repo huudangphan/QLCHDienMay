@@ -29,7 +29,7 @@ namespace QuanLy.DonHangXuat
             dataGridView1.Columns[0].HeaderText = "Mã Sản phẩm";
             dataGridView1.Columns[1].HeaderText = "Tên sản phẩm";
             dataGridView1.Columns[2].HeaderText = "Giá bán";
-            dataGridView1.Columns[2].HeaderText = "Số lượng";
+            dataGridView1.Columns[3].HeaderText = "Số lượng";
         }
         
 
